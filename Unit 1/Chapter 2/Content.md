@@ -1,6 +1,6 @@
 # UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
 
-## Chapter 2: Understanding Odoo
+## CHAPTER 2: UNDERSTANDING ODOO
 
 Chapter 1 gave us the business-side mental model:
 
@@ -16,7 +16,7 @@ For current product-specific facts such as editions and hosting, I also verified
 
 ---
 
-## Chapter 2 Table of Contents
+## CHAPTER 2 TABLE OF CONTENTS
 
 - [**2.1** What Odoo Is](#21-what-odoo-is)
 - [**2.2** Odoo Ecosystem](#22-odoo-ecosystem)
@@ -46,9 +46,9 @@ For current product-specific facts such as editions and hosting, I also verified
 
 ---
 
-## 2.1 What Odoo Is
+## 2.1 WHAT ODOO IS
 
-### Start with the simplest mental model
+### START WITH THE SIMPLEST MENTAL MODEL
 
 Imagine the company from Chapter 1.
 
@@ -78,7 +78,7 @@ Odoo takes a different approach.
 
 It provides a collection of integrated business applications that operate as parts of one broader platform.
 
-#### Definition
+#### DEFINITION
 
 Odoo is an ERP and business application platform containing integrated applications for managing many areas of an organization.
 
@@ -124,7 +124,7 @@ So our technical mental model should eventually become:
 
 **Odoo = Business Applications + ERP Integration + Development Framework**
 
-### Odoo connects what Chapter 1 introduced
+### ODOO CONNECTS WHAT CHAPTER 1 INTRODUCED
 
 Remember our Chapter 1 example:
 
@@ -154,7 +154,7 @@ That is why learning Odoo development without understanding ERP first would have
 
 The code exists to support these business relationships.
 
-### Odoo is not just a collection of pages
+### ODOO IS NOT JUST A COLLECTION OF PAGES
 
 This distinction is extremely important.
 
@@ -179,7 +179,7 @@ Odoo is therefore not merely a bundle of screens. It is an integrated platform w
 
 ---
 
-## 2.2 Odoo Ecosystem
+## 2.2 ODOO ECOSYSTEM
 
 Odoo is not just one executable program maintained in isolation.
 
@@ -207,7 +207,7 @@ flowchart TB
 
 </div>
 
-### Odoo SA
+### ODOO SA
 
 Odoo SA is the company behind Odoo.
 
@@ -226,7 +226,7 @@ These include areas such as:
 
 Without Odoo SA, the ecosystem would lack a central maintainer of the core platform. Community contributors and partners extend the platform, but Odoo SA remains the primary publisher of official Odoo software.
 
-### Community
+### COMMUNITY
 
 Odoo also has a large open-source community.
 
@@ -247,7 +247,7 @@ People may:
 - contribute documentation,
 - implement Odoo for customers.
 
-### Partners
+### PARTNERS
 
 Businesses often hire Odoo implementation partners.
 
@@ -267,7 +267,7 @@ A good implementation partner should not begin by writing Python immediately.
 
 They need to understand the company's processes.
 
-### Third-party modules
+### THIRD-PARTY MODULES
 
 Odoo's functionality can also be extended using third-party modules.
 
@@ -277,7 +277,7 @@ $$ \text{Odoo Core} + \text{Official Modules} + \text{Custom Modules} + \text{Th
 
 That extensibility is one of the major reasons Odoo development exists as a profession.
 
-### Why the ecosystem matters to an Odoo developer
+### WHY THE ECOSYSTEM MATTERS TO AN ODOO DEVELOPER
 
 Suppose your customer says:
 
@@ -298,19 +298,19 @@ The Odoo ecosystem matters because a capable developer knows how to search the e
 
 ---
 
-## 2.3 Community Edition
+## 2.3 COMMUNITY EDITION
 
 Odoo is available in different editions.
 
 The first is Odoo Community Edition.
 
-#### Intuition
+#### INTUITION
 
 Think of Community Edition as the open-source foundation of Odoo.
 
 Odoo itself describes Community as the core upon which Enterprise is built. Community is currently licensed under LGPLv3.
 
-### What open source means here
+### WHAT OPEN SOURCE MEANS HERE
 
 The Community source code can be inspected and modified according to its license.
 
@@ -326,7 +326,7 @@ This is one reason Odoo is excellent for learning enterprise software engineerin
 
 You are not limited to interacting with a black-box API.
 
-### Community does not mean "demo"
+### COMMUNITY DOES NOT MEAN "DEMO"
 
 A common misconception is:
 
@@ -344,7 +344,7 @@ Enterprise adds commercial features and services.
 
 Odoo's current edition comparison explicitly describes Community as open source and Enterprise as licensed, with Enterprise containing additional capabilities.
 
-### Typical Community deployment thinking
+### TYPICAL COMMUNITY DEPLOYMENT THINKING
 
 With Community, organizations often manage hosting themselves or use another provider.
 
@@ -367,7 +367,7 @@ $$ \text{Total Cost}=0 $$
 
 You may avoid Enterprise licensing, but infrastructure and engineering still cost time and money.
 
-### Community strengths
+### COMMUNITY STRENGTHS
 
 Community is particularly useful when:
 
@@ -377,7 +377,7 @@ Community is particularly useful when:
 - requiring strong control over deployment,
 - developing custom modules.
 
-### Community limitations
+### COMMUNITY LIMITATIONS
 
 The important limitation is that some Odoo functionality is Enterprise-only.
 
@@ -397,11 +397,11 @@ Community Edition is the real open-source foundation of Odoo: inspectable, deplo
 
 ---
 
-## 2.4 Enterprise Edition
+## 2.4 ENTERPRISE EDITION
 
 Now consider Odoo Enterprise.
 
-#### Intuition
+#### INTUITION
 
 Suppose Community provides our base ERP platform.
 
@@ -409,13 +409,13 @@ A business wants additional official functionality, commercial support arrangeme
 
 That is where Enterprise comes in.
 
-#### Definition
+#### DEFINITION
 
 Odoo Enterprise is Odoo's commercially licensed edition.
 
 Current Odoo documentation describes Community as LGPLv3 and Enterprise under the Odoo Enterprise Edition License, requiring a valid Enterprise subscription for use.
 
-### Relationship between Community and Enterprise
+### RELATIONSHIP BETWEEN COMMUNITY AND ENTERPRISE
 
 Do not imagine these as completely unrelated products.
 
@@ -427,7 +427,7 @@ Conceptually, Community supplies much of the foundation, while Enterprise adds a
 
 Odoo itself describes Community as the core upon which Enterprise is built.
 
-### What Enterprise can add
+### WHAT ENTERPRISE CAN ADD
 
 The exact feature comparison changes as Odoo versions evolve.
 
@@ -451,7 +451,7 @@ in every detail.
 
 For an implementation project, always check the edition matrix for the target Odoo version.
 
-### Community vs Enterprise
+### COMMUNITY VS ENTERPRISE
 
 | Community | Enterprise |
 | --------- | ---------- |
@@ -474,7 +474,7 @@ Enterprise builds on Community rather than replacing it, and the right edition c
 
 ---
 
-## 2.5 Odoo Online
+## 2.5 ODOO ONLINE
 
 Now we move from edition to hosting.
 
@@ -482,7 +482,7 @@ These are different dimensions.
 
 This distinction matters greatly.
 
-### Edition vs hosting
+### EDITION VS HOSTING
 
 Edition asks:
 
@@ -498,13 +498,13 @@ Conceptually:
 
 $$ \text{Edition} \neq \text{Hosting Method} $$
 
-### What is Odoo Online?
+### WHAT IS ODOO ONLINE?
 
 Odoo Online is Odoo's managed SaaS hosting option.
 
 Odoo describes it as private databases hosted and managed by Odoo, accessible through a browser without requiring local installation.
 
-#### Mental model
+#### MENTAL MODEL
 
 Instead of your company managing:
 
@@ -523,7 +523,7 @@ flowchart LR
 
 </div>
 
-### Why companies choose Odoo Online
+### WHY COMPANIES CHOOSE ODOO ONLINE
 
 It reduces infrastructure responsibility.
 
@@ -536,7 +536,7 @@ That can be attractive when the business mostly needs:
 - normal application usage,
 - supported no-code customization.
 
-### Critical Odoo Online limitation
+### CRITICAL ODOO ONLINE LIMITATION
 
 This is especially important for us as future Odoo developers.
 
@@ -548,7 +548,7 @@ $$ \text{Odoo Online} \neq \text{Full arbitrary server-side development environm
 
 You can configure and customize within the capabilities allowed by the hosted platform, but you cannot simply deploy arbitrary custom Python addons as you would on Odoo.sh or self-hosted Odoo.
 
-#### Example
+#### EXAMPLE
 
 Suppose the customer says:
 
@@ -568,11 +568,11 @@ Odoo Online simplifies operations for standard usage, but its restriction on arb
 
 ---
 
-## 2.6 Odoo.sh
+## 2.6 ODOO.SH
 
 Odoo.sh occupies an important middle ground.
 
-#### Intuition
+#### INTUITION
 
 Imagine two extremes.
 
@@ -586,13 +586,13 @@ Maximum infrastructure control, but you manage much more yourself.
 
 Odoo.sh is designed to provide an Odoo-focused managed development and hosting platform while allowing custom development.
 
-#### Mental model
+#### MENTAL MODEL
 
 You can think of it as:
 
 **Managed Odoo Hosting + Development Workflow + Custom Code**
 
-### Git-based development
+### GIT-BASED DEVELOPMENT
 
 Odoo.sh integrates closely with Git repositories.
 
@@ -611,7 +611,7 @@ flowchart TD
 
 </div>
 
-### Environments
+### ENVIRONMENTS
 
 Odoo.sh supports concepts such as:
 
@@ -649,7 +649,7 @@ flowchart LR
 
 Current Odoo.sh documentation describes builds based on specific Git revisions and distinguishes development/staging/production workflows.
 
-### Why Odoo.sh matters for developers
+### WHY ODOO.SH MATTERS FOR DEVELOPERS
 
 It provides facilities designed around Odoo development, including access to things such as:
 
@@ -663,7 +663,7 @@ It provides facilities designed around Odoo development, including access to thi
 
 Current documentation also shows that development and staging builds can have their source code inspected or edited, while production source is treated more conservatively.
 
-### Odoo Online vs Odoo.sh
+### ODOO ONLINE VS ODOO.SH
 
 | Odoo Online | Odoo.sh |
 | ----------- | ------- |
@@ -685,11 +685,11 @@ Odoo.sh is the managed path for teams that need Git-based workflows, environment
 
 ---
 
-## 2.7 On-Premise Odoo
+## 2.7 ON-PREMISE ODOO
 
 The third major deployment concept is on-premise, often also called self-hosted.
 
-#### Intuition
+#### INTUITION
 
 Instead of Odoo operating the hosting environment, your organization controls where Odoo runs.
 
@@ -702,7 +702,7 @@ That could be:
 
 The term "on-premise" is often used broadly in Odoo discussions to mean self-hosting, even though a self-managed server could physically run in a public cloud.
 
-### Responsibility
+### RESPONSIBILITY
 
 With self-hosting, much more responsibility shifts to you.
 
@@ -733,7 +733,7 @@ You may need to manage:
 
 Official Odoo documentation provides both packaged and source installation approaches and confirms that PostgreSQL is required for normal Odoo operation.
 
-### Why developers often like self-hosting
+### WHY DEVELOPERS OFTEN LIKE SELF-HOSTING
 
 It gives extensive technical control.
 
@@ -750,7 +750,7 @@ For example, you can generally:
 
 This becomes very useful for complex deployments.
 
-### But freedom creates operational responsibility
+### BUT FREEDOM CREATES OPERATIONAL RESPONSIBILITY
 
 Suppose your Odoo server fails at 10:00 AM on a business day.
 
@@ -781,7 +781,7 @@ Production engineering also requires thinking about:
 
 We will reach these subjects later in the roadmap.
 
-### The three hosting mental models
+### THE THREE HOSTING MENTAL MODELS
 
 | Option | Character |
 | --- | --- |
@@ -793,7 +793,7 @@ Self-hosted Odoo offers the most control and the most operational burden, and th
 
 ---
 
-## 2.8 Odoo Apps
+## 2.8 ODOO APPS
 
 Now let's move inside Odoo itself.
 
@@ -811,7 +811,7 @@ Examples:
 - Website
 - Manufacturing
 
-### What is an app conceptually?
+### WHAT IS AN APP CONCEPTUALLY?
 
 An app is a relatively large collection of functionality centered around a business domain.
 
@@ -827,7 +827,7 @@ So:
 
 $$ \text{Business Function} \rightarrow \text{Odoo App} $$
 
-### Apps are integrated
+### APPS ARE INTEGRATED
 
 This is the crucial part.
 
@@ -854,7 +854,7 @@ They participate in the same broader Odoo environment.
 
 This brings us straight back to Chapter 1's ERP principle.
 
-#### Example
+#### EXAMPLE
 
 Sales confirms:
 
@@ -878,13 +878,13 @@ Odoo apps map business domains to software, but their value comes from integrati
 
 ---
 
-## 2.9 Modules / Addons
+## 2.9 MODULES / ADDONS
 
 Now we need a more technical concept.
 
 The words app, module, and addon are related but not perfectly identical in everyday Odoo terminology.
 
-### Module
+### MODULE
 
 A module is a packaged unit of Odoo functionality.
 
@@ -902,7 +902,7 @@ A module can contain things such as:
 
 Current Odoo documentation explains that modules and apps contain elements such as models, views, data files, web controllers, and static web content.
 
-### Addon
+### ADDON
 
 "Addon" is often used broadly for an installable Odoo module that adds or modifies functionality.
 
@@ -920,7 +920,7 @@ meaning:
 
 > "Create a custom Odoo module."
 
-### App vs module
+### APP VS MODULE
 
 Odoo's own documentation gives us a very useful rule:
 
@@ -930,7 +930,7 @@ That gives us a useful subset relationship in conceptual terms:
 
 **Apps ⊆ Modules** (every app is a module, but not every module is a major app)
 
-#### Example
+#### EXAMPLE
 
 Imagine a large Sales application.
 
@@ -953,7 +953,7 @@ $$ M_1 + M_2 + M_3 + M_4 $$
 
 where each \(M\) represents a module.
 
-### Why modularity exists
+### WHY MODULARITY EXISTS
 
 Suppose every Odoo feature existed in one enormous codebase that couldn't be separated.
 
@@ -970,7 +970,7 @@ even if it never used them.
 
 Modularity allows functionality to be installed selectively.
 
-### Module dependencies
+### MODULE DEPENDENCIES
 
 Modules can depend on other modules.
 
@@ -994,19 +994,19 @@ Modules and addons are the building blocks behind every app, installed selective
 
 ---
 
-## 2.10 Users
+## 2.10 USERS
 
 A business system is useful only if people can interact with it.
 
 Odoo therefore has the concept of users.
 
-#### Definition
+#### DEFINITION
 
 A user is an identity that can access an Odoo database.
 
 Current official documentation defines a user as someone with access to an Odoo database and explains that administrators can assign different access rights.
 
-### User is not the same as employee
+### USER IS NOT THE SAME AS EMPLOYEE
 
 This is an important beginner distinction.
 
@@ -1036,7 +1036,7 @@ Those concepts are related, but they answer different questions.
 
 **User:** Who can authenticate and use the system?
 
-### Users need permissions
+### USERS NEED PERMISSIONS
 
 Not every user should see or modify everything.
 
@@ -1053,7 +1053,7 @@ $$ \text{User} + \text{Access Rights} = \text{Authorized Capabilities} $$
 
 Odoo uses groups, access rights, record rules, and other mechanisms to control access. We will study security properly later.
 
-### User types
+### USER TYPES
 
 Current Odoo documentation distinguishes:
 
@@ -1087,7 +1087,7 @@ Example:
 
 > Website visitor.
 
-### Important lesson
+### IMPORTANT LESSON
 
 Do not think:
 
@@ -1099,7 +1099,7 @@ A user is an access identity, not the same thing as an employee record, and effe
 
 ---
 
-## 2.11 Companies
+## 2.11 COMPANIES
 
 Remember Chapter 1?
 
@@ -1107,11 +1107,11 @@ A company is the business organization whose processes we are managing.
 
 Odoo models this explicitly.
 
-#### Definition
+#### DEFINITION
 
 In current Odoo documentation, a company represents an individual business entity with its own identity, financial records, and operational settings.
 
-### Single-company example
+### SINGLE-COMPANY EXAMPLE
 
 Imagine:
 
@@ -1123,7 +1123,7 @@ Users work primarily inside that one company.
 
 Simple.
 
-### Multi-company example
+### MULTI-COMPANY EXAMPLE
 
 Now imagine a group:
 
@@ -1145,7 +1145,7 @@ Conceptually, one **Odoo Database** contains:
 - **C_2** = Pakistan Company
 - **C_3** = UAE Company
 
-### User company access
+### USER COMPANY ACCESS
 
 Not every user necessarily sees every company.
 
@@ -1157,7 +1157,7 @@ For example:
 
 Current Odoo documentation allows users to be granted access to one or more companies and to have a default company.
 
-### Why multi-company becomes complicated
+### WHY MULTI-COMPANY BECOMES COMPLICATED
 
 Suppose the same product exists across three companies.
 
@@ -1181,7 +1181,7 @@ Odoo models legal business entities explicitly, and multi-company setups introdu
 
 ---
 
-## 2.12 Shared Business Records
+## 2.12 SHARED BUSINESS RECORDS
 
 This section connects almost perfectly to Chapter 1's single source of truth concept.
 
@@ -1189,7 +1189,7 @@ Remember our customer master record?
 
 Instead of creating five unrelated copies of the same customer, ERP systems often attempt to reuse shared records.
 
-### Odoo shared record intuition
+### ODOO SHARED RECORD INTUITION
 
 Imagine two companies inside one Odoo database:
 
@@ -1217,13 +1217,13 @@ Not always.
 
 Some Odoo records can be shared.
 
-### Current Odoo behavior
+### CURRENT ODOO BEHAVIOR
 
 Official documentation explains that records such as products and contacts can be shared across companies, while business documents such as quotations, invoices, and vendor bills are typically tied to a particular company.
 
 That distinction makes sense if we think carefully.
 
-### Why contacts may be shared
+### WHY CONTACTS MAY BE SHARED
 
 A customer is still the same external organization.
 
@@ -1235,7 +1235,7 @@ could purchase from multiple subsidiaries within your group.
 
 A common contact record may therefore be useful.
 
-### Why invoices shouldn't simply be globally shared
+### WHY INVOICES SHOULDN'T SIMPLY BE GLOBALLY SHARED
 
 An invoice belongs to a legal business entity.
 
@@ -1259,7 +1259,7 @@ can coexist with:
 
 $$ \text{Company-Specific Transactions} $$
 
-### This is a powerful ERP pattern
+### THIS IS A POWERFUL ERP PATTERN
 
 Remember Chapter 1:
 
@@ -1281,7 +1281,7 @@ Usually company-specific:
 
 The exact behavior depends on model and configuration, but this is the key mental model.
 
-### Company-dependent values
+### COMPANY-DEPENDENT VALUES
 
 It gets even more interesting.
 
@@ -1303,7 +1303,7 @@ Odoo separates shared master data from company-specific transactions, and even s
 
 ---
 
-## 2.13 Standard vs Custom Modules
+## 2.13 STANDARD VS CUSTOM MODULES
 
 Now we're getting closer to the Odoo developer's actual job.
 
@@ -1313,7 +1313,7 @@ But businesses frequently need modifications.
 
 We therefore distinguish **Standard Modules** from **Custom Modules**.
 
-### Standard module
+### STANDARD MODULE
 
 A standard module is functionality already supplied as part of the Odoo software distribution you are using.
 
@@ -1326,7 +1326,7 @@ Examples conceptually include modules supporting:
 
 You don't build these from scratch for every customer.
 
-### Custom module
+### CUSTOM MODULE
 
 A custom module is functionality developed specifically to add, modify, or integrate behavior beyond what the standard system provides.
 
@@ -1344,7 +1344,7 @@ as a custom module.
 
 Conceptually, it might extend the existing Sales functionality rather than replace the Sales application.
 
-### Extending instead of rebuilding
+### EXTENDING INSTEAD OF REBUILDING
 
 This is a central Odoo philosophy.
 
@@ -1367,7 +1367,7 @@ This provides:
 
 $$ \text{Existing Functionality} + \text{Business-Specific Behavior} $$
 
-### Why keeping customization separate matters
+### WHY KEEPING CUSTOMIZATION SEPARATE MATTERS
 
 Imagine editing Odoo's standard source directly.
 
@@ -1396,7 +1396,7 @@ $$ \text{Your Custom Addons} $$
 
 This separation will become extremely important when we start programming.
 
-### Configuration before customization
+### CONFIGURATION BEFORE CUSTOMIZATION
 
 An Odoo engineer should ask:
 
@@ -1445,7 +1445,7 @@ flowchart LR
 
 Not every business request deserves Python code.
 
-### Common customization mistake
+### COMMON CUSTOMIZATION MISTAKE
 
 A developer hears:
 
@@ -1471,13 +1471,13 @@ Custom modules extend standard Odoo rather than replacing it, and the profession
 
 ---
 
-## 2.14 Odoo Studio Concept
+## 2.14 ODOO STUDIO CONCEPT
 
 Our final Chapter 2 concept is Odoo Studio.
 
 This introduces another customization path.
 
-#### Intuition
+#### INTUITION
 
 Imagine a business user wants to add:
 
@@ -1497,7 +1497,7 @@ But writing and deploying code for every simple field change may be unnecessary.
 
 Odoo Studio exists to provide visual/no-code or low-code customization capabilities.
 
-### What Studio can do
+### WHAT STUDIO CAN DO
 
 Current Odoo documentation describes Studio as a toolbox for customizing Odoo without coding knowledge and lists capabilities including modifying:
 
@@ -1512,7 +1512,7 @@ Current Odoo documentation describes Studio as a toolbox for customizing Odoo wi
 
 It can also be used to create applications.
 
-#### Example
+#### EXAMPLE
 
 Suppose Sales wants a field:
 
@@ -1529,7 +1529,7 @@ Instead of writing Python immediately:
 
 The user now sees the additional information.
 
-### What Studio is doing conceptually
+### WHAT STUDIO IS DOING CONCEPTUALLY
 
 A beginner may think:
 
@@ -1555,7 +1555,7 @@ is not separate magic.
 
 It is another way of creating/modifying Odoo configuration and metadata.
 
-### Studio vs custom code
+### STUDIO VS CUSTOM CODE
 
 This comparison is extremely important.
 
@@ -1568,7 +1568,7 @@ This comparison is extremely important.
 | Limited compared with arbitrary code | Can implement complex logic/integrations |
 | Suitable for business/configuration users | Suitable for developers |
 
-#### Example 1: Studio is reasonable
+#### EXAMPLE 1: STUDIO IS REASONABLE
 
 Requirement:
 
@@ -1576,7 +1576,7 @@ Requirement:
 
 Studio may be appropriate.
 
-#### Example 2: custom module probably better
+#### EXAMPLE 2: CUSTOM MODULE PROBABLY BETTER
 
 Requirement:
 
@@ -1586,7 +1586,7 @@ This is a software integration problem.
 
 You probably need proper code.
 
-### Studio limitation mindset
+### STUDIO LIMITATION MINDSET
 
 The question is not:
 
@@ -1608,7 +1608,7 @@ Studio is a legitimate customization layer for simpler metadata and UI changes, 
 
 ---
 
-## Bringing All of Chapter 2 Together
+## BRINGING ALL OF CHAPTER 2 TOGETHER
 
 We can now build a much stronger picture of Odoo.
 
@@ -1668,7 +1668,7 @@ The system must run somewhere:
 
 ---
 
-## One Complete Example
+## ONE COMPLETE EXAMPLE
 
 Return to Bilal Office Supplies.
 
@@ -1685,7 +1685,7 @@ It has installed:
 
 This gives us a realistic small-business Odoo environment: not every possible app, but enough to show how platform concepts from this chapter work in practice.
 
-### Users
+### USERS
 
 - **Ahmed:** Salesperson
 - **Sara:** Purchasing Manager
@@ -1699,7 +1699,7 @@ Ahmed should see customers and sales documents, but not full accounting configur
 
 This reflects the user and permission thinking from Section 2.10.
 
-### Shared records
+### SHARED RECORDS
 
 Product:
 
@@ -1713,7 +1713,7 @@ These master records can participate in multiple applications.
 
 ABC Trading is not recreated separately in Sales, Inventory, and Accounting. The same customer identity can appear across CRM opportunities, Sales Orders, deliveries, and invoices. Likewise, the Dell Monitor product can be referenced by sales lines, stock movements, and purchase lines. That reuse is exactly what shared master data means in Odoo.
 
-### Transaction
+### TRANSACTION
 
 ABC Trading asks for:
 
@@ -1743,7 +1743,7 @@ The business process is one connected flow.
 
 From Ahmed's perspective, he confirmed a sale. From Ali's perspective, he moved stock. From Sara's perspective, she may have replenished shortage. From Fatima's perspective, she recorded the invoice. Each person worked inside a different app, but the underlying business event remained connected.
 
-### Then a customization appears
+### THEN A CUSTOMIZATION APPEARS
 
 Bilal says:
 
@@ -1778,9 +1778,9 @@ The important lesson is sequence. A professional Odoo engineer does not hear a b
 
 ---
 
-## Common Beginner Mistakes in Chapter 2
+## COMMON BEGINNER MISTAKES IN CHAPTER 2
 
-### Mistake 1: Odoo is one giant application
+### MISTAKE 1: ODOO IS ONE GIANT APPLICATION
 
 No.
 
@@ -1788,7 +1788,7 @@ Odoo is modular.
 
 A beginner sometimes opens Odoo, sees many menus, and assumes everything is one undifferentiated program. In reality, Odoo is built from installable modules and apps. Organizations can enable only what they need, and developers extend specific modules rather than modifying one monolithic codebase.
 
-### Mistake 2: Odoo apps are completely separate programs
+### MISTAKE 2: ODOO APPS ARE COMPLETELY SEPARATE PROGRAMS
 
 No.
 
@@ -1796,7 +1796,7 @@ Their integration and shared records are central to the ERP model.
 
 Sales, Inventory, and Accounting may look like separate apps in the interface, but they operate on connected business records inside one database. That integration is what makes Odoo an ERP rather than a bundle of unrelated tools.
 
-### Mistake 3: Community is just a trial of Enterprise
+### MISTAKE 3: COMMUNITY IS JUST A TRIAL OF ENTERPRISE
 
 No.
 
@@ -1804,7 +1804,7 @@ Community is the open-source core edition.
 
 Community is a real deployable edition, not a temporary demo. Many organizations run Community in production, and it is also the foundation developers study when learning the framework.
 
-### Mistake 4: Community and Enterprise are identical
+### MISTAKE 4: COMMUNITY AND ENTERPRISE ARE IDENTICAL
 
 No.
 
@@ -1812,7 +1812,7 @@ Enterprise adds commercial functionality and has a different license.
 
 Community and Enterprise share a foundation, but Enterprise includes additional official capabilities and commercial services. Choosing between them is a business and licensing decision, not a question of "real vs fake Odoo."
 
-### Mistake 5: Odoo Online and Odoo.sh are the same thing
+### MISTAKE 5: ODOO ONLINE AND ODOO.SH ARE THE SAME THING
 
 No.
 
@@ -1822,7 +1822,7 @@ Odoo.sh provides a much more development-oriented environment supporting custom 
 
 Both are hosted by Odoo, but they serve different purposes. Odoo Online is optimized for standard SaaS usage. Odoo.sh is optimized for custom module development with Git-based workflows.
 
-### Mistake 6: On-premise automatically means a physical server inside the office
+### MISTAKE 6: ON-PREMISE AUTOMATICALLY MEANS A PHYSICAL SERVER INSIDE THE OFFICE
 
 Not necessarily.
 
@@ -1830,7 +1830,7 @@ The important concept is that you control and operate the hosting environment.
 
 Self-hosted Odoo may run on a cloud virtual machine, a managed private server, or hardware inside the company. "On-premise" in Odoo discussions usually means you operate the environment, not that the server must literally sit in your office.
 
-### Mistake 7: App and module always mean exactly the same thing
+### MISTAKE 7: APP AND MODULE ALWAYS MEAN EXACTLY THE SAME THING
 
 They overlap, but the useful rule is:
 
@@ -1838,7 +1838,7 @@ They overlap, but the useful rule is:
 
 An app is a major business-facing capability such as Sales. A module is the technical package that implements functionality. Some modules extend other apps without appearing as standalone launcher apps.
 
-### Mistake 8: User equals employee
+### MISTAKE 8: USER EQUALS EMPLOYEE
 
 No.
 
@@ -1848,7 +1848,7 @@ User is an application-access identity.
 
 Ahmed may exist as an employee because he works for the company, and separately as a user because he logs into Odoo. Another employee may never receive a user account. A portal customer may be a user without being an employee.
 
-### Mistake 9: Every record belongs to exactly one company
+### MISTAKE 9: EVERY RECORD BELONGS TO EXACTLY ONE COMPANY
 
 Not necessarily.
 
@@ -1856,7 +1856,7 @@ Some records can be shared; others are company-specific.
 
 Contacts and products may be shared across companies in a multi-company database, while invoices and Sales Orders usually belong to one legal entity. Multi-company design requires understanding which records are shared identity and which are company-specific transactions.
 
-### Mistake 10: Every customization needs Python
+### MISTAKE 10: EVERY CUSTOMIZATION NEEDS PYTHON
 
 Definitely not.
 
@@ -1875,7 +1875,7 @@ Many business requests can be solved with standard functionality, settings, or S
 
 ---
 
-## Chapter 2 Summary
+## CHAPTER 2 SUMMARY
 
 We started this chapter asking how Odoo turns Chapter 1's ERP ideas into actual software. We can now say Odoo is simultaneously a **business application suite**, an **ERP system**, a **development framework**, a **PostgreSQL-backed information system**, and a **web application platform**.
 

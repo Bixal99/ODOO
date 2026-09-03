@@ -1,6 +1,6 @@
 ﻿# UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
 
-## Chapter 1: What Is ERP?
+## CHAPTER 1: WHAT IS ERP?
 
 **Starting-point check:** No prerequisite gap detected. This chapter is intentionally the foundation: before learning Odoo itself, you need to understand the business system Odoo is designed to represent.
 
@@ -8,7 +8,7 @@ The roadmap places Chapter 1 before Odoo applications, architecture, Python, ORM
 
 ---
 
-## Chapter 1 Table of Contents
+## CHAPTER 1 TABLE OF CONTENTS
 
 - [**First: What does ERP mean?**](#first-what-does-erp-mean)
 - [**1.1** Business Processes](#11-business-processes)
@@ -50,7 +50,7 @@ The roadmap places Chapter 1 before Odoo applications, architecture, Python, ORM
 
 ---
 
-## First: What does ERP mean?
+## FIRST: WHAT DOES ERP MEAN?
 
 **ERP** stands for **Enterprise Resource Planning**.
 
@@ -93,7 +93,7 @@ Before we discuss Odoo itself in Chapter 2, we need to understand what exactly i
 
 ---
 
-## 1.1 Business Processes
+## 1.1 BUSINESS PROCESSES
 
 A business is not simply a collection of people sitting in departments. Departments matter for organization, but they do not describe what the company actually **does** all day.
 
@@ -112,9 +112,9 @@ Those activities are not random. They are organized into **business processes**,
 
 ---
 
-### 1.1.1 What Is a Business Process?
+### 1.1.1 WHAT IS A BUSINESS PROCESS?
 
-#### Intuition
+#### INTUITION
 
 Imagine a customer calls a company and says:
 
@@ -137,7 +137,7 @@ Each step depends on the previous one. You cannot invoice a customer who never o
 
 That entire sequence, from customer request to collected payment, is a **business process**.
 
-#### Definition
+#### DEFINITION
 
 A **business process** is a structured sequence of related activities performed to achieve a business objective. The activities are related because they serve the same goal. The sequence is structured because order usually matters.
 
@@ -151,7 +151,7 @@ $$ \text{Customer Requirement} \rightarrow \text{Sell and Deliver Product} \righ
 
 But real business processes are usually more complicated because several departments may participate. Sales may start the process, Warehouse may fulfill it, and Finance may close it. The process is one chain; the participants are many.
 
-#### Why processes matter in ERP
+#### WHY PROCESSES MATTER IN ERP
 
 ERP software does not exist merely to store information. A spreadsheet can store information. A text file can store information. ERP software exists to **support processes**, to make the right steps happen in the right order, with the right data, involving the right people.
 
@@ -179,7 +179,7 @@ Instead:
 
 That distinction separates basic coding from **ERP engineering**. A button is easy. A correctly placed business rule is valuable.
 
-#### Example: employee hiring
+#### EXAMPLE: EMPLOYEE HIRING
 
 Consider HR recruitment:
 
@@ -191,17 +191,17 @@ ERP systems represent many such business processes. Some are commercial, like sa
 
 ---
 
-### 1.1.2 Process Inputs
+### 1.1.2 PROCESS INPUTS
 
 A process cannot begin from nothing. Something has to trigger the work. Something has to enter the system. Something has to give the process a reason to start.
 
 That something is its **input**.
 
-#### Definition
+#### DEFINITION
 
 A **process input** is any information, material, request, resource, or event required for the process to begin or continue. Inputs can therefore be physical or informational. A truck arriving at a warehouse is an input. A customer email requesting a quote is also an input.
 
-#### Examples
+#### EXAMPLES
 
 | Process           | Possible Input      |
 | ----------------- | ------------------- |
@@ -213,7 +213,7 @@ A **process input** is any information, material, request, resource, or event re
 | Accounting        | Invoice             |
 | Recruitment       | Job vacancy         |
 
-#### ERP perspective
+#### ERP PERSPECTIVE
 
 Inputs frequently appear in an ERP as **records**. The business world speaks in events; the ERP world stores those events as structured data.
 
@@ -234,7 +234,7 @@ This is extremely important for future Odoo development. You'll eventually learn
 
 ---
 
-### 1.1.3 Process Activities
+### 1.1.3 PROCESS ACTIVITIES
 
 Inputs alone accomplish nothing. A customer inquiry sitting in an inbox does not generate revenue. A job vacancy sitting in a manager's head does not produce a hire.
 
@@ -253,7 +253,7 @@ For a purchase:
 
 Each step is an activity. Together, they transform a purchasing need into a completed procurement cycle.
 
-#### Human activities vs automated activities
+#### HUMAN ACTIVITIES VS AUTOMATED ACTIVITIES
 
 Activities may be performed by **humans**.
 
@@ -279,7 +279,7 @@ $$ \text{Human Decisions} + \text{Automated Business Rules} $$
 
 The best ERP implementations do not try to remove humans from judgment. They remove humans from repetitive coordination work so judgment can happen where it actually matters.
 
-#### Activity dependencies
+#### ACTIVITY DEPENDENCIES
 
 Activities often depend on earlier activities. Business reality has an order, and systems that ignore that order create chaos.
 
@@ -309,7 +309,7 @@ These are not arbitrary UI features. They are not there because a designer liked
 
 ---
 
-### 1.1.4 Process Outputs
+### 1.1.4 PROCESS OUTPUTS
 
 Every process exists to produce something. The result produced by a business process is its **output**.
 
@@ -363,7 +363,7 @@ ERP systems connect them. That connection is what allows a sale in one departmen
 
 ---
 
-### 1.1.5 Process Owners
+### 1.1.5 PROCESS OWNERS
 
 Processes need responsibility. A process without ownership becomes everyone's problem and therefore nobody's problem.
 
@@ -385,7 +385,7 @@ A process owner may care about:
 - exceptions,
 - improvement.
 
-#### Important distinction
+#### IMPORTANT DISTINCTION
 
 The process owner doesn't necessarily perform every step.
 
@@ -417,7 +417,7 @@ With this process model in hand, the next layer is understanding who performs th
 
 ---
 
-## 1.2 Departments
+## 1.2 DEPARTMENTS
 
 Businesses divide work into specialized groups because no single person can master every function. Salespeople should sell. Accountants should account. Warehouse staff should move goods. Specialization creates speed and expertise.
 
@@ -431,7 +431,7 @@ A department describes who reports to whom. A process describes what must happen
 
 ---
 
-### 1.2.1 Sales
+### 1.2.1 SALES
 
 The **Sales** department is responsible for converting customer demand into revenue. If no one sells, the business eventually stops, but selling alone does not complete the customer experience.
 
@@ -454,7 +454,7 @@ Once an order is confirmed, Warehouse may need to deliver it and Finance may nee
 
 ---
 
-### 1.2.2 Purchasing
+### 1.2.2 PURCHASING
 
 **Purchasing**, also called **Procurement**, obtains goods and services from suppliers. When the company needs something it does not already have in the right quantity, Purchasing goes to the market.
 
@@ -475,7 +475,7 @@ That connection is precisely what integrated ERP systems are designed to support
 
 ---
 
-### 1.2.3 Warehouse
+### 1.2.3 WAREHOUSE
 
 The **Warehouse** function manages physical inventory movements. In many businesses, this is where operational reality meets the promise Sales made to the customer.
 
@@ -505,7 +505,7 @@ Warehouse information therefore affects Sales, Purchase, Accounting, and Operati
 
 ---
 
-### 1.2.4 Finance
+### 1.2.4 FINANCE
 
 **Finance** tracks the monetary consequences of business activity. Operations move goods; Finance translates those movements into financial truth.
 
@@ -560,7 +560,7 @@ ERP systems therefore often connect employee identity with business responsibili
 
 ---
 
-### 1.2.6 Operations
+### 1.2.6 OPERATIONS
 
 **Operations** is the function responsible for executing the organization's core productive work. This is the department that actually produces what the company sells, whether that product is physical, digital, or a service.
 
@@ -579,7 +579,7 @@ This is an important ERP lesson:
 
 Odoo provides standard structures, but implementations often require configuration or customization to match operational reality. A restaurant's operations look nothing like a manufacturer's, and both deserve a system that fits.
 
-#### Department integration example
+#### DEPARTMENT INTEGRATION EXAMPLE
 
 Imagine a company called **GulfTech Electronics**.
 
@@ -616,13 +616,13 @@ Departments give us the org chart. The next question is what happens when a sing
 
 ---
 
-## 1.3 Cross-Department Workflows
+## 1.3 CROSS-DEPARTMENT WORKFLOWS
 
 Individual departments have clear responsibilities, but customers do not experience the company as a collection of departments. They experience an outcome: the product arrives, the invoice is correct, the support call gets resolved.
 
 A **cross-department workflow** is a business process whose activities involve multiple departments. The process is one; the participants are many.
 
-### Example: Order-to-Cash
+### EXAMPLE: ORDER-TO-CASH
 
 One famous ERP workflow is **Order-to-Cash**. It describes the journey from customer order to receiving customer payment, the full commercial cycle, not just the sales moment.
 
@@ -648,7 +648,7 @@ Departments involved might include:
 
 This is one process spread across multiple organizational areas. If you only optimize Sales, you may win the quotation and lose the customer during delivery or billing.
 
-### Another example: Procure-to-Pay
+### ANOTHER EXAMPLE: PROCURE-TO-PAY
 
 **Procure-to-Pay** concerns buying something and eventually paying the supplier, the mirror image of Order-to-Cash on the spending side.
 
@@ -665,7 +665,7 @@ Departments:
 
 $$ \text{Operations} \rightarrow \text{Purchasing} \rightarrow \text{Warehouse} \rightarrow \text{Finance} $$
 
-### Why ERP is powerful here
+### WHY ERP IS POWERFUL HERE
 
 Imagine each department uses different software.
 
@@ -687,11 +687,11 @@ Processes and workflows generate data constantly, but not all data is the same k
 
 ---
 
-## 1.4 Master Data
+## 1.4 MASTER DATA
 
 Not all business data represents an event. Some data describes the relatively stable entities used repeatedly across business processes. This is called **master data**, the "who" and "what" the business works with every day.
 
-#### Intuition
+#### INTUITION
 
 Suppose customer "Qatar Trading LLC" places 50 orders this year.
 
@@ -709,7 +709,7 @@ Instead, the company maintains a reusable customer record. Every order reference
 
 That is master data.
 
-#### Definition
+#### DEFINITION
 
 **Master data** is relatively stable, reusable business information describing core entities used across multiple processes and transactions.
 
@@ -725,7 +725,7 @@ Master data provides context for transactions. Transactions say what happened; m
 
 ---
 
-### 1.4.1 Customers
+### 1.4.1 CUSTOMERS
 
 A **customer** master record may contain:
 
@@ -751,7 +751,7 @@ You do not need five unrelated copies of the customer. Ideally, the ERP shares t
 
 ---
 
-### 1.4.2 Vendors
+### 1.4.2 VENDORS
 
 A **vendor** is an organization or person from whom the business purchases goods or services.
 
@@ -774,7 +774,7 @@ That distinction matters.
 
 ---
 
-### 1.4.3 Products
+### 1.4.3 PRODUCTS
 
 **Product** master data describes something the business buys, sells, stores, manufactures, or consumes.
 
@@ -804,7 +804,7 @@ Changing product information can influence many processes. Raise the price and S
 
 ---
 
-### 1.4.4 Employees
+### 1.4.4 EMPLOYEES
 
 **Employee** master data may contain:
 
@@ -828,7 +828,7 @@ The employee exists as a person in the organization. The expense claim records o
 
 ---
 
-### 1.4.5 Accounts
+### 1.4.5 ACCOUNTS
 
 **Financial accounts** provide the structure used for categorizing monetary activity.
 
@@ -843,7 +843,7 @@ Examples include:
 
 The account itself is relatively stable configuration/master information. Individual accounting entries against those accounts are transactions.
 
-#### Master data vs transaction data
+#### MASTER DATA VS TRANSACTION DATA
 
 This distinction is important enough to memorize.
 
@@ -865,7 +865,7 @@ Master data tells you who and what exists. **Transactions** tell you what actual
 
 ---
 
-## 1.5 Transactions
+## 1.5 TRANSACTIONS
 
 A **transaction** records a business event or activity. If master data is the cast of characters, transactions are the scenes in the story.
 
@@ -891,7 +891,7 @@ $$ 10 \times 500 = 5{,}000\text{ QAR} $$
 
 The transaction says: Customer A purchased 10 units of Product X for 5,000 QAR. Every piece of that sentence connects master data (Customer A, Product X) with event data (quantity, price, total).
 
-### Transactions create business history
+### TRANSACTIONS CREATE BUSINESS HISTORY
 
 Master data tells us that a customer exists. Transactions tell us what that customer has done.
 
@@ -910,7 +910,7 @@ Over time, transactional data becomes the organization's operational history. Yo
 
 This is why ERP databases become extremely valuable. The data is not just storage, it is evidence of how the business actually ran.
 
-### Document flow
+### DOCUMENT FLOW
 
 Many ERP transactions create related documents. One business outcome produces a chain of records, each representing a step in the process.
 
@@ -926,7 +926,7 @@ When dozens of departments create thousands of transactions referencing the same
 
 ---
 
-## 1.6 Single Source of Truth
+## 1.6 SINGLE SOURCE OF TRUTH
 
 This is another central ERP principle, and one that sounds simpler than it is.
 
@@ -940,13 +940,13 @@ Which value is correct? All three departments believe they are helping the custo
 
 This is a **data consistency problem**. It is not a technology problem first. It is a business governance problem that technology can either improve or amplify.
 
-### Single Source of Truth
+### SINGLE SOURCE OF TRUTH
 
 A **single source of truth** means the organization establishes an authoritative place or record from which information is consistently obtained.
 
 It doesn't necessarily mean "only one physical database table in the whole universe." It means that for a particular business fact, the organization knows which representation is authoritative. If someone asks for the customer's phone number, there is one answer the company trusts.
 
-#### ERP example
+#### ERP EXAMPLE
 
 Instead of a **Customer** record in Sales, another in Accounting, and another in Inventory, we aim for one **Shared Customer Record** used across applications.
 
@@ -957,7 +957,7 @@ This reduces:
 - manual synchronization,
 - human errors.
 
-#### But integration creates responsibility
+#### BUT INTEGRATION CREATES RESPONSIBILITY
 
 A common beginner misconception is:
 
@@ -983,7 +983,7 @@ With processes, departments, master data, transactions, and a single source of t
 
 ---
 
-## 1.7 ERP vs CRM
+## 1.7 ERP VS CRM
 
 ERP and CRM overlap, but they are not the same thing. Many sales teams live inside CRM tools every day and reasonably wonder whether they already "have ERP." The answer depends on what happens after the opportunity closes.
 
@@ -1001,7 +1001,7 @@ Typical CRM functionality includes:
 
 ERP covers a much broader operational scope. CRM helps you win the deal. ERP helps you **fulfill** it across the entire company.
 
-### Comparison
+### COMPARISON
 
 | CRM                                 | ERP                                  |
 | ----------------------------------- | ------------------------------------ |
@@ -1023,7 +1023,7 @@ ERP asks much broader questions such as:
 
 CRM optimizes the front of the revenue engine. ERP runs the engine itself.
 
-### Odoo perspective
+### ODOO PERSPECTIVE
 
 This distinction will become interesting because Odoo includes CRM as one application inside a larger ERP ecosystem.
 
@@ -1041,7 +1041,7 @@ CRM is often one application among many. Companies also run standalone tools for
 
 ---
 
-## 1.8 ERP vs Standalone Business Software
+## 1.8 ERP VS STANDALONE BUSINESS SOFTWARE
 
 Before ERP systems, or even alongside them today, businesses often use independent applications. Each tool may be excellent at its job. The fracture appears when the **process** crosses tool boundaries.
 
@@ -1057,7 +1057,7 @@ For example:
 
 Each might work well individually. Sales loves the spreadsheet because it is flexible. Accounting loves its tool because it is compliant. Warehouse loves its app because it tracks bins. The problem appears when the business process crosses application boundaries.
 
-### Example
+### EXAMPLE
 
 **Sales** confirms: 100 units.
 
@@ -1073,7 +1073,7 @@ Sales may tell the customer:
 
 Now operational trouble begins. The customer expects 100 units. Warehouse can only ship 80 today. Purchasing expected to backfill, but nobody connected the three truths into one answer.
 
-### Standalone systems
+### STANDALONE SYSTEMS
 
 Standalone systems can offer advantages:
 
@@ -1091,7 +1091,7 @@ But they create integration challenges. Data may need to move using:
 
 Every transfer is a chance for delay, error, or version mismatch.
 
-### ERP approach
+### ERP APPROACH
 
 ERP attempts to provide more integrated processes.
 
@@ -1117,7 +1117,7 @@ flowchart LR
 
 </div>
 
-#### Important limitation
+#### IMPORTANT LIMITATION
 
 ERP does not mean every company must replace every external application. Real organizations may still integrate ERP with:
 
@@ -1142,13 +1142,13 @@ Understanding what ERP is, and what it is not, prepares you for the practical sk
 
 ---
 
-## 1.9 Business Process Mapping
+## 1.9 BUSINESS PROCESS MAPPING
 
 Before configuring or developing an ERP workflow, you need to understand the process you are implementing. Code without process understanding produces features that work technically and fail operationally.
 
 That is where **business process mapping** comes in.
 
-#### Intuition
+#### INTUITION
 
 Suppose a manager says:
 
@@ -1173,7 +1173,7 @@ A proper ERP implementation asks:
 
 Only after understanding these questions should the system be designed. The button is the last detail, not the first.
 
-#### Process mapping
+#### PROCESS MAPPING
 
 **Business process mapping** means representing the sequence of activities, decisions, participants, inputs, and outputs in a business process.
 
@@ -1188,7 +1188,7 @@ where:
 - D = decision
 - O = output
 
-#### Example: Purchase approval
+#### EXAMPLE: PURCHASE APPROVAL
 
 Suppose the rule is:
 
@@ -1237,7 +1237,7 @@ Notice what happened. We went from **Business Requirement** to **Business Proces
 
 That sequence is fundamental. Skip a step and you build the wrong thing efficiently.
 
-#### As-Is vs To-Be processes
+#### AS-IS VS TO-BE PROCESSES
 
 Two concepts are especially useful in ERP projects.
 
@@ -1265,7 +1265,7 @@ flowchart LR
 
 Do not automatically copy every inefficient existing practice into an ERP. Sometimes implementation means improving the process, not digitizing dysfunction.
 
-#### Business process mapping questions
+#### BUSINESS PROCESS MAPPING QUESTIONS
 
 When investigating a process, ask:
 
@@ -1309,13 +1309,13 @@ That is a much stronger understanding than simply saying:
 
 ---
 
-## Complete Running Example: GulfTech Electronics
+## COMPLETE RUNNING EXAMPLE: GULFTECH ELECTRONICS
 
 Let's combine every Chapter 1 concept.
 
 A customer called **ABC Trading** wants 20 monitors.
 
-### Master data
+### MASTER DATA
 
 Existing records:
 
@@ -1325,7 +1325,7 @@ Existing records:
 
 **Vendor:** Global Displays Ltd.
 
-### Step 1: Sales
+### STEP 1: SALES
 
 ABC Trading requests 20 monitors.
 
@@ -1344,7 +1344,7 @@ flowchart LR
 
 This creates a transaction.
 
-### Step 2: Warehouse
+### STEP 2: WAREHOUSE
 
 ERP checks inventory.
 
@@ -1356,21 +1356,21 @@ ERP checks inventory.
 
 Warehouse cannot immediately fulfill the complete order.
 
-### Step 3: Purchasing
+### STEP 3: PURCHASING
 
 Purchasing needs 12 additional monitors. It creates a Purchase Order for Global Displays Ltd. That is another transaction.
 
-### Step 4: Vendor Delivery
+### STEP 4: VENDOR DELIVERY
 
 The supplier delivers 12 monitors. Warehouse receives them.
 
 Inventory now becomes **20** (8 + 12).
 
-### Step 5: Customer Delivery
+### STEP 5: CUSTOMER DELIVERY
 
 Warehouse prepares the customer's 20 monitors. The delivery transaction confirms stock movement.
 
-### Step 6: Finance
+### STEP 6: FINANCE
 
 The customer must be invoiced.
 
@@ -1395,7 +1395,7 @@ flowchart TD
 
 </div>
 
-### What was integrated?
+### WHAT WAS INTEGRATED?
 
 - Sales knew the customer order.
 - Warehouse knew the inventory requirement.
@@ -1408,13 +1408,13 @@ That is the integrated enterprise concept at the heart of ERP.
 
 ---
 
-## Common Beginner Mistakes From Chapter 1
+## COMMON BEGINNER MISTAKES FROM CHAPTER 1
 
-### 1. Thinking ERP means accounting software
+### 1. THINKING ERP MEANS ACCOUNTING SOFTWARE
 
 Accounting is only one major component. ERP may integrate Sales, Purchase, Inventory, HR, Manufacturing, Projects, Finance, and much more.
 
-### 2. Thinking ERP means a database
+### 2. THINKING ERP MEANS A DATABASE
 
 ERP certainly uses a database, but a database alone doesn't understand business processes. ERP adds:
 
@@ -1426,19 +1426,19 @@ ERP certainly uses a database, but a database alone doesn't understand business 
 - user interfaces,
 - automation.
 
-### 3. Thinking each department is independent
+### 3. THINKING EACH DEPARTMENT IS INDEPENDENT
 
 Departments have responsibilities, but enterprise workflows usually cross departments.
 
-### 4. Confusing master data with transactions
+### 4. CONFUSING MASTER DATA WITH TRANSACTIONS
 
 Remember: **Customer** = Master Data, and **Customer Order** = Transaction.
 
-### 5. Assuming ERP automatically fixes bad processes
+### 5. ASSUMING ERP AUTOMATICALLY FIXES BAD PROCESSES
 
 Software can automate a bad process just as easily as a good process. Process understanding comes first.
 
-### 6. Coding before understanding the business requirement
+### 6. CODING BEFORE UNDERSTANDING THE BUSINESS REQUIREMENT
 
 This is one of the most dangerous mistakes for an Odoo developer.
 
@@ -1454,7 +1454,7 @@ First understand the process.
 
 ---
 
-## Chapter 1 Mastery Check
+## CHAPTER 1 MASTERY CHECK
 
 You should now be able to explain why the following statement is incomplete:
 
@@ -1468,7 +1468,7 @@ If that explanation makes sense rather than merely sounding technical, then the 
 
 ---
 
-## Chapter 1 Summary
+## CHAPTER 1 SUMMARY
 
 We began with the most important idea: a business is a network of processes.
 

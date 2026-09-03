@@ -1,21 +1,21 @@
-# Unit I Conclusion: Understand the Business Before the Code
+# UNIT I CONCLUSION: UNDERSTAND THE BUSINESS BEFORE THE CODE
 
 You've finished the three teaching chapters of Unit I. Before we go into Unit II and Odoo architecture, let's pause here: check that the full unit landed, then pull the whole picture together in one place.
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Did we cover everything?](#did-we-cover-everything)
 - [The whole unit in one picture](#the-whole-unit-in-one-picture)
 
 ---
 
-## Did we cover everything?
+## DID WE COVER EVERYTHING?
 
 Chapter 3 was the last teaching chapter in Unit I. The roadmap defines this unit as Chapters 1 through 3, then **Unit II: How Odoo Actually Works**. So this is a good moment to ask: did we actually cover what we needed before architecture starts?
 
-### Chapter 1: What Is ERP?
+### CHAPTER 1: WHAT IS ERP?
 
 We covered:
 
@@ -33,7 +33,7 @@ Exercise and project are in place.
 
 This chapter gave you the business-side mental model: companies run on processes, not isolated tasks, and ERP systems connect departments through shared data rather than duplicate spreadsheets.
 
-### Chapter 2: Understanding Odoo
+### CHAPTER 2: UNDERSTANDING ODOO
 
 We covered:
 
@@ -56,7 +56,7 @@ Exercise and project are in place.
 
 This chapter translated Chapter 1's ERP ideas into the Odoo platform: editions, hosting, apps, modules, users, companies, shared records, and the customization hierarchy from standard functionality through configuration, Studio, and custom development.
 
-### Chapter 3: Core Business Applications
+### CHAPTER 3: CORE BUSINESS APPLICATIONS
 
 We covered all roadmap items:
 
@@ -81,7 +81,7 @@ Exercise and project are in place.
 
 This chapter opened the Odoo toolbox itself. You learned what each major application does, how records differ across domains, and how real business flows cross application boundaries in Lead-to-Cash, Procure-to-Pay, service, manufacturing, eCommerce, POS, and Helpdesk scenarios.
 
-### Before Chapter 4, do you need more first?
+### BEFORE CHAPTER 4, DO YOU NEED MORE FIRST?
 
 You might be wondering whether you should already know:
 
@@ -112,11 +112,11 @@ flowchart LR
 
 ---
 
-## The whole unit in one picture
+## THE WHOLE UNIT IN ONE PICTURE
 
 The entire unit can be condensed into one large model. Each layer below builds on the previous one.
 
-### Layer 1: The Real Business
+### LAYER 1: THE REAL BUSINESS
 
 A company contains **departments** performing **business processes** using **master data** and creating **transactions**.
 
@@ -134,7 +134,7 @@ flowchart TB
 
 </div>
 
-### Layer 2: ERP
+### LAYER 2: ERP
 
 ERP integrates those areas so Sales, Purchase, Inventory, Finance, and HR work from connected information rather than isolated systems.
 
@@ -149,7 +149,7 @@ flowchart LR
 
 </div>
 
-### Layer 3: Odoo
+### LAYER 3: ODOO
 
 Odoo implements those business domains through integrated apps and modules:
 
@@ -170,7 +170,7 @@ Odoo implements those business domains through integrated apps and modules:
 
 Chapter 2 explained that these apps are not separate programs with separate databases. They are modules inside one platform, installed selectively, linked by dependencies, and connected through shared records.
 
-### Layer 4: Shared Records
+### LAYER 4: SHARED RECORDS
 
 Applications share or relate business records.
 
@@ -189,7 +189,7 @@ The same contact identity can appear in an opportunity, a Sales Order, a deliver
 
 Some records are shared master data. Others are company-specific transactions. Multi-company setups add another design layer, but the core pattern remains: reuse identity, separate operational documents where the business requires it.
 
-### Layer 5: Customization
+### LAYER 5: CUSTOMIZATION
 
 Business-specific requirements can be addressed through:
 
@@ -204,7 +204,7 @@ flowchart LR
 
 Chapter 2 emphasized that professional Odoo work does not begin with Python. Standard capability, configuration, and Studio should be investigated first. Custom modules extend Odoo; they should not replace understanding of what already exists.
 
-### Layer 6: Deployment
+### LAYER 6: DEPLOYMENT
 
 Odoo eventually runs through a hosting and deployment approach such as:
 
@@ -227,7 +227,7 @@ flowchart TB
 
 Unit I built this stack from the ground up: first business concepts, then the Odoo platform, then individual applications and their connected flows. That foundation is what every technical chapter from Unit II onward will assume.
 
-### A quick sanity check
+### A QUICK SANITY CHECK
 
 If you can explain a realistic business scenario across master data, transactions, departments, applications, inventory changes, financial records, and Helpdesk, Unit I has achieved its purpose:
 

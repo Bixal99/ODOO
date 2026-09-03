@@ -1,4 +1,4 @@
-# Chapter 2 Exercise
+# CHAPTER 2 EXERCISE
 
 Try answering these without looking back at Content.md first. Answer in your own words, then compare with the complete solution at the bottom of this file.
 
@@ -8,7 +8,7 @@ For Odoo docs, hosting comparisons, GitHub repos, and practice environments, see
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Part A: Understanding](#part-a-understanding)
 - [Practical Classification Exercise](#practical-classification-exercise)
@@ -18,7 +18,7 @@ For Odoo docs, hosting comparisons, GitHub repos, and practice environments, see
 
 ---
 
-## Part A: Understanding
+## PART A: UNDERSTANDING
 
 1. Explain Odoo in your own words without using only the phrase "ERP software."
 
@@ -54,7 +54,7 @@ For Odoo docs, hosting comparisons, GitHub repos, and practice environments, see
 
 ---
 
-## Practical Classification Exercise
+## PRACTICAL CLASSIFICATION EXERCISE
 
 Classify each request as the first solution you would investigate:
 
@@ -77,15 +77,15 @@ The exact answer sometimes depends on details. That itself is an ERP lesson: you
 
 ---
 
-# Chapter 2 Exercise: Complete Solution
+# CHAPTER 2 EXERCISE: COMPLETE SOLUTION
 
 Work through the questions above first. The solutions below explain the reasoning Chapter 2 expects you to demonstrate.
 
 ---
 
-## Part A: Understanding
+## PART A: UNDERSTANDING
 
-### 1. What is Odoo?
+### 1. WHAT IS ODOO?
 
 Odoo is an integrated business application platform used to manage different parts of an organization through connected applications and shared business data.
 
@@ -112,7 +112,7 @@ So a strong definition is:
 
 ---
 
-### 2. Why is Odoo both an ERP system and a development framework?
+### 2. WHY IS ODOO BOTH AN ERP SYSTEM AND A DEVELOPMENT FRAMEWORK?
 
 It is an ERP system because it manages and connects business functions such as Sales, Purchase, Inventory, Accounting, HR, Manufacturing, and Projects.
 
@@ -135,7 +135,7 @@ The same platform provides both.
 
 ---
 
-### 3. What does the Odoo ecosystem include?
+### 3. WHAT DOES THE ODOO ECOSYSTEM INCLUDE?
 
 The Odoo ecosystem is everything surrounding and supporting the Odoo platform.
 
@@ -160,7 +160,7 @@ A useful model is:
 
 ---
 
-### 4. Community → Enterprise relationship
+### 4. COMMUNITY → ENTERPRISE RELATIONSHIP
 
 The correct mental model is not that Community and Enterprise are completely unrelated products.
 
@@ -176,7 +176,7 @@ Therefore the arrow **Community → Enterprise** means that Enterprise grows fro
 
 ---
 
-### 5. Why doesn't open source mean zero operational cost?
+### 5. WHY DOESN'T OPEN SOURCE MEAN ZERO OPERATIONAL COST?
 
 Open-source software can be free to obtain while still costing money to operate.
 
@@ -201,7 +201,7 @@ A better equation is:
 
 ---
 
-### 6. Edition vs hosting
+### 6. EDITION VS HOSTING
 
 These answer different questions.
 
@@ -219,7 +219,7 @@ You should never treat "Enterprise" and "Odoo.sh" as equivalent concepts. One co
 
 ---
 
-### 7. Odoo Online vs Odoo.sh vs Self-Hosted
+### 7. ODOO ONLINE VS ODOO.SH VS SELF-HOSTED
 
 | Area | Odoo Online | Odoo.sh | Self-Hosted |
 | --- | --- | --- | --- |
@@ -239,7 +239,7 @@ You should never treat "Enterprise" and "Odoo.sh" as equivalent concepts. One co
 
 ---
 
-### 8. Why is Odoo Online inappropriate for arbitrary custom Python modules?
+### 8. WHY IS ODOO ONLINE INAPPROPRIATE FOR ARBITRARY CUSTOM PYTHON MODULES?
 
 Because Odoo Online is a managed SaaS environment.
 
@@ -259,7 +259,7 @@ Therefore, if you require significant Python development, the likely candidates 
 
 ---
 
-### 9. App vs Module vs Addon
+### 9. APP VS MODULE VS ADDON
 
 **App**
 
@@ -281,7 +281,7 @@ For example, "We created a custom addon" normally means "We created a custom Odo
 
 ---
 
-### 10. Why is Apps ⊆ Modules useful?
+### 10. WHY IS APPS ⊆ MODULES USEFUL?
 
 Because an Odoo app is implemented as a module, but many modules are not major standalone applications.
 
@@ -294,7 +294,7 @@ Therefore:
 
 ---
 
-### 11. Employee vs Odoo user
+### 11. EMPLOYEE VS ODOO USER
 
 An employee represents someone from the business or HR perspective.
 
@@ -310,7 +310,7 @@ Also, some users may not be employees. For example, portal users might be custom
 
 ---
 
-### 12. Why use multiple companies in one database?
+### 12. WHY USE MULTIPLE COMPANIES IN ONE DATABASE?
 
 Suppose Bilal Office Supplies expands to Qatar, Pakistan, and UAE.
 
@@ -328,7 +328,7 @@ Conceptually, **one Odoo database** can contain multiple companies while still s
 
 ---
 
-### 13. Shared vs company-specific records
+### 13. SHARED VS COMPANY-SPECIFIC RECORDS
 
 **Potentially shared**
 
@@ -346,7 +346,7 @@ A useful distinction is **Shared Master Data** versus **Company-Specific Transac
 
 ---
 
-### 14. When is Studio preferable?
+### 14. WHEN IS STUDIO PREFERABLE?
 
 Studio is attractive when the customization is:
 
@@ -362,7 +362,7 @@ For such requirements, **Studio convenience > custom development cost**.
 
 ---
 
-### 15. When is custom development preferable?
+### 15. WHEN IS CUSTOM DEVELOPMENT PREFERABLE?
 
 Custom modules become more suitable when requirements involve:
 
@@ -382,39 +382,39 @@ That is clearly becoming an engineering problem rather than a simple visual cust
 
 ---
 
-## Practical Classification Exercise: Solutions
+## PRACTICAL CLASSIFICATION EXERCISE: SOLUTIONS
 
-### A. Add an additional text field to Customer
+### A. ADD AN ADDITIONAL TEXT FIELD TO CUSTOMER
 
 **First investigate: Studio**
 
 Assuming standard Odoo does not already provide the required field, this is a simple model and view customization and does not justify complex Python development.
 
-### B. Synchronize orders with proprietary API using signed HTTP requests
+### B. SYNCHRONIZE ORDERS WITH PROPRIETARY API USING SIGNED HTTP REQUESTS
 
 **First investigate: Custom Module**
 
 Because this likely requires HTTP requests, authentication, signatures, error handling, logging, retry logic, and synchronization status. That is software integration work.
 
-### C. Enable standard Purchase functionality
+### C. ENABLE STANDARD PURCHASE FUNCTIONALITY
 
 **Answer: Standard Functionality**
 
 Install or enable the existing Purchase application. There is no reason to build something Odoo already provides.
 
-### D. Change a business setting already available in Settings
+### D. CHANGE A BUSINESS SETTING ALREADY AVAILABLE IN SETTINGS
 
 **Answer: Configuration**
 
 If the system already provides the setting, configure it. Do not customize the platform unnecessarily.
 
-### E. Complicated custom pricing algorithm using multiple external systems
+### E. COMPLICATED CUSTOM PRICING ALGORITHM USING MULTIPLE EXTERNAL SYSTEMS
 
 **Answer: Custom Module**
 
 Because the requirement includes complex logic and external integration.
 
-### The professional decision sequence
+### THE PROFESSIONAL DECISION SEQUENCE
 
 The broader lesson is:
 

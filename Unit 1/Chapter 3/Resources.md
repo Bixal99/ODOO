@@ -1,6 +1,6 @@
 # UNIT I: FREE LEARNING RESOURCES
 
-## Chapter 3: Core Business Applications
+## CHAPTER 3: CORE BUSINESS APPLICATIONS
 
 Chapter 3 is **functional**, so the best resources are actual Odoo app demonstrations, official documentation, and a practice database from [Chapter 3 Content](Content.md).
 
@@ -10,7 +10,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## Chapter 3 Resources Table of Contents
+## CHAPTER 3 RESOURCES TABLE OF CONTENTS
 
 - [YouTube: Overview](#youtube-overview)
 - [YouTube: CRM](#youtube-crm)
@@ -30,11 +30,11 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Overview
+## YOUTUBE: OVERVIEW
 
 > **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
-### Odoo Full Beginner Course 2026
+### ODOO FULL BEGINNER COURSE 2026
 
 | | |
 |---|---|
@@ -52,9 +52,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: CRM
+## YOUTUBE: CRM
 
-### 1. CRM Basics: Pipelines and Opportunities
+### 1. CRM BASICS: PIPELINES AND OPPORTUNITIES
 
 | | |
 |---|---|
@@ -72,7 +72,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 2. CRM Lead and Opportunity Basics
+### 2. CRM LEAD AND OPPORTUNITY BASICS
 
 | | |
 |---|---|
@@ -89,9 +89,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Sales
+## YOUTUBE: SALES
 
-### Selling Products: Odoo Sales
+### SELLING PRODUCTS: ODOO SALES
 
 | | |
 |---|---|
@@ -109,9 +109,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Purchase
+## YOUTUBE: PURCHASE
 
-### 1. Purchase and RFQ Basics
+### 1. PURCHASE AND RFQ BASICS
 
 | | |
 |---|---|
@@ -129,7 +129,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 2. Purchase App Tour: RFQ to Receipt
+### 2. PURCHASE APP TOUR: RFQ TO RECEIPT
 
 | | |
 |---|---|
@@ -147,9 +147,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Inventory
+## YOUTUBE: INVENTORY
 
-### Inventory Basics: Receive and Store Stock
+### INVENTORY BASICS: RECEIVE AND STORE STOCK
 
 | | |
 |---|---|
@@ -167,9 +167,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Accounting / Invoicing
+## YOUTUBE: ACCOUNTING / INVOICING
 
-### Customer Invoice from Sales Order
+### CUSTOMER INVOICE FROM SALES ORDER
 
 | | |
 |---|---|
@@ -187,9 +187,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Projects and Timesheets
+## YOUTUBE: PROJECTS AND TIMESHEETS
 
-### 1. Timesheets Basics
+### 1. TIMESHEETS BASICS
 
 | | |
 |---|---|
@@ -207,7 +207,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 2. Measuring Project Profitability
+### 2. MEASURING PROJECT PROFITABILITY
 
 | | |
 |---|---|
@@ -225,9 +225,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Manufacturing
+## YOUTUBE: MANUFACTURING
 
-### 1. Bill of Materials Basics
+### 1. BILL OF MATERIALS BASICS
 
 | | |
 |---|---|
@@ -245,7 +245,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 2. Sales Order to Manufacturing Order
+### 2. SALES ORDER TO MANUFACTURING ORDER
 
 | | |
 |---|---|
@@ -263,7 +263,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 3. Manufacturing Order and Work Order Basics
+### 3. MANUFACTURING ORDER AND WORK ORDER BASICS
 
 | | |
 |---|---|
@@ -280,9 +280,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Website / eCommerce
+## YOUTUBE: WEBSITE / ECOMMERCE
 
-### 1. Building Your Digital Storefront with Odoo eCommerce
+### 1. BUILDING YOUR DIGITAL STOREFRONT WITH ODOO ECOMMERCE
 
 | | |
 |---|---|
@@ -300,7 +300,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 2. Create Your Product: Odoo eCommerce
+### 2. CREATE YOUR PRODUCT: ODOO ECOMMERCE
 
 | | |
 |---|---|
@@ -317,9 +317,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Point of Sale
+## YOUTUBE: POINT OF SALE
 
-### 1. Manage Your Shop with Odoo POS
+### 1. MANAGE YOUR SHOP WITH ODOO POS
 
 | | |
 |---|---|
@@ -336,7 +336,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-### 2. Sell Products: Odoo POS
+### 2. SELL PRODUCTS: ODOO POS
 
 | | |
 |---|---|
@@ -354,9 +354,9 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## YouTube: Helpdesk
+## YOUTUBE: HELPDESK
 
-### After-Sales Features: Odoo Helpdesk
+### AFTER-SALES FEATURES: ODOO HELPDESK
 
 | | |
 |---|---|
@@ -374,7 +374,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ---
 
-## Official Documentation
+## OFFICIAL DOCUMENTATION
 
 All links below target **Odoo 19.0** documentation.
 
@@ -391,17 +391,17 @@ All links below target **Odoo 19.0** documentation.
 
 ---
 
-## Repositories
+## REPOSITORIES
 
 You do **not** need to understand their code yet. For now, they are useful for seeing how Odoo business domains correspond to actual addon repositories.
 
-### Official Odoo
+### OFFICIAL ODOO
 
 | Repository | Relevant to | Link |
 |---|---|---|
 | **odoo/odoo** | All Chapter 3 apps (trace modules such as Sales, Purchase, CRM, Inventory, Accounting later) | [GitHub: odoo/odoo](https://github.com/odoo/odoo) |
 
-### OCA (Odoo Community Association)
+### OCA (ODOO COMMUNITY ASSOCIATION)
 
 These show real professional Odoo extension patterns rather than toy examples. Bookmark for later units.
 
@@ -418,7 +418,7 @@ These show real professional Odoo extension patterns rather than toy examples. B
 
 ---
 
-## Practice / Hands-On
+## PRACTICE / HANDS-ON
 
 The best Chapter 3 exercise is **not coding**.
 
@@ -451,7 +451,7 @@ flowchart LR
 
 </div>
 
-### Environments to use
+### ENVIRONMENTS TO USE
 
 | Environment | Best for | Link |
 |---|---|---|
@@ -461,7 +461,7 @@ flowchart LR
 
 ---
 
-## Best Resource Order for Unit I
+## BEST RESOURCE ORDER FOR UNIT I
 
 If you do not want to consume everything across all three chapters, use this sequence:
 

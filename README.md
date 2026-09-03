@@ -1,4 +1,4 @@
-# ODOO Development & Engineering Study Guide
+# ODOO DEVELOPMENT & ENGINEERING STUDY GUIDE
 
 > **From Zero to Odoo Engineer** — A structured, chapter-by-chapter roadmap for learning ERP fundamentals, Odoo development, production engineering, and real-world Odoo engineering practice.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [About](#about)
 - [Learning Path](#learning-path)
@@ -27,7 +27,7 @@
 
 ---
 
-## About
+## ABOUT
 
 This repository is a **comprehensive Odoo study guide** designed to take learners from no prior ERP or Odoo knowledge to production-ready **Odoo Engineer** competency. It is organized as a detailed roadmap with **24 units**, **96 chapters**, and hundreds of granular topics covering business fundamentals, backend development, frontend (OWL), integrations, deployment, and professional engineering practices.
 
@@ -42,7 +42,7 @@ Each unit builds on the previous one — starting with *why* businesses use ERP 
 
 ---
 
-## Learning Path
+## LEARNING PATH
 
 | Phase | Units | Focus |
 |-------|-------|-------|
@@ -54,7 +54,7 @@ Each unit builds on the previous one — starting with *why* businesses use ERP 
 
 ---
 
-## Who Is This For?
+## WHO IS THIS FOR?
 
 - **Beginners** who want a clear, structured path into Odoo development
 - **Python developers** transitioning into ERP and Odoo customization
@@ -64,7 +64,7 @@ Each unit builds on the previous one — starting with *why* businesses use ERP 
 
 ---
 
-## Prerequisites
+## PREREQUISITES
 
 | Area | Minimum Level |
 |------|---------------|
@@ -78,7 +78,7 @@ No prior ERP or Odoo experience is required — Unit I starts from business proc
 
 ---
 
-## Repository Structure
+## REPOSITORY STRUCTURE
 
 Each unit follows the same organizational pattern: **chapters** for teaching content, then **conclusion**, **unit exercise**, and **unit project** at the unit level.
 
@@ -113,7 +113,7 @@ ODOO/
         └── Project.md                     # Unit capstone project + solution + next-unit transition
 ```
 
-### Unit I study order
+### UNIT I STUDY ORDER
 
 Work through Unit I in this sequence:
 
@@ -136,9 +136,9 @@ The master roadmap lives at:
 
 ---
 
-## Curriculum Overview
+## CURRICULUM OVERVIEW
 
-### Unit I: Understand the Business Before the Code
+### UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
 Chapters 1–3 · ERP fundamentals, Odoo ecosystem, core business applications
 
 Learn business processes, departments, master data, and how Odoo apps (CRM, Sales, Inventory, Accounting, etc.) fit together before writing any code.
@@ -155,168 +155,168 @@ Unit-level capstone (**start here after Chapter 3**): [Conclusion](Unit%201/Conc
 
 ---
 
-### Unit II: How Odoo Actually Works
+### UNIT II: HOW ODOO ACTUALLY WORKS
 Chapters 4–6 · Architecture, dev environment, source code structure
 
 Three-tier architecture, ORM, PostgreSQL, filestore, workers, Python/PostgreSQL setup, and navigating the Odoo source tree.
 
 ---
 
-### Unit III: Your First Odoo Module
+### UNIT III: YOUR FIRST ODOO MODULE
 Chapters 7–8 · Module anatomy and lifecycle
 
 `__manifest__.py`, models, views, security, installation, upgrades, and module flags.
 
 ---
 
-### Unit IV: Modeling Business Data
+### UNIT IV: MODELING BUSINESS DATA
 Chapters 9–12 · Models, fields, relationships, computed fields
 
 `models.Model`, field types, Many2one/One2many/Many2many, `@api.depends`, stored vs non-stored computations.
 
 ---
 
-### Unit V: Mastering the Odoo ORM
+### UNIT V: MASTERING THE ODOO ORM
 Chapters 13–17 · Environment, CRUD, domains, recordsets, performance
 
 `env`, `search()`, domains, recordset operations, prefetching, N+1 queries, `read_group()`, and ORM internals.
 
 ---
 
-### Unit VI: Business Rules & Workflows
+### UNIT VI: BUSINESS RULES & WORKFLOWS
 Chapters 18–21 · Methods, constraints, onchange, state machines
 
 Method overrides, `@api.constrains`, `@api.onchange`, draft/confirmed/done workflows, and auditability.
 
 ---
 
-### Unit VII: Building the User Interface
+### UNIT VII: BUILDING THE USER INTERFACE
 Chapters 22–26 · XML, views, actions, inheritance
 
 Form/list/kanban/search views, window actions, menus, XPath inheritance, and upgrade-safe view extensions.
 
 ---
 
-### Unit VIII: Security & Multi-Company
+### UNIT VIII: SECURITY & MULTI-COMPANY
 Chapters 27–31 · Users, ACLs, record rules, multi-company
 
 Groups, `ir.model.access`, `ir.rule`, `sudo()`, field security, `company_id`, and cross-company patterns.
 
 ---
 
-### Unit IX: Extending Existing Odoo
+### UNIT IX: EXTENDING EXISTING ODOO
 Chapters 32–35 · Inheritance, mixins, real module extensions
 
 `_inherit`, `_inherits`, `mail.thread`, extending `sale.order`, `stock.picking`, `account.move`, and more.
 
 ---
 
-### Unit X: Advanced Business Features
+### UNIT X: ADVANCED BUSINESS FEATURES
 Chapters 36–42 · Wizards, cron, automation, mail, reports, data
 
 TransientModel wizards, `ir.sequence`, `ir.cron`, server actions, QWeb reports, import/export, and demo data.
 
 ---
 
-### Unit XI: Internationalization & Localization
+### UNIT XI: INTERNATIONALIZATION & LOCALIZATION
 Chapter 43 · Translations and locale
 
 `_()` translation function, `.po` files, translatable fields, and localization modules.
 
 ---
 
-### Unit XII: Web Development with Odoo
+### UNIT XII: WEB DEVELOPMENT WITH ODOO
 Chapters 44–46 · Controllers, website, portal
 
 `@http.route`, QWeb pages, website forms, portal users, and customer-facing security.
 
 ---
 
-### Unit XIII: APIs & Integrations
+### UNIT XIII: APIS & INTEGRATIONS
 Chapters 47–52 · External API, webhooks, payments
 
 JSON-RPC/XML-RPC, custom REST endpoints, webhook security, third-party sync, and payment provider integration.
 
 ---
 
-### Unit XIV: Modern Odoo Frontend
+### UNIT XIV: MODERN ODOO FRONTEND
 Chapters 53–58 · JavaScript, OWL, assets, client actions
 
 OWL components, services, registries, `patch()`, custom field widgets, and client actions.
 
 ---
 
-### Unit XV: Files, Attachments & Media
+### UNIT XV: FILES, ATTACHMENTS & MEDIA
 Chapter 59 · Filestore and attachments
 
 `ir.attachment`, binary/image fields, upload security, and access tokens.
 
 ---
 
-### Unit XVI: PostgreSQL & Performance
+### UNIT XVI: POSTGRESQL & PERFORMANCE
 Chapters 60–65 · Database structure, SQL, transactions, optimization
 
 Schema inspection, EXPLAIN ANALYZE, indexes, ORM performance, profiling, and benchmarking.
 
 ---
 
-### Unit XVII: Testing & Debugging
+### UNIT XVII: TESTING & DEBUGGING
 Chapters 66–71 · Logging, unit tests, security tests, frontend tests
 
 `TransactionCase`, test tours, HOOT, query count tests, and root cause analysis.
 
 ---
 
-### Unit XVIII: CLI & Developer Tooling
+### UNIT XVIII: CLI & DEVELOPER TOOLING
 Chapter 72 · Odoo command-line interface
 
 `odoo-bin`, install/upgrade flags, `--dev`, shell, scaffold, and test tags.
 
 ---
 
-### Unit XIX: Deployment & Operations
+### UNIT XIX: DEPLOYMENT & OPERATIONS
 Chapters 73–81 · Config, Linux, Nginx, workers, Docker, monitoring
 
 Production configuration, systemd, HTTPS, backups, Odoo.sh, Docker Compose, and incident diagnosis.
 
 ---
 
-### Unit XX: Upgrades, Migrations & Maintenance
+### UNIT XX: UPGRADES, MIGRATIONS & MAINTENANCE
 Chapters 82–88 · Versioning, schema changes, hooks, legacy code
 
 Migration scripts, `pre_init_hook` / `post_init_hook`, upgrade-safe customization, and technical debt.
 
 ---
 
-### Unit XXI: Functional Odoo for Developers
+### UNIT XXI: FUNCTIONAL ODOO FOR DEVELOPERS
 Chapter 89 · End-to-end business flows
 
 Deep functional coverage of Sales, Purchase, Inventory, Accounting, MRP, eCommerce, POS, and document flows.
 
 ---
 
-### Unit XXII: Real Odoo Engineering
+### UNIT XXII: REAL ODOO ENGINEERING
 Chapters 90–94 · Requirements, architecture, maintainability, Git
 
 ERP solution design, configuration vs customization decisions, code quality, and team collaboration workflows.
 
 ---
 
-### Unit XXIII: Grand Odoo Engineering Capstone
+### UNIT XXIII: GRAND ODOO ENGINEERING CAPSTONE
 Chapter 95 · Production ERP project
 
 Full-stack capstone: requirements → models → security → UI → API → tests → deployment → documentation.
 
 ---
 
-### Unit XXIV: Interview & Odoo Engineer Readiness
+### UNIT XXIV: INTERVIEW & ODOO ENGINEER READINESS
 Chapter 96 · Knowledge review, live engineering, final assessment
 
 Structured review of all topics, live coding/debugging exercises, mock interviews, and portfolio defense.
 
 ---
 
-## How to Use This Guide
+## HOW TO USE THIS GUIDE
 
 1. **Start at Unit I** — Even experienced developers benefit from the business context in early units.
 2. **Follow the roadmap sequentially** — Later units assume knowledge from earlier chapters.
@@ -329,7 +329,7 @@ Structured review of all topics, live coding/debugging exercises, mock interview
 
 ---
 
-## Recommended Study Order
+## RECOMMENDED STUDY ORDER
 
 ```mermaid
 flowchart TD
@@ -346,7 +346,7 @@ flowchart TD
 
 ---
 
-## Technologies Covered
+## TECHNOLOGIES COVERED
 
 | Category | Technologies & Concepts |
 |----------|-------------------------|
@@ -360,7 +360,7 @@ flowchart TD
 
 ---
 
-## Official Resources
+## OFFICIAL RESOURCES
 
 Use these alongside this study guide:
 
@@ -374,7 +374,7 @@ Use these alongside this study guide:
 
 ---
 
-## Contributing
+## CONTRIBUTING
 
 Contributions are welcome! This guide grows best with community input.
 
@@ -392,13 +392,13 @@ Suggestions for contributions:
 
 ---
 
-## License
+## LICENSE
 
 This study guide is provided as an open educational resource. Please refer to the repository for license details. When sharing or adapting content, credit the original repository and respect Odoo's own licensing terms for Odoo source code and trademarks.
 
 ---
 
-## Author
+## AUTHOR
 
 **Repository:** [github.com/Bixal99/ODOO](https://github.com/Bixal99/ODOO)
 

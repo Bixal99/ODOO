@@ -1,6 +1,6 @@
 # UNIT I: FREE LEARNING RESOURCES
 
-## Chapter 2: Understanding Odoo
+## CHAPTER 2: UNDERSTANDING ODOO
 
 These resources become **strongly Odoo-specific**: editions, hosting, apps/modules, users, companies, shared records, Studio, and customization from [Chapter 2 Content](Content.md).
 
@@ -10,7 +10,7 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-## Chapter 2 Resources Table of Contents
+## CHAPTER 2 RESOURCES TABLE OF CONTENTS
 
 - [YouTube](#youtube)
 - [Official Odoo Learning Website](#official-odoo-learning-website)
@@ -21,11 +21,11 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-## YouTube
+## YOUTUBE
 
 > **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
-### 1. Odoo Beginner's Guide
+### 1. ODOO BEGINNER'S GUIDE
 
 | | |
 |---|---|
@@ -43,7 +43,7 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-### 2. Meet Odoo 19's Best Features
+### 2. MEET ODOO 19'S BEST FEATURES
 
 | | |
 |---|---|
@@ -61,7 +61,7 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-### 3. Odoo Studio: Build and Customize Apps
+### 3. ODOO STUDIO: BUILD AND CUSTOMIZE APPS
 
 | | |
 |---|---|
@@ -79,7 +79,7 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-### 4. Odoo Online vs Odoo.sh vs On-Premise
+### 4. ODOO ONLINE VS ODOO.SH VS ON-PREMISE
 
 | | |
 |---|---|
@@ -97,7 +97,7 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-### 5. Working with Odoo.sh
+### 5. WORKING WITH ODOO.SH
 
 | | |
 |---|---|
@@ -115,7 +115,7 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-### 6. Is Self-Hosted Odoo Right for You?
+### 6. IS SELF-HOSTED ODOO RIGHT FOR YOU?
 
 | | |
 |---|---|
@@ -133,9 +133,9 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-## Official Odoo Learning Website
+## OFFICIAL ODOO LEARNING WEBSITE
 
-### Odoo Learn (Odoo Slides)
+### ODOO LEARN (ODOO SLIDES)
 
 | | |
 |---|---|
@@ -147,11 +147,11 @@ Use them to see the current product generation, not only to read concepts.
 
 ---
 
-## Official Documentation
+## OFFICIAL DOCUMENTATION
 
 All links below target **Odoo 19.0** documentation unless noted.
 
-### 1. Odoo 19 User Documentation (Main Entry)
+### 1. ODOO 19 USER DOCUMENTATION (MAIN ENTRY)
 
 | | |
 |---|---|
@@ -162,7 +162,7 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ---
 
-### 2. Models, Modules and Apps
+### 2. MODELS, MODULES AND APPS
 
 | | |
 |---|---|
@@ -172,7 +172,7 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ---
 
-### 3. Odoo Studio
+### 3. ODOO STUDIO
 
 | | |
 |---|---|
@@ -182,7 +182,7 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ---
 
-### 4. Odoo.sh Documentation
+### 4. ODOO.SH DOCUMENTATION
 
 | | |
 |---|---|
@@ -194,7 +194,7 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ---
 
-### 5. Self-Hosted / Source Installation
+### 5. SELF-HOSTED / SOURCE INSTALLATION
 
 | | |
 |---|---|
@@ -204,7 +204,7 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ---
 
-### 6. Odoo Administration
+### 6. ODOO ADMINISTRATION
 
 | | |
 |---|---|
@@ -214,11 +214,11 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ---
 
-## Repositories
+## REPOSITORIES
 
 Do **not** try to understand the entire codebase yet. For now, browse structure, application names, and module directories.
 
-### 1. Official Odoo Source Code
+### 1. OFFICIAL ODOO SOURCE CODE
 
 | | |
 |---|---|
@@ -230,7 +230,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 2. Official Odoo Documentation Source
+### 2. OFFICIAL ODOO DOCUMENTATION SOURCE
 
 | | |
 |---|---|
@@ -241,7 +241,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 3. Official Odoo Tutorials Repository
+### 3. OFFICIAL ODOO TUTORIALS REPOSITORY
 
 | | |
 |---|---|
@@ -253,7 +253,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 4. Odoo Technical Training
+### 4. ODOO TECHNICAL TRAINING
 
 | | |
 |---|---|
@@ -264,7 +264,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 5. Odoo Technical Training Solutions
+### 5. ODOO TECHNICAL TRAINING SOLUTIONS
 
 | | |
 |---|---|
@@ -275,7 +275,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 6. Awesome Odoo
+### 6. AWESOME ODOO
 
 | | |
 |---|---|
@@ -287,9 +287,9 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-## Practice / Lab Environments
+## PRACTICE / LAB ENVIRONMENTS
 
-### 1. Odoo Education: Free Practice Database
+### 1. ODOO EDUCATION: FREE PRACTICE DATABASE
 
 | | |
 |---|---|
@@ -303,7 +303,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 2. Free Odoo Online Trial
+### 2. FREE ODOO ONLINE TRIAL
 
 | | |
 |---|---|
@@ -315,7 +315,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ---
 
-### 3. Odoo Runbot
+### 3. ODOO RUNBOT
 
 | | |
 |---|---|
@@ -331,7 +331,7 @@ Not as: *"This is where I will store my learning project."*
 
 ---
 
-## Recommended Study Order
+## RECOMMENDED STUDY ORDER
 
 If you do not want to consume everything, use this sequence for Chapter 2:
 

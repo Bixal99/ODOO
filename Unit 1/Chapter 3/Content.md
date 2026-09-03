@@ -1,6 +1,6 @@
 # UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
 
-## Chapter 3: Core Business Applications
+## CHAPTER 3: CORE BUSINESS APPLICATIONS
 
 The roadmap makes Chapter 3 the final chapter of Unit I and requires us to cover **Contacts**, **CRM**, **Sales**, **Purchase**, **Inventory**, **Accounting / Invoicing**, **Employees / HR**, **Projects**, **Timesheets**, **Manufacturing**, **Maintenance**, **Website**, **eCommerce**, **Point of Sale**, **Helpdesk**, and **End-to-End Document Flow** before moving into Odoo architecture.
 
@@ -8,7 +8,7 @@ The roadmap itself gives the scope and hierarchy; the detailed explanations belo
 
 ---
 
-## Chapter 3 Table of Contents
+## CHAPTER 3 TABLE OF CONTENTS
 
 - [**Before We Start: The Most Important Mental Model**](#before-we-start-the-most-important-mental-model)
 - [**3.1** Contacts](#31-contacts)
@@ -39,7 +39,7 @@ The roadmap itself gives the scope and hierarchy; the detailed explanations belo
 
 ---
 
-## Before We Start: The Most Important Mental Model
+## BEFORE WE START: THE MOST IMPORTANT MENTAL MODEL
 
 Do not imagine these applications as 15 unrelated programs.
 
@@ -82,9 +82,9 @@ That integration is the main idea of this entire chapter. Each application has i
 
 ---
 
-## 3.1 Contacts
+## 3.1 CONTACTS
 
-### Intuition
+### INTUITION
 
 Every business process involves people or organizations.
 
@@ -92,7 +92,7 @@ You sell to someone. You purchase from someone. You invoice someone. You contact
 
 Odoo therefore needs a central way to represent these parties. That is the purpose of **Contacts**.
 
-### Definition
+### DEFINITION
 
 **Contacts** is the business application and domain used to maintain information about people and organizations that interact with the company.
 
@@ -108,7 +108,7 @@ Typical examples include:
 
 This strongly connects to Chapter 1's idea of **master data**. A customer contact is usually not a transaction. It is reusable information that many transactions refer to.
 
-### Why Contacts Exists
+### WHY CONTACTS EXISTS
 
 Suppose ABC Trading buys from you ten times.
 
@@ -147,7 +147,7 @@ flowchart TB
 
 </div>
 
-### Company Contact vs Individual Contact
+### COMPANY CONTACT VS INDIVIDUAL CONTACT
 
 Imagine **ABC Trading LLC** has:
 
@@ -167,7 +167,7 @@ and:
 
 Those may be different people. A quotation might go to Hassan in Purchasing, while the invoice goes to Sara in Finance. Contacts must support that distinction.
 
-### Practical Odoo Use
+### PRACTICAL ODOO USE
 
 Contacts becomes foundational because many other apps need a party to associate with a record.
 
@@ -179,7 +179,7 @@ Contacts becomes foundational because many other apps need a party to associate 
 
 That means Contacts is not merely an address book. It is a **shared master-data layer** that other applications depend on.
 
-### Common Mistake
+### COMMON MISTAKE
 
 A beginner may create duplicate contacts:
 
@@ -200,7 +200,7 @@ Contacts is where that discipline begins. Every duplicate contact you allow toda
 
 We already separated CRM from ERP in Chapter 1. Now we place CRM inside Odoo.
 
-### Intuition
+### INTUITION
 
 Sales does not always start with an order.
 
@@ -214,7 +214,7 @@ Often it starts with uncertainty. Someone may:
 
 At that point, there may be no confirmed sale. CRM manages that earlier stage: the period of possibility before a commercial commitment exists.
 
-### Lead and Opportunity Thinking
+### LEAD AND OPPORTUNITY THINKING
 
 Imagine someone says:
 
@@ -235,7 +235,7 @@ flowchart LR
 
 </div>
 
-### Pipeline Concept
+### PIPELINE CONCEPT
 
 A **sales pipeline** represents opportunities progressing through stages.
 
@@ -252,7 +252,7 @@ flowchart LR
 
 The exact stages depend on the business. A real estate company's pipeline could differ from a software consultancy's pipeline. The structure is flexible; the purpose is consistent: give salespeople a shared view of where each potential deal stands.
 
-### Why CRM Exists
+### WHY CRM EXISTS
 
 Without CRM, salespeople often manage prospects through:
 
@@ -271,7 +271,7 @@ Problems appear quickly:
 
 CRM gives structure to the process. It turns informal interest into trackable records with owners, stages, expected values, and planned activities.
 
-### CRM vs Sales
+### CRM VS SALES
 
 This distinction matters greatly.
 
@@ -293,7 +293,7 @@ flowchart LR
 
 CRM handles the relationship and opportunity. Sales handles the commercial transaction. They connect, but they are not the same domain.
 
-### Example
+### EXAMPLE
 
 Ahmed speaks with Gulf Construction. They may require **200 monitors**.
 
@@ -309,7 +309,7 @@ Once requirements become clear, a quotation can be created.
 
 Thus: **CRM** feeds **Sales** when the business moves from "maybe" to "let us propose terms."
 
-### Common Mistake
+### COMMON MISTAKE
 
 Do not treat every existing customer as a CRM opportunity.
 
@@ -321,9 +321,9 @@ CRM therefore sits upstream of Sales in many organizations. It does not replace 
 
 ---
 
-## 3.3 Sales
+## 3.3 SALES
 
-### Intuition
+### INTUITION
 
 CRM asks:
 
@@ -335,7 +335,7 @@ Sales asks:
 
 Sales is where commercial language becomes concrete: products, quantities, prices, discounts, taxes, and payment terms.
 
-### Core Sales Flow
+### CORE SALES FLOW
 
 A common sales process is:
 
@@ -360,7 +360,7 @@ A **quotation** is a commercial proposal. It can specify:
 
 Once the customer accepts and the sale is confirmed, the quotation becomes a confirmed Sales Order conceptually.
 
-### Why a Sales Order Matters
+### WHY A SALES ORDER MATTERS
 
 A confirmed sale is not merely a PDF. It is a **business commitment**.
 
@@ -373,7 +373,7 @@ Suppose the order contains **20 monitors**. This may mean:
 
 Therefore, a **Sales Order** can become a trigger for other processes across the organization.
 
-### Example
+### EXAMPLE
 
 Customer: **ABC Trading**
 
@@ -385,7 +385,7 @@ $$ 10 \times 1{,}000 = 10{,}000 \text{ QAR} $$
 
 The Sales Order captures the commercial agreement. Inventory then deals with the physical movement. Accounting deals with the financial consequence. Sales sits at the center of the commercial promise, not at the end of fulfillment.
 
-### Sales Is Not Inventory
+### SALES IS NOT INVENTORY
 
 A Sales Order does not itself mean that stock physically moved. It records the commercial obligation. That distinction is critical.
 
@@ -397,7 +397,7 @@ A Sales Order does not itself mean that stock physically moved. It records the c
 
 These are related records in different business domains. Confusing them leads to bad process design and bad development assumptions.
 
-### Why Developers Must Understand This
+### WHY DEVELOPERS MUST UNDERSTAND THIS
 
 Later you may encounter models such as:
 
@@ -417,7 +417,7 @@ Sales creates demand and commercial obligation. Other domains fulfill that oblig
 
 ---
 
-## 3.4 Purchase
+## 3.4 PURCHASE
 
 Purchase handles the opposite commercial direction.
 
@@ -426,7 +426,7 @@ Purchase handles the opposite commercial direction.
 | **Sales** | Company → Customer |
 | **Purchase** | Vendor → Company |
 
-### Intuition
+### INTUITION
 
 Your warehouse needs 50 keyboards. You don't have enough.
 
@@ -439,7 +439,7 @@ Someone must:
 
 That is **procurement**, and Purchase is the application domain that manages it.
 
-### Typical Flow
+### TYPICAL FLOW
 
 Conceptually:
 
@@ -454,7 +454,7 @@ flowchart LR
 
 Notice how several apps participate. Purchase handles the commercial agreement with the vendor. Inventory handles receiving goods. Accounting handles the vendor bill and payment.
 
-### RFQ vs Purchase Order
+### RFQ VS PURCHASE ORDER
 
 An **RFQ** is typically an unconfirmed request or proposed purchase. A **Purchase Order** represents the approved and confirmed purchasing commitment.
 
@@ -471,7 +471,7 @@ flowchart LR
 
 The RFQ explores options; the Purchase Order commits the company to buy.
 
-### Example
+### EXAMPLE
 
 Warehouse needs **50 keyboards**.
 
@@ -485,7 +485,7 @@ Purchase handles the commercial order. But the stock should not increase merely 
 
 Why? Because goods haven't necessarily arrived yet. That is Inventory's job.
 
-### Purchase vs Inventory
+### PURCHASE VS INVENTORY
 
 Important:
 
@@ -503,11 +503,11 @@ Purchase tells the organization what it agreed to buy. Inventory tells the organ
 
 ---
 
-## 3.5 Inventory
+## 3.5 INVENTORY
 
 Inventory is one of the most important applications for understanding ERP integration.
 
-### Intuition
+### INTUITION
 
 Sales says:
 
@@ -523,7 +523,7 @@ Inventory answers:
 
 Inventory is the operational truth of physical stock.
 
-### Inventory Has Two Major Concerns
+### INVENTORY HAS TWO MAJOR CONCERNS
 
 **Quantity:** How much do we have?
 
@@ -531,7 +531,7 @@ Inventory is the operational truth of physical stock.
 
 That means Inventory is more than `product quantity = 50`. It needs to represent movement: incoming, outgoing, internal transfers, and reservations.
 
-### Physical Flow
+### PHYSICAL FLOW
 
 Example:
 
@@ -546,7 +546,7 @@ flowchart LR
 
 Each arrow represents a movement of goods.
 
-### Incoming Movement
+### INCOMING MOVEMENT
 
 Purchase order: **50 keyboards ordered**
 
@@ -556,7 +556,7 @@ does not necessarily mean:
 
 Only after receipt is processed should inventory reflect the actual physical movement according to the workflow.
 
-### Outgoing Movement
+### OUTGOING MOVEMENT
 
 Similarly, Sales order: **20 monitors sold** may create an outgoing delivery requirement.
 
@@ -569,7 +569,7 @@ Warehouse operations then:
 
 The Sales Order created the demand; Inventory executes the physical movement.
 
-### Stock States
+### STOCK STATES
 
 Even at a basic level, inventory thinking needs distinctions such as:
 
@@ -584,7 +584,7 @@ Only **20** may effectively remain available for new demand.
 
 So raw "quantity" alone may not tell the whole story. ERP inventory tracks not just totals but commitments against those totals.
 
-### Locations
+### LOCATIONS
 
 Warehouses can also have internal locations.
 
@@ -601,7 +601,7 @@ flowchart LR
 
 This allows ERP to represent physical operations more accurately. Goods do not teleport from the loading dock to the customer; they move through defined locations.
 
-### Why Inventory Is Central
+### WHY INVENTORY IS CENTRAL
 
 Inventory connects strongly to:
 
@@ -614,7 +614,7 @@ Inventory connects strongly to:
 
 This is why changes in stock logic can have wide consequences. A small change in how reservations work can affect sales availability, manufacturing planning, and financial valuation.
 
-### Common Mistake
+### COMMON MISTAKE
 
 Do not assume Sales creates inventory.
 
@@ -628,11 +628,11 @@ These are different concepts. Sales says what must be fulfilled. Inventory recor
 
 ---
 
-## 3.6 Accounting / Invoicing
+## 3.6 ACCOUNTING / INVOICING
 
 Now we move from operational events to financial consequences.
 
-### Intuition
+### INTUITION
 
 A company can sell many products and still fail financially if it doesn't properly track:
 
@@ -644,7 +644,7 @@ A company can sell many products and still fail financially if it doesn't proper
 
 **Accounting / Invoicing** exists to represent the financial side of business activity.
 
-### Customer Invoice
+### CUSTOMER INVOICE
 
 Suppose you delivered **10 monitors** at **1,000 QAR each**.
 
@@ -654,7 +654,7 @@ $$ 10{,}000 \text{ QAR} $$
 
 The invoice says: the customer owes us this amount according to the transaction.
 
-### Vendor Bill
+### VENDOR BILL
 
 Suppose the company purchased **50 keyboards** for **7,500 QAR**.
 
@@ -665,7 +665,7 @@ The vendor bill represents the company's obligation to pay the supplier.
 | **Customer Invoice** | Customer owes us |
 | **Vendor Bill** | We owe the vendor |
 
-### Payment Is a Separate Event
+### PAYMENT IS A SEPARATE EVENT
 
 Creating an invoice does not mean money has arrived. This distinction is crucial.
 
@@ -682,7 +682,7 @@ Example:
 
 Later the customer pays. Only then does the payment process occur. Finance tracks both the obligation and the settlement as separate events.
 
-### Accounts
+### ACCOUNTS
 
 Chapter 1 introduced financial accounts as master and configuration data.
 
@@ -706,7 +706,7 @@ For example:
 
 Operational work creates financial records; Accounting captures the monetary consequence.
 
-### Why This Connection Matters
+### WHY THIS CONNECTION MATTERS
 
 A standalone warehouse system may know that goods were delivered. A standalone accounting system may not know why.
 
@@ -716,15 +716,15 @@ Accounting is not an island. It is the financial mirror of operational reality.
 
 ---
 
-## 3.7 Employees / HR
+## 3.7 EMPLOYEES / HR
 
-### Intuition
+### INTUITION
 
 ERP isn't only about products and money. Organizations also manage people.
 
 Employees participate in business processes. HR applications represent people as business resources with their own records, relationships, and workflows.
 
-### Employee Master Data
+### EMPLOYEE MASTER DATA
 
 An employee record may describe:
 
@@ -737,7 +737,7 @@ An employee record may describe:
 
 This is another example of **master data**. Like customers and products, an employee record is reusable across many processes.
 
-### Employee vs User
+### EMPLOYEE VS USER
 
 We covered this in Chapter 2. Remember:
 
@@ -748,7 +748,7 @@ We covered this in Chapter 2. Remember:
 
 An employee may have an Odoo user account, but the concepts are still different. Not every employee needs system access, and not every system user is an employee.
 
-### HR Processes
+### HR PROCESSES
 
 HR-related applications can support processes around areas such as:
 
@@ -762,7 +762,7 @@ HR-related applications can support processes around areas such as:
 
 The exact app set can vary, but the core concept is stable: **people are business resources with their own processes and records**.
 
-### Integration Example
+### INTEGRATION EXAMPLE
 
 Employee: **Ahmed** works as salesperson.
 
@@ -786,11 +786,11 @@ Employees / HR reminds us that ERP is not only about products and invoices. Peop
 
 ---
 
-## 3.8 Projects
+## 3.8 PROJECTS
 
 Project management becomes important when the business performs work over time rather than simply shipping products.
 
-### Intuition
+### INTUITION
 
 Suppose your company sells:
 
@@ -808,7 +808,7 @@ You cannot simply deliver a box from the warehouse. The company must perform a s
 
 This is **project work**: structured effort over time with multiple contributors and milestones.
 
-### Project vs Task
+### PROJECT VS TASK
 
 A **project** is the broader body of work. A **task** is a specific unit of work inside it.
 
@@ -832,7 +832,7 @@ flowchart TB
 
 </div>
 
-### Why Projects Exist
+### WHY PROJECTS EXIST
 
 Projects help coordinate:
 
@@ -850,7 +850,7 @@ This is especially important for:
 - professional services,
 - internal initiatives.
 
-### Connection to Sales
+### CONNECTION TO SALES
 
 Suppose Sales sells **100 consulting hours**.
 
@@ -873,13 +873,13 @@ Projects matter whenever fulfillment is work performed over time rather than a p
 
 ---
 
-## 3.9 Timesheets
+## 3.9 TIMESHEETS
 
 Timesheets answer:
 
 > How much time did someone spend on work?
 
-### Intuition
+### INTUITION
 
 Suppose a consultant works **6 hours** on customer A. The next day: **4 hours**.
 
@@ -895,7 +895,7 @@ The business may need this information for:
 
 Time is a resource. Timesheets make that resource visible and measurable.
 
-### Project Connection
+### PROJECT CONNECTION
 
 Timesheets are often associated with:
 
@@ -913,7 +913,7 @@ Total project effort:
 
 $$ 4 + 3 + 2 = 9 \text{ hours} $$
 
-### Billable vs Internal Time
+### BILLABLE VS INTERNAL TIME
 
 Not all time has the same business meaning.
 
@@ -924,7 +924,7 @@ Not all time has the same business meaning.
 
 This distinction matters for service companies. Billable hours drive revenue; internal hours drive cost and capacity planning.
 
-### Integration
+### INTEGRATION
 
 Conceptually:
 
@@ -954,11 +954,11 @@ Timesheets turn invisible labor into measurable business data. For product compa
 
 ---
 
-## 3.10 Manufacturing
+## 3.10 MANUFACTURING
 
 Manufacturing applies when the business does not merely buy and resell products. It produces them.
 
-### Intuition
+### INTUITION
 
 Suppose your company sells desks. You don't buy finished desks. Instead you combine:
 
@@ -980,7 +980,7 @@ flowchart LR
 
 Manufacturing transforms raw and semi-finished materials into sellable products.
 
-### Bill of Materials Concept
+### BILL OF MATERIALS CONCEPT
 
 Manufacturing requires knowing what components are needed.
 
@@ -1000,7 +1000,7 @@ For **10 desks**, requirements become:
 
 The BOM scales demand from finished product back to component requirements.
 
-### Manufacturing Order
+### MANUFACTURING ORDER
 
 A manufacturing process needs a record representing: produce this quantity of this product.
 
@@ -1011,7 +1011,7 @@ Conceptually, a **Manufacturing Order**:
 
 It is the operational instruction that tells the shop floor what to build and in what quantity.
 
-### Manufacturing and Inventory
+### MANUFACTURING AND INVENTORY
 
 Manufacturing cannot exist independently of Inventory. It needs to know:
 
@@ -1032,7 +1032,7 @@ flowchart LR
 
 Every production run is also an inventory event: materials leave stock, finished products enter stock.
 
-### Manufacturing and Sales
+### MANUFACTURING AND SALES
 
 Suppose a customer orders a custom desk. Sales may create demand that eventually requires production.
 
@@ -1049,7 +1049,7 @@ flowchart LR
 
 This is a much more complex workflow than simple resale. The company must plan, produce, and then fulfill.
 
-### Common Mistake
+### COMMON MISTAKE
 
 Manufacturing isn't simply: decrease raw materials and increase finished product.
 
@@ -1068,11 +1068,11 @@ Manufacturing adds a production layer between demand and fulfillment. Sales may 
 
 ---
 
-## 3.11 Maintenance
+## 3.11 MAINTENANCE
 
 Businesses rely on equipment. That equipment can fail.
 
-### Intuition
+### INTUITION
 
 Imagine a manufacturing machine breaks. Production stops.
 
@@ -1080,7 +1080,7 @@ If **Machine Down**, then **Production Capacity** decreases, and customer delive
 
 Maintenance exists to manage the health and repair of operational equipment. Equipment reliability is not a side concern; it directly affects business performance.
 
-### Corrective Maintenance
+### CORRECTIVE MAINTENANCE
 
 Something breaks first. Then repair occurs.
 
@@ -1095,7 +1095,7 @@ flowchart LR
 
 Example: packaging machine stopped working. A maintenance request is raised, a technician investigates, and repair restores production capacity.
 
-### Preventive Maintenance
+### PREVENTIVE MAINTENANCE
 
 Instead of waiting for failure, maintenance is planned.
 
@@ -1114,7 +1114,7 @@ flowchart LR
 
 Preventive maintenance trades scheduled downtime for lower risk of unplanned breakdowns.
 
-### Why ERP Integration Matters
+### WHY ERP INTEGRATION MATTERS
 
 Maintenance may affect Manufacturing.
 
@@ -1135,17 +1135,17 @@ Maintenance is easy to overlook in ERP training because it does not appear in ev
 
 ---
 
-## 3.12 Website
+## 3.12 WEBSITE
 
 Odoo can also participate in the business's public-facing web presence.
 
-### Intuition
+### INTUITION
 
 So far most applications have been internal. Employees use CRM, Sales, Inventory, and Accounting.
 
 But customers interact with the organization from outside. The **Website** application provides the public-facing side: the digital front door of the business.
 
-### Website Purpose
+### WEBSITE PURPOSE
 
 A business website may present:
 
@@ -1158,7 +1158,7 @@ A business website may present:
 
 The important ERP idea is that the website does not necessarily have to be a completely disconnected system.
 
-### Website → CRM Example
+### WEBSITE → CRM EXAMPLE
 
 A visitor fills a form:
 
@@ -1177,7 +1177,7 @@ flowchart LR
 
 Now external interaction becomes internal business data. This is integration: the public channel feeds the internal sales process.
 
-### Website → Contacts
+### WEBSITE → CONTACTS
 
 A visitor or customer may also produce or update contact-related information.
 
@@ -1194,7 +1194,7 @@ flowchart LR
 
 The website is not just marketing. It can be a data entry point for the ERP.
 
-### Why This Matters
+### WHY THIS MATTERS
 
 Without integration, someone might manually copy website form submissions into the CRM. That creates:
 
@@ -1206,11 +1206,11 @@ Integrated systems reduce manual transfers. What the customer submits online bec
 
 ---
 
-## 3.13 eCommerce
+## 3.13 ECOMMERCE
 
 Website gives the public web presence. **eCommerce** adds online selling.
 
-### Intuition
+### INTUITION
 
 Suppose instead of contacting Sales manually, customers can:
 
@@ -1221,7 +1221,7 @@ Suppose instead of contacting Sales manually, customers can:
 
 That is eCommerce: self-service buying through the web.
 
-### Core Flow
+### CORE FLOW
 
 Conceptually:
 
@@ -1247,7 +1247,7 @@ flowchart LR
 
 This is a perfect example of why integrated ERP is powerful. One customer action on the website triggers the same internal process chain that a salesperson-initiated order would trigger.
 
-### External to Internal Transformation
+### EXTERNAL TO INTERNAL TRANSFORMATION
 
 The customer sees: **Buy Now**.
 
@@ -1262,13 +1262,13 @@ Internally, the business may see:
 
 One customer action creates several business consequences across multiple applications.
 
-### Product Data Connection
+### PRODUCT DATA CONNECTION
 
 If eCommerce were a totally separate platform, the company might have to maintain product name, price, and stock twice.
 
 Integration can reduce that duplication. The product master record in Odoo can feed both internal operations and the online catalog.
 
-### Common Mistake
+### COMMON MISTAKE
 
 Do not think eCommerce is only website design.
 
@@ -1286,17 +1286,17 @@ Design matters for customer experience, but the ERP significance is operational:
 
 ---
 
-## 3.14 Point of Sale
+## 3.14 POINT OF SALE
 
 **Point of Sale (POS)** handles sales occurring at a physical or direct sales location.
 
-### Intuition
+### INTUITION
 
 Imagine a retail store. Customer walks in. Buys **2 keyboards**. Cashier processes the sale immediately.
 
 That workflow is different from a salesperson preparing a formal quotation. POS is optimized for speed, immediacy, and in-person interaction.
 
-### POS Transaction
+### POS TRANSACTION
 
 A POS system typically handles:
 
@@ -1320,7 +1320,7 @@ flowchart LR
 
 Payment and stock impact often happen in the same session, unlike the multi-step B2B sales cycle.
 
-### Sales vs POS
+### SALES VS POS
 
 Both sell things, but the workflow differs.
 
@@ -1331,7 +1331,7 @@ Both sell things, but the workflow differs.
 
 The commercial context is different. Sales often involves negotiation, credit terms, and delayed fulfillment. POS assumes immediate exchange.
 
-### Integration
+### INTEGRATION
 
 POS can interact with:
 
@@ -1343,7 +1343,7 @@ POS can interact with:
 
 So retail transactions are still part of the enterprise system, not a separate cash register disconnected from the rest of the business.
 
-### Example
+### EXAMPLE
 
 A shop starts with **100 keyboards**. Customer purchases **2**.
 
@@ -1357,11 +1357,11 @@ Point of Sale proves that not every sales channel follows the quotation-to-deliv
 
 ---
 
-## 3.15 Helpdesk
+## 3.15 HELPDESK
 
 Businesses also need to manage customer problems after the sale.
 
-### Intuition
+### INTUITION
 
 Customer sends:
 
@@ -1371,7 +1371,7 @@ That is not a Sales opportunity. It is not a Purchase Order. It is a **support i
 
 Helpdesk gives structure to customer-support work: tickets, assignments, priorities, and resolution tracking.
 
-### Ticket Concept
+### TICKET CONCEPT
 
 A support request is typically represented as a **ticket**. A ticket may contain:
 
@@ -1384,7 +1384,7 @@ A support request is typically represented as a **ticket**. A ticket may contain
 
 The ticket is the container for everything known about one support problem.
 
-### Basic Flow
+### BASIC FLOW
 
 <div align="center">
 
@@ -1395,7 +1395,7 @@ flowchart LR
 
 </div>
 
-### Why Helpdesk Matters in ERP
+### WHY HELPDESK MATTERS IN ERP
 
 The support team may need context.
 
@@ -1411,7 +1411,7 @@ If systems are integrated, support can relate the complaint to existing business
 
 the business may already have those records. Helpdesk connects post-sale problems to pre-sale and fulfillment history.
 
-### Helpdesk and Customer Lifecycle
+### HELPDESK AND CUSTOMER LIFECYCLE
 
 | Stage | Application |
 |---|---|
@@ -1427,7 +1427,7 @@ Helpdesk closes the loop on customer experience. CRM and Sales win the business,
 
 ---
 
-## 3.16 End-to-End Document Flow
+## 3.16 END-TO-END DOCUMENT FLOW
 
 This is the most important section in Chapter 3.
 
@@ -1435,7 +1435,7 @@ Everything before this section introduced individual applications. Now we connec
 
 The point of ERP is not simply **15 Apps**. The point is **Integrated Business Flow**: one real-world event traveling across functional boundaries, with each application representing a different stage and responsibility.
 
-### First Principle: One Real-World Event Can Create Several Records
+### FIRST PRINCIPLE: ONE REAL-WORLD EVENT CAN CREATE SEVERAL RECORDS
 
 Imagine ABC Trading wants 20 monitors.
 
@@ -1454,7 +1454,7 @@ These records are related, but not interchangeable. Each answers a different que
 
 ---
 
-### Flow 1: Lead-to-Cash
+### FLOW 1: LEAD-TO-CASH
 
 Let's build the entire sales journey.
 
@@ -1571,7 +1571,7 @@ This is the ERP mental model you must retain. A single customer need creates a c
 
 ---
 
-### Flow 2: Procure-to-Pay
+### FLOW 2: PROCURE-TO-PAY
 
 Now examine the vendor side independently.
 
@@ -1605,7 +1605,7 @@ Procure-to-Pay is the supplier-side mirror of Lead-to-Cash. Purchase commits, In
 
 ---
 
-### Flow 3: Service Business
+### FLOW 3: SERVICE BUSINESS
 
 Suppose the company sells consulting instead of monitors.
 
@@ -1631,7 +1631,7 @@ There is no warehouse delivery in this flow. The "fulfillment" is time spent on 
 
 ---
 
-### Flow 4: Manufacturing Business
+### FLOW 4: MANUFACTURING BUSINESS
 
 Customer orders **10 desks**. No finished desks exist.
 
@@ -1668,7 +1668,7 @@ depending on the exact process. Manufacturing adds a production layer between sa
 
 ---
 
-### Flow 5: eCommerce Business
+### FLOW 5: ECOMMERCE BUSINESS
 
 Customer visits the website.
 
@@ -1689,7 +1689,7 @@ A website click has now become an enterprise transaction. The customer never spo
 
 ---
 
-### Flow 6: Retail (POS)
+### FLOW 6: RETAIL (POS)
 
 Customer enters store.
 
@@ -1708,7 +1708,7 @@ depending on configuration and workflow. Retail compresses the sales cycle into 
 
 ---
 
-### Flow 7: Customer Support (Helpdesk)
+### FLOW 7: CUSTOMER SUPPORT (HELPDESK)
 
 Customer later complains.
 
@@ -1728,7 +1728,7 @@ The support problem is now part of the same customer history. Helpdesk does not 
 
 ---
 
-### Why End-to-End Flow Is More Important Than Memorizing Apps
+### WHY END-TO-END FLOW IS MORE IMPORTANT THAN MEMORIZING APPS
 
 You could memorize:
 
@@ -1740,7 +1740,7 @@ and still not really understand ERP.
 
 Real mastery means understanding that **a business event travels across functional boundaries**. Different applications represent different stages and responsibilities.
 
-### Document Flow vs Duplicated Records
+### DOCUMENT FLOW VS DUPLICATED RECORDS
 
 The same business reality is represented by related documents, not necessarily one gigantic document. That's important.
 
@@ -1753,7 +1753,7 @@ The same business reality is represented by related documents, not necessarily o
 
 Each has a distinct job. ERP strength comes from linking them, not from collapsing them into one record.
 
-### Why This Matters for Future Odoo Development
+### WHY THIS MATTERS FOR FUTURE ODOO DEVELOPMENT
 
 Later you'll encounter actual technical models corresponding to these domains.
 
@@ -1776,9 +1776,9 @@ That's exactly why Unit I came before coding. Business meaning first; technical 
 
 ---
 
-## Common Beginner Mistakes in Chapter 3
+## COMMON BEGINNER MISTAKES IN CHAPTER 3
 
-### Mistake 1: Treating apps as isolated systems
+### MISTAKE 1: TREATING APPS AS ISOLATED SYSTEMS
 
 **Wrong:** Sales, Inventory, and Accounting as three separate islands.
 
@@ -1786,37 +1786,37 @@ That's exactly why Unit I came before coding. Business meaning first; technical 
 
 A beginner sometimes learns each app in isolation and treats them like independent software packages. In Odoo, their value comes from integration. A Sales Order in one app creates consequences in others. Thinking in silos leads to broken workflows and incorrect customization.
 
-### Mistake 2: Confusing contacts with transactions
+### MISTAKE 2: CONFUSING CONTACTS WITH TRANSACTIONS
 
 **Customer** = Master Data. **Sales Order** = Transaction.
 
 Contacts persist across time; transactions record specific events. ABC Trading the contact exists for years. SO0047 the Sales Order exists for one commercial event. Mixing these levels causes duplicate master data and lost traceability.
 
-### Mistake 3: Confusing CRM with Sales
+### MISTAKE 3: CONFUSING CRM WITH SALES
 
 CRM manages **potential business**. Sales manages **commercial offers and orders**.
 
 CRM is about possibilities, pipeline stages, and relationship work before confirmation. Sales is about quotations, confirmed orders, and commercial terms. They connect, but assigning Sales responsibilities to CRM (or vice versa) blurs the process.
 
-### Mistake 4: Assuming Sales Order means delivered
+### MISTAKE 4: ASSUMING SALES ORDER MEANS DELIVERED
 
 No. **Order ≠ Delivery**.
 
 A confirmed Sales Order is a commercial commitment, not proof of physical shipment. Warehouse may still be picking, purchasing may still be replenishing, and delivery may be scheduled for a future date. Never treat order confirmation as delivery confirmation.
 
-### Mistake 5: Assuming Purchase Order means stock received
+### MISTAKE 5: ASSUMING PURCHASE ORDER MEANS STOCK RECEIVED
 
 No. **Purchase Order ≠ Receipt**.
 
 A Purchase Order commits the company to buy. Receipt confirms physical arrival. Vendors routinely confirm orders days or weeks before goods arrive. Stock levels should reflect receipts, not purchase commitments alone.
 
-### Mistake 6: Assuming Invoice means paid
+### MISTAKE 6: ASSUMING INVOICE MEANS PAID
 
 No. **Invoice ≠ Payment**.
 
 An invoice creates a financial obligation. Payment settles it. Customers may pay immediately, pay later, or pay in installments. Finance tracks both the obligation and the settlement as separate events.
 
-### Mistake 7: Thinking Inventory means only a quantity field
+### MISTAKE 7: THINKING INVENTORY MEANS ONLY A QUANTITY FIELD
 
 Inventory also concerns:
 
@@ -1828,19 +1828,19 @@ Inventory also concerns:
 
 A single quantity number hides commitments against that quantity. One hundred units on hand with eighty reserved means only twenty are truly available for new demand. Inventory is a movement and state system, not a counter.
 
-### Mistake 8: Thinking Website/eCommerce are disconnected from ERP
+### MISTAKE 8: THINKING WEBSITE/ECOMMERCE ARE DISCONNECTED FROM ERP
 
 Their real value increases when online activity becomes integrated business data.
 
 A website that only displays marketing content adds limited ERP value. When form submissions become CRM opportunities and checkout creates Sales Orders, the public channel feeds the same internal process chain as traditional sales. Disconnected eCommerce recreates the spreadsheet problem from Chapter 1.
 
-### Mistake 9: Thinking Timesheets are just attendance
+### MISTAKE 9: THINKING TIMESHEETS ARE JUST ATTENDANCE
 
 Timesheets generally represent **time spent on work, projects, and tasks**.
 
 Attendance answers: "Was the employee present?" Timesheets answer: "What work did they perform and for how long?" For service businesses, timesheets drive billing, costing, and project tracking. Confusing the two breaks service delivery workflows.
 
-### Mistake 10: Thinking one app should own the whole process
+### MISTAKE 10: THINKING ONE APP SHOULD OWN THE WHOLE PROCESS
 
 No. ERP processes deliberately cross application boundaries.
 
@@ -1848,7 +1848,7 @@ Lead-to-Cash touches CRM, Sales, Purchase, Inventory, and Accounting. Expecting 
 
 ---
 
-## Chapter 3 Summary
+## CHAPTER 3 SUMMARY
 
 You now know the purpose of the main business applications in the roadmap.
 

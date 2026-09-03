@@ -1,4 +1,4 @@
-# Chapter 1 Exercise
+# CHAPTER 1 EXERCISE
 
 Try these without looking back at Content.md immediately. Answer in your own words first, then compare with the complete solution at the bottom of this file.
 
@@ -6,7 +6,7 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Part A: Concepts](#part-a-concepts)
 - [Part B: Scenario](#part-b-scenario)
@@ -16,7 +16,7 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 
 ---
 
-## Part A: Concepts
+## PART A: CONCEPTS
 
 1. What makes something a **business process** rather than simply an isolated task?
 
@@ -49,7 +49,7 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 
 ---
 
-## Part B: Scenario
+## PART B: SCENARIO
 
 A company sells office chairs.
 
@@ -72,15 +72,15 @@ For this scenario, identify:
 
 ---
 
-# Chapter 1 Exercise: Complete Solution
+# CHAPTER 1 EXERCISE: COMPLETE SOLUTION
 
 Work through the questions above first. The solutions below explain the reasoning Chapter 1 expects you to demonstrate.
 
 ---
 
-## Part A: Concepts
+## PART A: CONCEPTS
 
-### 1. What makes something a business process rather than simply an isolated task?
+### 1. WHAT MAKES SOMETHING A BUSINESS PROCESS RATHER THAN SIMPLY AN ISOLATED TASK?
 
 A **business process** is a connected sequence of activities that works toward a defined business outcome.
 
@@ -104,7 +104,7 @@ So the key difference is that a task is one piece of work, while a business proc
 
 ---
 
-### 2. Employee leave-request process
+### 2. EMPLOYEE LEAVE-REQUEST PROCESS
 
 **Input**
 
@@ -155,7 +155,7 @@ flowchart LR
 
 ---
 
-### 3. Why Sales, Warehouse, Purchase, and Finance cannot always operate independently
+### 3. WHY SALES, WAREHOUSE, PURCHASE, AND FINANCE CANNOT ALWAYS OPERATE INDEPENDENTLY
 
 These departments work on different parts of the same business process.
 
@@ -182,7 +182,7 @@ ERP exists partly to connect these activities.
 
 ---
 
-### 4. Difference between master data and transaction data
+### 4. DIFFERENCE BETWEEN MASTER DATA AND TRANSACTION DATA
 
 **Master data** represents relatively stable business entities that are reused repeatedly.
 
@@ -213,7 +213,7 @@ For example:
 
 ---
 
-### 5. Classification
+### 5. CLASSIFICATION
 
 | Item | Classification | Reason |
 | --- | --- | --- |
@@ -226,7 +226,7 @@ For example:
 
 ---
 
-### 6. Explain "single source of truth"
+### 6. EXPLAIN "SINGLE SOURCE OF TRUTH"
 
 A **single source of truth** means the company has one authoritative place for a particular piece of business information.
 
@@ -246,7 +246,7 @@ It does not mean incorrect data becomes impossible. If incorrect information is 
 
 ---
 
-### 7. Why CRM is not normally equivalent to a complete ERP
+### 7. WHY CRM IS NOT NORMALLY EQUIVALENT TO A COMPLETE ERP
 
 A **CRM** mainly focuses on customer relationships and sales opportunities.
 
@@ -266,7 +266,7 @@ In Odoo specifically, CRM can operate as one application within a much larger co
 
 ---
 
-### 8. One advantage and one disadvantage of standalone business software
+### 8. ONE ADVANTAGE AND ONE DISADVANTAGE OF STANDALONE BUSINESS SOFTWARE
 
 **Advantage**
 
@@ -278,7 +278,7 @@ Standalone software may create disconnected data. Sales may have one customer da
 
 ---
 
-### 9. What is business process mapping?
+### 9. WHAT IS BUSINESS PROCESS MAPPING?
 
 **Business process mapping** is the activity of documenting how a business process works from beginning to end.
 
@@ -307,7 +307,7 @@ A proper process map helps everyone understand what the organization actually do
 
 ---
 
-### 10. Why process mapping should happen before major ERP customization
+### 10. WHY PROCESS MAPPING SHOULD HAPPEN BEFORE MAJOR ERP CUSTOMIZATION
 
 Because developers need to understand the business requirement before designing the technical solution.
 
@@ -331,9 +331,9 @@ Not: **Business Request → Start Coding Immediately**.
 
 ---
 
-## Part B: Scenario Solution
+## PART B: SCENARIO SOLUTION
 
-### Scenario recap
+### SCENARIO RECAP
 
 A company sells office chairs. A customer orders **50 chairs**. Only **30** are available. The company purchases **20** additional chairs. The supplier delivers them. Warehouse ships all **50 chairs** to the customer. Finance invoices the customer.
 
@@ -345,7 +345,7 @@ A company sells office chairs. A customer orders **50 chairs**. Only **30** are 
 
 ---
 
-### 1. Master data
+### 1. MASTER DATA
 
 The likely master data includes:
 
@@ -363,7 +363,7 @@ These records are reused across many transactions.
 
 ---
 
-### 2. Transactions
+### 2. TRANSACTIONS
 
 The main transactions are:
 
@@ -379,7 +379,7 @@ These transactions record what happened during this particular sale.
 
 ---
 
-### 3. Departments
+### 3. DEPARTMENTS
 
 | Department | Role in this scenario |
 | --- | --- |
@@ -391,7 +391,7 @@ These transactions record what happened during this particular sale.
 
 ---
 
-### 4. Process inputs
+### 4. PROCESS INPUTS
 
 | Input type | Example in this scenario |
 | --- | --- |
@@ -403,7 +403,7 @@ These transactions record what happened during this particular sale.
 
 ---
 
-### 5. Process outputs
+### 5. PROCESS OUTPUTS
 
 | Stage | Output |
 | --- | --- |
@@ -416,7 +416,7 @@ These transactions record what happened during this particular sale.
 
 ---
 
-### 6. Cross-department workflow
+### 6. CROSS-DEPARTMENT WORKFLOW
 
 <div align="center">
 
@@ -442,7 +442,7 @@ This is a good example of why ERP systems integrate departments rather than trea
 
 ---
 
-### 7. Likely process owners
+### 7. LIKELY PROCESS OWNERS
 
 | Process | Likely owner |
 | --- | --- |

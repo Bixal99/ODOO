@@ -4,7 +4,7 @@
 
 ## UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
 
-### CHAPTER 1: What Is ERP?
+### CHAPTER 1: WHAT IS ERP?
 - 1.1 Business Processes
   - 1.1.1 What Is a Business Process?
   - 1.1.2 Process Inputs
@@ -34,7 +34,7 @@
 - 1.8 ERP vs Standalone Business Software
 - 1.9 Business Process Mapping
 
-### CHAPTER 2: Understanding Odoo
+### CHAPTER 2: UNDERSTANDING ODOO
 - 2.1 What Odoo Is
 - 2.2 Odoo Ecosystem
 - 2.3 Community Edition
@@ -50,7 +50,7 @@
 - 2.13 Standard vs Custom Modules
 - 2.14 Odoo Studio Concept
 
-### CHAPTER 3: Core Business Applications
+### CHAPTER 3: CORE BUSINESS APPLICATIONS
 - 3.1 Contacts
 - 3.2 CRM
 - 3.3 Sales
@@ -70,7 +70,7 @@
 
 ## UNIT II: HOW ODOO ACTUALLY WORKS
 
-### CHAPTER 4: Odoo Architecture
+### CHAPTER 4: ODOO ARCHITECTURE
 - 4.1 Three-Tier Architecture
 - 4.2 Browser
 - 4.3 Odoo Web Client
@@ -88,7 +88,7 @@
 - 4.15 Cron Workers
 - 4.16 Long-Polling / WebSocket Concepts
 
-### CHAPTER 5: Development Environment
+### CHAPTER 5: DEVELOPMENT ENVIRONMENT
 - 5.1 Python Environment
 - 5.2 Python Virtual Environments
 - 5.3 Python Dependencies
@@ -106,7 +106,7 @@
 - 5.15 IDE Setup
 - 5.16 Debugger Setup
 
-### CHAPTER 6: Odoo Source Code Structure
+### CHAPTER 6: ODOO SOURCE CODE STRUCTURE
 - 6.1 odoo/
 - 6.2 addons/
 - 6.3 Core Framework
@@ -125,7 +125,7 @@
 
 ## UNIT III: YOUR FIRST ODOO MODULE
 
-### CHAPTER 7: Module Anatomy
+### CHAPTER 7: MODULE ANATOMY
 - 7.1 Addon Directory
 - 7.2 __manifest__.py
 - 7.3 __init__.py
@@ -143,7 +143,7 @@
 - 7.15 README
 - 7.16 Coding Conventions
 
-### CHAPTER 8: Module Lifecycle
+### CHAPTER 8: MODULE LIFECYCLE
 - 8.1 Module Discovery
 - 8.2 Manifest Metadata
 - 8.3 Dependencies
@@ -161,7 +161,7 @@
 
 ## UNIT IV: MODELING BUSINESS DATA
 
-### CHAPTER 9: Models
+### CHAPTER 9: MODELS
 - 9.1 models.Model
 - 9.2 models.AbstractModel
 - 9.3 models.TransientModel
@@ -179,7 +179,7 @@
 - 9.15 write_uid
 - 9.16 Reserved Field Names
 
-### CHAPTER 10: Fields
+### CHAPTER 10: FIELDS
 - 10.1 Char
 - 10.2 Text
 - 10.3 Html
@@ -205,7 +205,7 @@
 - 10.23 translate
 - 10.24 company_dependent
 
-### CHAPTER 11: Relationships
+### CHAPTER 11: RELATIONSHIPS
 - 11.1 Many2one
 - 11.2 One2many
 - 11.3 Many2many
@@ -224,7 +224,7 @@
 - 11.16 ondelete
 - 11.17 Referential Integrity
 
-### CHAPTER 12: Computed & Dynamic Fields
+### CHAPTER 12: COMPUTED & DYNAMIC FIELDS
 - 12.1 compute
 - 12.2 @api.depends
 - 12.3 @api.depends_context
@@ -242,7 +242,7 @@
 
 ## UNIT V: MASTERING THE ODOO ORM
 
-### CHAPTER 13: Environment & Recordsets
+### CHAPTER 13: ENVIRONMENT & RECORDSETS
 - 13.1 env
 - 13.2 self
 - 13.3 Recordsets
@@ -280,7 +280,7 @@
 - 14.13 CRUD Side Effects
 - 14.14 Bulk CRUD
 
-### CHAPTER 15: Domains & Searching
+### CHAPTER 15: DOMAINS & SEARCHING
 - 15.1 Domain Syntax
 - 15.2 Comparison Operators
 - 15.3 = / !=
@@ -301,7 +301,7 @@
 - 15.18 Offset
 - 15.19 Dynamic Domains
 
-### CHAPTER 16: Recordset Operations
+### CHAPTER 16: RECORDSET OPERATIONS
 - 16.1 Iteration
 - 16.2 filtered()
 - 16.3 filtered_domain()
@@ -315,7 +315,7 @@
 - 16.11 Batch Operations
 - 16.12 Avoiding Per-Record Queries
 
-### CHAPTER 17: ORM Internals & Performance
+### CHAPTER 17: ORM INTERNALS & PERFORMANCE
 - 17.1 Prefetching
 - 17.2 Prefetch Sets
 - 17.3 ORM Cache
@@ -340,7 +340,7 @@
 
 ## UNIT VI: BUSINESS RULES & WORKFLOWS
 
-### CHAPTER 18: Business Methods
+### CHAPTER 18: BUSINESS METHODS
 - 18.1 Model Methods
 - 18.2 Recordset Methods
 - 18.3 @api.model
@@ -356,7 +356,7 @@
 - 18.13 Public Methods
 - 18.14 Method Design
 
-### CHAPTER 19: Constraints & Validation
+### CHAPTER 19: CONSTRAINTS & VALIDATION
 - 19.1 Business Validation
 - 19.2 Python Constraints
 - 19.3 @api.constrains
@@ -369,7 +369,7 @@
 - 19.10 Constraint Performance
 - 19.11 Database vs Application Constraints
 
-### CHAPTER 20: Onchange & UI Logic
+### CHAPTER 20: ONCHANGE & UI LOGIC
 - 20.1 @api.onchange
 - 20.2 Defaults
 - 20.3 default_get()
@@ -380,7 +380,7 @@
 - 20.8 Onchange vs Compute
 - 20.9 Onchange vs Constraint
 
-### CHAPTER 21: States & Workflows
+### CHAPTER 21: STATES & WORKFLOWS
 - 21.1 State Fields
 - 21.2 Draft
 - 21.3 Confirmed
@@ -396,7 +396,7 @@
 
 ## UNIT VII: BUILDING THE USER INTERFACE
 
-### CHAPTER 22: XML Foundations
+### CHAPTER 22: XML FOUNDATIONS
 - 22.1 XML Syntax
 - 22.2 XML Declaration
 - 22.3 <odoo>
@@ -409,7 +409,7 @@
 - 22.10 XML Loading
 - 22.11 noupdate
 
-### CHAPTER 23: Form & List Views
+### CHAPTER 23: FORM & LIST VIEWS
 - 23.1 Form Views
 - 23.2 List Views
 - 23.3 Field Display
@@ -426,7 +426,7 @@
 - 23.14 Invisible / Readonly Logic
 - 23.15 Editable Lists
 
-### CHAPTER 24: Search, Kanban & Analytical Views
+### CHAPTER 24: SEARCH, KANBAN & ANALYTICAL VIEWS
 - 24.1 Search Views
 - 24.2 Filters
 - 24.3 Group By
@@ -440,7 +440,7 @@
 - 24.11 Cohort Concepts
 - 24.12 Dashboard Concepts
 
-### CHAPTER 25: Actions & Menus
+### CHAPTER 25: ACTIONS & MENUS
 - 25.1 Actions
 - 25.2 Action Bindings
 - 25.3 Window Actions
@@ -457,7 +457,7 @@
 - 25.14 Domains
 - 25.15 Navigation
 
-### CHAPTER 26: View Inheritance
+### CHAPTER 26: VIEW INHERITANCE
 - 26.1 inherit_id
 - 26.2 XPath
 - 26.3 position
@@ -476,7 +476,7 @@
 
 ## UNIT VIII: SECURITY & MULTI-COMPANY
 
-### CHAPTER 27: Users & Groups
+### CHAPTER 27: USERS & GROUPS
 - 27.1 Users
 - 27.2 Internal Users
 - 27.3 Portal Users
@@ -488,7 +488,7 @@
 - 27.9 Permission Design
 - 27.10 Role Design
 
-### CHAPTER 28: Access Control Lists
+### CHAPTER 28: ACCESS CONTROL LISTS
 - 28.1 ACL Concepts
 - 28.2 ir.model.access
 - 28.3 ir.model.access.csv
@@ -500,7 +500,7 @@
 - 28.9 Additive Permissions
 - 28.10 Default-Deny Thinking
 
-### CHAPTER 29: Record Rules
+### CHAPTER 29: RECORD RULES
 - 29.1 ir.rule
 - 29.2 domain_force
 - 29.3 Global Rules
@@ -512,7 +512,7 @@
 - 29.9 Ownership Rules
 - 29.10 Multi-Group Interactions
 
-### CHAPTER 30: Security Context & Safe Privilege
+### CHAPTER 30: SECURITY CONTEXT & SAFE PRIVILEGE
 - 30.1 sudo()
 - 30.2 with_user()
 - 30.3 Access Checks
@@ -527,7 +527,7 @@
 - 30.12 Avoiding Unnecessary sudo()
 - 30.13 Input Validation
 
-### CHAPTER 31: Multi-Company Development
+### CHAPTER 31: MULTI-COMPANY DEVELOPMENT
 - 31.1 res.company
 - 31.2 company_id
 - 31.3 company_ids
@@ -544,7 +544,7 @@
 
 ## UNIT IX: EXTENDING EXISTING ODOO
 
-### CHAPTER 32: Model Inheritance
+### CHAPTER 32: MODEL INHERITANCE
 - 32.1 Extension Inheritance
 - 32.2 _inherit
 - 32.3 Classical Inheritance
@@ -555,7 +555,7 @@
 - 32.8 Method Resolution Order
 - 32.9 Extension Conflicts
 
-### CHAPTER 33: Delegation & Mixins
+### CHAPTER 33: DELEGATION & MIXINS
 - 33.1 _inherits
 - 33.2 Delegated Fields
 - 33.3 Delegation vs Extension
@@ -567,7 +567,7 @@
 - 33.9 mail.activity.mixin
 - 33.10 portal.mixin Concepts
 
-### CHAPTER 34: View Inheritance in Real Modules
+### CHAPTER 34: VIEW INHERITANCE IN REAL MODULES
 - 34.1 Finding Parent Views
 - 34.2 External IDs
 - 34.3 XPath Targeting
@@ -579,7 +579,7 @@
 - 34.9 Conflicting Inheritances
 - 34.10 Debugging Inheritance Conflicts
 
-### CHAPTER 35: Extending Official Applications
+### CHAPTER 35: EXTENDING OFFICIAL APPLICATIONS
 - 35.1 res.partner
 - 35.2 product.template
 - 35.3 product.product
@@ -598,7 +598,7 @@
 
 ## UNIT X: ADVANCED BUSINESS FEATURES
 
-### CHAPTER 36: Wizards & TransientModel
+### CHAPTER 36: WIZARDS & TRANSIENTMODEL
 - 36.1 TransientModel
 - 36.2 Wizard Fields
 - 36.3 Wizard Views
@@ -611,7 +611,7 @@
 - 36.10 Multi-Step Wizards
 - 36.11 Wizard Security
 
-### CHAPTER 37: Sequences
+### CHAPTER 37: SEQUENCES
 - 37.1 ir.sequence
 - 37.2 next_by_code()
 - 37.3 Prefix
@@ -622,7 +622,7 @@
 - 37.8 Business References
 - 37.9 Concurrency Considerations
 
-### CHAPTER 38: Scheduled Actions / Cron
+### CHAPTER 38: SCHEDULED ACTIONS / CRON
 - 38.1 ir.cron
 - 38.2 Scheduling
 - 38.3 Intervals
@@ -635,7 +635,7 @@
 - 38.10 Long-Running Jobs
 - 38.11 Transaction Boundaries
 
-### CHAPTER 39: Automation & Server Actions
+### CHAPTER 39: AUTOMATION & SERVER ACTIONS
 - 39.1 Automated Actions
 - 39.2 Triggers
 - 39.3 Conditions
@@ -647,7 +647,7 @@
 - 39.9 Security
 - 39.10 When to Use Code Instead
 
-### CHAPTER 40: Mail, Chatter & Activities
+### CHAPTER 40: MAIL, CHATTER & ACTIVITIES
 - 40.1 mail.thread
 - 40.2 mail.activity.mixin
 - 40.3 Messages
@@ -663,7 +663,7 @@
 - 40.13 Mail Queue
 - 40.14 Subtypes
 
-### CHAPTER 41: Reports & QWeb
+### CHAPTER 41: REPORTS & QWEB
 - 41.1 QWeb
 - 41.2 QWeb Templates
 - 41.3 t-if
@@ -680,7 +680,7 @@
 - 41.14 Barcodes
 - 41.15 Report Attachments
 
-### CHAPTER 42: Data Files, Import & Export
+### CHAPTER 42: DATA FILES, IMPORT & EXPORT
 - 42.1 XML Data
 - 42.2 CSV Data
 - 42.3 External IDs
@@ -698,7 +698,7 @@
 
 ## UNIT XI: INTERNATIONALIZATION & LOCALIZATION
 
-### CHAPTER 43: Internationalization & Localization
+### CHAPTER 43: INTERNATIONALIZATION & LOCALIZATION
 - 43.1 Translatable Strings
 - 43.2 _() Translation Function
 - 43.3 Translatable Fields
@@ -719,7 +719,7 @@
 
 ## UNIT XII: WEB DEVELOPMENT WITH ODOO
 
-### CHAPTER 44: HTTP Controllers
+### CHAPTER 44: HTTP CONTROLLERS
 - 44.1 http.Controller
 - 44.2 @http.route
 - 44.3 request
@@ -740,7 +740,7 @@
 - 44.18 Controller Inheritance
 - 44.19 Controller Security
 
-### CHAPTER 45: Website Development
+### CHAPTER 45: WEBSITE DEVELOPMENT
 - 45.1 Website Architecture
 - 45.2 Website Pages
 - 45.3 QWeb Templates
@@ -755,7 +755,7 @@
 - 45.12 Multi-Website
 - 45.13 Website-Specific Records
 
-### CHAPTER 46: Portal Development
+### CHAPTER 46: PORTAL DEVELOPMENT
 - 46.1 Portal Users
 - 46.2 Portal Controllers
 - 46.3 Customer Pages
@@ -770,9 +770,9 @@
 - 46.12 Chatter in Portal
 - 46.13 Downloads
 
-## UNIT XIII: APIs & INTEGRATIONS
+## UNIT XIII: APIS & INTEGRATIONS
 
-### CHAPTER 47: External API Concepts
+### CHAPTER 47: EXTERNAL API CONCEPTS
 - 47.1 Client / Server
 - 47.2 Resources
 - 47.3 Endpoints
@@ -787,7 +787,7 @@
 - 47.12 API Contracts
 - 47.13 Idempotency
 
-### CHAPTER 48: External Odoo Access
+### CHAPTER 48: EXTERNAL ODOO ACCESS
 - 48.1 External API Architecture
 - 48.2 Integration Users
 - 48.3 Authentication
@@ -801,7 +801,7 @@
 - 48.11 Version Compatibility
 - 48.12 API Keys
 
-### CHAPTER 49: Building API Endpoints
+### CHAPTER 49: BUILDING API ENDPOINTS
 - 49.1 API Routes
 - 49.2 Request Parsing
 - 49.3 Input Validation
@@ -817,7 +817,7 @@
 - 49.13 API Versioning Concepts
 - 49.14 Logging
 
-### CHAPTER 50: Webhooks
+### CHAPTER 50: WEBHOOKS
 - 50.1 Incoming Webhooks
 - 50.2 Outgoing Events
 - 50.3 Payload Validation
@@ -831,7 +831,7 @@
 - 50.11 Audit Logging
 - 50.12 Dead-Letter Concepts
 
-### CHAPTER 51: Third-Party Integrations
+### CHAPTER 51: THIRD-PARTY INTEGRATIONS
 - 51.1 REST APIs
 - 51.2 API Authentication
 - 51.3 OAuth Concepts
@@ -848,7 +848,7 @@
 - 51.14 Error Handling
 - 51.15 Integration Logs
 
-### CHAPTER 52: Payment Integrations
+### CHAPTER 52: PAYMENT INTEGRATIONS
 - 52.1 Payment Architecture
 - 52.2 Payment Providers
 - 52.3 Payment Transactions
@@ -866,7 +866,7 @@
 
 ## UNIT XIV: MODERN ODOO FRONTEND
 
-### CHAPTER 53: Odoo JavaScript Architecture
+### CHAPTER 53: ODOO JAVASCRIPT ARCHITECTURE
 - 53.1 Web Client
 - 53.2 JavaScript Modules
 - 53.3 Native JS Modules
@@ -881,7 +881,7 @@
 - 53.12 Actions
 - 53.13 Frontend Debugging
 
-### CHAPTER 54: OWL Fundamentals
+### CHAPTER 54: OWL FUNDAMENTALS
 - 54.1 Components
 - 54.2 Templates
 - 54.3 Props
@@ -895,7 +895,7 @@
 - 54.11 Conditional Rendering
 - 54.12 Loops
 
-### CHAPTER 55: Services, Registries & Hooks
+### CHAPTER 55: SERVICES, REGISTRIES & HOOKS
 - 55.1 Registries
 - 55.2 Registry Categories
 - 55.3 Services
@@ -911,7 +911,7 @@
 - 55.13 useAssets
 - 55.14 Custom Hooks
 
-### CHAPTER 56: Assets & Frontend Resources
+### CHAPTER 56: ASSETS & FRONTEND RESOURCES
 - 56.1 Asset Bundles
 - 56.2 JavaScript Assets
 - 56.3 SCSS / CSS
@@ -922,7 +922,7 @@
 - 56.8 Asset Debugging
 - 56.9 Cache Busting Concepts
 
-### CHAPTER 57: Extending & Patching the Web Client
+### CHAPTER 57: EXTENDING & PATCHING THE WEB CLIENT
 - 57.1 Patching Code
 - 57.2 patch()
 - 57.3 Patching Components
@@ -934,7 +934,7 @@
 - 57.9 Conflict Risks
 - 57.10 When Not to Patch
 
-### CHAPTER 58: Client Actions & Advanced Frontend
+### CHAPTER 58: CLIENT ACTIONS & ADVANCED FRONTEND
 - 58.1 Client Actions
 - 58.2 Action Registry
 - 58.3 OWL Client Components
@@ -952,7 +952,7 @@
 
 ## UNIT XV: FILES, ATTACHMENTS & MEDIA
 
-### CHAPTER 59: Attachments & Filestore
+### CHAPTER 59: ATTACHMENTS & FILESTORE
 - 59.1 ir.attachment
 - 59.2 Binary Fields
 - 59.3 Image Fields
@@ -971,7 +971,7 @@
 
 ## UNIT XVI: POSTGRESQL & PERFORMANCE
 
-### CHAPTER 60: Odoo Database Structure
+### CHAPTER 60: ODOO DATABASE STRUCTURE
 - 60.1 Models → Tables
 - 60.2 Fields → Columns
 - 60.3 Many2one Foreign Keys
@@ -983,7 +983,7 @@
 - 60.9 ir_model_data
 - 60.10 Inspecting the Schema
 
-### CHAPTER 61: PostgreSQL for Odoo Developers
+### CHAPTER 61: POSTGRESQL FOR ODOO DEVELOPERS
 - 61.1 SELECT
 - 61.2 WHERE
 - 61.3 JOIN
@@ -996,7 +996,7 @@
 - 61.10 Database Inspection
 - 61.11 Information Schema
 
-### CHAPTER 62: Transactions & Concurrency
+### CHAPTER 62: TRANSACTIONS & CONCURRENCY
 - 62.1 Transactions
 - 62.2 Commit
 - 62.3 Rollback
@@ -1009,7 +1009,7 @@
 - 62.10 Savepoints
 - 62.11 Retry Patterns
 
-### CHAPTER 63: Indexes & Query Plans
+### CHAPTER 63: INDEXES & QUERY PLANS
 - 63.1 Indexes
 - 63.2 B-Tree Intuition
 - 63.3 Selectivity
@@ -1022,7 +1022,7 @@
 - 63.10 When to Add an Index
 - 63.11 Over-Indexing
 
-### CHAPTER 64: ORM Performance
+### CHAPTER 64: ORM PERFORMANCE
 - 64.1 Query Counts
 - 64.2 Batch Operations
 - 64.3 Prefetch
@@ -1036,7 +1036,7 @@
 - 64.11 read_group()
 - 64.12 Avoiding Loops over Queries
 
-### CHAPTER 65: Profiling & Optimization
+### CHAPTER 65: PROFILING & OPTIMIZATION
 - 65.1 Odoo Profiler
 - 65.2 SQL Profiling
 - 65.3 Query Collector
@@ -1050,7 +1050,7 @@
 
 ## UNIT XVII: TESTING & DEBUGGING
 
-### CHAPTER 66: Odoo Logging & Debugging
+### CHAPTER 66: ODOO LOGGING & DEBUGGING
 - 66.1 Log Levels
 - 66.2 Server Logs
 - 66.3 Stack Traces
@@ -1063,7 +1063,7 @@
 - 66.10 Root Cause Analysis
 - 66.11 Minimal Reproduction
 
-### CHAPTER 67: Python Tests
+### CHAPTER 67: PYTHON TESTS
 - 67.1 Test Module Structure
 - 67.2 TransactionCase
 - 67.3 Savepoint / Transaction Concepts
@@ -1075,7 +1075,7 @@
 - 67.9 Form Helper Concepts
 - 67.10 Deterministic Tests
 
-### CHAPTER 68: Testing Business Logic
+### CHAPTER 68: TESTING BUSINESS LOGIC
 - 68.1 CRUD Tests
 - 68.2 Computed Field Tests
 - 68.3 Constraint Tests
@@ -1086,7 +1086,7 @@
 - 68.8 Regression Tests
 - 68.9 Error Tests
 
-### CHAPTER 69: Testing Security
+### CHAPTER 69: TESTING SECURITY
 - 69.1 User Context
 - 69.2 ACL Tests
 - 69.3 Record Rule Tests
@@ -1097,7 +1097,7 @@
 - 69.8 Public Access Tests
 - 69.9 Permission Regression
 
-### CHAPTER 70: Web & Frontend Testing
+### CHAPTER 70: WEB & FRONTEND TESTING
 - 70.1 HTTP Tests
 - 70.2 Controller Tests
 - 70.3 browser_js
@@ -1111,7 +1111,7 @@
 - 70.11 Mocking RPC
 - 70.12 End-to-End Flows
 
-### CHAPTER 71: Performance & Regression Testing
+### CHAPTER 71: PERFORMANCE & REGRESSION TESTING
 - 71.1 Query Count Tests
 - 71.2 assertQueryCount()
 - 71.3 --log-sql
@@ -1122,7 +1122,7 @@
 
 ## UNIT XVIII: CLI & DEVELOPER TOOLING
 
-### CHAPTER 72: Odoo CLI & Developer Commands
+### CHAPTER 72: ODOO CLI & DEVELOPER COMMANDS
 - 72.1 odoo-bin / odoo
 - 72.2 Configuration File
 - 72.3 Database Selection
@@ -1142,7 +1142,7 @@
 
 ## UNIT XIX: DEPLOYMENT & OPERATIONS
 
-### CHAPTER 73: Odoo Configuration
+### CHAPTER 73: ODOO CONFIGURATION
 - 73.1 odoo.conf
 - 73.2 addons_path
 - 73.3 db_host
@@ -1156,7 +1156,7 @@
 - 73.11 Environment-Specific Configuration
 - 73.12 Resource Limits
 
-### CHAPTER 74: Linux Deployment
+### CHAPTER 74: LINUX DEPLOYMENT
 - 74.1 Linux User
 - 74.2 Filesystem Layout
 - 74.3 Python Environment
@@ -1169,7 +1169,7 @@
 - 74.10 Logs
 - 74.11 Deployment User Security
 
-### CHAPTER 75: Reverse Proxy & HTTPS
+### CHAPTER 75: REVERSE PROXY & HTTPS
 - 75.1 Reverse Proxy
 - 75.2 Nginx
 - 75.3 Domains
@@ -1181,7 +1181,7 @@
 - 75.9 Static Content
 - 75.10 Secure Production Exposure
 
-### CHAPTER 76: Workers & Production Configuration
+### CHAPTER 76: WORKERS & PRODUCTION CONFIGURATION
 - 76.1 Development Mode
 - 76.2 Multi-Processing
 - 76.3 Workers
@@ -1193,7 +1193,7 @@
 - 76.9 Long-Polling / WebSocket Worker Concepts
 - 76.10 Capacity Planning
 
-### CHAPTER 77: PostgreSQL Operations
+### CHAPTER 77: POSTGRESQL OPERATIONS
 - 77.1 Database Users
 - 77.2 Connections
 - 77.3 Connection Limits
@@ -1205,7 +1205,7 @@
 - 77.9 Disk Usage
 - 77.10 Slow Queries
 
-### CHAPTER 78: Backups & Disaster Recovery
+### CHAPTER 78: BACKUPS & DISASTER RECOVERY
 - 78.1 Database Backup
 - 78.2 Filestore Backup
 - 78.3 Configuration Backup
@@ -1219,7 +1219,7 @@
 - 78.11 Recovery Time Objective
 - 78.12 Disaster Recovery Plan
 
-### CHAPTER 79: Odoo.sh
+### CHAPTER 79: ODOO.SH
 - 79.1 Odoo.sh Architecture
 - 79.2 Projects
 - 79.3 Git Integration
@@ -1233,7 +1233,7 @@
 - 79.11 Database Management
 - 79.12 Backups
 
-### CHAPTER 80: Docker for Odoo
+### CHAPTER 80: DOCKER FOR ODOO
 - 80.1 Images
 - 80.2 Containers
 - 80.3 Volumes
@@ -1247,7 +1247,7 @@
 - 80.11 Configuration
 - 80.12 Container Logs
 
-### CHAPTER 81: Monitoring & Production Troubleshooting
+### CHAPTER 81: MONITORING & PRODUCTION TROUBLESHOOTING
 - 81.1 Application Logs
 - 81.2 PostgreSQL Logs
 - 81.3 CPU
@@ -1265,7 +1265,7 @@
 
 ## UNIT XX: UPGRADES, MIGRATIONS & MAINTENANCE
 
-### CHAPTER 82: Module Versioning
+### CHAPTER 82: MODULE VERSIONING
 - 82.1 Manifest Version
 - 82.2 Semantic Change Thinking
 - 82.3 Release Changes
@@ -1275,7 +1275,7 @@
 - 82.7 Changelog
 - 82.8 Release Notes
 
-### CHAPTER 83: Schema Changes
+### CHAPTER 83: SCHEMA CHANGES
 - 83.1 Adding Fields
 - 83.2 Renaming Fields
 - 83.3 Changing Field Types
@@ -1287,7 +1287,7 @@
 - 83.9 Index Changes
 - 83.10 Safe Schema Evolution
 
-### CHAPTER 84: Data Migrations
+### CHAPTER 84: DATA MIGRATIONS
 - 84.1 Migration Scripts
 - 84.2 Pre-Migration
 - 84.3 Post-Migration
@@ -1300,7 +1300,7 @@
 - 84.10 Idempotent Migrations
 - 84.11 Rollback Planning
 
-### CHAPTER 85: Odoo Version Upgrades
+### CHAPTER 85: ODOO VERSION UPGRADES
 - 85.1 Version Differences
 - 85.2 Deprecated APIs
 - 85.3 Framework Changes
@@ -1313,7 +1313,7 @@
 - 85.10 Asset Migration
 - 85.11 Post-Upgrade Testing
 
-### CHAPTER 86: Module Hooks
+### CHAPTER 86: MODULE HOOKS
 - 86.1 Hooks Concept
 - 86.2 pre_init_hook
 - 86.3 post_init_hook
@@ -1323,7 +1323,7 @@
 - 86.7 Appropriate Uses
 - 86.8 Avoiding Hook Abuse
 
-### CHAPTER 87: Upgrade-Safe Customization
+### CHAPTER 87: UPGRADE-SAFE CUSTOMIZATION
 - 87.1 Never Modify Core Directly
 - 87.2 Extension Points
 - 87.3 Model Inheritance
@@ -1335,7 +1335,7 @@
 - 87.9 Stable XML IDs
 - 87.10 Future-Proof Design
 
-### CHAPTER 88: Legacy Module Maintenance
+### CHAPTER 88: LEGACY MODULE MAINTENANCE
 - 88.1 Read Before Changing
 - 88.2 Trace Dependencies
 - 88.3 Trace Execution
@@ -1349,7 +1349,7 @@
 
 ## UNIT XXI: FUNCTIONAL ODOO FOR DEVELOPERS
 
-### CHAPTER 89: Core Functional Applications
+### CHAPTER 89: CORE FUNCTIONAL APPLICATIONS
 
 - 89.1 Contacts
   - 89.1.1 res.partner
@@ -1460,7 +1460,7 @@
 
 ## UNIT XXII: REAL ODOO ENGINEERING
 
-### CHAPTER 90: Requirements → ERP Design
+### CHAPTER 90: REQUIREMENTS → ERP DESIGN
 - 90.1 Stakeholder Interviews
 - 90.2 Business Requirements
 - 90.3 Functional Requirements
@@ -1478,7 +1478,7 @@
 - 90.15 Edge Cases
 - 90.16 Change Requests
 
-### CHAPTER 91: Odoo Solution Architecture
+### CHAPTER 91: ODOO SOLUTION ARCHITECTURE
 - 91.1 Module Boundaries
 - 91.2 Model Ownership
 - 91.3 Dependencies
@@ -1494,7 +1494,7 @@
 - 91.13 Deployment
 - 91.14 Upgrade Strategy
 
-### CHAPTER 92: Configuration vs Customization vs Integration
+### CHAPTER 92: CONFIGURATION VS CUSTOMIZATION VS INTEGRATION
 - 92.1 Standard Odoo
 - 92.2 Configuration
 - 92.3 Studio Concepts
@@ -1508,7 +1508,7 @@
 - 92.11 Technical Debt
 - 92.12 Choosing the Simplest Correct Solution
 
-### CHAPTER 93: Maintainable Odoo Code
+### CHAPTER 93: MAINTAINABLE ODOO CODE
 - 93.1 Naming
 - 93.2 Small Methods
 - 93.3 Separation of Concerns
@@ -1526,7 +1526,7 @@
 - 93.15 Testability
 - 93.16 Avoiding Premature Abstraction
 
-### CHAPTER 94: Git, Collaboration & Code Review
+### CHAPTER 94: GIT, COLLABORATION & CODE REVIEW
 - 94.1 Repository
 - 94.2 Branches
 - 94.3 Commits
@@ -1551,7 +1551,7 @@
 
 ## UNIT XXIII: GRAND ODOO ENGINEERING CAPSTONE
 
-### CHAPTER 95: Production ERP Engineering
+### CHAPTER 95: PRODUCTION ERP ENGINEERING
 - 95.1 Problem Discovery
 - 95.2 Business Requirements
 - 95.3 Process Maps
@@ -1601,7 +1601,7 @@
 
 ## UNIT XXIV: INTERVIEW & ODOO ENGINEER READINESS
 
-### CHAPTER 96: Odoo Engineer Job Readiness
+### CHAPTER 96: ODOO ENGINEER JOB READINESS
 
 #### KNOWLEDGE REVIEW
 

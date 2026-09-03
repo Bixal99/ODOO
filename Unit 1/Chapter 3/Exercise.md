@@ -1,4 +1,4 @@
-# Chapter 3 Exercise
+# CHAPTER 3 EXERCISE
 
 Try answering these without looking back at Content.md first. Answer in your own words, then compare with the complete solution at the bottom of this file.
 
@@ -6,7 +6,7 @@ For official Odoo app videos and practice database links, see [Resources.md](Res
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Part A: Application Recognition](#part-a-application-recognition)
 - [Part B: Distinguish the Records](#part-b-distinguish-the-records)
@@ -17,7 +17,7 @@ For official Odoo app videos and practice database links, see [Resources.md](Res
 
 ---
 
-## Part A: Application Recognition
+## PART A: APPLICATION RECOGNITION
 
 Identify the most relevant application for each situation.
 
@@ -38,7 +38,7 @@ Identify the most relevant application for each situation.
 
 ---
 
-## Part B: Distinguish the Records
+## PART B: DISTINGUISH THE RECORDS
 
 Explain why each pair is different:
 
@@ -52,7 +52,7 @@ Explain why each pair is different:
 
 ---
 
-## Part C: Build the Flow
+## PART C: BUILD THE FLOW
 
 Customer buys **30 office chairs**.
 
@@ -74,7 +74,7 @@ Write the complete application flow.
 
 ---
 
-## Part D: Service Business
+## PART D: SERVICE BUSINESS
 
 Customer purchases **50 implementation hours**.
 
@@ -88,7 +88,7 @@ Explain how the following could participate:
 
 ---
 
-## Part E: Manufacturing
+## PART E: MANUFACTURING
 
 Customer orders **20 tables**.
 
@@ -103,11 +103,11 @@ Then explain how **Sales**, **Inventory**, **Manufacturing**, and **Purchase** c
 
 ---
 
-# Chapter 3 Exercise: Complete Solution
+# CHAPTER 3 EXERCISE: COMPLETE SOLUTION
 
 ---
 
-## Part A: Application Recognition
+## PART A: APPLICATION RECOGNITION
 
 | # | Situation | Most relevant application |
 | --- | --- | --- |
@@ -128,9 +128,9 @@ Then explain how **Sales**, **Inventory**, **Manufacturing**, and **Purchase** c
 
 ---
 
-## Part B: Distinguish the Records
+## PART B: DISTINGUISH THE RECORDS
 
-### 1. Contact ≠ CRM Opportunity
+### 1. CONTACT ≠ CRM OPPORTUNITY
 
 A **contact** is reusable master data about a person or organization.
 
@@ -138,7 +138,7 @@ A **CRM opportunity** is a specific potential business deal linked to that conta
 
 ABC Trading may be one contact but have several opportunities over time.
 
-### 2. CRM Opportunity ≠ Quotation
+### 2. CRM OPPORTUNITY ≠ QUOTATION
 
 An **opportunity** represents possible future business and sales pursuit.
 
@@ -146,7 +146,7 @@ A **quotation** is a formal commercial offer with products, quantities, and pric
 
 The opportunity may exist before the business is ready to quote exact terms.
 
-### 3. Quotation ≠ Sales Order
+### 3. QUOTATION ≠ SALES ORDER
 
 A **quotation** is a proposal that may still be rejected or revised.
 
@@ -154,7 +154,7 @@ A **Sales Order** is a confirmed commercial commitment.
 
 Confirmation changes the business meaning from "we offered" to "the customer agreed."
 
-### 4. Sales Order ≠ Delivery
+### 4. SALES ORDER ≠ DELIVERY
 
 A **Sales Order** records what was sold commercially.
 
@@ -162,7 +162,7 @@ A **delivery** records physical movement of goods.
 
 The customer may have ordered products before the warehouse actually shipped them.
 
-### 5. Purchase Order ≠ Receipt
+### 5. PURCHASE ORDER ≠ RECEIPT
 
 A **Purchase Order** records the purchasing commitment to the vendor.
 
@@ -170,7 +170,7 @@ A **receipt** records that goods physically arrived.
 
 The vendor may confirm an order days before goods reach the warehouse.
 
-### 6. Invoice ≠ Payment
+### 6. INVOICE ≠ PAYMENT
 
 An **invoice** creates or records a financial obligation.
 
@@ -178,7 +178,7 @@ A **payment** records that money was actually received or sent.
 
 A customer can owe money on an invoice long before paying it.
 
-### 7. Project ≠ Timesheet
+### 7. PROJECT ≠ TIMESHEET
 
 A **project** is the broader body of work being performed.
 
@@ -188,7 +188,7 @@ One project may contain many timesheet entries from one or more employees.
 
 ---
 
-## Part C: Build the Flow
+## PART C: BUILD THE FLOW
 
 Given: 30 chairs ordered, 10 available, shortage of 20.
 
@@ -220,7 +220,7 @@ This is a simplified lead-to-cash flow with a procurement step in the middle.
 
 ---
 
-## Part D: Service Business
+## PART D: SERVICE BUSINESS
 
 Customer purchases **50 implementation hours**.
 
@@ -247,7 +247,7 @@ For a service company, this flow can be as central as Sales → Inventory → In
 
 ---
 
-## Part E: Manufacturing
+## PART E: MANUFACTURING
 
 Customer orders **20 tables**.
 

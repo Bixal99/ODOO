@@ -1,4 +1,4 @@
-# Unit I Exercise
+# UNIT I EXERCISE
 
 This exercise covers all of Unit I: Chapters 1, 2, and 3.
 
@@ -6,7 +6,7 @@ Try answering without looking back first. Work through the scenario in your own 
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Scenario](#scenario)
 - [Your Task](#your-task)
@@ -24,7 +24,7 @@ Try answering without looking back first. Work through the scenario in your own 
 
 ---
 
-## Scenario
+## SCENARIO
 
 Without looking back, explain this scenario from beginning to end:
 
@@ -34,7 +34,7 @@ This scenario deliberately crosses sales, manufacturing, purchasing, inventory, 
 
 ---
 
-## Your Task
+## YOUR TASK
 
 Identify:
 
@@ -51,13 +51,13 @@ Identify:
 
 ---
 
-# Unit I Exercise: Complete Solution
+# UNIT I EXERCISE: COMPLETE SOLUTION
 
 Work through the scenario above first. The solution below explains the reasoning Unit I expects across all three chapters.
 
 ---
 
-## 1. Master Data
+## 1. MASTER DATA
 
 Master data is reusable information referenced by many transactions.
 
@@ -74,7 +74,7 @@ Master data answers questions such as "Who is the customer?" and "What is a desk
 
 ---
 
-## 2. Transactions
+## 2. TRANSACTIONS
 
 Transactions are specific business events at points in time.
 
@@ -96,7 +96,7 @@ Each transaction represents a business event with its own meaning. A Sales Order
 
 ---
 
-## 3. Departments
+## 3. DEPARTMENTS
 
 | Stage | Likely department | Responsibility |
 | --- | --- | --- |
@@ -111,7 +111,7 @@ The workflow crosses several departments even though it began as one customer re
 
 ---
 
-## 4. Applications
+## 4. APPLICATIONS
 
 | Stage | Odoo application | Why |
 | --- | --- | --- |
@@ -129,7 +129,7 @@ Chapter 2 taught that these apps share a platform. Chapter 3 taught what each ap
 
 ---
 
-## 5. Likely Document Flow
+## 5. LIKELY DOCUMENT FLOW
 
 <div align="center">
 
@@ -166,7 +166,7 @@ flowchart TD
 
 ---
 
-## 6. Where Inventory Changes
+## 6. WHERE INVENTORY CHANGES
 
 Inventory is not one static number. It changes through movements and state transitions.
 
@@ -182,7 +182,7 @@ Inventory tracks quantities, locations, reservations, incoming goods, and outgoi
 
 ---
 
-## 7. Where Financial Records Appear
+## 7. WHERE FINANCIAL RECORDS APPEAR
 
 Financial records appear mainly in **Accounting**.
 
@@ -197,7 +197,7 @@ This reflects the Chapter 3 distinction: **Invoice ≠ Payment**.
 
 ---
 
-## 8. Where Helpdesk Appears
+## 8. WHERE HELPDESK APPEARS
 
 Helpdesk appears **after delivery**, when the customer reports one damaged desk.
 
@@ -215,7 +215,7 @@ Integrated Helpdesk avoids asking the customer to repeat information Odoo alread
 
 ---
 
-## 9. Single Source of Truth
+## 9. SINGLE SOURCE OF TRUTH
 
 Single source of truth matters wherever duplicate records would break traceability.
 
@@ -232,7 +232,7 @@ That was the core lesson of Chapter 1, applied concretely in Chapters 2 and 3.
 
 ---
 
-## 10. One Process or Many?
+## 10. ONE PROCESS OR MANY?
 
 This is **multiple connected processes** forming one larger customer journey.
 

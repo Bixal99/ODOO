@@ -1,6 +1,6 @@
 # UNIT I: FREE LEARNING RESOURCES
 
-## Chapter 1: What Is ERP?
+## CHAPTER 1: WHAT IS ERP?
 
 These resources reinforce **business processes**, **departments**, **master data**, **transactions**, **ERP integration**, **ERP vs CRM**, and **process mapping** from [Chapter 1 Content](Content.md).
 
@@ -10,7 +10,7 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 
 ---
 
-## Chapter 1 Resources Table of Contents
+## CHAPTER 1 RESOURCES TABLE OF CONTENTS
 
 - [YouTube](#youtube)
 - [Free Courses / Websites](#free-courses--websites)
@@ -20,11 +20,11 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 
 ---
 
-## YouTube
+## YOUTUBE
 
 > **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
-### 1. Enterprise Resource Planning (ERP) in 15 Minutes
+### 1. ENTERPRISE RESOURCE PLANNING (ERP) IN 15 MINUTES
 
 | | |
 |---|---|
@@ -42,7 +42,7 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 
 ---
 
-### 2. Business Process Mapping 101: Step-by-Step
+### 2. BUSINESS PROCESS MAPPING 101: STEP-BY-STEP
 
 | | |
 |---|---|
@@ -60,7 +60,7 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 
 ---
 
-### 3. Cross-Functional Information Systems / ERP
+### 3. CROSS-FUNCTIONAL INFORMATION SYSTEMS / ERP
 
 | | |
 |---|---|
@@ -78,11 +78,11 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 
 ---
 
-## Free Courses / Websites
+## FREE COURSES / WEBSITES
 
 These are **not Odoo-specific**, which is useful for Chapter 1 because this chapter teaches ERP thinking rather than Odoo screens.
 
-### 1. SAP Learning: Exploring End-to-End Business Processes in SAP
+### 1. SAP LEARNING: EXPLORING END-TO-END BUSINESS PROCESSES IN SAP
 
 | | |
 |---|---|
@@ -94,7 +94,7 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 
 ---
 
-### 2. SAP Learning: Executing Basic ERP Processes with SAP S/4HANA
+### 2. SAP LEARNING: EXECUTING BASIC ERP PROCESSES WITH SAP S/4HANA
 
 | | |
 |---|---|
@@ -106,7 +106,7 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 
 ---
 
-### 3. SAP Learning: Understanding the Concept of Master Data
+### 3. SAP LEARNING: UNDERSTANDING THE CONCEPT OF MASTER DATA
 
 | | |
 |---|---|
@@ -118,9 +118,9 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 
 ---
 
-## Animated / Interactive
+## ANIMATED / INTERACTIVE
 
-### 1. bpmn.io: Interactive BPMN Process Modeler
+### 1. BPMN.IO: INTERACTIVE BPMN PROCESS MODELER
 
 | | |
 |---|---|
@@ -161,9 +161,9 @@ Also useful:
 
 ---
 
-## Repositories
+## REPOSITORIES
 
-### 1. bpmn-js Examples
+### 1. BPMN-JS EXAMPLES
 
 | | |
 |---|---|
@@ -175,7 +175,7 @@ Also useful:
 
 ---
 
-## Recommended Study Order
+## RECOMMENDED STUDY ORDER
 
 If you do not want to consume everything, use this sequence for Chapter 1:
 

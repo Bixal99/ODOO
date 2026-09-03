@@ -1,6 +1,6 @@
-# Chapter 1 Project: Map a Small Company Before Building It in Odoo
+# CHAPTER 1 PROJECT: MAP A SMALL COMPANY BEFORE BUILDING IT IN ODOO
 
-## Project Goal
+## PROJECT GOAL
 
 Create an ERP business analysis for a fictional company called **Bilal Office Supplies**.
 
@@ -19,7 +19,7 @@ For supplementary ERP videos and process-mapping tools, see [Resources.md](Resou
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Part 1: Define the Departments](#part-1-define-the-departments)
 - [Part 2: Define Master Data](#part-2-define-master-data)
@@ -31,7 +31,7 @@ For supplementary ERP videos and process-mapping tools, see [Resources.md](Resou
 
 ---
 
-## Part 1: Define the Departments
+## PART 1: DEFINE THE DEPARTMENTS
 
 Document responsibilities for:
 
@@ -46,7 +46,7 @@ For each department, describe its purpose, key responsibilities, and likely proc
 
 ---
 
-## Part 2: Define Master Data
+## PART 2: DEFINE MASTER DATA
 
 Create sample master records for:
 
@@ -60,7 +60,7 @@ Do not build them in Odoo yet. This is business modeling.
 
 ---
 
-## Part 3: Map Order-to-Cash
+## PART 3: MAP ORDER-TO-CASH
 
 Create the flow from customer request through payment.
 
@@ -83,7 +83,7 @@ For every stage identify:
 
 ---
 
-## Part 4: Add an Inventory Shortage
+## PART 4: ADD AN INVENTORY SHORTAGE
 
 Assume:
 
@@ -106,7 +106,7 @@ Document how the departments interact.
 
 ---
 
-## Part 5: Identify the Source of Truth
+## PART 5: IDENTIFY THE SOURCE OF TRUTH
 
 For each item, decide where the authoritative information should conceptually live:
 
@@ -120,7 +120,7 @@ Then explain why maintaining multiple unrelated copies would cause problems.
 
 ---
 
-## Part 6: As-Is vs To-Be
+## PART 6: AS-IS VS TO-BE
 
 Design a deliberately inefficient manual process. For example:
 
@@ -134,13 +134,13 @@ This exercise will make the need for an ERP system very concrete.
 
 ---
 
-# Chapter 1 Project: Complete Solution
+# CHAPTER 1 PROJECT: COMPLETE SOLUTION
 
 The solution below shows what a strong Chapter 1 project submission looks like. Use it to check your own work, not to skip the analysis.
 
 ---
 
-## Bilal Office Supplies: Company Description
+## BILAL OFFICE SUPPLIES: COMPANY DESCRIPTION
 
 Bilal Office Supplies is a fictional business-to-business company selling laptops, monitors, keyboards, and office chairs.
 
@@ -150,9 +150,9 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 ---
 
-## Part 1: Define the Departments
+## PART 1: DEFINE THE DEPARTMENTS
 
-### 1. Sales Department
+### 1. SALES DEPARTMENT
 
 **Main purpose:** Convert customer demand into confirmed orders and revenue.
 
@@ -172,7 +172,7 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 ---
 
-### 2. Purchasing Department
+### 2. PURCHASING DEPARTMENT
 
 **Main purpose:** Obtain products and services required by the company.
 
@@ -192,7 +192,7 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 ---
 
-### 3. Warehouse Department
+### 3. WAREHOUSE DEPARTMENT
 
 **Main purpose:** Control physical product movement and storage.
 
@@ -213,7 +213,7 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 ---
 
-### 4. Finance Department
+### 4. FINANCE DEPARTMENT
 
 **Main purpose:** Manage financial records and monetary consequences of business activities.
 
@@ -233,7 +233,7 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 ---
 
-### 5. HR Department
+### 5. HR DEPARTMENT
 
 **Main purpose:** Manage employees and employee-related processes.
 
@@ -252,7 +252,7 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 ---
 
-### 6. Operations Department
+### 6. OPERATIONS DEPARTMENT
 
 **Main purpose:** Ensure the company's day-to-day business activities operate effectively.
 
@@ -271,9 +271,9 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ---
 
-## Part 2: Define Master Data
+## PART 2: DEFINE MASTER DATA
 
-### A. Customers
+### A. CUSTOMERS
 
 **Customer 1: Doha Business Solutions**
 
@@ -310,7 +310,7 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ---
 
-### B. Vendors
+### B. VENDORS
 
 **Vendor 1: TechSource Distribution** (supplies laptops, monitors, keyboards)
 
@@ -332,7 +332,7 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ---
 
-### C. Products
+### C. PRODUCTS
 
 | Product | Selling Price | Cost | Type / Category |
 | --- | --- | --- | --- |
@@ -343,7 +343,7 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ---
 
-### D. Employees
+### D. EMPLOYEES
 
 | Employee | Role | Department | Manager |
 | --- | --- | --- | --- |
@@ -353,7 +353,7 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ---
 
-### E. Basic Financial Accounts
+### E. BASIC FINANCIAL ACCOUNTS
 
 | Account | Type | Purpose |
 | --- | --- | --- |
@@ -370,7 +370,7 @@ These account records are relatively stable. Individual journal entries against 
 
 ---
 
-## Part 3: Map Order-to-Cash
+## PART 3: MAP ORDER-TO-CASH
 
 <div align="center">
 
@@ -381,7 +381,7 @@ flowchart LR
 
 </div>
 
-### Stage 1: Customer Request
+### STAGE 1: CUSTOMER REQUEST
 
 | | |
 | --- | --- |
@@ -391,7 +391,7 @@ flowchart LR
 | **Output** | A sufficiently defined customer requirement that can become a quotation |
 | **Responsible role** | Sales Executive |
 
-### Stage 2: Quotation
+### STAGE 2: QUOTATION
 
 | | |
 | --- | --- |
@@ -401,7 +401,7 @@ flowchart LR
 | **Output** | Customer quotation |
 | **Responsible role** | Sales Executive |
 
-### Stage 3: Sales Order
+### STAGE 3: SALES ORDER
 
 | | |
 | --- | --- |
@@ -411,7 +411,7 @@ flowchart LR
 | **Output** | Sales Order |
 | **Responsible role** | Sales Executive / Sales Manager |
 
-### Stage 4: Delivery
+### STAGE 4: DELIVERY
 
 | | |
 | --- | --- |
@@ -421,7 +421,7 @@ flowchart LR
 | **Output** | Completed delivery |
 | **Responsible role** | Warehouse Officer / Warehouse Manager |
 
-### Stage 5: Invoice
+### STAGE 5: INVOICE
 
 | | |
 | --- | --- |
@@ -431,7 +431,7 @@ flowchart LR
 | **Output** | Customer invoice |
 | **Responsible role** | Accountant |
 
-### Stage 6: Payment
+### STAGE 6: PAYMENT
 
 | | |
 | --- | --- |
@@ -441,7 +441,7 @@ flowchart LR
 | **Output** | Paid or partially paid invoice |
 | **Responsible role** | Accountant / Finance Officer |
 
-### Order-to-Cash summary
+### ORDER-TO-CASH SUMMARY
 
 | Stage | Department | Input | Activity | Output | Responsible role |
 | --- | --- | --- | --- | --- | --- |
@@ -454,7 +454,7 @@ flowchart LR
 
 ---
 
-## Part 4: Inventory Shortage
+## PART 4: INVENTORY SHORTAGE
 
 **Given:** Customer demand = **50**, Available stock = **20**, Shortage = **30** (50 − 20).
 
@@ -469,31 +469,31 @@ flowchart LR
 
 Suppose the product is **27-inch Monitor**.
 
-### Step 1: Sales
+### STEP 1: SALES
 
 Customer requests **50 monitors**. Sales creates and confirms the order. Sales demand becomes an inventory requirement.
 
-### Step 2: Inventory check
+### STEP 2: INVENTORY CHECK
 
 Warehouse sees **20 available** but **50 required**. **30 missing**. The shortage must be communicated to Purchasing.
 
-### Step 3: Purchasing
+### STEP 3: PURCHASING
 
 Purchasing receives the requirement for **30 monitors** and creates a Purchase Order with **TechSource Distribution**. Output: **PO for 30 Monitors**.
 
-### Step 4: Supplier receipt
+### STEP 4: SUPPLIER RECEIPT
 
 TechSource Distribution sends the 30 monitors. Warehouse receives them. Stock becomes **50** (20 + 30). Now the complete customer order can be fulfilled.
 
-### Step 5: Delivery
+### STEP 5: DELIVERY
 
 Warehouse reserves **50 monitors** for the customer, picks, packs, and delivers them. Stock movement is recorded.
 
-### Step 6: Invoice
+### STEP 6: INVOICE
 
 Selling price: **1,000 QAR per monitor**. Invoice total: **50,000 QAR** (50 × 1,000). Finance creates the customer invoice.
 
-### How the departments interact
+### HOW THE DEPARTMENTS INTERACT
 
 - **Sales** tells **Warehouse:** the customer requires 50 units.
 - **Warehouse** tells **Purchasing:** we only have 20; we need 30 more.
@@ -506,39 +506,39 @@ That is a cross-department ERP workflow.
 
 ---
 
-## Part 5: Identify the Source of Truth
+## PART 5: IDENTIFY THE SOURCE OF TRUTH
 
-### 1. Customer address
+### 1. CUSTOMER ADDRESS
 
 **Authoritative location:** Customer master record.
 
 Sales, Warehouse, and Finance should reference the same customer address rather than keeping unrelated copies. If each department stores a different street, the company may deliver to the wrong address, invoice incorrectly, and maintain inconsistent customer data.
 
-### 2. Product price
+### 2. PRODUCT PRICE
 
 **Authoritative location:** Product / pricing master data.
 
 There must be an authoritative pricing rule rather than independent departmental spreadsheets. Otherwise Sales could quote **900 QAR** while Finance invoices **1,000 QAR**, creating disputes.
 
-### 3. Stock quantity
+### 3. STOCK QUANTITY
 
 **Authoritative location:** Inventory / Warehouse system records.
 
 Inventory quantities should come from recorded stock movements and warehouse data. Sales should not maintain an unrelated Excel sheet saying **50 available** while Warehouse knows actual stock is **20**.
 
-### 4. Employee department
+### 4. EMPLOYEE DEPARTMENT
 
 **Authoritative location:** Employee / HR master record.
 
 Example: **Ahmed Khan → Sales Department**. Other applications should refer to that organizational information where appropriate.
 
-### 5. Invoice status
+### 5. INVOICE STATUS
 
 **Authoritative location:** Accounting / Finance transaction record.
 
 The invoice itself should represent its status: Draft, Posted, Partially Paid, Paid. Sales should not maintain an unrelated spreadsheet manually saying an invoice is paid.
 
-### Why multiple unrelated copies are dangerous
+### WHY MULTIPLE UNRELATED COPIES ARE DANGEROUS
 
 Suppose the same information exists in four systems. A change must then be made four times. If someone forgets one system, the organization has multiple conflicting versions of "truth."
 
@@ -553,9 +553,9 @@ This causes:
 
 ---
 
-## Part 6: As-Is vs To-Be
+## PART 6: AS-IS VS TO-BE
 
-### As-Is: Inefficient manual process
+### AS-IS: INEFFICIENT MANUAL PROCESS
 
 Bilal Office Supplies currently operates without an integrated ERP.
 
@@ -579,7 +579,7 @@ Bilal Office Supplies currently operates without an integrated ERP.
 
 ---
 
-### To-Be: Integrated ERP process
+### TO-BE: INTEGRATED ERP PROCESS
 
 Now imagine Bilal Office Supplies operates through an integrated ERP.
 
@@ -603,7 +603,7 @@ flowchart LR
 
 All activities operate around connected records.
 
-### As-Is vs To-Be comparison
+### AS-IS VS TO-BE COMPARISON
 
 | As-Is | To-Be |
 | --- | --- |
@@ -618,7 +618,7 @@ All activities operate around connected records.
 
 ---
 
-## Final Chapter 1 Project Conclusion
+## FINAL CHAPTER 1 PROJECT CONCLUSION
 
 Bilal Office Supplies demonstrates the basic reason ERP systems exist.
 

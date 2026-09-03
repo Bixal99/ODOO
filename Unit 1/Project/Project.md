@@ -1,4 +1,4 @@
-# Unit I Project: Map a Complete Mini Enterprise
+# UNIT I PROJECT: MAP A COMPLETE MINI ENTERPRISE
 
 Design a fictional company that uses Odoo across product sales, procurement, services, manufacturing, and online channels.
 
@@ -6,7 +6,7 @@ This is **business modeling**, not Odoo configuration. Do not build records in O
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Project Goal](#project-goal)
 - [Part 1: Design the Company](#part-1-design-the-company)
@@ -18,7 +18,7 @@ This is **business modeling**, not Odoo configuration. Do not build records in O
 
 ---
 
-## Project Goal
+## PROJECT GOAL
 
 Design a fictional company with:
 
@@ -91,45 +91,45 @@ If you can do that correctly, Unit I has done its job.
 
 ---
 
-## Part 1: Design the Company
+## PART 1: DESIGN THE COMPANY
 
 Create your fictional company profile including departments, products, services, customers, vendors, and employees.
 
 ---
 
-## Part 2: Flow A - Lead-to-Cash
+## PART 2: FLOW A - LEAD-TO-CASH
 
 Map a product sale from prospect interest through payment.
 
 ---
 
-## Part 3: Flow B - Procure-to-Pay
+## PART 3: FLOW B - PROCURE-TO-PAY
 
 Map a procurement cycle from need through vendor payment.
 
 ---
 
-## Part 4: Flow C - Service Delivery
+## PART 4: FLOW C - SERVICE DELIVERY
 
 Map a consulting or implementation sale from opportunity through billed hours.
 
 ---
 
-## Part 5: Flow D - Manufacturing
+## PART 5: FLOW D - MANUFACTURING
 
 Map a made-to-order manufacturing scenario from sales demand through delivery and invoicing.
 
 ---
 
-# Unit I Project: Complete Solution
+# UNIT I PROJECT: COMPLETE SOLUTION
 
 The solution below uses a fictional company called **Gulf Smart Solutions (GSS)**. It sells IT products, manufactures custom office desks, offers Odoo implementation services, and sells selected products through eCommerce.
 
 ---
 
-## Part 1: Design the Company
+## PART 1: DESIGN THE COMPANY
 
-### Company profile
+### COMPANY PROFILE
 
 **Gulf Smart Solutions (GSS)** is a Qatar-based company that:
 
@@ -138,7 +138,7 @@ The solution below uses a fictional company called **Gulf Smart Solutions (GSS)*
 - provides Odoo implementation consulting,
 - sells selected products online through its website.
 
-### Departments
+### DEPARTMENTS
 
 | Department | Purpose |
 | --- | --- |
@@ -151,7 +151,7 @@ The solution below uses a fictional company called **Gulf Smart Solutions (GSS)*
 | **Projects / Consulting** | deliver implementation services |
 | **Support** | handle after-sales issues through Helpdesk when needed |
 
-### Master data
+### MASTER DATA
 
 **Customers**
 
@@ -194,7 +194,7 @@ The solution below uses a fictional company called **Gulf Smart Solutions (GSS)*
 
 ---
 
-## Part 2: Flow A - Lead-to-Cash
+## PART 2: FLOW A - LEAD-TO-CASH
 
 **Scenario:** Doha Tech may need **20 monitors** for a new office. Ahmed qualifies the opportunity, quotes, confirms the sale, fulfills from stock with partial procurement, delivers, invoices, and receives payment.
 
@@ -240,7 +240,7 @@ flowchart TD
 
 ---
 
-## Part 3: Flow B - Procure-to-Pay
+## PART 3: FLOW B - PROCURE-TO-PAY
 
 **Scenario:** Warehouse stock of keyboards falls below minimum. Sara procures **100 keyboards** from Qatar Hardware Supply, receives them, processes the vendor bill, and Finance pays the vendor.
 
@@ -282,7 +282,7 @@ flowchart TD
 
 ---
 
-## Part 4: Flow C - Service Delivery
+## PART 4: FLOW C - SERVICE DELIVERY
 
 **Scenario:** Gulf Office Solutions buys an **Odoo Implementation Package** for **80 consulting hours**. Layla delivers the work through a project with timesheets. Finance invoices based on the commercial agreement.
 
@@ -327,7 +327,7 @@ For service businesses, **Sales → Project → Timesheet → Accounting** is as
 
 ---
 
-## Part 5: Flow D - Manufacturing
+## PART 5: FLOW D - MANUFACTURING
 
 **Scenario:** ABC Trading orders **10 custom office desks**. GSS manufactures desks from components. Some components are in stock; WoodCraft Materials supplies missing items. Manufacturing completes the desks, warehouse delivers them, and Finance invoices ABC Trading.
 
@@ -385,7 +385,7 @@ flowchart TD
 
 ---
 
-## eCommerce channel note
+## ECOMMERCE CHANNEL NOTE
 
 GSS also sells keyboards and monitors online.
 
@@ -404,7 +404,7 @@ A website checkout creates the same internal document chain as a traditional sal
 
 ---
 
-## Final enterprise map
+## FINAL ENTERPRISE MAP
 
 Gulf Smart Solutions therefore operates four major connected flows inside one enterprise model:
 

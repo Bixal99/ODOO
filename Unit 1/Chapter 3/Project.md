@@ -1,4 +1,4 @@
-# Chapter 3 Project: Bilal Office Supplies Integrated Odoo Flow
+# CHAPTER 3 PROJECT: BILAL OFFICE SUPPLIES INTEGRATED ODOO FLOW
 
 We extend the same fictional company from Chapters 1 and 2.
 
@@ -8,7 +8,7 @@ For app-specific Odoo videos, documentation, and hands-on environments, see [Res
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Part 1: Master Data](#part-1-master-data)
 - [Part 2: CRM](#part-2-crm)
@@ -24,7 +24,7 @@ For app-specific Odoo videos, documentation, and hands-on environments, see [Res
 
 ---
 
-## Part 1: Master Data
+## PART 1: MASTER DATA
 
 Define:
 
@@ -55,7 +55,7 @@ Define:
 
 ---
 
-## Part 2: CRM
+## PART 2: CRM
 
 Create this conceptual opportunity:
 
@@ -72,7 +72,7 @@ Expected value:
 
 ---
 
-## Part 3: Sales
+## PART 3: SALES
 
 Convert the opportunity into a quotation.
 
@@ -87,7 +87,7 @@ Demand:
 
 ---
 
-## Part 4: Inventory
+## PART 4: INVENTORY
 
 Available stock:
 
@@ -104,7 +104,7 @@ Therefore monitors are not sufficient, but keyboards are.
 
 ---
 
-## Part 5: Purchase
+## PART 5: PURCHASE
 
 Purchase **12 monitors** from Global Displays.
 
@@ -114,7 +114,7 @@ Document conceptual flow:
 
 ---
 
-## Part 6: Receipt
+## PART 6: RECEIPT
 
 Vendor delivers **12 monitors**.
 
@@ -122,13 +122,13 @@ New monitor stock: **8 + 12 = 20**
 
 ---
 
-## Part 7: Delivery
+## PART 7: DELIVERY
 
 Deliver **20 monitors** and **20 keyboards** to ABC Trading.
 
 ---
 
-## Part 8: Accounting
+## PART 8: ACCOUNTING
 
 Suppose:
 
@@ -145,7 +145,7 @@ Outstanding: **0**
 
 ---
 
-## Part 9: Helpdesk
+## PART 9: HELPDESK
 
 After delivery, customer reports:
 
@@ -164,7 +164,7 @@ Explain why connecting this ticket to existing records is better than treating i
 
 ---
 
-## Part 10: Final Document Map
+## PART 10: FINAL DOCUMENT MAP
 
 Your project should end with the complete conceptual flow from contact through payment and, if needed, Helpdesk.
 
@@ -174,13 +174,13 @@ That diagram demonstrates the core goal of Unit I:
 
 ---
 
-# Chapter 3 Project: Complete Solution
+# CHAPTER 3 PROJECT: COMPLETE SOLUTION
 
 ---
 
-## Part 1: Master Data
+## PART 1: MASTER DATA
 
-### Customers
+### CUSTOMERS
 
 | Customer | Role in this project |
 | --- | --- |
@@ -190,14 +190,14 @@ That diagram demonstrates the core goal of Unit I:
 
 These are reusable contact records, not transactions.
 
-### Vendors
+### VENDORS
 
 | Vendor | Role in this project |
 | --- | --- |
 | **Global Displays** | Supplier used to replenish monitors |
 | **Qatar Hardware Supply** | Additional vendor master record |
 
-### Products
+### PRODUCTS
 
 | Product | Typical use |
 | --- | --- |
@@ -206,7 +206,7 @@ These are reusable contact records, not transactions.
 | Keyboard | Used in ABC Trading order |
 | Office Chair | General catalog product |
 
-### Employees
+### EMPLOYEES
 
 | Employee | Department / role |
 | --- | --- |
@@ -219,7 +219,7 @@ Each employee is master data. Only some will also be Odoo users with app access.
 
 ---
 
-## Part 2: CRM
+## PART 2: CRM
 
 **Opportunity:** ABC Trading — New Office Equipment
 
@@ -242,7 +242,7 @@ Ahmed may record notes, activities, stage, and expected close information while 
 
 ---
 
-## Part 3: Sales
+## PART 3: SALES
 
 Once requirements are clear, Ahmed converts the opportunity into a **quotation** for ABC Trading:
 
@@ -260,7 +260,7 @@ This Sales Order now triggers operational consequences in Inventory and eventual
 
 ---
 
-## Part 4: Inventory
+## PART 4: INVENTORY
 
 | Product | Required | Available | Result |
 | --- | --- | --- | --- |
@@ -276,7 +276,7 @@ Ali sees outgoing delivery demand for both products, but only monitors require r
 
 ---
 
-## Part 5: Purchase
+## PART 5: PURCHASE
 
 Sara creates procurement for **12 monitors** from **Global Displays**.
 
@@ -297,7 +297,7 @@ It does **not** by itself mean the monitors are already in stock.
 
 ---
 
-## Part 6: Receipt
+## PART 6: RECEIPT
 
 Global Displays delivers **12 monitors**.
 
@@ -311,7 +311,7 @@ Now the warehouse can fulfill the full Sales Order quantity for monitors. Keyboa
 
 ---
 
-## Part 7: Delivery
+## PART 7: DELIVERY
 
 Ali delivers to ABC Trading:
 
@@ -326,7 +326,7 @@ The delivery records the actual movement of goods to the customer.
 
 ---
 
-## Part 8: Accounting
+## PART 8: ACCOUNTING
 
 **Pricing:**
 
@@ -351,7 +351,7 @@ The payment represents money actually received.
 
 ---
 
-## Part 9: Helpdesk
+## PART 9: HELPDESK
 
 **Problem reported:** Two keyboards arrived damaged.
 
@@ -382,7 +382,7 @@ That reduces delay, duplication, and error. It also preserves the customer lifec
 
 ---
 
-## Part 10: Final Document Map
+## PART 10: FINAL DOCUMENT MAP
 
 <div align="center">
 

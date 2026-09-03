@@ -1,4 +1,4 @@
-# Chapter 2 Project: Design an Odoo Deployment for Bilal Office Supplies
+# CHAPTER 2 PROJECT: DESIGN AN ODOO DEPLOYMENT FOR BILAL OFFICE SUPPLIES
 
 You already modeled the company's processes in Chapter 1.
 
@@ -10,7 +10,7 @@ For Odoo Learn, official documentation, and deployment resources, see [Resources
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [Part 1: Applications](#part-1-applications)
 - [Part 2: Users](#part-2-users)
@@ -23,7 +23,7 @@ For Odoo Learn, official documentation, and deployment resources, see [Resources
 
 ---
 
-## Part 1: Applications
+## PART 1: APPLICATIONS
 
 Bilal Office Supplies needs:
 
@@ -38,7 +38,7 @@ Identify the Odoo apps you expect to investigate for each requirement.
 
 ---
 
-## Part 2: Users
+## PART 2: USERS
 
 Create these roles:
 
@@ -61,7 +61,7 @@ Do not configure security yet. We are designing the requirement.
 
 ---
 
-## Part 3: Companies
+## PART 3: COMPANIES
 
 Start with **Bilal Office Supplies Qatar**.
 
@@ -76,7 +76,7 @@ Determine:
 
 ---
 
-## Part 4: Master Records
+## PART 4: MASTER RECORDS
 
 Identify likely shared or master data:
 
@@ -89,7 +89,7 @@ Then determine which of these may require company-specific information.
 
 ---
 
-## Part 5: Hosting Decision
+## PART 5: HOSTING DECISION
 
 Compare the three options:
 
@@ -106,7 +106,7 @@ For each, write:
 
 ---
 
-## Part 6: Custom Requirement (Sales Approval)
+## PART 6: CUSTOM REQUIREMENT (SALES APPROVAL)
 
 Business requirement:
 
@@ -126,7 +126,7 @@ Would you first investigate standard Odoo, configuration, Studio, or custom code
 
 ---
 
-## Part 7: Complex Requirement (Logistics API)
+## PART 7: COMPLEX REQUIREMENT (LOGISTICS API)
 
 The company later says:
 
@@ -142,13 +142,13 @@ You are not coding yet. The goal is to develop Odoo engineering judgment.
 
 ---
 
-# Chapter 2 Project: Complete Solution
+# CHAPTER 2 PROJECT: COMPLETE SOLUTION
 
 Work through the parts above first. The solutions below apply Chapter 2 concepts to Bilal Office Supplies.
 
 ---
 
-## Part 1: Applications
+## PART 1: APPLICATIONS
 
 The company needs the following:
 
@@ -165,9 +165,9 @@ The company needs the following:
 
 ---
 
-## Part 2: Users
+## PART 2: USERS
 
-### Ahmed: Salesperson
+### AHMED: SALESPERSON
 
 **Applications:** Contacts, CRM (if used), Sales
 
@@ -177,7 +177,7 @@ The company needs the following:
 
 **Should probably not access:** full accounting configuration, employee salary information, server administration, vendor purchasing controls.
 
-### Sara: Purchasing
+### SARA: PURCHASING
 
 **Applications:** Purchase, Contacts/Vendors, relevant Inventory information
 
@@ -187,7 +187,7 @@ The company needs the following:
 
 **Should probably not access:** HR confidential information, full accounting administration, unrelated Sales administration, system administration.
 
-### Ali: Warehouse
+### ALI: WAREHOUSE
 
 **Applications:** primarily Inventory
 
@@ -197,7 +197,7 @@ The company needs the following:
 
 **Should probably not access:** accounting, vendor financial terms unnecessarily, HR, Odoo administration, sensitive Sales pricing if not required.
 
-### Fatima: Finance
+### FATIMA: FINANCE
 
 **Applications:** Accounting/Invoicing, Contacts, limited Sales/Purchase information when required for financial processing
 
@@ -207,7 +207,7 @@ The company needs the following:
 
 **Should probably not access:** system technical settings, unnecessary HR data, arbitrary warehouse administration.
 
-### Bilal: Administrator
+### BILAL: ADMINISTRATOR
 
 **Applications:** potentially all applications
 
@@ -217,20 +217,20 @@ The company needs the following:
 
 However, even administrators should use high privilege responsibly. Being an administrator does not mean changing anything at any time. Production systems require controlled changes.
 
-### User-access principle
+### USER-ACCESS PRINCIPLE
 
 The requirement should follow **Least Necessary Access**: users get what they need to perform their business responsibilities, not automatically everything.
 
 ---
 
-## Part 3: Companies
+## PART 3: COMPANIES
 
 We now have:
 
 - **C_Q** = Bilal Office Supplies Qatar
 - **C_P** = Bilal Office Supplies Pakistan
 
-### User design
+### USER DESIGN
 
 | User | Role | Access |
 | --- | --- | --- |
@@ -242,7 +242,7 @@ We now have:
 
 Pakistan-specific staff would normally receive **C_P** only.
 
-### Information that might be shared
+### INFORMATION THAT MIGHT BE SHARED
 
 Potential examples:
 
@@ -253,7 +253,7 @@ Potential examples:
 
 For example, **Logitech Keyboard** could be recognized as the same product used throughout the group.
 
-### Information that must remain company-specific
+### INFORMATION THAT MUST REMAIN COMPANY-SPECIFIC
 
 Examples:
 
@@ -269,7 +269,7 @@ Examples:
 
 Example: **INV_Q001 ∈ C_Q** must not accidentally become an accounting transaction for **C_P**.
 
-### Why separation matters
+### WHY SEPARATION MATTERS
 
 The two businesses may have different currencies, taxes, laws, bank accounts, and accounting structures.
 
@@ -277,9 +277,9 @@ Therefore **Shared ERP Database ≠ Shared Legal Identity**.
 
 ---
 
-## Part 4: Master Records
+## PART 4: MASTER RECORDS
 
-### Customers
+### CUSTOMERS
 
 Potentially shared.
 
@@ -287,13 +287,13 @@ Example: **ABC International** might purchase from both Qatar and Pakistan.
 
 However, company-specific values could differ, such as payment terms, salesperson, pricing, and accounting treatment.
 
-### Vendors
+### VENDORS
 
 Potentially shared if the same supplier serves multiple group companies.
 
 Company-specific aspects might include purchase terms, currency, payment arrangements, and accounting information.
 
-### Products
+### PRODUCTS
 
 Products are strong candidates for shared master information.
 
@@ -301,7 +301,7 @@ Potentially shared: name, SKU, description, barcode.
 
 Potentially company-dependent: cost, valuation and accounting behavior, pricing, taxes, procurement settings.
 
-### Employees
+### EMPLOYEES
 
 Employees normally have much stronger company context.
 
@@ -309,15 +309,15 @@ Ahmed working for Bilal Office Supplies Qatar should normally be associated with
 
 An employee's department, manager, contract, payroll, and leave rules may depend heavily on their company.
 
-### Overall design principle
+### OVERALL DESIGN PRINCIPLE
 
 Some master information can be **Shared Identity** while certain attributes remain **Company-Specific Context**.
 
 ---
 
-## Part 5: Hosting Decision
+## PART 5: HOSTING DECISION
 
-### Odoo Online
+### ODOO ONLINE
 
 | | |
 | --- | --- |
@@ -326,7 +326,7 @@ Some master information can be **Shared Identity** while certain attributes rema
 | **Customization capability** | Good for standard functionality, configuration, and supported Studio-based customization |
 | **Infrastructure responsibility** | Mostly handled by Odoo |
 
-### Odoo.sh
+### ODOO.SH
 
 | | |
 | --- | --- |
@@ -335,7 +335,7 @@ Some master information can be **Shared Identity** while certain attributes rema
 | **Customization capability** | High; supports custom modules and Git-oriented development workflows |
 | **Infrastructure responsibility** | Shared and managed significantly by Odoo.sh; the development team concentrates more on Odoo than on raw server administration |
 
-### Self-Hosted
+### SELF-HOSTED
 
 | | |
 | --- | --- |
@@ -344,7 +344,7 @@ Some master information can be **Shared Identity** while certain attributes rema
 | **Customization capability** | Very high |
 | **Infrastructure responsibility** | Mostly yours; you need backups, security, SSL, updates, monitoring, recovery, and database management |
 
-### Hosting recommendation for Bilal Office Supplies
+### HOSTING RECOMMENDATION FOR BILAL OFFICE SUPPLIES
 
 Suppose this company plans substantial custom development.
 
@@ -354,7 +354,7 @@ If the company eventually needs deep infrastructure control, strict hosting requ
 
 ---
 
-## Part 6: Custom Requirement (Sales Approval)
+## PART 6: CUSTOM REQUIREMENT (SALES APPROVAL)
 
 **Requirement:** Order Total ≥ 50,000 QAR requires approval.
 
@@ -364,7 +364,7 @@ If the company eventually needs deep infrastructure control, strict hosting requ
 | **Actor** | Sales Manager |
 | **Expected state (before approval)** | Awaiting Approval |
 
-### Positive path
+### POSITIVE PATH
 
 <div align="center">
 
@@ -378,7 +378,7 @@ flowchart TD
 
 </div>
 
-### Negative path
+### NEGATIVE PATH
 
 <div align="center">
 
@@ -392,7 +392,7 @@ flowchart TD
 
 The salesperson may then need to revise the order, explain it, cancel it, or resubmit it.
 
-### What should we investigate first?
+### WHAT SHOULD WE INVESTIGATE FIRST?
 
 Do not immediately choose custom Python.
 
@@ -411,7 +411,7 @@ flowchart LR
 
 </div>
 
-### Additional questions an Odoo engineer should ask
+### ADDITIONAL QUESTIONS AN ODOO ENGINEER SHOULD ASK
 
 Before implementation:
 
@@ -425,21 +425,21 @@ These questions turn a vague request into a real ERP specification.
 
 ---
 
-## Part 7: Complex Requirement (Logistics API)
+## PART 7: COMPLEX REQUIREMENT (LOGISTICS API)
 
 **Requirement:** After delivery, send delivery information to an external logistics API, retry failures safely, and display synchronization status.
 
-### Would Studio likely be enough?
+### WOULD STUDIO LIKELY BE ENOUGH?
 
 For the complete requirement: **Probably No**.
 
 A simple webhook might sometimes be possible through no-code tools, but this requirement includes significantly more than merely sending one request. It requires reliable integration behavior.
 
-### Would a custom module be more appropriate?
+### WOULD A CUSTOM MODULE BE MORE APPROPRIATE?
 
 **Yes.** A custom module would likely be the more maintainable solution.
 
-### Why?
+### WHY?
 
 Because we probably need logic such as:
 
@@ -457,7 +457,7 @@ flowchart TD
 
 </div>
 
-### Integration concerns
+### INTEGRATION CONCERNS
 
 **1. Authentication**
 
