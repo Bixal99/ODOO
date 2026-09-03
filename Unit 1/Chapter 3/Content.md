@@ -80,6 +80,33 @@ flowchart LR
 
 That integration is the main idea of this entire chapter. Each application has its own responsibility, but the real power of ERP appears when those responsibilities connect into complete business processes.
 
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **BEFORE WE START: THE MOST IMPORTANT MENTAL MODEL**:
+
+> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
+
+### ODOO FULL BEGINNER COURSE 2026
+
+| | |
+|---|---|
+| **Source** | Long-form community course |
+| **Why use it** | Companion overview across multiple Odoo areas, not a replacement for this roadmap |
+
+<div align="center">
+
+[![Odoo Full Beginner Course 2026](https://img.youtube.com/vi/KL-xWoDksdk/hqdefault.jpg)](https://www.youtube.com/watch?v=KL-xWoDksdk)
+
+**Watch on YouTube:** [Odoo Full Beginner Course 2026](https://www.youtube.com/watch?v=KL-xWoDksdk)
+
+</div>
+
 ---
 
 ## 3.1 CONTACTS
@@ -191,6 +218,38 @@ A beginner may create duplicate contacts:
 Then different departments use different versions. That breaks the single-source-of-truth principle. Good ERP implementation requires controlled master data: one canonical record per real-world party, with clear naming and deduplication rules.
 
 Contacts is where that discipline begins. Every duplicate contact you allow today becomes a reconciliation problem tomorrow when Sales, Warehouse, and Finance each work from a slightly different version of the same customer.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.1 CONTACTS**:
+
+### ODOO FULL BEGINNER COURSE 2026
+
+| | |
+|---|---|
+| **Source** | Long-form community course |
+| **Why use it** | Companion overview across multiple Odoo areas, not a replacement for this roadmap |
+
+<div align="center">
+
+[![Odoo Full Beginner Course 2026](https://img.youtube.com/vi/KL-xWoDksdk/hqdefault.jpg)](https://www.youtube.com/watch?v=KL-xWoDksdk)
+
+**Watch on YouTube:** [Odoo Full Beginner Course 2026](https://www.youtube.com/watch?v=KL-xWoDksdk)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **All applications** | [Odoo 19 Applications Documentation](https://www.odoo.com/documentation/19.0/applications.html) |
 
 ---
 
@@ -319,6 +378,54 @@ ABC Trading may be one contact but have **Opportunity 1**, **Opportunity 2**, an
 
 CRM therefore sits upstream of Sales in many organizations. It does not replace Sales, and it does not record confirmed commercial terms. It gives the sales team a structured way to pursue business before any quotation exists. When you later see CRM and Sales as separate Odoo apps, remember that separation reflects a real business distinction between possibility and commitment.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.2 CRM**:
+
+### 1. CRM BASICS: PIPELINES AND OPPORTUNITIES
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Lead/Opportunity → Pipeline** |
+
+<div align="center">
+
+[![CRM Basics: Pipelines and Opportunities](https://img.youtube.com/vi/RpPKOl85kuc/hqdefault.jpg)](https://www.youtube.com/watch?v=RpPKOl85kuc)
+
+**Watch on YouTube:** [CRM Basics: Pipelines and Opportunities](https://www.youtube.com/watch?v=RpPKOl85kuc)
+
+</div>
+
+---
+
+### 2. CRM LEAD AND OPPORTUNITY BASICS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+
+<div align="center">
+
+[![CRM Lead and Opportunity Basics](https://img.youtube.com/vi/BSEf-EldDIA/hqdefault.jpg)](https://www.youtube.com/watch?v=BSEf-EldDIA)
+
+**Watch on YouTube:** [CRM Lead and Opportunity Basics](https://www.youtube.com/watch?v=BSEf-EldDIA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **CRM** | [Odoo 19 CRM Documentation](https://www.odoo.com/documentation/19.0/applications/sales/crm.html) |
+
 ---
 
 ## 3.3 SALES
@@ -415,6 +522,38 @@ That is false in many processes. The Sales Order may be confirmed days or weeks 
 
 Sales creates demand and commercial obligation. Other domains fulfill that obligation on their own timelines.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.3 SALES**:
+
+### SELLING PRODUCTS: ODOO SALES
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Quotation → Sales Order** |
+
+<div align="center">
+
+[![Selling Products: Odoo Sales](https://img.youtube.com/vi/uPMpMH1A6vk/hqdefault.jpg)](https://www.youtube.com/watch?v=uPMpMH1A6vk)
+
+**Watch on YouTube:** [Selling Products: Odoo Sales](https://www.youtube.com/watch?v=uPMpMH1A6vk)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Sales** | [Odoo 19 Sales Documentation](https://www.odoo.com/documentation/19.0/applications/sales/sales.html) |
+
 ---
 
 ## 3.4 PURCHASE
@@ -500,6 +639,55 @@ A vendor can confirm an order today but deliver next week. ERP systems therefore
 - physical receipt.
 
 Purchase tells the organization what it agreed to buy. Inventory tells the organization what actually arrived and where it sits.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.4 PURCHASE**:
+
+### 1. PURCHASE AND RFQ BASICS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **RFQ → Purchase Order** |
+
+<div align="center">
+
+[![Purchase and RFQ Basics](https://img.youtube.com/vi/LX_kRgiqUj0/hqdefault.jpg)](https://www.youtube.com/watch?v=LX_kRgiqUj0)
+
+**Watch on YouTube:** [Purchase and RFQ Basics](https://www.youtube.com/watch?v=LX_kRgiqUj0)
+
+</div>
+
+---
+
+### 2. PURCHASE APP TOUR: RFQ TO RECEIPT
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Why use it** | Especially useful because it begins showing cross-application flow |
+
+<div align="center">
+
+[![Purchase App Tour: RFQ to Receipt](https://img.youtube.com/vi/P17LOOEbufg/hqdefault.jpg)](https://www.youtube.com/watch?v=P17LOOEbufg)
+
+**Watch on YouTube:** [Purchase App Tour: RFQ to Receipt](https://www.youtube.com/watch?v=P17LOOEbufg)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Purchase / Inventory / Manufacturing / Maintenance** | [Odoo 19 Supply Chain Documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp.html) |
 
 ---
 
@@ -626,6 +814,38 @@ Do not assume Sales creates inventory.
 
 These are different concepts. Sales says what must be fulfilled. Inventory records what actually moved.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.5 INVENTORY**:
+
+### INVENTORY BASICS: RECEIVE AND STORE STOCK
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Purchase Order ≠ Receipt**, and why Inventory deals with physical movement |
+
+<div align="center">
+
+[![Inventory Basics: Receive and Store Stock](https://img.youtube.com/vi/0r575dWbkMk/hqdefault.jpg)](https://www.youtube.com/watch?v=0r575dWbkMk)
+
+**Watch on YouTube:** [Inventory Basics: Receive and Store Stock](https://www.youtube.com/watch?v=0r575dWbkMk)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Purchase / Inventory / Manufacturing / Maintenance** | [Odoo 19 Supply Chain Documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp.html) |
+
 ---
 
 ## 3.6 ACCOUNTING / INVOICING
@@ -714,6 +934,38 @@ ERP integration can link operational and financial records. That creates **trace
 
 Accounting is not an island. It is the financial mirror of operational reality.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.6 ACCOUNTING / INVOICING**:
+
+### CUSTOMER INVOICE FROM SALES ORDER
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Sales Order → Invoice** |
+
+<div align="center">
+
+[![Customer Invoice from Sales Order](https://img.youtube.com/vi/14AIEJ_B7rA/hqdefault.jpg)](https://www.youtube.com/watch?v=14AIEJ_B7rA)
+
+**Watch on YouTube:** [Customer Invoice from Sales Order](https://www.youtube.com/watch?v=14AIEJ_B7rA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Accounting / Invoicing** | [Odoo 19 Accounting Documentation](https://www.odoo.com/documentation/19.0/applications/finance/accounting.html) |
+
 ---
 
 ## 3.7 EMPLOYEES / HR
@@ -783,6 +1035,21 @@ His system user may connect to:
 Thus one real human participates in several ERP dimensions. HR knows Ahmed as an employee; Sales knows him as a salesperson; the system knows him as a user with specific access rights.
 
 Employees / HR reminds us that ERP is not only about products and invoices. People are business resources with organizational structure, approvals, time, expenses, and assignments. Any complete Odoo mental model must include humans alongside customers, vendors, and stock.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.7 EMPLOYEES / HR**:
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **All applications** | [Odoo 19 Applications Documentation](https://www.odoo.com/documentation/19.0/applications.html) |
 
 ---
 
@@ -871,6 +1138,38 @@ This is another cross-department workflow. The commercial agreement (Sales) beco
 
 Projects matter whenever fulfillment is work performed over time rather than a product shipped from stock. For consulting, implementation, construction, and internal initiatives, the project record is how the organization coordinates who does what, by when, and toward which deliverable.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.8 PROJECTS**:
+
+### 2. MEASURING PROJECT PROFITABILITY
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Why use it** | Shows how project work eventually connects back to financial and business outcomes |
+
+<div align="center">
+
+[![Measuring Project Profitability](https://img.youtube.com/vi/tqELamDjaNU/hqdefault.jpg)](https://www.youtube.com/watch?v=tqELamDjaNU)
+
+**Watch on YouTube:** [Measuring Project Profitability](https://www.youtube.com/watch?v=tqELamDjaNU)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Project / Timesheets** | [Odoo 19 Project Management Documentation](https://www.odoo.com/documentation/19.0/applications/services/project.html) |
+
 ---
 
 ## 3.9 TIMESHEETS
@@ -951,6 +1250,38 @@ flowchart LR
 is for product businesses. The fulfillment path differs, but the integration principle is the same: one commercial commitment triggers work in other domains, which eventually produces a financial record.
 
 Timesheets turn invisible labor into measurable business data. For product companies they support costing and utilization. For service companies they can be the primary evidence that work was performed and is ready to bill. Either way, time is a resource ERP must track when projects and services are part of the business model.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.9 TIMESHEETS**:
+
+### 1. TIMESHEETS BASICS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Employee + Project + Task + Time** |
+
+<div align="center">
+
+[![Timesheets Basics](https://img.youtube.com/vi/Gch9tm7cRfs/hqdefault.jpg)](https://www.youtube.com/watch?v=Gch9tm7cRfs)
+
+**Watch on YouTube:** [Timesheets Basics](https://www.youtube.com/watch?v=Gch9tm7cRfs)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Project / Timesheets** | [Odoo 19 Project Management Documentation](https://www.odoo.com/documentation/19.0/applications/services/project.html) |
 
 ---
 
@@ -1066,6 +1397,71 @@ We don't need those details yet, but remember that manufacturing is its own oper
 
 Manufacturing adds a production layer between demand and fulfillment. Sales may create the need, but Manufacturing determines how components become finished goods and Inventory records every physical change along the way. Resale businesses can ignore this app; make-to-stock and make-to-order businesses cannot.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.10 MANUFACTURING**:
+
+### 1. BILL OF MATERIALS BASICS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Components → Finished Product** |
+
+<div align="center">
+
+[![Bill of Materials Basics](https://img.youtube.com/vi/EQMjhnHTV5s/hqdefault.jpg)](https://www.youtube.com/watch?v=EQMjhnHTV5s)
+
+**Watch on YouTube:** [Bill of Materials Basics](https://www.youtube.com/watch?v=EQMjhnHTV5s)
+
+</div>
+
+---
+
+### 2. SALES ORDER TO MANUFACTURING ORDER
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Why use it** | One of the best videos for integration instead of one isolated app |
+
+<div align="center">
+
+[![Sales Order to Manufacturing Order](https://img.youtube.com/vi/ILpbH7X6vzo/hqdefault.jpg)](https://www.youtube.com/watch?v=ILpbH7X6vzo)
+
+**Watch on YouTube:** [Sales Order to Manufacturing Order](https://www.youtube.com/watch?v=ILpbH7X6vzo)
+
+</div>
+
+---
+
+### 3. MANUFACTURING ORDER AND WORK ORDER BASICS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+
+<div align="center">
+
+[![Manufacturing Order and Work Order Basics](https://img.youtube.com/vi/r5JewejnfQ4/hqdefault.jpg)](https://www.youtube.com/watch?v=r5JewejnfQ4)
+
+**Watch on YouTube:** [Manufacturing Order and Work Order Basics](https://www.youtube.com/watch?v=r5JewejnfQ4)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Manufacturing** | [Odoo 19 Manufacturing Documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing.html) |
+
 ---
 
 ## 3.11 MAINTENANCE
@@ -1132,6 +1528,21 @@ flowchart LR
 So equipment health is not isolated from business performance. A maintenance delay can cascade into missed deliveries and unhappy customers.
 
 Maintenance is easy to overlook in ERP training because it does not appear in every company's daily workflow. When production equipment matters, however, downtime becomes a business problem with the same seriousness as stock shortage or late payment. Maintenance connects operational reliability to customer promise.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.11 MAINTENANCE**:
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **Purchase / Inventory / Manufacturing / Maintenance** | [Odoo 19 Supply Chain Documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp.html) |
 
 ---
 
@@ -1203,6 +1614,30 @@ Without integration, someone might manually copy website form submissions into t
 - duplication.
 
 Integrated systems reduce manual transfers. What the customer submits online becomes a business record immediately, ready for follow-up.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.12 WEBSITE**:
+
+### 1. BUILDING YOUR DIGITAL STOREFRONT WITH ODOO ECOMMERCE
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Website → eCommerce → Sales** |
+
+<div align="center">
+
+[![Building Your Digital Storefront with Odoo eCommerce](https://img.youtube.com/vi/vH6jIkmnmhs/hqdefault.jpg)](https://www.youtube.com/watch?v=vH6jIkmnmhs)
+
+**Watch on YouTube:** [Building Your Digital Storefront with Odoo eCommerce](https://www.youtube.com/watch?v=vH6jIkmnmhs)
+
+</div>
 
 ---
 
@@ -1284,6 +1719,54 @@ In ERP terms, eCommerce is a **sales channel**. It affects:
 
 Design matters for customer experience, but the ERP significance is operational: online orders become real business transactions.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.13 ECOMMERCE**:
+
+### 1. BUILDING YOUR DIGITAL STOREFRONT WITH ODOO ECOMMERCE
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Website → eCommerce → Sales** |
+
+<div align="center">
+
+[![Building Your Digital Storefront with Odoo eCommerce](https://img.youtube.com/vi/vH6jIkmnmhs/hqdefault.jpg)](https://www.youtube.com/watch?v=vH6jIkmnmhs)
+
+**Watch on YouTube:** [Building Your Digital Storefront with Odoo eCommerce](https://www.youtube.com/watch?v=vH6jIkmnmhs)
+
+</div>
+
+---
+
+### 2. CREATE YOUR PRODUCT: ODOO ECOMMERCE
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+
+<div align="center">
+
+[![Create Your Product: Odoo eCommerce](https://img.youtube.com/vi/SLAMX3gPyEg/hqdefault.jpg)](https://www.youtube.com/watch?v=SLAMX3gPyEg)
+
+**Watch on YouTube:** [Create Your Product: Odoo eCommerce](https://www.youtube.com/watch?v=SLAMX3gPyEg)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **eCommerce** | [Odoo 19 eCommerce Documentation](https://www.odoo.com/documentation/19.0/applications/websites/ecommerce.html) |
+
 ---
 
 ## 3.14 POINT OF SALE
@@ -1355,6 +1838,46 @@ This stock reduction matters to warehouse and future sales availability. POS is 
 
 Point of Sale proves that not every sales channel follows the quotation-to-delivery cycle. Retail needs speed and immediacy, yet the underlying ERP principle remains: a sale creates stock and financial consequences inside one connected system rather than in a standalone cash register.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.14 POINT OF SALE**:
+
+### 1. MANAGE YOUR SHOP WITH ODOO POS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+
+<div align="center">
+
+[![Manage Your Shop with Odoo POS](https://img.youtube.com/vi/5Bl60GkEa50/hqdefault.jpg)](https://www.youtube.com/watch?v=5Bl60GkEa50)
+
+**Watch on YouTube:** [Manage Your Shop with Odoo POS](https://www.youtube.com/watch?v=5Bl60GkEa50)
+
+</div>
+
+---
+
+### 2. SELL PRODUCTS: ODOO POS
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Why use it** | Contrasts **Traditional Sales Flow** with **Immediate Retail/POS Sale** |
+
+<div align="center">
+
+[![Sell Products: Odoo POS](https://img.youtube.com/vi/3pfUEX2B3Z4/hqdefault.jpg)](https://www.youtube.com/watch?v=3pfUEX2B3Z4)
+
+**Watch on YouTube:** [Sell Products: Odoo POS](https://www.youtube.com/watch?v=3pfUEX2B3Z4)
+
+</div>
+
 ---
 
 ## 3.15 HELPDESK
@@ -1424,6 +1947,30 @@ the business may already have those records. Helpdesk connects post-sale problem
 This gives a broader **customer lifecycle**. ERP does not stop caring about the customer after payment. Support is part of the same connected story.
 
 Helpdesk closes the loop on customer experience. CRM and Sales win the business, Inventory and Accounting fulfill and settle it, and Helpdesk handles what happens when something goes wrong afterward. Integrated support is faster because the ticket can reference the same customer, order, and delivery records the rest of the company already maintains.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.15 HELPDESK**:
+
+### AFTER-SALES FEATURES: ODOO HELPDESK
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **CRM → Sales → Delivery → After-Sales Support** |
+
+<div align="center">
+
+[![After-Sales Features: Odoo Helpdesk](https://img.youtube.com/vi/thwZnwPquTI/hqdefault.jpg)](https://www.youtube.com/watch?v=thwZnwPquTI)
+
+**Watch on YouTube:** [After-Sales Features: Odoo Helpdesk](https://www.youtube.com/watch?v=thwZnwPquTI)
+
+</div>
 
 ---
 
@@ -1774,6 +2321,123 @@ Instead of memorizing "sale.order is some Python class," you will understand: it
 
 That's exactly why Unit I came before coding. Business meaning first; technical names second.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.16 END-TO-END DOCUMENT FLOW**:
+
+### SELLING PRODUCTS: ODOO SALES
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Quotation → Sales Order** |
+
+<div align="center">
+
+[![Selling Products: Odoo Sales](https://img.youtube.com/vi/uPMpMH1A6vk/hqdefault.jpg)](https://www.youtube.com/watch?v=uPMpMH1A6vk)
+
+**Watch on YouTube:** [Selling Products: Odoo Sales](https://www.youtube.com/watch?v=uPMpMH1A6vk)
+
+</div>
+
+---
+
+### 2. PURCHASE APP TOUR: RFQ TO RECEIPT
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Why use it** | Especially useful because it begins showing cross-application flow |
+
+<div align="center">
+
+[![Purchase App Tour: RFQ to Receipt](https://img.youtube.com/vi/P17LOOEbufg/hqdefault.jpg)](https://www.youtube.com/watch?v=P17LOOEbufg)
+
+**Watch on YouTube:** [Purchase App Tour: RFQ to Receipt](https://www.youtube.com/watch?v=P17LOOEbufg)
+
+</div>
+
+---
+
+### CUSTOMER INVOICE FROM SALES ORDER
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Sales Order → Invoice** |
+
+<div align="center">
+
+[![Customer Invoice from Sales Order](https://img.youtube.com/vi/14AIEJ_B7rA/hqdefault.jpg)](https://www.youtube.com/watch?v=14AIEJ_B7rA)
+
+**Watch on YouTube:** [Customer Invoice from Sales Order](https://www.youtube.com/watch?v=14AIEJ_B7rA)
+
+</div>
+
+---
+
+### 2. SALES ORDER TO MANUFACTURING ORDER
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Why use it** | One of the best videos for integration instead of one isolated app |
+
+<div align="center">
+
+[![Sales Order to Manufacturing Order](https://img.youtube.com/vi/ILpbH7X6vzo/hqdefault.jpg)](https://www.youtube.com/watch?v=ILpbH7X6vzo)
+
+**Watch on YouTube:** [Sales Order to Manufacturing Order](https://www.youtube.com/watch?v=ILpbH7X6vzo)
+
+</div>
+
+---
+
+The best Chapter 3 exercise is **not coding**.
+
+Open a free Odoo environment and manually perform:
+
+**Order-to-Cash**
+
+<div align="center">
+
+```mermaid
+flowchart TD
+    A["Create Contact"] --> B["Create CRM Opportunity"]
+    B --> C["Create Quotation"]
+    C --> D["Confirm Sales Order"]
+    D --> E["Process Delivery"]
+    E --> F["Create Invoice"]
+    F --> G["Record Payment"]
+```
+
+</div>
+
+**Procure-to-Pay** (separately)
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    A["RFQ"] --> B["Purchase Order"] --> C["Receipt"] --> D["Vendor Bill"]
+```
+
+</div>
+
+### ENVIRONMENTS TO USE
+
+| Environment | Best for | Link |
+|---|---|---|
+| **Odoo Education** | Free educational practice (when eligible) | [Odoo Education](https://www.odoo.com/education/odoo-online) |
+| **Odoo Trial** | Temporary free trial for experimentation | [Odoo Trial](https://www.odoo.com/trial) |
+| **Odoo Runbot** | Developer/test sandbox (not for permanent work) | [Odoo Runbot](https://runbot.odoo.com/) |
+---
+
 ---
 
 ## COMMON BEGINNER MISTAKES IN CHAPTER 3
@@ -1845,6 +2509,39 @@ Attendance answers: "Was the employee present?" Timesheets answer: "What work di
 No. ERP processes deliberately cross application boundaries.
 
 Lead-to-Cash touches CRM, Sales, Purchase, Inventory, and Accounting. Expecting Sales to "handle everything" ignores how real businesses divide responsibility. Good ERP design respects domain boundaries while maintaining record linkage across them.
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **COMMON BEGINNER MISTAKES IN CHAPTER 3**:
+
+### ODOO FULL BEGINNER COURSE 2026
+
+| | |
+|---|---|
+| **Source** | Long-form community course |
+| **Why use it** | Companion overview across multiple Odoo areas, not a replacement for this roadmap |
+
+<div align="center">
+
+[![Odoo Full Beginner Course 2026](https://img.youtube.com/vi/KL-xWoDksdk/hqdefault.jpg)](https://www.youtube.com/watch?v=KL-xWoDksdk)
+
+**Watch on YouTube:** [Odoo Full Beginner Course 2026](https://www.youtube.com/watch?v=KL-xWoDksdk)
+
+</div>
+
+---
+
+### ENVIRONMENTS TO USE
+
+| Environment | Best for | Link |
+|---|---|---|
+| **Odoo Education** | Free educational practice (when eligible) | [Odoo Education](https://www.odoo.com/education/odoo-online) |
+| **Odoo Trial** | Temporary free trial for experimentation | [Odoo Trial](https://www.odoo.com/trial) |
+| **Odoo Runbot** | Developer/test sandbox (not for permanent work) | [Odoo Runbot](https://runbot.odoo.com/) |
 
 ---
 

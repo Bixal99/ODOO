@@ -91,6 +91,31 @@ Odoo is one implementation of this idea. It is not the only ERP in the world, bu
 
 Before we discuss Odoo itself in Chapter 2, we need to understand what exactly it is integrating. That means learning how businesses actually operate, the processes, the departments, the data, and the workflows that any ERP platform must represent.
 
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **FIRST: WHAT DOES ERP MEAN?**:
+
+> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
+
+### 1. ENTERPRISE RESOURCE PLANNING (ERP) IN 15 MINUTES
+
+| | |
+|---|---|
+| **Source** | Third-party conceptual overview |
+| **Why use it** | Good conceptual ERP introduction before going deeper into Odoo |
+
+<div align="center">
+
+[![Enterprise Resource Planning (ERP) in 15 Minutes](https://img.youtube.com/vi/gBXJ_PhlADQ/hqdefault.jpg)](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
+
+**Watch on YouTube:** [Enterprise Resource Planning (ERP) in 15 Minutes](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
+
+</div>
+
 ---
 
 ## 1.1 BUSINESS PROCESSES
@@ -415,6 +440,30 @@ So at this point, we can say we have the lens every Odoo developer needs before 
 
 With this process model in hand, the next layer is understanding who performs the work inside a company, and that means looking at **departments**.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.1 BUSINESS PROCESSES**:
+
+### 2. BUSINESS PROCESS MAPPING 101: STEP-BY-STEP
+
+| | |
+|---|---|
+| **Source** | Process modeling tutorial |
+| **Why use it** | Very relevant to learning how to draw and read business flows |
+
+<div align="center">
+
+[![Business Process Mapping 101: Step-by-Step](https://img.youtube.com/vi/zGB9SScvoQU/hqdefault.jpg)](https://www.youtube.com/watch?v=zGB9SScvoQU)
+
+**Watch on YouTube:** [Business Process Mapping 101: Step-by-Step](https://www.youtube.com/watch?v=zGB9SScvoQU)
+
+</div>
+
 ---
 
 ## 1.2 DEPARTMENTS
@@ -614,6 +663,30 @@ So now we can see past the org chart. Businesses organize work into **department
 
 Departments give us the org chart. The next question is what happens when a single business outcome requires several of them to cooperate on one connected path, and that is where **cross-department workflows** enter the picture.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.2 DEPARTMENTS**:
+
+### 3. CROSS-FUNCTIONAL INFORMATION SYSTEMS / ERP
+
+| | |
+|---|---|
+| **Source** | Academic / systems overview |
+| **Why use it** | Explains why Sales, Inventory, Purchase, Finance, and other areas cannot be treated as isolated departments |
+
+<div align="center">
+
+[![Cross-Functional Information Systems / ERP](https://img.youtube.com/vi/Igdb0Hp7xJw/hqdefault.jpg)](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
+
+**Watch on YouTube:** [Cross-Functional Information Systems / ERP](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
+
+</div>
+
 ---
 
 ## 1.3 CROSS-DEPARTMENT WORKFLOWS
@@ -684,6 +757,41 @@ ERP reduces this fragmentation by connecting the records involved in the workflo
 Putting it together, a **cross-department workflow** is still one process even when many departments participate. **Order-to-Cash** runs from selling through to customer payment; **Procure-to-Pay** runs from buying through to supplier payment. When each team uses its own tool, managers rebuild the truth by hand. ERP connects the records that belong to the same workflow.
 
 Processes and workflows generate data constantly, but not all data is the same kind. Some records describe events; others describe the stable entities those events revolve around. Separating those two categories is one of the most important distinctions in ERP.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.3 CROSS-DEPARTMENT WORKFLOWS**:
+
+### 3. CROSS-FUNCTIONAL INFORMATION SYSTEMS / ERP
+
+| | |
+|---|---|
+| **Source** | Academic / systems overview |
+| **Why use it** | Explains why Sales, Inventory, Purchase, Finance, and other areas cannot be treated as isolated departments |
+
+<div align="center">
+
+[![Cross-Functional Information Systems / ERP](https://img.youtube.com/vi/Igdb0Hp7xJw/hqdefault.jpg)](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
+
+**Watch on YouTube:** [Cross-Functional Information Systems / ERP](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
+
+</div>
+
+---
+
+### 1. SAP LEARNING: EXPLORING END-TO-END BUSINESS PROCESSES IN SAP
+
+| | |
+|---|---|
+| **Cost** | Free |
+| **Covers** | Integrated processes, enterprise structures, master data, transactional data, cross-functional workflows |
+
+[Open course: Exploring End-to-End Business Processes in SAP](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap-business-suite)
 
 ---
 
@@ -863,6 +971,24 @@ With that distinction clear, we can say **master data** is the stable "who and w
 
 Master data tells you who and what exists. **Transactions** tell you what actually happened, and over time, those events become the company's operational history.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.4 MASTER DATA**:
+
+### 3. SAP LEARNING: UNDERSTANDING THE CONCEPT OF MASTER DATA
+
+| | |
+|---|---|
+| **Cost** | Free |
+| **Why use it** | Excellent reinforcement for the distinction: **Master Data ≠ Transaction Data** |
+
+[Open lesson: Understanding the Concept of Master Data](https://learning.sap.com/learning-journeys/explore-integrated-business-processes-in-sap-s-4hana-/understanding-the-concept-of-master-data_a91e9234-9d79-47b1-adba-60ed63bd836c)
+
 ---
 
 ## 1.5 TRANSACTIONS
@@ -924,6 +1050,24 @@ So a **transaction** is a recorded business event that usually points back to ma
 
 When dozens of departments create thousands of transactions referencing the same customers and products, the company faces a new challenge: which version of the truth is correct?
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.5 TRANSACTIONS**:
+
+### 2. SAP LEARNING: EXECUTING BASIC ERP PROCESSES WITH SAP S/4HANA
+
+| | |
+|---|---|
+| **Cost** | Free |
+| **Covers** | Purchase order management, goods receipt, invoice verification, sales order management, production basics |
+
+[Open course: Executing Basic ERP Processes with SAP S/4HANA](https://learning.sap.com/courses/executing-basic-erp-processes-with-sap-s-4hana)
+
 ---
 
 ## 1.6 SINGLE SOURCE OF TRUTH
@@ -980,6 +1124,29 @@ Single source of truth improves consistency, but only when the source is managed
 We can now say a **single source of truth** means the company knows which record is authoritative for a given fact: one **shared customer record** across applications instead of scattered copies. That only works when people respect validation, permissions, ownership, and data quality, because integration spreads good data fast and bad data just as fast.
 
 With processes, departments, master data, transactions, and a single source of truth defined, we can now compare ERP to systems you may already have heard of, starting with **CRM**.
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.6 SINGLE SOURCE OF TRUTH**:
+
+### 1. ENTERPRISE RESOURCE PLANNING (ERP) IN 15 MINUTES
+
+| | |
+|---|---|
+| **Source** | Third-party conceptual overview |
+| **Why use it** | Good conceptual ERP introduction before going deeper into Odoo |
+
+<div align="center">
+
+[![Enterprise Resource Planning (ERP) in 15 Minutes](https://img.youtube.com/vi/gBXJ_PhlADQ/hqdefault.jpg)](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
+
+**Watch on YouTube:** [Enterprise Resource Planning (ERP) in 15 Minutes](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
+
+</div>
 
 ---
 
@@ -1038,6 +1205,28 @@ CRM is therefore an important part of enterprise operations, but not the entire 
 In short, **CRM** lives at the front of the revenue story (leads, pipelines, opportunities), while **ERP** runs the whole operation once a deal becomes real work: stock, purchasing, delivery, invoicing, manufacturing. CRM asks which deals might close; ERP asks whether the company can actually fulfill them. In Odoo you will see both, with CRM sitting inside the broader business system rather than replacing it.
 
 CRM is often one application among many. Companies also run standalone tools for accounting, warehouse, HR, and purchasing, and that creates a different kind of challenge.
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.7 ERP VS CRM**:
+
+### 1. ENTERPRISE RESOURCE PLANNING (ERP) IN 15 MINUTES
+
+| | |
+|---|---|
+| **Source** | Third-party conceptual overview |
+| **Why use it** | Good conceptual ERP introduction before going deeper into Odoo |
+
+<div align="center">
+
+[![Enterprise Resource Planning (ERP) in 15 Minutes](https://img.youtube.com/vi/gBXJ_PhlADQ/hqdefault.jpg)](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
+
+**Watch on YouTube:** [Enterprise Resource Planning (ERP) in 15 Minutes](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
+
+</div>
 
 ---
 
@@ -1139,6 +1328,28 @@ $$ ERP = \text{Literally Everything} $$
 Standalone tools can each be excellent, yet they fracture the moment a process crosses a boundary. Data hops through exports, APIs, or manual re-entry, and every handoff is a chance to lose the plot. ERP aims for a **Connected Enterprise System** where applications share related information, but real life is usually **ERP + External Systems + Integrations**, not one system doing literally everything.
 
 Understanding what ERP is, and what it is not, prepares you for the practical skill that turns business knowledge into implementable design: **business process mapping**.
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.8 ERP VS STANDALONE BUSINESS SOFTWARE**:
+
+### 3. CROSS-FUNCTIONAL INFORMATION SYSTEMS / ERP
+
+| | |
+|---|---|
+| **Source** | Academic / systems overview |
+| **Why use it** | Explains why Sales, Inventory, Purchase, Finance, and other areas cannot be treated as isolated departments |
+
+<div align="center">
+
+[![Cross-Functional Information Systems / ERP](https://img.youtube.com/vi/Igdb0Hp7xJw/hqdefault.jpg)](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
+
+**Watch on YouTube:** [Cross-Functional Information Systems / ERP](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
+
+</div>
 
 ---
 
@@ -1307,6 +1518,70 @@ That is a much stronger understanding than simply saying:
 
 > "ERP is business software."
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **1.9 BUSINESS PROCESS MAPPING**:
+
+### 2. BUSINESS PROCESS MAPPING 101: STEP-BY-STEP
+
+| | |
+|---|---|
+| **Source** | Process modeling tutorial |
+| **Why use it** | Very relevant to learning how to draw and read business flows |
+
+<div align="center">
+
+[![Business Process Mapping 101: Step-by-Step](https://img.youtube.com/vi/zGB9SScvoQU/hqdefault.jpg)](https://www.youtube.com/watch?v=zGB9SScvoQU)
+
+**Watch on YouTube:** [Business Process Mapping 101: Step-by-Step](https://www.youtube.com/watch?v=zGB9SScvoQU)
+
+</div>
+
+---
+
+### 1. BPMN.IO: INTERACTIVE BPMN PROCESS MODELER
+
+| | |
+|---|---|
+| **Type** | Interactive web tool |
+| **Why use it** | Highly recommended for Chapter 1. Instead of merely writing text flows, you can visually draw actual business processes |
+
+[Open the Interactive BPMN Modeler](https://demo.bpmn.io/new)
+
+**Use it to draw:**
+
+**Order-to-Cash**
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    C["Customer"] --> S["Sales"] --> W["Warehouse"] --> F["Finance"]
+```
+
+</div>
+
+**Procure-to-Pay**
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    R["Requirement"] --> P["Purchase"] --> RC["Receipt"] --> VB["Vendor Bill"] --> PAY["Payment"]
+```
+
+</div>
+
+Also useful:
+
+- [bpmn.io Main Website](https://bpmn.io/)
+- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (helpful once you want to understand the visual process notation better)
+
 ---
 
 ## COMPLETE RUNNING EXAMPLE: GULFTECH ELECTRONICS
@@ -1405,6 +1680,70 @@ flowchart TD
 - Management could theoretically inspect the process from beginning to end.
 
 That is the integrated enterprise concept at the heart of ERP.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **COMPLETE RUNNING EXAMPLE: GULFTECH ELECTRONICS**:
+
+### 2. BUSINESS PROCESS MAPPING 101: STEP-BY-STEP
+
+| | |
+|---|---|
+| **Source** | Process modeling tutorial |
+| **Why use it** | Very relevant to learning how to draw and read business flows |
+
+<div align="center">
+
+[![Business Process Mapping 101: Step-by-Step](https://img.youtube.com/vi/zGB9SScvoQU/hqdefault.jpg)](https://www.youtube.com/watch?v=zGB9SScvoQU)
+
+**Watch on YouTube:** [Business Process Mapping 101: Step-by-Step](https://www.youtube.com/watch?v=zGB9SScvoQU)
+
+</div>
+
+---
+
+### 1. BPMN.IO: INTERACTIVE BPMN PROCESS MODELER
+
+| | |
+|---|---|
+| **Type** | Interactive web tool |
+| **Why use it** | Highly recommended for Chapter 1. Instead of merely writing text flows, you can visually draw actual business processes |
+
+[Open the Interactive BPMN Modeler](https://demo.bpmn.io/new)
+
+**Use it to draw:**
+
+**Order-to-Cash**
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    C["Customer"] --> S["Sales"] --> W["Warehouse"] --> F["Finance"]
+```
+
+</div>
+
+**Procure-to-Pay**
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    R["Requirement"] --> P["Purchase"] --> RC["Receipt"] --> VB["Vendor Bill"] --> PAY["Payment"]
+```
+
+</div>
+
+Also useful:
+
+- [bpmn.io Main Website](https://bpmn.io/)
+- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (helpful once you want to understand the visual process notation better)
 
 ---
 

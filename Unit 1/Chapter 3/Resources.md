@@ -49,7 +49,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Odoo Full Beginner Course 2026](https://www.youtube.com/watch?v=KL-xWoDksdk)
 
 </div>
-
 ---
 
 ## YOUTUBE: CRM
@@ -86,7 +85,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [CRM Lead and Opportunity Basics](https://www.youtube.com/watch?v=BSEf-EldDIA)
 
 </div>
-
 ---
 
 ## YOUTUBE: SALES
@@ -106,7 +104,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Selling Products: Odoo Sales](https://www.youtube.com/watch?v=uPMpMH1A6vk)
 
 </div>
-
 ---
 
 ## YOUTUBE: PURCHASE
@@ -144,7 +141,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Purchase App Tour: RFQ to Receipt](https://www.youtube.com/watch?v=P17LOOEbufg)
 
 </div>
-
 ---
 
 ## YOUTUBE: INVENTORY
@@ -164,7 +160,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Inventory Basics: Receive and Store Stock](https://www.youtube.com/watch?v=0r575dWbkMk)
 
 </div>
-
 ---
 
 ## YOUTUBE: ACCOUNTING / INVOICING
@@ -184,7 +179,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Customer Invoice from Sales Order](https://www.youtube.com/watch?v=14AIEJ_B7rA)
 
 </div>
-
 ---
 
 ## YOUTUBE: PROJECTS AND TIMESHEETS
@@ -204,6 +198,7 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Timesheets Basics](https://www.youtube.com/watch?v=Gch9tm7cRfs)
 
 </div>
+
 
 ---
 
@@ -297,7 +292,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Building Your Digital Storefront with Odoo eCommerce](https://www.youtube.com/watch?v=vH6jIkmnmhs)
 
 </div>
-
 ---
 
 ### 2. CREATE YOUR PRODUCT: ODOO ECOMMERCE
@@ -351,7 +345,6 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 **Watch on YouTube:** [Sell Products: Odoo POS](https://www.youtube.com/watch?v=3pfUEX2B3Z4)
 
 </div>
-
 ---
 
 ## YOUTUBE: HELPDESK
@@ -388,7 +381,6 @@ All links below target **Odoo 19.0** documentation.
 | **Project** | [3.8 Projects](Content.md#38-projects), [3.9 Timesheets](Content.md#39-timesheets) | [Odoo 19 Project Management Documentation](https://www.odoo.com/documentation/19.0/applications/services/project.html) |
 | **eCommerce** | [3.13 eCommerce](Content.md#313-ecommerce) | [Odoo 19 eCommerce Documentation](https://www.odoo.com/documentation/19.0/applications/websites/ecommerce.html) |
 | **All applications** | Contacts, Employees, HR, Website, POS, Helpdesk, etc. | [Odoo 19 Applications Documentation](https://www.odoo.com/documentation/19.0/applications.html) |
-
 ---
 
 ## REPOSITORIES
@@ -415,7 +407,6 @@ These show real professional Odoo extension patterns rather than toy examples. B
 | **project** | Project management | [GitHub: OCA/project](https://github.com/OCA/project) |
 | **hr** | HR | [GitHub: OCA/hr](https://github.com/OCA/hr) |
 | **website** | Website | [GitHub: OCA/website](https://github.com/OCA/website) |
-
 ---
 
 ## PRACTICE / HANDS-ON
@@ -458,7 +449,6 @@ flowchart LR
 | **Odoo Education** | Free educational practice (when eligible) | [Odoo Education](https://www.odoo.com/education/odoo-online) |
 | **Odoo Trial** | Temporary free trial for experimentation | [Odoo Trial](https://www.odoo.com/trial) |
 | **Odoo Runbot** | Developer/test sandbox (not for permanent work) | [Odoo Runbot](https://runbot.odoo.com/) |
-
 ---
 
 ## BEST RESOURCE ORDER FOR UNIT I

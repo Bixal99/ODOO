@@ -40,7 +40,6 @@ Use them to see the current product generation, not only to read concepts.
 **Watch on YouTube:** [Odoo Beginner's Guide](https://www.youtube.com/watch?v=QuC6rc2q2mg)
 
 </div>
-
 ---
 
 ### 2. MEET ODOO 19'S BEST FEATURES
@@ -58,7 +57,6 @@ Use them to see the current product generation, not only to read concepts.
 **Watch on YouTube:** [Meet Odoo 19's Best Features](https://www.youtube.com/watch?v=OZLP-SCHW7A)
 
 </div>
-
 ---
 
 ### 3. ODOO STUDIO: BUILD AND CUSTOMIZE APPS
@@ -76,7 +74,6 @@ Use them to see the current product generation, not only to read concepts.
 **Watch on YouTube:** [Odoo Studio: Build and Customize Apps](https://www.youtube.com/watch?v=IRbj-SzTcrY)
 
 </div>
-
 ---
 
 ### 4. ODOO ONLINE VS ODOO.SH VS ON-PREMISE
@@ -94,7 +91,6 @@ Use them to see the current product generation, not only to read concepts.
 **Watch on YouTube:** [Odoo Online vs Odoo.sh vs On-Premise](https://www.youtube.com/watch?v=ws3Z7fhhxuA)
 
 </div>
-
 ---
 
 ### 5. WORKING WITH ODOO.SH
@@ -112,7 +108,6 @@ Use them to see the current product generation, not only to read concepts.
 **Watch on YouTube:** [Working with Odoo.sh](https://www.youtube.com/watch?v=vsqzfA3ERD8)
 
 </div>
-
 ---
 
 ### 6. IS SELF-HOSTED ODOO RIGHT FOR YOU?
@@ -130,7 +125,6 @@ Use them to see the current product generation, not only to read concepts.
 **Watch on YouTube:** [Is Self-Hosted Odoo Right for You?](https://www.youtube.com/watch?v=ngbrg7DUOeQ)
 
 </div>
-
 ---
 
 ## OFFICIAL ODOO LEARNING WEBSITE
@@ -144,7 +138,6 @@ Use them to see the current product generation, not only to read concepts.
 | **Why use it** | This should become one of your main companion resources throughout the roadmap |
 
 [Open Odoo Learn](https://www.odoo.com/slides)
-
 ---
 
 ## OFFICIAL DOCUMENTATION
@@ -169,7 +162,6 @@ All links below target **Odoo 19.0** documentation unless noted.
 | **Relevant to** | [2.8 Odoo Apps](Content.md#28-odoo-apps), [2.9 Modules / Addons](Content.md#29-modules--addons) |
 
 [Models, Modules and Apps](https://www.odoo.com/documentation/19.0/applications/general/apps_modules.html)
-
 ---
 
 ### 3. ODOO STUDIO
@@ -211,7 +203,6 @@ All links below target **Odoo 19.0** documentation unless noted.
 | **Relevant to** | Databases, deployment-related topics, multi-company context |
 
 [Odoo 19 Administration](https://www.odoo.com/documentation/19.0/administration.html)
-
 ---
 
 ## REPOSITORIES
@@ -227,7 +218,6 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 | **Browse first** | `addons/` directory: application names and module folders |
 
 [GitHub: odoo/odoo](https://github.com/odoo/odoo)
-
 ---
 
 ### 2. OFFICIAL ODOO DOCUMENTATION SOURCE
@@ -312,7 +302,6 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 | **Note** | Temporary environment; no payment needed to create a trial |
 
 [Create an Odoo Trial](https://www.odoo.com/trial)
-
 ---
 
 ### 3. ODOO RUNBOT
@@ -328,7 +317,6 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 Treat Runbot as: *"I want to quickly inspect what current Odoo looks like."*
 
 Not as: *"This is where I will store my learning project."*
-
 ---
 
 ## RECOMMENDED STUDY ORDER

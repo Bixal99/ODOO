@@ -39,7 +39,6 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 **Watch on YouTube:** [Enterprise Resource Planning (ERP) in 15 Minutes](https://www.youtube.com/watch?v=gBXJ_PhlADQ)
 
 </div>
-
 ---
 
 ### 2. BUSINESS PROCESS MAPPING 101: STEP-BY-STEP
@@ -57,7 +56,6 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 **Watch on YouTube:** [Business Process Mapping 101: Step-by-Step](https://www.youtube.com/watch?v=zGB9SScvoQU)
 
 </div>
-
 ---
 
 ### 3. CROSS-FUNCTIONAL INFORMATION SYSTEMS / ERP
@@ -75,7 +73,6 @@ Use them after reading each section, not instead of it. Chapter 1 teaches ERP th
 **Watch on YouTube:** [Cross-Functional Information Systems / ERP](https://www.youtube.com/watch?v=Igdb0Hp7xJw)
 
 </div>
-
 ---
 
 ## FREE COURSES / WEBSITES
@@ -91,7 +88,6 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 | **Covers** | Integrated processes, enterprise structures, master data, transactional data, cross-functional workflows |
 
 [Open course: Exploring End-to-End Business Processes in SAP](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap-business-suite)
-
 ---
 
 ### 2. SAP LEARNING: EXECUTING BASIC ERP PROCESSES WITH SAP S/4HANA
@@ -103,7 +99,6 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 | **Covers** | Purchase order management, goods receipt, invoice verification, sales order management, production basics |
 
 [Open course: Executing Basic ERP Processes with SAP S/4HANA](https://learning.sap.com/courses/executing-basic-erp-processes-with-sap-s-4hana)
-
 ---
 
 ### 3. SAP LEARNING: UNDERSTANDING THE CONCEPT OF MASTER DATA
@@ -115,7 +110,6 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 | **Why use it** | Excellent reinforcement for the distinction: **Master Data ≠ Transaction Data** |
 
 [Open lesson: Understanding the Concept of Master Data](https://learning.sap.com/learning-journeys/explore-integrated-business-processes-in-sap-s-4hana-/understanding-the-concept-of-master-data_a91e9234-9d79-47b1-adba-60ed63bd836c)
-
 ---
 
 ## ANIMATED / INTERACTIVE
@@ -158,7 +152,6 @@ Also useful:
 
 - [bpmn.io Main Website](https://bpmn.io/)
 - [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (helpful once you want to understand the visual process notation better)
-
 ---
 
 ## REPOSITORIES
@@ -172,7 +165,6 @@ Also useful:
 | **Why bookmark it** | Especially relevant later if you ever want to build interactive process diagrams into a website |
 
 [GitHub: bpmn-io/bpmn-js-examples](https://github.com/bpmn-io/bpmn-js-examples)
-
 ---
 
 ## RECOMMENDED STUDY ORDER

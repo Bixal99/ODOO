@@ -177,6 +177,49 @@ That interconnected data model is what makes Odoo much more interesting than sim
 
 Odoo is therefore not merely a bundle of screens. It is an integrated platform where business records link across applications, and that connected data model is what turns separate apps into a true ERP.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.1 WHAT ODOO IS**:
+
+> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
+
+### 1. ODOO BEGINNER'S GUIDE
+
+| | |
+|---|---|
+| **Source** | Community tutorial |
+| **Why use it** | Good broad introduction before studying individual applications |
+
+<div align="center">
+
+[![Odoo Beginner's Guide](https://img.youtube.com/vi/QuC6rc2q2mg/hqdefault.jpg)](https://www.youtube.com/watch?v=QuC6rc2q2mg)
+
+**Watch on YouTube:** [Odoo Beginner's Guide](https://www.youtube.com/watch?v=QuC6rc2q2mg)
+
+</div>
+
+---
+
+### 2. MEET ODOO 19'S BEST FEATURES
+
+| | |
+|---|---|
+| **Source** | Official Odoo YouTube channel |
+| **Why use it** | Useful for seeing the current generation of Odoo rather than only reading concepts |
+
+<div align="center">
+
+[![Meet Odoo 19's Best Features](https://img.youtube.com/vi/OZLP-SCHW7A/hqdefault.jpg)](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+**Watch on YouTube:** [Meet Odoo 19's Best Features](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+</div>
+
 ---
 
 ## 2.2 ODOO ECOSYSTEM
@@ -296,6 +339,30 @@ A professional Odoo engineer doesn't automatically build everything from scratch
 
 The Odoo ecosystem matters because a capable developer knows how to search the existing software, partner network, and module marketplace before committing to custom code.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.2 ODOO ECOSYSTEM**:
+
+### 1. ODOO BEGINNER'S GUIDE
+
+| | |
+|---|---|
+| **Source** | Community tutorial |
+| **Why use it** | Good broad introduction before studying individual applications |
+
+<div align="center">
+
+[![Odoo Beginner's Guide](https://img.youtube.com/vi/QuC6rc2q2mg/hqdefault.jpg)](https://www.youtube.com/watch?v=QuC6rc2q2mg)
+
+**Watch on YouTube:** [Odoo Beginner's Guide](https://www.youtube.com/watch?v=QuC6rc2q2mg)
+
+</div>
+
 ---
 
 ## 2.3 COMMUNITY EDITION
@@ -395,6 +462,29 @@ $$ \text{Enterprise} = \text{Community foundation} + \text{Additional proprietar
 
 Community Edition is the real open-source foundation of Odoo: inspectable, deployable, and excellent for learning, but not identical to Enterprise in features or licensing.
 
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.3 COMMUNITY EDITION**:
+
+### 2. MEET ODOO 19'S BEST FEATURES
+
+| | |
+|---|---|
+| **Source** | Official Odoo YouTube channel |
+| **Why use it** | Useful for seeing the current generation of Odoo rather than only reading concepts |
+
+<div align="center">
+
+[![Meet Odoo 19's Best Features](https://img.youtube.com/vi/OZLP-SCHW7A/hqdefault.jpg)](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+**Watch on YouTube:** [Meet Odoo 19's Best Features](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+</div>
+
 ---
 
 ## 2.4 ENTERPRISE EDITION
@@ -471,6 +561,29 @@ The correct question is:
 > Which edition fits the organization's functional, technical, licensing, and operational requirements?
 
 Enterprise builds on Community rather than replacing it, and the right edition choice depends on functional needs, licensing constraints, and operational context, not on assuming that commercial always means better.
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.4 ENTERPRISE EDITION**:
+
+### 2. MEET ODOO 19'S BEST FEATURES
+
+| | |
+|---|---|
+| **Source** | Official Odoo YouTube channel |
+| **Why use it** | Useful for seeing the current generation of Odoo rather than only reading concepts |
+
+<div align="center">
+
+[![Meet Odoo 19's Best Features](https://img.youtube.com/vi/OZLP-SCHW7A/hqdefault.jpg)](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+**Watch on YouTube:** [Meet Odoo 19's Best Features](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+</div>
 
 ---
 
@@ -565,6 +678,30 @@ Odoo Online is generally not the appropriate environment for that because non-st
 This leads us directly to Odoo.sh.
 
 Odoo Online simplifies operations for standard usage, but its restriction on arbitrary custom modules is the dividing line between managed convenience and full developer freedom.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.5 ODOO ONLINE**:
+
+### 4. ODOO ONLINE VS ODOO.SH VS ON-PREMISE
+
+| | |
+|---|---|
+| **Source** | Hosting comparison tutorial |
+| **Why use it** | Reinforces that **Online ≠ Odoo.sh ≠ On-Premise** |
+
+<div align="center">
+
+[![Odoo Online vs Odoo.sh vs On-Premise](https://img.youtube.com/vi/ws3Z7fhhxuA/hqdefault.jpg)](https://www.youtube.com/watch?v=ws3Z7fhhxuA)
+
+**Watch on YouTube:** [Odoo Online vs Odoo.sh vs On-Premise](https://www.youtube.com/watch?v=ws3Z7fhhxuA)
+
+</div>
 
 ---
 
@@ -683,6 +820,41 @@ Its role is fundamentally more development-oriented.
 
 Odoo.sh is the managed path for teams that need Git-based workflows, environment separation, and custom Python addons without taking on full infrastructure ownership.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.6 ODOO.SH**:
+
+### 5. WORKING WITH ODOO.SH
+
+| | |
+|---|---|
+| **Source** | Community / partner tutorial |
+| **Why use it** | Shows projects, custom code, staging branches, backups, and deployment workflow |
+
+<div align="center">
+
+[![Working with Odoo.sh](https://img.youtube.com/vi/vsqzfA3ERD8/hqdefault.jpg)](https://www.youtube.com/watch?v=vsqzfA3ERD8)
+
+**Watch on YouTube:** [Working with Odoo.sh](https://www.youtube.com/watch?v=vsqzfA3ERD8)
+
+</div>
+
+---
+
+### 4. ODOO.SH DOCUMENTATION
+
+| | |
+|---|---|
+
+[Odoo.sh Documentation](https://www.odoo.com/documentation/19.0/administration/odoo_sh.html)
+
+[Odoo.sh Getting Started](https://www.odoo.com/documentation/19.0/administration/odoo_sh/getting_started.html)
+
 ---
 
 ## 2.7 ON-PREMISE ODOO
@@ -791,6 +963,39 @@ We will reach these subjects later in the roadmap.
 
 Self-hosted Odoo offers the most control and the most operational burden, and the three hosting options form a spectrum from maximum convenience to maximum freedom.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.7 ON-PREMISE ODOO**:
+
+### 6. IS SELF-HOSTED ODOO RIGHT FOR YOU?
+
+| | |
+|---|---|
+| **Source** | Hosting decision guide |
+| **Why use it** | Useful for understanding when self-hosting makes sense |
+
+<div align="center">
+
+[![Is Self-Hosted Odoo Right for You?](https://img.youtube.com/vi/ngbrg7DUOeQ/hqdefault.jpg)](https://www.youtube.com/watch?v=ngbrg7DUOeQ)
+
+**Watch on YouTube:** [Is Self-Hosted Odoo Right for You?](https://www.youtube.com/watch?v=ngbrg7DUOeQ)
+
+</div>
+
+---
+
+### 5. SELF-HOSTED / SOURCE INSTALLATION
+
+| | |
+|---|---|
+
+[Odoo 19 Source Installation](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html)
+
 ---
 
 ## 2.8 ODOO APPS
@@ -875,6 +1080,22 @@ and:
 - having an integrated ERP.
 
 Odoo apps map business domains to software, but their value comes from integration: one confirmed sale can ripple through Inventory, Purchase, and Accounting without re-entering the same facts.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.8 ODOO APPS**:
+
+### 2. MODELS, MODULES AND APPS
+
+| | |
+|---|---|
+
+[Models, Modules and Apps](https://www.odoo.com/documentation/19.0/applications/general/apps_modules.html)
 
 ---
 
@@ -992,6 +1213,24 @@ Odoo functionality is constructed as a network of modules, not as one indivisibl
 
 Modules and addons are the building blocks behind every app, installed selectively and linked by dependencies rather than shipped as one monolithic program.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.9 MODULES / ADDONS**:
+
+### 1. OFFICIAL ODOO SOURCE CODE
+
+| | |
+|---|---|
+| **Default branch** | `19.0` (verified via GitHub) |
+| **Browse first** | `addons/` directory: application names and module folders |
+
+[GitHub: odoo/odoo](https://github.com/odoo/odoo)
+
 ---
 
 ## 2.10 USERS
@@ -1097,6 +1336,35 @@ Odoo can expose different interfaces and privileges depending on who the person 
 
 A user is an access identity, not the same thing as an employee record, and effective Odoo design assigns the minimum access each role actually needs.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.10 USERS**:
+
+### ODOO LEARN (ODOO SLIDES)
+
+| | |
+|---|---|
+| **Type** | Official free Odoo learning platform |
+| **Why use it** | This should become one of your main companion resources throughout the roadmap |
+
+[Open Odoo Learn](https://www.odoo.com/slides)
+
+---
+
+### 2. FREE ODOO ONLINE TRIAL
+
+| | |
+|---|---|
+| **Best for** | Experimentation, not permanent roadmap work |
+| **Note** | Temporary environment; no payment needed to create a trial |
+
+[Create an Odoo Trial](https://www.odoo.com/trial)
+
 ---
 
 ## 2.11 COMPANIES
@@ -1178,6 +1446,22 @@ Some must be company-specific.
 This brings us directly to Section 2.12.
 
 Odoo models legal business entities explicitly, and multi-company setups introduce real design questions about what should be shared versus what must remain company-specific.
+
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.11 COMPANIES**:
+
+### 6. ODOO ADMINISTRATION
+
+| | |
+|---|---|
+
+[Odoo 19 Administration](https://www.odoo.com/documentation/19.0/administration.html)
 
 ---
 
@@ -1300,6 +1584,29 @@ $$ \text{Property}_{C_A} \neq \text{Property}_{C_B} $$
 This will become technically important much later when we study company-dependent fields and multi-company development.
 
 Odoo separates shared master data from company-specific transactions, and even shared records can carry company-dependent properties where the business requires it.
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.12 SHARED BUSINESS RECORDS**:
+
+### 1. ODOO BEGINNER'S GUIDE
+
+| | |
+|---|---|
+| **Source** | Community tutorial |
+| **Why use it** | Good broad introduction before studying individual applications |
+
+<div align="center">
+
+[![Odoo Beginner's Guide](https://img.youtube.com/vi/QuC6rc2q2mg/hqdefault.jpg)](https://www.youtube.com/watch?v=QuC6rc2q2mg)
+
+**Watch on YouTube:** [Odoo Beginner's Guide](https://www.youtube.com/watch?v=QuC6rc2q2mg)
+
+</div>
 
 ---
 
@@ -1469,6 +1776,30 @@ Always understand what already exists before replacing it.
 
 Custom modules extend standard Odoo rather than replacing it, and the professional path is always to exhaust standard capability, configuration, and Studio before writing Python.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.13 STANDARD VS CUSTOM MODULES**:
+
+### 3. ODOO STUDIO: BUILD AND CUSTOMIZE APPS
+
+| | |
+|---|---|
+| **Source** | Official Odoo YouTube channel |
+| **Why use it** | Directly relevant to understanding no-code customization inside Odoo |
+
+<div align="center">
+
+[![Odoo Studio: Build and Customize Apps](https://img.youtube.com/vi/IRbj-SzTcrY/hqdefault.jpg)](https://www.youtube.com/watch?v=IRbj-SzTcrY)
+
+**Watch on YouTube:** [Odoo Studio: Build and Customize Apps](https://www.youtube.com/watch?v=IRbj-SzTcrY)
+
+</div>
+
 ---
 
 ## 2.14 ODOO STUDIO CONCEPT
@@ -1606,6 +1937,39 @@ $$ \text{Custom Code Control} \gg \text{Studio Convenience} $$
 
 Studio is a legitimate customization layer for simpler metadata and UI changes, but complex integrations and business logic still belong in custom code.
 
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **2.14 ODOO STUDIO CONCEPT**:
+
+### 3. ODOO STUDIO: BUILD AND CUSTOMIZE APPS
+
+| | |
+|---|---|
+| **Source** | Official Odoo YouTube channel |
+| **Why use it** | Directly relevant to understanding no-code customization inside Odoo |
+
+<div align="center">
+
+[![Odoo Studio: Build and Customize Apps](https://img.youtube.com/vi/IRbj-SzTcrY/hqdefault.jpg)](https://www.youtube.com/watch?v=IRbj-SzTcrY)
+
+**Watch on YouTube:** [Odoo Studio: Build and Customize Apps](https://www.youtube.com/watch?v=IRbj-SzTcrY)
+
+</div>
+
+---
+
+### 3. ODOO STUDIO
+
+| | |
+|---|---|
+
+[Odoo Studio Documentation](https://www.odoo.com/documentation/19.0/applications/studio.html)
+
 ---
 
 ## BRINGING ALL OF CHAPTER 2 TOGETHER
@@ -1665,6 +2029,40 @@ The system must run somewhere:
 - Odoo Online
 - Odoo.sh
 - Self-Hosted
+
+
+
+
+
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **BRINGING ALL OF CHAPTER 2 TOGETHER**:
+
+### 2. MEET ODOO 19'S BEST FEATURES
+
+| | |
+|---|---|
+| **Source** | Official Odoo YouTube channel |
+| **Why use it** | Useful for seeing the current generation of Odoo rather than only reading concepts |
+
+<div align="center">
+
+[![Meet Odoo 19's Best Features](https://img.youtube.com/vi/OZLP-SCHW7A/hqdefault.jpg)](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+**Watch on YouTube:** [Meet Odoo 19's Best Features](https://www.youtube.com/watch?v=OZLP-SCHW7A)
+
+</div>
+
+---
+
+### ODOO LEARN (ODOO SLIDES)
+
+| | |
+|---|---|
+| **Type** | Official free Odoo learning platform |
+| **Why use it** | This should become one of your main companion resources throughout the roadmap |
+
+[Open Odoo Learn](https://www.odoo.com/slides)
 
 ---
 

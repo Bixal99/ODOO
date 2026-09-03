@@ -82,7 +82,57 @@ No prior ERP or Odoo experience is required — Unit I starts from business proc
 
 Each unit follows the same organizational pattern: **chapters** for teaching content, then **conclusion**, **unit exercise**, and **unit project** at the unit level.
 
-Per chapter, the intended order is: **Content → Resources → Exercise → Project**.
+Per chapter, the intended order is: **Content → Exercise → Project**. Resources are embedded inside `Content.md` at the end of each topic; `Resources.md` remains as the full chapter reference index.
+
+**Final template (all units):** read theory in `Content.md`, then scroll to **Relevant Resources** on the same page — thumbnails, videos, docs, and links appear inline. No jumping between files while studying.
+
+```
+Read topic theory in Content.md
+        ↓
+### RELEVANT RESOURCES  (same file, end of section)
+        ↓
+YouTube thumbnails + docs + practice links (topic-relevant only)
+        ↓
+Scroll down to next topic in Content.md
+```
+
+**Content.md (end of each topic section):**
+
+```markdown
+### RELEVANT RESOURCES
+
+Here are the relevant resources for **3.2 CRM**:
+
+### 1. CRM BASICS: PIPELINES AND OPPORTUNITIES
+
+| | |
+|---|---|
+| **Source** | Official Odoo |
+| **Reinforces** | **Lead/Opportunity → Pipeline** |
+
+<div align="center">
+
+[![CRM Basics: Pipelines and Opportunities](https://img.youtube.com/vi/RpPKOl85kuc/hqdefault.jpg)](https://www.youtube.com/watch?v=RpPKOl85kuc)
+
+**Watch on YouTube:** [CRM Basics: Pipelines and Opportunities](https://www.youtube.com/watch?v=RpPKOl85kuc)
+
+</div>
+
+### OFFICIAL DOCUMENTATION
+
+| Application | Documentation |
+|---|---|
+| **CRM** | [Odoo 19 CRM Documentation](https://www.odoo.com/documentation/19.0/applications/sales/crm.html) |
+```
+
+**Resources.md:** kept as the complete chapter resource library (same content, organized by type). Used for reference and when building future units — not required during linear reading.
+
+Rules for future units:
+
+- Every teachable topic section in `Content.md` gets a `### RELEVANT RESOURCES` block with **full embedded resources** copied from `Resources.md` (thumbnails, tables, links) — only items relevant to that topic.
+- Include the GitHub thumbnail note once per chapter (first topic section).
+- Keep `Resources.md` in sync as the master resource index for the chapter.
+- ALL HEADINGS UPPERCASE; no em dashes in chapter content; conversational closings.
 
 ```
 ODOO/
@@ -117,9 +167,9 @@ ODOO/
 
 Work through Unit I in this sequence:
 
-1. **Chapter 1** → [Content](Unit%201/Chapter%201/Content.md), then [Resources](Unit%201/Chapter%201/Resources.md), then [Exercise](Unit%201/Chapter%201/Exercise.md), then [Project](Unit%201/Chapter%201/Project.md)  
-2. **Chapter 2** → [Content](Unit%201/Chapter%202/Content.md), then [Resources](Unit%201/Chapter%202/Resources.md), then [Exercise](Unit%201/Chapter%202/Exercise.md), then [Project](Unit%201/Chapter%202/Project.md)  
-3. **Chapter 3** → [Content](Unit%201/Chapter%203/Content.md), then [Resources](Unit%201/Chapter%203/Resources.md), then [Exercise](Unit%201/Chapter%203/Exercise.md), then [Project](Unit%201/Chapter%203/Project.md)  
+1. **Chapter 1** → [Content](Unit%201/Chapter%201/Content.md), then [Exercise](Unit%201/Chapter%201/Exercise.md), then [Project](Unit%201/Chapter%201/Project.md) · [Resources index](Unit%201/Chapter%201/Resources.md)  
+2. **Chapter 2** → [Content](Unit%201/Chapter%202/Content.md), then [Exercise](Unit%201/Chapter%202/Exercise.md), then [Project](Unit%201/Chapter%202/Project.md) · [Resources index](Unit%201/Chapter%202/Resources.md)  
+3. **Chapter 3** → [Content](Unit%201/Chapter%203/Content.md), then [Exercise](Unit%201/Chapter%203/Exercise.md), then [Project](Unit%201/Chapter%203/Project.md) · [Resources index](Unit%201/Chapter%203/Resources.md)  
 
 **After Chapter 3, start here:**
 
@@ -320,7 +370,7 @@ Structured review of all topics, live coding/debugging exercises, mock interview
 
 1. **Start at Unit I** — Even experienced developers benefit from the business context in early units.
 2. **Follow the roadmap sequentially** — Later units assume knowledge from earlier chapters.
-3. **Use the per-chapter structure** — Read `Content.md`, review `Resources.md`, then complete `Exercise.md` and `Project.md` before moving to the next chapter.
+3. **Use the per-chapter structure** — Read each topic in `Content.md` (theory plus embedded **Relevant Resources** at the bottom of each section), then complete `Exercise.md` and `Project.md`. Use `Resources.md` as a chapter-wide reference when needed.
 4. **Finish each unit** — Complete the unit `Conclusion/`, `Exercise/`, and `Project/` before starting the next unit.
 5. **Use the table of contents** — Open [Roadmap.md](Unit%201/Table%20of%20Content/Roadmap.md) to jump to specific topics.
 6. **Practice alongside reading** — Set up a local Odoo dev environment (Unit II, Chapter 5) and build modules as you learn.
