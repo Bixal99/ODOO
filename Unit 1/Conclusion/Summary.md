@@ -246,4 +246,27 @@ If those questions feel natural rather than confusing, you are ready for the nex
 
 Work through the **[Unit I Exercise](../Exercise/Exercise.md)** first: one integrated scenario covering Chapters 1, 2, and 3. Then the **[Unit I Project](../Project/Project.md)**: design a complete mini enterprise with four business flows.
 
-After that, **Unit II: How Odoo Actually Works** is up next. That is where we stop talking about what the business does and start asking how Odoo makes it work under the hood.
+---
+
+## UP NEXT: UNIT II
+
+### UNIT I ANSWERED ONE QUESTION
+
+**What business is Odoo modeling?**
+
+We understand:
+
+- processes,
+- departments,
+- master data,
+- transactions,
+- Odoo applications,
+- connected document flows.
+
+### UNIT II ASKS AN ENTIRELY DIFFERENT QUESTION
+
+**How does the software actually make those business processes work?**
+
+We now leave the functional view of Odoo and move inside its technical architecture.
+
+**Up next:** **Unit II: How Odoo Actually Works**, starting with **Chapter 4: Odoo Architecture**.

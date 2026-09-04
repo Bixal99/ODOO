@@ -437,9 +437,26 @@ If you can explain these flows, identify master data versus transactions, and na
 
 ---
 
-Until now we have deliberately stayed on the business side. You know **what Odoo represents**.
+## UP NEXT: UNIT II
 
-The next question is completely different: **How does Odoo technically make all of this work?**
+### UNIT I ANSWERED ONE QUESTION
+
+**What business is Odoo modeling?**
+
+We understand:
+
+- processes,
+- departments,
+- master data,
+- transactions,
+- Odoo applications,
+- connected document flows.
+
+### UNIT II ASKS AN ENTIRELY DIFFERENT QUESTION
+
+**How does the software actually make those business processes work?**
+
+We now leave the functional view of Odoo and move inside its technical architecture.
 
 When a salesperson opens a Sales Order in their browser:
 
