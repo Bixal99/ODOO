@@ -2,6 +2,8 @@
 
 ## CHAPTER 3: CORE BUSINESS APPLICATIONS
 
+> **Added review guidance:** The app introductions already establish purpose and examples. New material makes record states, quantities, billing policies, and optional integration behavior explicit. Paper walkthroughs are sufficient for Unit I. When using a practice database, record its release, edition, installed apps, and relevant settings; an unavailable feature is an environment difference to investigate, not proof that the business model is wrong.
+
 The roadmap makes Chapter 3 the final chapter of Unit I and requires us to cover **Contacts**, **CRM**, **Sales**, **Purchase**, **Inventory**, **Accounting / Invoicing**, **Employees / HR**, **Projects**, **Timesheets**, **Manufacturing**, **Maintenance**, **Website**, **eCommerce**, **Point of Sale**, **Helpdesk**, and **End-to-End Document Flow** before moving into Odoo architecture.
 
 The roadmap itself gives the scope and hierarchy; the detailed explanations below are the teaching layer built around those roadmap topics. Exact menus and optional features can vary by Odoo version and edition, so our focus here is the stable business purpose and integration model of each application.
@@ -32,6 +34,8 @@ The roadmap itself gives the scope and hierarchy; the detailed explanations belo
 - [**Free Learning Resources**](Resources.md)
 
 **Then complete Unit I in order:**
+
+> **Added study-order clarification:** First complete this chapter’s [Exercise](Exercise.md) and [Project](Project.md), then continue through the unit-level links below. Recognizing an app is the starting point; the chapter project checks quantities and document transitions before the larger capstone.
 
 - [Unit I Conclusion](../Conclusion/Summary.md)
 - [Unit I Exercise](../Exercise/Exercise.md)
@@ -176,6 +180,8 @@ flowchart TB
 
 ### COMPANY CONTACT VS INDIVIDUAL CONTACT
 
+> **Added worked choice:** Use ABC Trading as the customer organization, Hassan as the purchasing contact, a finance-office invoice address, and a warehouse delivery address. One customer identity can legitimately have several related contacts and addresses. Before merging similar names, verify the real organization and relationship. An external company contact is also different from your own operating company in Odoo’s company settings.
+
 Imagine **ABC Trading LLC** has:
 
 - Hassan - Purchasing Manager
@@ -275,6 +281,8 @@ At that point, there may be no confirmed sale. CRM manages that earlier stage: t
 
 ### LEAD AND OPPORTUNITY THINKING
 
+> **Added qualification example:** “Please send a catalog” is an early inquiry. “We need 100 chairs by 1 October and can discuss budget tomorrow” supports a more qualified opportunity. Record an owner, next activity, and evidence for the stage. Some CRM setups use a separate lead stage and others start with opportunities; the goal is to manage uncertainty, not force every customer through an identical record sequence.
+
 Imagine someone says:
 
 > "We may need 100 office chairs next month."
@@ -295,6 +303,8 @@ flowchart LR
 </div>
 
 ### PIPELINE CONCEPT
+
+> **Added check:** Moving an opportunity to Won records a sales outcome; it is not proof of a validated delivery or settled invoice. A lost deal can retain its history without creating a Sales Order. Ask which document you would inspect to establish each later fact instead of relying on the pipeline label.
 
 A **sales pipeline** represents opportunities progressing through stages.
 
@@ -444,6 +454,8 @@ Sales is where commercial language becomes concrete: products, quantities, price
 
 ### CORE SALES FLOW
 
+> **Added worked distinction:** A quotation for 20 monitors at 1,000 QAR proposes 20,000 QAR. Confirmation changes its business state; in standard Odoo the quotation and Sales Order are states of the same order record. A delivery and an invoice are separate related records. Therefore, count business stages separately from database records. Under a delivered-quantity billing policy, delivering eight monitors first makes 8,000 QAR billable before the other twelve are delivered.
+
 A common sales process is:
 
 <div align="center">
@@ -493,6 +505,8 @@ $$ 10 \times 1{,}000 = 10{,}000 \text{ QAR} $$
 The Sales Order captures the commercial agreement. Inventory then deals with the physical movement. Accounting deals with the financial consequence. Sales sits at the center of the commercial promise, not at the end of fulfillment.
 
 ### SALES IS NOT INVENTORY
+
+> **Added policy reference:** [Invoicing policies](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/invoicing_policy.html) shows how ordered-quantity and delivered-quantity billing differ. In the examples below, delivery precedes invoicing unless specified. This is a chosen teaching scenario; invoices can also precede delivery under other arrangements.
 
 A Sales Order does not itself mean that stock physically moved. It records the commercial obligation. That distinction is critical.
 
@@ -595,6 +609,8 @@ Notice how several apps participate. Purchase handles the commercial agreement w
 
 ### RFQ VS PURCHASE ORDER
 
+> **Added state distinction:** In standard Odoo, RFQ and Purchase Order represent stages of the same purchase record. Confirming it may create a planned receipt when inventory integration applies; validating that receipt records the quantity received. One order for 50 keyboards can have receipts of 30 and 20, so neither the number of orders nor their ordered quantity proves what arrived.
+
 An **RFQ** is typically an unconfirmed request or proposed purchase. A **Purchase Order** represents the approved and confirmed purchasing commitment.
 
 Conceptually:
@@ -625,6 +641,8 @@ Purchase handles the commercial order. But the stock should not increase merely 
 Why? Because goods haven't necessarily arrived yet. That is Inventory's job.
 
 ### PURCHASE VS INVENTORY
+
+> **Added bill-check walkthrough:** Compare the order, the actual receipt, and the supplier’s invoice. If 50 keyboards were ordered but 30 received, investigate a bill for 50 rather than assuming it is correct. [Purchase control policies](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/purchase/manage_deals/control_bills.html) explains whether draft billing quantities follow orders or receipts. The receipt itself is not the supplier’s bill.
 
 Important:
 
@@ -759,6 +777,8 @@ The Sales Order created the demand; Inventory executes the physical movement.
 
 ### STOCK STATES
 
+> **Added quantity walkthrough:** Assume one stock location, no damaged goods, and no other commitments. Start with eight monitors on hand and an order needing twenty. Reserving eight leaves eight physically on hand and zero unreserved; it does not remove eight from the warehouse. The shortage is twelve. Receiving twelve gives twenty on hand; delivering all twenty gives zero. In this simplified model, forecast stock is on hand plus expected incoming minus expected outgoing. Do not subtract reserved quantities again if those same units already belong to outgoing demand.
+
 Even at a basic level, inventory thinking needs distinctions such as:
 
 - physically available,
@@ -773,6 +793,8 @@ Only **20** may effectively remain available for new demand.
 So raw "quantity" alone may not tell the whole story. ERP inventory tracks not just totals but commitments against those totals.
 
 ### LOCATIONS
+
+> **Added scope example:** Moving ten keyboards from Main Stock to Packing changes each location’s balance but not the total held across those two internal locations. Sending them from Packing to the customer reduces company-held stock. State the location and company whenever quoting a quantity; “we have ten” is incomplete if they are at another site or unavailable for this shipment.
 
 Warehouses can also have internal locations.
 
@@ -790,6 +812,8 @@ flowchart LR
 This allows ERP to represent physical operations more accurately. Goods do not teleport from the loading dock to the customer; they move through defined locations.
 
 ### WHY INVENTORY IS CENTRAL
+
+> **Added replenishment reference:** A shortage is a need, not an automatic confirmed Purchase Order. A buyer can order manually, or configured routes and replenishment rules can propose supply. [Reordering rules](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.html) explains the minimum, maximum, and route that determine that behavior. Read its example to see why procurement can exceed today’s shortage.
 
 Inventory connects strongly to:
 
@@ -866,6 +890,8 @@ A company can sell many products and still fail financially if it doesn't proper
 
 ### CUSTOMER INVOICE
 
+> **Added state check:** Preparing a draft invoice allows review; posting records its accounting effect. For a tax-free illustrative invoice of 10,000 QAR, distinguish the customer amount due from cash collected. Accounting also covers vendor obligations, account categories, reconciliation, and reporting, so “can create an invoice” does not demonstrate the entire Accounting domain. [Customer invoices](https://www.odoo.com/documentation/19.0/applications/finance/accounting/customer_invoices.html) traces the draft-to-posted workflow.
+
 Suppose you delivered **10 monitors** at **1,000 QAR each**.
 
 Customer invoice:
@@ -887,12 +913,14 @@ The vendor bill represents the company's obligation to pay the supplier.
 
 ### PAYMENT IS A SEPARATE EVENT
 
+> **Added reconciliation example:** Against an invoice of 10,000 QAR, matching a received 4,000 QAR leaves 6,000 QAR due. Reconciliation means matching the financial records that explain the settlement. Odoo’s displayed payment state depends on the payment setup; registering a payment alone need not produce Paid. [Payments](https://www.odoo.com/documentation/19.0/applications/finance/accounting/payments.html) explains the role of outstanding accounts, and [bank reconciliation](https://www.odoo.com/documentation/19.0/applications/finance/accounting/bank/reconciliation.html) shows how bank evidence is matched.
+
 Creating an invoice does not mean money has arrived. This distinction is crucial.
 
 | Record | What It Represents |
 |---|---|
 | **Invoice** | Amount owed or due |
-| **Payment** | Money actually transferred |
+| **Payment** | **Enhanced:** A payment record; actual settlement must be checked against payment/bank evidence |
 
 Example:
 
@@ -930,7 +958,7 @@ Operational work creates financial records; Accounting captures the monetary con
 
 A standalone warehouse system may know that goods were delivered. A standalone accounting system may not know why.
 
-ERP integration can link operational and financial records. That creates **traceability**: from invoice back to delivery, from delivery back to Sales Order, from Sales Order back to customer.
+ERP integration can link operational and financial records. **Enhanced:** That creates **traceability** through related records: an invoice can be traced through sales lines to the originating order and its deliveries. A direct invoice-to-delivery link is not guaranteed, and partial or grouped invoicing can make the relationship many-to-many.
 
 Accounting is not an island. It is the financial mirror of operational reality.
 
@@ -1001,6 +1029,8 @@ We covered this in Chapter 2. Remember:
 An employee may have an Odoo user account, but the concepts are still different. Not every employee needs system access, and not every system user is an employee.
 
 ### HR PROCESSES
+
+> **Added mini-walkthrough:** Layla requests leave for Tuesday. Her employee record identifies her department and manager; the leave request stores dates and approval status. The project lead then checks whether Tuesday’s customer training needs another consultant. This connects HR availability to service delivery. Creating the employee alone does not install every HR app or make every staffing decision automatic.
 
 HR-related applications can support processes around areas such as:
 
@@ -1077,6 +1107,8 @@ This is **project work**: structured effort over time with multiple contributors
 
 ### PROJECT VS TASK
 
+> **Added task example:** “Migrate customers” becomes actionable when it names Layla as owner, a due date, the source data, and completion evidence: imported customer counts checked and duplicates reviewed. The project groups this task with configuration and training. Moving a task to Done should reflect an agreed outcome; it does not establish that all project hours are billable.
+
 A **project** is the broader body of work. A **task** is a specific unit of work inside it.
 
 Example: **Project: ABC Odoo Implementation** contains:
@@ -1118,6 +1150,8 @@ This is especially important for:
 - internal initiatives.
 
 ### CONNECTION TO SALES
+
+> **Added configuration bridge:** A service order can generate project work when its product and project settings support that behavior. The official [time-and-material invoicing guide](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/time_materials.html) connects a Service product, its invoicing policy, and project/task creation. Use it to explain why confirming an ordinary physical-product order does not automatically create the same project workflow.
 
 Suppose Sales sells **100 consulting hours**.
 
@@ -1196,6 +1230,8 @@ Time is a resource. Timesheets make that resource visible and measurable.
 
 ### PROJECT CONNECTION
 
+> **Added practice reference:** [Timesheets documentation](https://www.odoo.com/documentation/19.0/applications/services/timesheets.html) explains employee/user requirements, enabling time logging on a project, and linking billable time to a Sales Order Item. Inspect these relationships if hours are recorded but do not become invoiceable. They clarify which customer agreement the work belongs to.
+
 Timesheets are often associated with:
 
 **Employee + Project + Task + Time**
@@ -1213,6 +1249,8 @@ Total project effort:
 $$ 4 + 3 + 2 = 9 \text{ hours} $$
 
 ### BILLABLE VS INTERNAL TIME
+
+> **Added calculation:** Layla records six customer-work hours and two internal-training hours. At an assumed 300 QAR per eligible customer hour, the time-based bill is 1,800 QAR, while total effort is eight hours. A fixed-price agreement can bill a different amount despite the same effort. Neither attendance nor a generic timesheet total determines what the contract allows you to charge.
 
 Not all time has the same business meaning.
 
@@ -1313,6 +1351,8 @@ Manufacturing transforms raw and semi-finished materials into sellable products.
 
 ### BILL OF MATERIALS CONCEPT
 
+> **Added shortage calculation:** Ten desks require ten tops, forty legs, and 160 screws. If usable component stock is six tops, forty legs, and 120 screws, the missing quantities are four tops, zero legs, and forty screws. The bill of materials defines planned requirements; a manufacturing order records a specific production run. [Bill of materials documentation](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html) shows the product quantity and component units that make scaling meaningful.
+
 Manufacturing requires knowing what components are needed.
 
 Suppose one desk needs:
@@ -1332,6 +1372,8 @@ For **10 desks**, requirements become:
 The BOM scales demand from finished product back to component requirements.
 
 ### MANUFACTURING ORDER
+
+> **Added execution check:** Confirming an instruction to build ten desks is not evidence that ten finished desks exist. Record actual component consumption and finished output when work is completed. If only nine desks pass inspection, do not mark ten deliverable merely because the order asked for ten. Explain the remaining work or loss and preserve the difference between planned and actual quantities.
 
 A manufacturing process needs a record representing: produce this quantity of this product.
 
@@ -1493,6 +1535,8 @@ Example: packaging machine stopped working. A maintenance request is raised, a t
 
 ### PREVENTIVE MAINTENANCE
 
+> **Added decision example:** A packaging machine is serviced for two planned hours before a large shipment. A corrective request instead starts after a breakdown. In either case, record the equipment, reported condition, assigned technician, and completion evidence. The production planner must check capacity and delivery dates; creating a maintenance request alone is not proof that every affected production order was rescheduled.
+
 Instead of waiting for failure, maintenance is planned.
 
 Example: service the machine every three months.
@@ -1570,6 +1614,8 @@ A business website may present:
 The important ERP idea is that the website does not necessarily have to be a completely disconnected system.
 
 ### WEBSITE → CRM EXAMPLE
+
+> **Added setup and verification:** Configure the form to create the intended CRM record and route it to a responsible team, then submit a fictional inquiry and inspect the result. A generic contact form may instead send email. Check the contact details, requested product, owner, and next action; a success message on the website alone does not prove that a useful opportunity reached Sales.
 
 A visitor fills a form:
 
@@ -1658,6 +1704,8 @@ That is eCommerce: self-service buying through the web.
 
 ### CORE FLOW
 
+> **Added checkout distinction:** A cart, a pending online payment, and a confirmed order are different states. Order confirmation depends on the configured checkout and payment workflow. For a failed payment, identify whether the order remains pending and who follows up; do not infer successful payment or delivery merely from a Buy button click. Online customers may pay before shipment, unlike the credit-sale examples.
+
 Conceptually:
 
 <div align="center">
@@ -1698,6 +1746,8 @@ Internally, the business may see:
 One customer action creates several business consequences across multiple applications.
 
 ### PRODUCT DATA CONNECTION
+
+> **Added example:** One keyboard product can appear in the internal catalog and the web shop, while website publication, price rules, and stock availability still need configuration. Test an unpublished product and a stock shortage as well as a successful checkout. Shared product identity reduces re-entry; it does not guarantee that every product is immediately for sale online.
 
 If eCommerce were a totally separate platform, the company might have to maintain product name, price, and stock twice.
 
@@ -1780,6 +1830,8 @@ Imagine a retail store. Customer walks in. Buys **2 keyboards**. Cashier process
 That workflow is different from a salesperson preparing a formal quotation. POS is optimized for speed, immediacy, and in-person interaction.
 
 ### POS TRANSACTION
+
+> **Added record check:** A POS order and POS payment represent the retail transaction; it need not create a conventional Sales Order or a customer invoice. For two keyboards sold from 100, verify the completed stock movement and payment/session records before accepting 98 as the resulting on-hand balance. Synchronization and posting timing depend on the POS workflow.
 
 A POS system typically handles:
 
@@ -1909,6 +1961,8 @@ The ticket is the container for everything known about one support problem.
 
 ### BASIC FLOW
 
+> **Added exception walkthrough:** For two damaged keyboards, support records the complaint, checks the order and delivery, and proposes a remedy. A return, replacement shipment, credit note, and refund are separate possible actions; logging or resolving a ticket alone does not perform them. The customer can complain before paying. [After-Sales services](https://www.odoo.com/documentation/19.0/applications/services/helpdesk/advanced/after_sales.html) explains the optional app integrations and team settings that support these actions.
+
 <div align="center">
 
 ```mermaid
@@ -1983,6 +2037,8 @@ Everything before this section introduced individual applications. Now we connec
 The point of ERP is not simply **15 Apps**. The point is **Integrated Business Flow**: one real-world event traveling across functional boundaries, with each application representing a different stage and responsibility.
 
 ### FIRST PRINCIPLE: ONE REAL-WORLD EVENT CAN CREATE SEVERAL RECORDS
+
+> **Added diagram reading rule:** The flows below summarize business dependencies, not guaranteed automatic record creation or one-to-one links. Skip purchasing when stock is sufficient, allow multiple receipts or deliveries, and branch customer support from the complaint independently of payment. For every arrow, name the triggering action, applicable configuration, and record that proves completion.
 
 Imagine ABC Trading wants 20 monitors.
 
@@ -2288,6 +2344,8 @@ and still not really understand ERP.
 Real mastery means understanding that **a business event travels across functional boundaries**. Different applications represent different stages and responsibilities.
 
 ### DOCUMENT FLOW VS DUPLICATED RECORDS
+
+> **Added worked trace:** SO001 promises twenty monitors. Delivery D1 records eight and D2 records twelve. Invoice I1 bills eight and I2 bills twelve under the example policy. All four operational/financial documents relate to the same sale; they are not duplicate orders. Compare ordered, delivered, invoiced, and settled amounts separately to locate an unfinished step.
 
 The same business reality is represented by related documents, not necessarily one gigantic document. That's important.
 

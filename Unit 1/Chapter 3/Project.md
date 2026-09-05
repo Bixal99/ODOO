@@ -1,5 +1,7 @@
 # CHAPTER 3 PROJECT: BILAL OFFICE SUPPLIES INTEGRATED ODOO FLOW
 
+> **Added working assumptions:** This remains a conceptual project; an optional practice database is not required. Use one company and warehouse, usable unreserved opening stock, manual replenishment, a single full delivery, and billing after delivery. The 24,000 QAR total excludes tax, discounts, and freight. Use illustrative references CUST-ABC, SO001, PO001, REC001, DEL001, INV001, and TKT001 throughout your existing parts so each link can be traced.
+
 We extend the same fictional company from Chapters 1 and 2.
 
 This project connects CRM, Sales, Purchase, Inventory, Accounting, and Helpdesk into one integrated document flow.
@@ -25,6 +27,8 @@ For app-specific Odoo videos, documentation, and hands-on environments, see [Res
 ---
 
 ## PART 1: MASTER DATA
+
+> **Added prompt:** Give monitors and keyboards distinct product references and unit “unit.” Reuse ABC Trading across the opportunity, order, shipment, invoice, and ticket. Identify its invoice and delivery addresses separately. Explain which employee roles need user access to perform the later actions; an employee record alone does not authorize those actions.
 
 Define:
 
@@ -57,6 +61,8 @@ Define:
 
 ## PART 2: CRM
 
+> **Added prompt:** Record Ahmed as opportunity owner, a proposed next activity, and the evidence needed to qualify the deal. Explain why 24,000 QAR is an estimate here rather than a posted receivable. The opportunity remains as sales history when a linked quotation is created.
+
 Create this conceptual opportunity:
 
 **ABC Trading — New Office Equipment**
@@ -74,7 +80,9 @@ Expected value:
 
 ## PART 3: SALES
 
-Convert the opportunity into a quotation.
+> **Added prompt:** Record two quotation lines, their units, quantities, agreed prices, and customer acceptance. Confirm the existing quotation as an order. Show that confirmation records demand and may plan a delivery, while on-hand stock and payment received remain unchanged at this moment.
+
+**Enhanced:** Create a quotation linked to the opportunity; the opportunity remains a distinct CRM record.
 
 Customer accepts.
 
@@ -89,6 +97,8 @@ Demand:
 
 ## PART 4: INVENTORY
 
+> **Added prompt:** Maintain separate monitor and keyboard balances after confirmation, reservation, receipt, and delivery. If the eight monitors are reserved, they remain on hand but unavailable to another order. Explain why treating reservation as a delivery would subtract the same goods twice.
+
 Available stock:
 
 | Product | Required | Available |
@@ -98,13 +108,15 @@ Available stock:
 
 Monitor shortage: **20 − 8 = 12**
 
-Keyboard shortage: **20 − 50 < 0** (sufficient stock)
+**Enhanced:** Keyboard shortage: **max(0, 20 − 50) = 0**; thirty keyboards remain beyond this order’s demand.
 
 Therefore monitors are not sufficient, but keyboards are.
 
 ---
 
 ## PART 5: PURCHASE
+
+> **Added prompt:** Use PO001 for twelve monitors and identify Global Displays as vendor. The scenario gives a selling price but no vendor price; obtain or explicitly assume a purchase price before calculating a vendor bill. Do not reuse the 1,000 QAR selling price as supplier cost without evidence.
 
 Purchase **12 monitors** from Global Displays.
 
@@ -116,6 +128,8 @@ Document conceptual flow:
 
 ## PART 6: RECEIPT
 
+> **Added exception:** Record the actual receipt against PO001. If only ten monitors arrive, calculate available stock and the remaining supply obligation. Do not record twelve received simply because twelve were ordered. State who informs Sales about any effect on the promised delivery.
+
 Vendor delivers **12 monitors**.
 
 New monitor stock: **8 + 12 = 20**
@@ -124,11 +138,15 @@ New monitor stock: **8 + 12 = 20**
 
 ## PART 7: DELIVERY
 
+> **Added prompt:** Show ending stock after DEL001 and verify it against the two ordered product lines. If part is held back, record an actual partial delivery and outstanding demand. Never use a new customer order merely to represent the unfulfilled part of the same order.
+
 Deliver **20 monitors** and **20 keyboards** to ABC Trading.
 
 ---
 
 ## PART 8: ACCOUNTING
+
+> **Added prompt:** Distinguish draft invoice, posted invoice, payment activity, and completed settlement. Use the 24,000 QAR customer charge to calculate what remains due after a 10,000 QAR partial settlement and after the final 14,000 QAR. Record a vendor bill/payment as a related procurement branch if that cycle is in scope; no vendor amount is supplied.
 
 Suppose:
 
@@ -146,6 +164,8 @@ Outstanding: **0**
 ---
 
 ## PART 9: HELPDESK
+
+> **Added prompt:** Open the ticket when the damage is reported, whether or not the invoice is paid. Add an investigation step and an explicit proposed remedy: repair, replacement, or credit/refund. Name which later record would prove the remedy happened. Ticket references are business requirements; structured links and after-sales buttons depend on installed features and configuration.
 
 After delivery, customer reports:
 
@@ -165,6 +185,8 @@ Explain why connecting this ticket to existing records is better than treating i
 ---
 
 ## PART 10: FINAL DOCUMENT MAP
+
+> **Added completion criteria:** Connect the contact to multiple transactions, include receipt between purchasing and delivery, and branch the ticket from the post-delivery complaint independently of payment. For every arrow explain whether it means a shared reference, an action, or an optional dependency. Check quantities and amounts against Parts 4–8. The diagram is complete only when another learner can locate an unfinished shipment or payment from your explanation.
 
 Your project should end with the complete conceptual flow from contact through payment and, if needed, Helpdesk.
 
@@ -244,7 +266,7 @@ Ahmed may record notes, activities, stage, and expected close information while 
 
 ## PART 3: SALES
 
-Once requirements are clear, Ahmed converts the opportunity into a **quotation** for ABC Trading:
+**Enhanced:** Once requirements are clear, Ahmed creates a **quotation** linked to the opportunity for ABC Trading:
 
 - 20 monitors at 1,000 QAR
 - 20 keyboards at 200 QAR
@@ -261,6 +283,8 @@ This Sales Order now triggers operational consequences in Inventory and eventual
 ---
 
 ## PART 4: INVENTORY
+
+> **Added worked balances:** Before receipt there are eight monitors and fifty keyboards on hand. After receiving twelve monitors: twenty monitors and fifty keyboards. After the full delivery: zero monitors and thirty keyboards. If only ten monitors arrive, eighteen are available and two are still missing; agree a partial shipment or wait for the outstanding two.
 
 | Product | Required | Available | Result |
 | --- | --- | --- | --- |
@@ -328,6 +352,8 @@ The delivery records the actual movement of goods to the customer.
 
 ## PART 8: ACCOUNTING
 
+> **Added worked settlement:** Against 24,000 QAR, a matched 10,000 QAR partial settlement leaves 14,000 QAR due; settling the remaining 14,000 leaves zero. The solution’s zero balance assumes the appropriate matching/reconciliation is complete. A payment button or standalone payment entry alone is not sufficient completion evidence.
+
 **Pricing:**
 
 - Monitor: 1,000 QAR
@@ -347,11 +373,13 @@ Outstanding balance becomes **0**.
 
 The invoice represents what the customer owes.
 
-The payment represents money actually received.
+**Enhanced:** The completed settlement in this example is supported by received funds and matching financial records; a payment entry alone does not prove settlement.
 
 ---
 
 ## PART 9: HELPDESK
+
+> **Added worked remedy:** Suppose the agreed remedy is to inspect the two returned keyboards and replace them. Receiving two damaged returns does not make them saleable automatically; keep their condition/location explicit. Sending two good replacements from the thirty remaining good keyboards leaves twenty-eight good keyboards. A refund would instead need the appropriate financial correction and payment evidence. The complaint alone changes neither stock nor the invoice.
 
 **Problem reported:** Two keyboards arrived damaged.
 
@@ -384,6 +412,8 @@ That reduces delay, duplication, and error. It also preserves the customer lifec
 
 ## PART 10: FINAL DOCUMENT MAP
 
+> **Correction:** The support branch below starts from the post-delivery complaint, not from payment. The purchase step supplies this example’s shortage; it is not required for a fully stocked order. Separate references may need to be followed through the originating order rather than assumed to be direct links on every screen.
+
 <div align="center">
 
 ```mermaid
@@ -396,7 +426,7 @@ flowchart TD
     REC --> DEL["Delivery"]
     DEL --> INV["Invoice: 24,000 QAR"]
     INV --> PAY["Payment"]
-    PAY --> HD["Helpdesk Ticket if support issue"]
+    DEL -->|"Damage complaint, independent of payment"| HD["Helpdesk Ticket if support issue"]
 ```
 
 </div>

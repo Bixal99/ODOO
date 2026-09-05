@@ -1,5 +1,7 @@
 # CHAPTER 1 EXERCISE
 
+> **Added study method:** Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
+
 Try these without looking back at Content.md immediately. Answer in your own words first, then compare with the complete solution at the bottom of this file.
 
 For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md](Resources.md).
@@ -17,6 +19,8 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 ---
 
 ## PART A: CONCEPTS
+
+> **Added response guidance:** For Questions 1–3, name a trigger, an outcome, and at least one handoff. For Questions 4–6, use the same customer across two purchases to show reuse and changing transaction details. For Questions 7–10, give a business consequence, not just a definition. For leave approval, include rejection as well as approval and distinguish the person performing a task from the owner of the whole process.
 
 1. What makes something a **business process** rather than simply an isolated task?
 
@@ -50,6 +54,8 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 ---
 
 ## PART B: SCENARIO
+
+> **Added assumptions and evidence:** Treat the thirty available chairs as usable and unreserved in the same warehouse; ignore other stock movements. Draw or describe each handoff with its owner and document. Show the running on-hand balance after order confirmation, receipt, and delivery. The scenario ends at invoicing, so label payment as a possible next event rather than claiming it has happened. Then consider a supplier receipt of only fifteen chairs: explain what is still missing and who must act.
 
 A company sells office chairs.
 
@@ -105,6 +111,8 @@ So the key difference is that a task is one piece of work, while a business proc
 ---
 
 ### 2. EMPLOYEE LEAVE-REQUEST PROCESS
+
+> **Added reasoning check:** Rejection produces a recorded decision and communication to the employee; it does not create approved absence. Approval should identify the affected dates and availability. The approver may be a line manager while HR owns the policy. Other ownership arrangements earn full credit if their responsibilities are explicit.
 
 **Input**
 
@@ -175,7 +183,7 @@ If the departments operate independently, problems can appear:
 - Sales may promise unavailable stock.
 - Purchasing may buy unnecessary products.
 - Warehouse may not know which order needs stock.
-- Finance may invoice before the goods are delivered.
+- **Enhanced:** Finance may invoice a quantity that conflicts with the agreed billing policy. Invoicing before delivery can be valid when the commercial arrangement allows it.
 - Different departments may hold conflicting data.
 
 ERP exists partly to connect these activities.
@@ -232,7 +240,7 @@ A **single source of truth** means the company has one authoritative place for a
 
 For example, there should not be three unrelated customer addresses: one in Sales, one in Finance, and one in Warehouse. Instead, the departments should use the same authoritative customer record.
 
-If the address changes, the correct record is updated and all connected processes should use that value.
+**Enhanced:** If an address changes, update the appropriate master address and review affected open documents. Invoice and delivery addresses can legitimately differ; an update should not silently rewrite historical commercial evidence.
 
 The purpose is to reduce:
 
@@ -365,6 +373,8 @@ These records are reused across many transactions.
 
 ### 2. TRANSACTIONS
 
+> **Added evidence distinction:** A quotation is a plausible earlier document, but the scenario does not explicitly say one was created. Similarly, a supplier bill is a likely connected procurement document, while supplier and customer payments are not stated as completed. Separate observed events from inferred or future events to avoid inventing completion evidence.
+
 The main transactions are:
 
 - Customer request / quotation
@@ -417,6 +427,8 @@ These transactions record what happened during this particular sale.
 ---
 
 ### 6. CROSS-DEPARTMENT WORKFLOW
+
+> **Added worked check:** On-hand chairs are 30 after confirming the order, 50 after receiving 20, and 0 after delivering 50. The order records demand; the receipt and delivery change stock. If only 15 arrive, stock is 45 and five more are needed. Sales must agree whether to deliver 45 now or wait; Purchasing follows up on five. A complete answer names both the numerical gap and the business decision.
 
 <div align="center">
 

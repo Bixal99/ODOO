@@ -6,7 +6,7 @@ Chapter 3 is **functional**, so the best resources are actual Odoo app demonstra
 
 These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Projects, Manufacturing, Website, eCommerce, POS, Helpdesk, and [3.16 End-to-End Document Flow](Content.md#316-end-to-end-document-flow).
 
-> **Verification note:** YouTube video IDs and GitHub repository links below were checked via Composio (YouTube Search + GitHub API). Official documentation links target Odoo 19.0.
+> **Enhanced verification scope:** This review checked targeted primary sources used by the marked additions. Existing videos and repository listings are retained as supplementary references; their playback, full content, and every link have not been reverified. Odoo-specific references use 19.0 unless stated.
 
 ---
 
@@ -369,6 +369,10 @@ These resources map directly to CRM, Sales, Purchase, Inventory, Accounting, Pro
 
 ## OFFICIAL DOCUMENTATION
 
+> **Added focused references:** Use [invoicing policies](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/invoicing_policy.html) for ordered versus delivered billing, [purchase control policies](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/purchase/manage_deals/control_bills.html) for bill quantities, and [reordering rules](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.html) for replenishment assumptions. For each, explain one setting that changes an arrow in your project flow.
+>
+> **Added further guidance:** [Payments](https://www.odoo.com/documentation/19.0/applications/finance/accounting/payments.html) and [bank reconciliation](https://www.odoo.com/documentation/19.0/applications/finance/accounting/bank/reconciliation.html) explain settlement evidence. [Timesheets](https://www.odoo.com/documentation/19.0/applications/services/timesheets.html) and [time-and-material invoicing](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/time_materials.html) connect work to a customer agreement. [Bill of materials](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.html) explains component quantities. [After-Sales services](https://www.odoo.com/documentation/19.0/applications/services/helpdesk/advanced/after_sales.html) distinguishes a support ticket from actions such as returns and refunds. These target the specific gaps addressed in the marked lesson additions.
+
 All links below target **Odoo 19.0** documentation.
 
 | Application | Relevant sections | Documentation |
@@ -391,7 +395,7 @@ You do **not** need to understand their code yet. For now, they are useful for s
 
 | Repository | Relevant to | Link |
 |---|---|---|
-| **odoo/odoo** | All Chapter 3 apps (trace modules such as Sales, Purchase, CRM, Inventory, Accounting later) | [GitHub: odoo/odoo](https://github.com/odoo/odoo) |
+| **odoo/odoo** | **Enhanced:** Community source examples for Sales, Purchase, CRM, Inventory, and Accounting; not the source of every Enterprise app | [GitHub: odoo/odoo](https://github.com/odoo/odoo) |
 
 ### OCA (ODOO COMMUNITY ASSOCIATION)
 
@@ -410,6 +414,8 @@ These show real professional Odoo extension patterns rather than toy examples. B
 ---
 
 ## PRACTICE / HANDS-ON
+
+> **Added optional lab method:** Complete the paper flow first. If you use a practice database, record its release/edition and installed apps, use fictional records, and note product stock tracking, opening quantities, and billing policy. Work through contact → quotation → confirmation → actual receipt/delivery → draft and posted invoice → settlement evidence. At each step record the document reference and before/after quantity or amount. If a step is unavailable, consult its focused reference and record the missing setting; do not substitute a guessed result. The paper project remains the required Unit I deliverable.
 
 The best Chapter 3 exercise is **not coding**.
 

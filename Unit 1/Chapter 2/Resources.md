@@ -6,7 +6,7 @@ These resources become **strongly Odoo-specific**: editions, hosting, apps/modul
 
 Use them to see the current product generation, not only to read concepts.
 
-> **Verification note:** YouTube video IDs and GitHub repository links below were checked via Composio (YouTube Search + GitHub API). Official documentation links target Odoo 19.0.
+> **Enhanced verification scope:** This review checked targeted primary sources used by the marked additions. Existing videos and repository listings are retained as supplementary references; their playback, full content, and every link have not been reverified. Odoo-specific references use 19.0 unless stated.
 
 ---
 
@@ -146,6 +146,8 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ### 1. ODOO 19 USER DOCUMENTATION (MAIN ENTRY)
 
+> **Added targeted references:** [Online hosting](https://www.odoo.com/documentation/19.0/administration/odoo_online.html) clarifies custom-addon restrictions; the [Odoo.sh FAQ](https://www.odoo.sh/faq) clarifies service eligibility. Use them to defend the hosting choice in the project rather than relying on a broad promotional video.
+
 | | |
 |---|---|
 | **Relevant to** | Entire Chapter 2 |
@@ -198,6 +200,8 @@ All links below target **Odoo 19.0** documentation unless noted.
 
 ### 6. ODOO ADMINISTRATION
 
+> **Added focused reading:** [Multi-company](https://www.odoo.com/documentation/19.0/applications/general/companies/multi_company.html) explains shared contacts/products and company context. Find one common product value and one company-specific value, then explain why the Qatar and Pakistan transactions remain distinct. This is more specific to Sections 2.11–2.12 than the administration landing page.
+
 | | |
 |---|---|
 | **Relevant to** | Databases, deployment-related topics, multi-company context |
@@ -211,10 +215,12 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 
 ### 1. OFFICIAL ODOO SOURCE CODE
 
+> **Added guided inspection:** Read the [19.0 Sales manifest](https://github.com/odoo/odoo/blob/19.0/addons/sale/__manifest__.py) and identify its name, dependencies, and data files. The [manifest reference](https://www.odoo.com/documentation/19.0/developer/reference/backend/module.html) explains those keys. This is a read-only conceptual exercise; installing or understanding the full source tree is unnecessary here.
+
 | | |
 |---|---|
 | **Relevant to** | [2.8 Odoo Apps](Content.md#28-odoo-apps), [2.9 Modules / Addons](Content.md#29-modules--addons) |
-| **Default branch** | `19.0` (verified via GitHub) |
+| **Study branch** | **Enhanced:** select `19.0` explicitly to match this guide |
 | **Browse first** | `addons/` directory: application names and module folders |
 
 [GitHub: odoo/odoo](https://github.com/odoo/odoo)
@@ -225,7 +231,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 | | |
 |---|---|
 | **Relevant to** | Understanding how official docs are maintained |
-| **Default branch** | `19.0` |
+| **Study branch** | **Enhanced:** use `19.0` when available; default branches can change |
 
 [GitHub: odoo/documentation](https://github.com/odoo/documentation)
 
@@ -236,7 +242,7 @@ Do **not** try to understand the entire codebase yet. For now, browse structure,
 | | |
 |---|---|
 | **Relevant to** | Later developer chapters (bookmark now) |
-| **Default branch** | `19.0` |
+| **Study branch** | **Enhanced:** use `19.0` when available; default branches can change |
 | **Contains** | Code bases and solutions for official Odoo tutorials |
 
 [GitHub: odoo/tutorials](https://github.com/odoo/tutorials)
@@ -320,6 +326,8 @@ Not as: *"This is where I will store my learning project."*
 ---
 
 ## RECOMMENDED STUDY ORDER
+
+> **Added learning output:** After the overview, write one paragraph selecting hosting for the Bilal scenario, one permission example, and one shared-record example. Use the focused official sources above to resolve a specific uncertainty. A completed watch list without those explanations does not demonstrate Chapter 2 mastery.
 
 If you do not want to consume everything, use this sequence for Chapter 2:
 

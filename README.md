@@ -182,7 +182,7 @@ Future units (`Unit 2/`, `Unit 3/`, etc.) will follow the same chapter pattern: 
 
 The master roadmap lives at:
 
-📄 **[Unit 1/Table of Content/Roadmap.md](Unit%201/Table%20of%20Content/Roadmap.md)**
+📄 **Enhanced:** [Table of Content/Roadmap.md](Table%20of%20Content/Roadmap.md)
 
 ---
 
@@ -372,7 +372,7 @@ Structured review of all topics, live coding/debugging exercises, mock interview
 2. **Follow the roadmap sequentially** — Later units assume knowledge from earlier chapters.
 3. **Use the per-chapter structure** — Read each topic in `Content.md` (theory plus embedded **Relevant Resources** at the bottom of each section), then complete `Exercise.md` and `Project.md`. Use `Resources.md` as a chapter-wide reference when needed.
 4. **Finish each unit** — Complete the unit `Conclusion/`, `Exercise/`, and `Project/` before starting the next unit.
-5. **Use the table of contents** — Open [Roadmap.md](Unit%201/Table%20of%20Content/Roadmap.md) to jump to specific topics.
+5. **Use the table of contents** — **Enhanced link:** Open [Roadmap.md](Table%20of%20Content/Roadmap.md) to jump to specific topics.
 6. **Practice alongside reading** — Set up a local Odoo dev environment (Unit II, Chapter 5) and build modules as you learn.
 7. **Track your progress** — Check off chapters as you complete them; revisit ORM and security units before interviews.
 8. **Build the capstone** — Unit XXIII is designed as a portfolio-worthy production project.

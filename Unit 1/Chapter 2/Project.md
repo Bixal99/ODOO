@@ -1,5 +1,7 @@
 # CHAPTER 2 PROJECT: DESIGN AN ODOO DEPLOYMENT FOR BILAL OFFICE SUPPLIES
 
+> **Added submission criteria:** In the seven existing parts, produce app mappings, role permissions, company access, master-data decisions, a justified hosting choice, approval examples, and an integration failure walkthrough. This is a design exercise. Names are illustrative; if carrying forward Chapter 1’s Omar as warehouse officer, explain his relationship to the Ali used here rather than silently duplicating an employee.
+
 You already modeled the company's processes in Chapter 1.
 
 Now convert that conceptual company into an Odoo system design.
@@ -25,6 +27,8 @@ For Odoo Learn, official documentation, and deployment resources, see [Resources
 
 ## PART 1: APPLICATIONS
 
+> **Added prompt:** Pair every app with the business record it manages and one required action. For example, customer management requires Contacts to identify the billing party; pipeline follow-up additionally motivates CRM. Mark optional apps explicitly so the design does not imply that every company needs every app.
+
 Bilal Office Supplies needs:
 
 - customer management,
@@ -39,6 +43,8 @@ Identify the Odoo apps you expect to investigate for each requirement.
 ---
 
 ## PART 2: USERS
+
+> **Added prompt:** For each role specify app, company, record scope, allowed action, and denied action. Describe one future positive and one future negative access check. For example, Ahmed may create a Qatar quotation but must not issue a Pakistan invoice. These are intended permissions to verify later, not claims that selecting an app role automatically enforces every detail.
 
 Create these roles:
 
@@ -63,6 +69,8 @@ Do not configure security yet. We are designing the requirement.
 
 ## PART 3: COMPANIES
 
+> **Added prompt:** State why Qatar and Pakistan are separate operating entities in this scenario. Identify the company on one Sales Order, one receipt, and one invoice. Explain why shared product identity does not make stock in Pakistan immediately available to a Qatar warehouse.
+
 Start with **Bilal Office Supplies Qatar**.
 
 Then imagine the company expands to **Bilal Office Supplies Pakistan**.
@@ -78,6 +86,8 @@ Determine:
 
 ## PART 4: MASTER RECORDS
 
+> **Added prompt:** Distinguish desired business differences from actual Odoo field behavior. A shared product may require different selling rules in two companies; that does not establish that the standard Sales Price field changes by company. Name the requirement, then identify what must be checked in configuration.
+
 Identify likely shared or master data:
 
 - customers,
@@ -90,6 +100,8 @@ Then determine which of these may require company-specific information.
 ---
 
 ## PART 5: HOSTING DECISION
+
+> **Added prompt:** Choose an edition and hosting option for the whole scenario, including the later logistics requirement. State who maintains custom code, who operates infrastructure, and one requirement that would make you reconsider. Do not propose purchasing a subscription or deploying software as part of this paper exercise.
 
 Compare the three options:
 
@@ -107,6 +119,8 @@ For each, write:
 ---
 
 ## PART 6: CUSTOM REQUIREMENT (SALES APPROVAL)
+
+> **Added testable assumptions:** For this exercise use QAR orders and the total including any applicable tax, after discounts. Test 49,999 QAR, exactly 50,000 QAR, and 50,001 QAR. Define approval before confirmation, a rejection reason, and whether a material edit invalidates approval. “Awaiting Approval” is a proposed business condition, not a promise that standard Odoo has that exact order state.
 
 Business requirement:
 
@@ -127,6 +141,8 @@ Would you first investigate standard Odoo, configuration, Studio, or custom code
 ---
 
 ## PART 7: COMPLEX REQUIREMENT (LOGISTICS API)
+
+> **Added scope clarification:** Interpret the requirement as reporting a completed shipment to the provider. If the provider must book transport before dispatch, that is a different trigger to clarify. Walk through success, temporary outage, a lost response after external success, and invalid data. For each, state what Warehouse sees and how duplicate external operations are prevented.
 
 The company later says:
 
@@ -219,6 +235,8 @@ However, even administrators should use high privilege responsibly. Being an adm
 
 ### USER-ACCESS PRINCIPLE
 
+> **Added acceptance evidence:** As Ahmed, creating an allowed Qatar quotation should succeed; attempting a prohibited action should fail even if he reaches the record through another route. As Fatima, a permitted invoice should show the intended company. Exact groups and record rules are designed in later security units; here, the deliverable is a clear requirement that those checks can validate.
+
 The requirement should follow **Least Necessary Access**: users get what they need to perform their business responsibilities, not automatically everything.
 
 ---
@@ -285,7 +303,7 @@ Potentially shared.
 
 Example: **ABC International** might purchase from both Qatar and Pakistan.
 
-However, company-specific values could differ, such as payment terms, salesperson, pricing, and accounting treatment.
+**Enhanced:** The business may require different payment terms, sales ownership, pricing, and accounting treatment by company. Determine which standard fields or configuration rules provide those differences; do not assume every field on a shared contact automatically changes with company context.
 
 ### VENDORS
 
@@ -299,7 +317,7 @@ Products are strong candidates for shared master information.
 
 Potentially shared: name, SKU, description, barcode.
 
-Potentially company-dependent: cost, valuation and accounting behavior, pricing, taxes, procurement settings.
+**Enhanced:** Requirements may differ for cost, accounting behavior, selling prices, taxes, and procurement settings, but these are not all automatically company-dependent fields. Verify each field and configuration separately; use explicit pricing rules when different selling prices are required.
 
 ### EMPLOYEES
 
@@ -346,6 +364,8 @@ Some master information can be **Shared Identity** while certain attributes rema
 
 ### HOSTING RECOMMENDATION FOR BILAL OFFICE SUPPLIES
 
+> **Added decision example:** Under the assumed need for a maintained Python integration and managed infrastructure, evaluate Enterprise with Odoo.sh and confirm the relevant service arrangement. If customization is removed and supported configuration satisfies the business, revisit Online. If the company chooses Community or requires different infrastructure control, evaluate a suitably operated self-hosted setup. Record the reason and operational owner, not just the preferred product name.
+
 Suppose this company plans substantial custom development.
 
 A reasonable first choice to evaluate would be **Odoo.sh**, because it provides **Custom Development + Managed Odoo Infrastructure** without immediately forcing a small business to operate its entire production infrastructure itself.
@@ -365,6 +385,8 @@ If the company eventually needs deep infrastructure control, strict hosting requ
 | **Expected state (before approval)** | Awaiting Approval |
 
 ### POSITIVE PATH
+
+> **Added boundary answers:** 49,999 QAR bypasses this approval rule; 50,000 and 50,001 require it. The diagram below shows the approval-required branch only. For the sample design, the salesperson cannot approve their own order, rejection returns it with a reason, and changing price, quantity, or customer after approval requires review again. These are explicit sample decisions to test against the chosen implementation.
 
 <div align="center">
 
@@ -413,6 +435,8 @@ flowchart LR
 
 ### ADDITIONAL QUESTIONS AN ODOO ENGINEER SHOULD ASK
 
+> **Added completion check:** The sample assumptions above answer the initial questions for this exercise. A real discovery process must confirm them with the process owner. Also specify what happens for a non-QAR order; either define an exchange-rate/date rule or keep it outside this approval design until resolved. This prevents a numeric comparison between unlike currencies.
+
 Before implementation:
 
 - Can managers approve their own Sales Orders? (Probably a business-rule question.)
@@ -458,6 +482,8 @@ flowchart TD
 </div>
 
 ### INTEGRATION CONCERNS
+
+> **Added worked recovery:** Suppose delivery WH/OUT/0052 is recorded, the provider accepts its report as EXT-52, and the reply is lost. A retry must reuse the same stable event identity and recover EXT-52, not create a second report. Temporary failures can be retried with a limit and delay; invalid data needs correction. Keep the successful warehouse movement distinct from synchronization status. A proposed background workflow should queue work only for a committed delivery and retain the external reference as evidence. This is a design acceptance case, not an implemented guarantee.
 
 **1. Authentication**
 

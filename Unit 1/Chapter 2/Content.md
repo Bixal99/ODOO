@@ -2,6 +2,8 @@
 
 ## CHAPTER 2: UNDERSTANDING ODOO
 
+> **Added review guidance:** The platform definitions are already substantial. The additions turn feature lists into decisions with evidence: what an addon contains, what a user can actually do, which values are shared, and how hosting constrains customization. References use Odoo 19.0 as the teaching baseline; distinguish edition (Community/Enterprise), release (19.0), commercial plan, and hosting.
+
 Chapter 1 gave us the business-side mental model:
 
 $$ \text{Departments} \rightarrow \text{Processes} \rightarrow \text{Master Data} \rightarrow \text{Transactions} \rightarrow \text{Integrated ERP} $$
@@ -12,7 +14,7 @@ What exactly is Odoo, and how does Odoo turn those ERP ideas into an actual soft
 
 The roadmap requires all 14 topics below.
 
-For current product-specific facts such as editions and hosting, I also verified against the current official Odoo 19 documentation.
+**Enhanced reference scope:** Targeted official sources accompany the product-specific clarifications below. Existing video listings are supplementary; their playback and teaching quality have not been re-audited in this review.
 
 ---
 
@@ -155,6 +157,8 @@ That is why learning Odoo development without understanding ERP first would have
 The code exists to support these business relationships.
 
 ### ODOO IS NOT JUST A COLLECTION OF PAGES
+
+> **Added trace exercise:** Imagine SO001 has customer ABC Trading and a monitor order line. The customer field points to the party; the order line holds the quantity and agreed price. Inventory needs the product and quantity for shipment, while Finance needs the amount to bill. Identify which facts should be reused and which belong to this particular order. Integration connects those responsibilities; merely installing icons does not configure every connection.
 
 This distinction is extremely important.
 
@@ -312,6 +316,8 @@ They need to understand the company's processes.
 
 ### THIRD-PARTY MODULES
 
+> **Added evaluation example:** A warehouse addon looks suitable, but its screenshots show a different Odoo release. Inspect its supported branch, dependencies, license, documentation, and a sample workflow before selecting it. A listing describes a candidate solution, not proof of compatibility. Test the actual requirement, such as partial delivery with serial-number tracking, and identify who will maintain the addon after an upgrade.
+
 Odoo's functionality can also be extended using third-party modules.
 
 That means your eventual Odoo system might look like:
@@ -446,6 +452,8 @@ Community is particularly useful when:
 
 ### COMMUNITY LIMITATIONS
 
+> **Added decision exercise:** List a retailer’s required workflows, then mark each as demonstrated in the chosen edition, available through an extension, or still unverified. Community may fit a learning installation even when a production project chooses Enterprise. The official [Community source license](https://github.com/odoo/odoo/blob/19.0/LICENSE) establishes the license baseline; it does not establish feature availability for every third-party addon.
+
 The important limitation is that some Odoo functionality is Enterprise-only.
 
 Therefore you should not assume:
@@ -542,6 +550,8 @@ in every detail.
 For an implementation project, always check the edition matrix for the target Odoo version.
 
 ### COMMUNITY VS ENTERPRISE
+
+> **Added decision method:** Compare the exact workflow, not just the app label. “Accounting needed” is incomplete; “create customer invoices, reconcile bank transactions, and produce the required reports” is testable. Record which edition and plan supports each requirement, then add hosting, implementation, training, and maintenance effort to the decision. Do not infer that an Enterprise subscription alone provides every possible hosting or customization service.
 
 | Community | Enterprise |
 | --------- | ---------- |
@@ -651,6 +661,8 @@ That can be attractive when the business mostly needs:
 
 ### CRITICAL ODOO ONLINE LIMITATION
 
+> **Added supporting reference:** [Odoo Online administration](https://www.odoo.com/documentation/19.0/administration/odoo_online.html) explicitly describes its custom-module restriction. Use it to distinguish supported in-platform customization from deploying your own Python addon. An external service may still integrate with Odoo where supported interfaces and the chosen plan allow it; “no custom addon deployment” does not mean “no integration of any kind.”
+
 This is especially important for us as future Odoo developers.
 
 Current official documentation states that Odoo Online is not compatible with custom modules or modules from the Odoo Apps Store.
@@ -750,6 +762,8 @@ flowchart TD
 
 ### ENVIRONMENTS
 
+> **Added example:** Development is where a developer tries an approval change. Staging is where testers exercise it using representative data. Production is where staff perform live work. Moving a code change toward production does not mean copying every staging transaction into the live database. For example, test invoice TEST001 should remain test evidence, not become a real customer debt.
+
 Odoo.sh supports concepts such as:
 
 - development,
@@ -801,6 +815,8 @@ It provides facilities designed around Odoo development, including access to thi
 Current documentation also shows that development and staging builds can have their source code inspected or edited, while production source is treated more conservatively.
 
 ### ODOO ONLINE VS ODOO.SH
+
+> **Added selection check:** If Bilal needs a custom addon and wants managed infrastructure, evaluate Odoo.sh. If he only needs supported settings, Online may suffice. Confirm the subscription arrangement using the [Odoo.sh FAQ](https://www.odoo.sh/faq), which explains platform eligibility and service boundaries; do not assume hosting is included merely because the software edition is Enterprise.
 
 | Odoo Online | Odoo.sh |
 | ----------- | ------- |
@@ -923,6 +939,8 @@ For example, you can generally:
 This becomes very useful for complex deployments.
 
 ### BUT FREEDOM CREATES OPERATIONAL RESPONSIBILITY
+
+> **Added concrete ownership:** For a self-hosted design, name who restores the database and attachments, who applies updates, and who responds when users cannot log in. “We have backups” is incomplete unless someone has restored them successfully. At Unit I level, document these responsibilities; installation commands and recovery procedures belong to later units.
 
 Suppose your Odoo server fails at 10:00 AM on a business day.
 
@@ -1107,6 +1125,8 @@ The words app, module, and addon are related but not perfectly identical in ever
 
 ### MODULE
 
+> **Added vocabulary bridge:** A model defines a kind of business record; a field holds an attribute or relationship; a view presents records to users; a security rule controls an allowed interaction. For example, a sales approval extension may add approval information to orders, display it on the form, and restrict who approves. The package containing that extension is the module. You need these meanings now, not Python implementation details.
+
 A module is a packaged unit of Odoo functionality.
 
 A module can contain things such as:
@@ -1193,6 +1213,8 @@ Modularity allows functionality to be installed selectively.
 
 ### MODULE DEPENDENCIES
 
+> **Added source-reading task:** Open the official [Sales manifest for 19.0](https://github.com/odoo/odoo/blob/19.0/addons/sale/__manifest__.py). Locate its name, dependency list, and data files. Read one listed dependency as “Sales needs this functionality available first.” You are inspecting a package description, not running code. The [manifest reference](https://www.odoo.com/documentation/19.0/developer/reference/backend/module.html) explains those keys when their purpose is unclear.
+
 Modules can depend on other modules.
 
 For example:
@@ -1226,7 +1248,7 @@ Here are the relevant resources for **2.9 MODULES / ADDONS**:
 
 | | |
 |---|---|
-| **Default branch** | `19.0` (verified via GitHub) |
+| **Study branch** | **Enhanced:** select `19.0` explicitly to match this guide |
 | **Browse first** | `addons/` directory: application names and module folders |
 
 [GitHub: odoo/odoo](https://github.com/odoo/odoo)
@@ -1277,6 +1299,8 @@ Those concepts are related, but they answer different questions.
 
 ### USERS NEED PERMISSIONS
 
+> **Added observable requirement:** Replace “Ali needs Inventory access” with “Ali may validate receipts for the Qatar company and may not change accounting setup.” App access, record visibility, and permission to change a record are separate questions. Test the requirement with Ali’s user identity later; hiding a menu alone is not evidence that data is protected.
+
 Not every user should see or modify everything.
 
 For example:
@@ -1293,6 +1317,8 @@ $$ \text{User} + \text{Access Rights} = \text{Authorized Capabilities} $$
 Odoo uses groups, access rights, record rules, and other mechanisms to control access. We will study security properly later.
 
 ### USER TYPES
+
+> **Added distinction:** A customer’s portal login can expose permitted customer documents without giving the customer staff screens. An anonymous website visitor normally operates through the website’s public-user context; you do not create a personal staff account for every visitor. Also, creating an employee record does not automatically authorize a login.
 
 Current Odoo documentation distinguishes:
 
@@ -1414,6 +1440,8 @@ Conceptually, one **Odoo Database** contains:
 - **C_3** = UAE Company
 
 ### USER COMPANY ACCESS
+
+> **Added example:** Sara may be allowed to access both Qatar and Pakistan, yet each Purchase Order must still use the intended company. Being allowed to work in both does not make their stock or invoices interchangeable. Before creating a transaction, identify the company and then check that its vendor terms, currency, and operational records are appropriate.
 
 Not every user necessarily sees every company.
 
@@ -1566,6 +1594,8 @@ Usually company-specific:
 The exact behavior depends on model and configuration, but this is the key mental model.
 
 ### COMPANY-DEPENDENT VALUES
+
+> **Added concrete example:** Odoo’s [multi-company guide](https://www.odoo.com/documentation/19.0/applications/general/companies/multi_company.html) distinguishes a shared product’s Sales Price and Reference from its company-specific Cost. Thus, switching company must not be assumed to give an independent value for every field. If two companies require different selling prices, investigate explicit pricing configuration. Use the guide to inspect actual field behavior before declaring a property shared or company-dependent.
 
 It gets even more interesting.
 
@@ -1774,7 +1804,7 @@ need adjusting.
 
 Always understand what already exists before replacing it.
 
-Custom modules extend standard Odoo rather than replacing it, and the professional path is always to exhaust standard capability, configuration, and Studio before writing Python.
+**Enhanced:** Prefer the simplest maintainable option that satisfies the requirement. Investigate standard functionality and configuration, and consider Studio when it is available and suitable. A team without Studio or with an explicit code-maintenance requirement can reasonably choose an extension without first building a Studio prototype.
 
 
 
@@ -1829,6 +1859,8 @@ But writing and deploying code for every simple field change may be unnecessary.
 Odoo Studio exists to provide visual/no-code or low-code customization capabilities.
 
 ### WHAT STUDIO CAN DO
+
+> **Added scope check:** Adding “Customer Priority” creates information, but does not by itself make high-priority orders ship first. That second requirement needs an explicit rule and verification. Check [Studio’s documented capabilities](https://www.odoo.com/documentation/19.0/applications/studio.html) against the selected plan before assuming the visual customization tool is available.
 
 Current Odoo documentation describes Studio as a toolbox for customizing Odoo without coding knowledge and lists capabilities including modifying:
 
@@ -1918,6 +1950,8 @@ This is a software integration problem.
 You probably need proper code.
 
 ### STUDIO LIMITATION MINDSET
+
+> **Added acceptance example:** After adding a priority field, check that it persists after reopening the record, is visible to the intended roles, and uses the intended shared or company-specific meaning. For approval, also specify who is blocked, the threshold, and what happens after editing an approved order. A successful screen change is evidence of presentation; workflow correctness needs its own evidence.
 
 The question is not:
 
@@ -2145,7 +2179,7 @@ From Ahmed's perspective, he confirmed a sale. From Ali's perspective, he moved 
 
 Bilal says:
 
-> "Orders over QAR 50,000 need Sales Manager approval."
+> **Enhanced:** "Orders of QAR 50,000 or more need Sales Manager approval." This matches the boundary used in the Chapter 2 project.
 
 The developer investigates.
 

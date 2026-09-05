@@ -13,6 +13,8 @@ You've finished the three teaching chapters of Unit I. Before we go into Unit II
 
 ## DID WE COVER EVERYTHING?
 
+> **Added review finding:** Unit I contains substantive teaching, not merely an outline. The original weakness was the gap between knowing app purposes and demonstrating correct transitions, assumptions, and exceptions. The marked additions address that gap in the existing lessons, exercises, and projects. Topic coverage is not itself evidence that a learner has mastered the material.
+
 Chapter 3 was the last teaching chapter in Unit I. The roadmap defines this unit as Chapters 1 through 3, then **Unit II: How Odoo Actually Works**. So this is a good moment to ask: did we actually cover what we needed before architecture starts?
 
 ### CHAPTER 1: WHAT IS ERP?
@@ -91,13 +93,13 @@ You might be wondering whether you should already know:
 - ORM?
 - workers?
 
-**Not yet.** Those belong to Unit II and later units.
+**Enhanced:** You do not need those technical internals to complete Unit I’s paper exercises. The repository’s basic Python, SQL, Git, command-line, and web prerequisites still apply when you begin implementation; Unit II introduces Odoo architecture and later units deepen the technical topics.
 
 What you actually need before Chapter 4 is simpler:
 
 > Understand what business system Odoo is serving and what records and applications the architecture exists to support.
 
-You have that now. I do not see an important Unit I learning gap here.
+**Enhanced:** Check that understanding using the exercises and project evidence below. Reading all sections establishes coverage; correctly explaining a new scenario establishes readiness.
 
 <div align="center">
 
@@ -228,6 +230,8 @@ flowchart TB
 Unit I built this stack from the ground up: first business concepts, then the Odoo platform, then individual applications and their connected flows. That foundation is what every technical chapter from Unit II onward will assume.
 
 ### A QUICK SANITY CHECK
+
+> **Added retrieval check:** Close the lessons and explain: (1) why reserving eight monitors leaves eight on hand; (2) why an invoice can remain unpaid; (3) why fifteen existing desks plus thirty-five newly made desks fulfill fifty; (4) why two companies can share a product without sharing all field values or stock; and (5) why a damaged-delivery ticket need not wait for payment. Each answer should name evidence and a responsible role. Revisit Chapter 3 Sections 3.5–3.6 and 3.15–3.16 for quantity/settlement/support gaps, Chapter 2 Sections 2.11–2.12 for company gaps, and the unit exercise for production arithmetic.
 
 If you can explain a realistic business scenario across master data, transactions, departments, applications, inventory changes, financial records, and Helpdesk, Unit I has achieved its purpose:
 
