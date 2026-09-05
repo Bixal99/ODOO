@@ -1,6 +1,6 @@
 # CHAPTER 3 EXERCISE
 
-> **Added study method:** Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
+Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
 
 Try answering these without looking back at Content.md first. Answer in your own words, then compare with the complete solution at the bottom of this file.
 
@@ -21,7 +21,7 @@ For official Odoo app videos and practice database links, see [Resources.md](Res
 
 ## PART A: APPLICATION RECOGNITION
 
-> **Added response guidance:** Add the expected record and one sentence explaining why the neighboring app is insufficient. For example, a receipt belongs to Inventory because it proves physical arrival; a Purchase Order only states the buying commitment. Also identify the reusable customer/vendor identity supporting the commercial cases so Contacts is assessed alongside the listed apps.
+Add the expected record and one sentence explaining why the neighboring app is insufficient. For example, a receipt belongs to Inventory because it proves physical arrival; a Purchase Order only states the buying commitment. Also identify the reusable customer/vendor identity supporting the commercial cases so Contacts is assessed alongside the listed apps.
 
 Identify the most relevant application for each situation.
 
@@ -44,7 +44,7 @@ Identify the most relevant application for each situation.
 
 ## PART B: DISTINGUISH THE RECORDS
 
-> **Added response guidance:** For each pair, state the question each item answers and give one example where the first exists without the second being complete. Distinguish business stages from separate records: a quotation and confirmed Sales Order can be the same Odoo order in different states.
+For each pair, state the question each item answers and give one example where the first exists without the second being complete. Distinguish business stages from separate records: a quotation and confirmed Sales Order can be the same Odoo order in different states.
 
 Explain why each pair is different:
 
@@ -60,7 +60,7 @@ Explain why each pair is different:
 
 ## PART C: BUILD THE FLOW
 
-> **Added assumptions and challenge:** Assume ten usable, unreserved chairs in one warehouse, manual buying of the twenty missing chairs, and invoicing after full delivery. Show ordered, on-hand, delivered, and still-needed quantities. Then suppose only fifteen arrive from the supplier: explain the available quantity, the remaining gap, and who agrees a revised delivery plan. No selling price is given, so do not invent an invoice amount.
+Assume ten usable, unreserved chairs in one warehouse, manual buying of the twenty missing chairs, and invoicing after full delivery. Show ordered, on-hand, delivered, and still-needed quantities. Then suppose only fifteen arrive from the supplier: explain the available quantity, the remaining gap, and who agrees a revised delivery plan. No selling price is given, so do not invent an invoice amount.
 
 Customer buys **30 office chairs**.
 
@@ -84,7 +84,7 @@ Write the complete application flow.
 
 ## PART D: SERVICE BUSINESS
 
-> **Added challenge:** Use an assumed rate of 300 QAR per eligible hour. At an interim review, forty-two customer hours and eight internal training hours were logged. Calculate the time-based invoice amount and total effort, and explain why a fixed-price contract could bill differently. State which project/task and sales line identify the customer work.
+Use an assumed rate of 300 QAR per eligible hour. At an interim review, forty-two customer hours and eight internal training hours were logged. Calculate the time-based invoice amount and total effort, and explain why a fixed-price contract could bill differently. State which project/task and sales line identify the customer work.
 
 Customer purchases **50 implementation hours**.
 
@@ -100,7 +100,7 @@ Explain how the following could participate:
 
 ## PART E: MANUFACTURING
 
-> **Added challenge:** Assume no finished tables, twelve usable tabletops, and sixty usable legs. Calculate both gross component demand and the missing quantities. Explain why a confirmed manufacturing order does not yet prove that finished tables can be delivered.
+Assume no finished tables, twelve usable tabletops, and sixty usable legs. Calculate both gross component demand and the missing quantities. Explain why a confirmed manufacturing order does not yet prove that finished tables can be delivered.
 
 Customer orders **20 tables**.
 
@@ -121,7 +121,7 @@ Then explain how **Sales**, **Inventory**, **Manufacturing**, and **Purchase** c
 
 ## PART A: APPLICATION RECOGNITION
 
-> **Added reasoning check:** The employee in case 6 belongs in HR because the requirement is a business identity, not login access. Contacts supplies the customer/vendor identity in cases 1–5 and 14. Maintenance in case 10 records equipment work; Manufacturing still owns the affected production schedule. Full credit explains these boundaries rather than only repeating the bold app names.
+The employee in case 6 belongs in HR because the requirement is a business identity, not login access. Contacts supplies the customer/vendor identity in cases 1–5 and 14. Maintenance in case 10 records equipment work; Manufacturing still owns the affected production schedule. Full credit explains these boundaries rather than only repeating the bold app names.
 
 | # | Situation | Most relevant application |
 | --- | --- | --- |
@@ -140,6 +140,25 @@ Then explain how **Sales**, **Inventory**, **Manufacturing**, and **Purchase** c
 | 13 | A customer buys two keyboards at a physical shop | **Point of Sale** (retail or direct store sale) |
 | 14 | A customer reports a damaged delivery | **Helpdesk** (customer support ticket) |
 
+The expected records and boundaries make the choices testable:
+
+1. CRM owns an **opportunity**; Sales would be premature before commercial terms are ready.
+2. Sales owns a **quotation**; CRM tracks the pursuit but does not replace the priced offer.
+3. Purchase owns an **RFQ or Purchase Order**; Inventory cannot prove a buying commitment.
+4. Inventory owns a **receipt**; the Purchase Order states what was ordered, not what arrived.
+5. Accounting owns the **posted customer invoice and balance**; Sales records the agreement but not settlement.
+6. Employees owns the **employee record**; a user account controls login access and is a separate concept.
+7. Projects owns the **project and tasks**; Sales defines the commercial agreement but does not organize delivery work.
+8. Timesheets owns the **time entry**; a project can exist without proving that six hours were worked.
+9. Manufacturing owns the **manufacturing order and production result**; Inventory records movement but does not define the conversion recipe.
+10. Maintenance owns the **maintenance request**; Manufacturing still manages any affected production plan.
+11. Website owns the **published page**; eCommerce is needed only when the visitor enters an online buying flow.
+12. eCommerce creates the **online cart/order path**; Website alone does not establish checkout behavior.
+13. Point of Sale owns the **POS order and payment session**; a normal Sales quotation is not the evidence of an immediate shop transaction.
+14. Helpdesk owns the **support ticket**; Inventory may later process a return, but the complaint alone is not a stock movement.
+
+The commercial cases reuse customer or vendor identities from Contacts. Those identities support the transactions without replacing the opportunity, quotation, order, receipt, invoice, or ticket.
+
 ---
 
 ## PART B: DISTINGUISH THE RECORDS
@@ -150,6 +169,8 @@ A **contact** is reusable master data about a person or organization.
 
 A **CRM opportunity** is a specific potential business deal linked to that contact.
 
+The contact answers “who is this party?” while the opportunity answers “what possible deal are we pursuing?”
+
 ABC Trading may be one contact but have several opportunities over time.
 
 ### 2. CRM OPPORTUNITY ≠ QUOTATION
@@ -158,15 +179,19 @@ An **opportunity** represents possible future business and sales pursuit.
 
 A **quotation** is a formal commercial offer with products, quantities, and prices.
 
+The opportunity answers “is there a deal to pursue?” while the quotation answers “what exactly are we offering and on which terms?”
+
 The opportunity may exist before the business is ready to quote exact terms.
 
 ### 3. QUOTATION ≠ SALES ORDER
 
-> **Added technical bridge:** These are different commercial states of the same standard Odoo order record. The distinction in this exercise concerns commitment, not an instruction to create a duplicate order when a quote is accepted.
+These are different commercial states of the same standard Odoo order record. The distinction in this exercise concerns commitment, not an instruction to create a duplicate order when a quote is accepted.
 
 A **quotation** is a proposal that may still be rejected or revised.
 
 A **Sales Order** is a confirmed commercial commitment.
+
+The quotation answers “what do we propose?” while the confirmed state answers “what has the customer accepted?”
 
 Confirmation changes the business meaning from "we offered" to "the customer agreed."
 
@@ -176,6 +201,8 @@ A **Sales Order** records what was sold commercially.
 
 A **delivery** records physical movement of goods.
 
+The order answers “what did we promise?” while the delivery answers “what quantity actually left the warehouse?”
+
 The customer may have ordered products before the warehouse actually shipped them.
 
 ### 5. PURCHASE ORDER ≠ RECEIPT
@@ -184,13 +211,17 @@ A **Purchase Order** records the purchasing commitment to the vendor.
 
 A **receipt** records that goods physically arrived.
 
+The order answers “what did we ask the vendor to supply?” while the receipt answers “what did the warehouse actually receive?”
+
 The vendor may confirm an order days before goods reach the warehouse.
 
 ### 6. INVOICE ≠ PAYMENT
 
 An **invoice** creates or records a financial obligation.
 
-**Enhanced:** A **payment** records payment activity; reconciliation and supporting evidence establish how the invoice is settled. Recording a payment is not the same as proving that funds have cleared.
+A **payment** records payment activity; reconciliation and supporting evidence establish how the invoice is settled. Recording a payment is not the same as proving that funds have cleared.
+
+The invoice answers “what does the customer owe?” while payment and reconciliation answer “what funds were received and which debt did they settle?”
 
 A customer can owe money on an invoice long before paying it.
 
@@ -200,13 +231,15 @@ A **project** is the broader body of work being performed.
 
 A **timesheet** is a record of time spent, often on a project task.
 
+The project answers “how is the work organized?” while a timesheet answers “who spent how much time on which task?”
+
 One project may contain many timesheet entries from one or more employees.
 
 ---
 
 ## PART C: BUILD THE FLOW
 
-> **Added worked check:** On-hand stock follows 10 → 10 after order confirmation → 30 after receiving twenty → 0 after shipping thirty. If fifteen arrive instead, stock is twenty-five and five are still needed. A partial-delivery agreement changes the fulfillment plan; it does not change the original order to twenty-five without an explicit commercial revision.
+On-hand stock follows 10 → 10 after order confirmation → 30 after receiving twenty → 0 after shipping thirty. If fifteen arrive instead, stock is twenty-five and five are still needed. A partial-delivery agreement changes the fulfillment plan; it does not change the original order to twenty-five without an explicit commercial revision.
 
 Given: 30 chairs ordered, 10 available, shortage of 20.
 
@@ -227,20 +260,22 @@ flowchart TD
 **Application sequence:**
 
 1. **Sales** captures the confirmed customer demand for 30 chairs.
-2. **Enhanced:** **Inventory** shows ten usable chairs against demand for thirty, revealing a replenishment need for twenty. The buyer acts on that need in this scenario.
+2. **Inventory** shows ten usable chairs against demand for thirty, revealing a replenishment need for twenty. The buyer acts on that need in this scenario.
 3. **Purchase** places the procurement commitment for 20 chairs.
 4. **Inventory** receives the 20 chairs from the vendor.
 5. **Inventory** delivers all 30 chairs to the customer.
 6. **Accounting** issues the customer invoice.
 7. **Accounting** records payment when the customer pays.
 
-**Enhanced:** This is an order-to-cash flow with procurement in the middle. A preceding lead/opportunity is optional and is not stated in this scenario.
+This is an order-to-cash flow with procurement in the middle. A preceding lead/opportunity is optional and is not stated in this scenario.
 
 ---
 
 ## PART D: SERVICE BUSINESS
 
-> **Added worked answer:** Forty-two eligible customer hours × 300 QAR = 12,600 QAR at this interim time-based billing point. Total effort is fifty hours, but eight internal-training hours do not belong on this customer’s bill under the stated assumption. A fixed-price arrangement follows agreed billing terms instead. Do not invent extra billable hours merely to reach the fifty hours originally sold.
+Forty-two eligible customer hours × 300 QAR = 12,600 QAR at this interim time-based billing point. Total effort is fifty hours, but eight internal-training hours do not belong on this customer’s bill under the stated assumption. A fixed-price arrangement follows agreed billing terms instead. Do not invent extra billable hours merely to reach the fifty hours originally sold.
+
+For traceability, assume the eligible entries belong to project **Gulf Office Implementation**, task **Customer Configuration**, and the Sales Order Item for **Implementation Hours**. Internal training uses a separate internal task or non-billable classification so it cannot be confused with customer work.
 
 Customer purchases **50 implementation hours**.
 
@@ -269,7 +304,9 @@ For a service company, this flow can be as central as Sales → Inventory → In
 
 ## PART E: MANUFACTURING
 
-> **Added worked answer:** Gross demand is twenty tabletops and eighty legs. After subtracting usable stock, purchase eight tabletops and twenty legs. Receipt makes those components available; completed production consumes them and adds twenty finished tables if there is no loss. Delivery then removes the twenty tables. When components already suffice, bypass the purchasing branch pictured below.
+Gross demand is twenty tabletops and eighty legs. After subtracting usable stock, purchase eight tabletops and twenty legs. Receipt makes those components available; completed production consumes them and adds twenty finished tables if there is no loss. Delivery then removes the twenty tables. When components already suffice, bypass the purchasing branch pictured below.
+
+A confirmed manufacturing order expresses the plan to produce twenty tables. It does not prove that missing components were received, production finished, quality checks passed, or twenty deliverable tables exist; those later records provide the evidence.
 
 Customer orders **20 tables**.
 

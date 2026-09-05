@@ -1,6 +1,6 @@
 # CHAPTER 1 EXERCISE
 
-> **Added study method:** Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
+Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
 
 Try these without looking back at Content.md immediately. Answer in your own words first, then compare with the complete solution at the bottom of this file.
 
@@ -20,7 +20,7 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 
 ## PART A: CONCEPTS
 
-> **Added response guidance:** For Questions 1–3, name a trigger, an outcome, and at least one handoff. For Questions 4–6, use the same customer across two purchases to show reuse and changing transaction details. For Questions 7–10, give a business consequence, not just a definition. For leave approval, include rejection as well as approval and distinguish the person performing a task from the owner of the whole process.
+For Questions 1–3, name a trigger, an outcome, and at least one handoff. For Questions 4–6, use the same customer across two purchases to show reuse and changing transaction details. For Questions 7–10, give a business consequence, not just a definition. For leave approval, include rejection as well as approval and distinguish the person performing a task from the owner of the whole process.
 
 1. What makes something a **business process** rather than simply an isolated task?
 
@@ -55,7 +55,7 @@ For ERP videos, SAP courses, and the bpmn.io process modeler, see [Resources.md]
 
 ## PART B: SCENARIO
 
-> **Added assumptions and evidence:** Treat the thirty available chairs as usable and unreserved in the same warehouse; ignore other stock movements. Draw or describe each handoff with its owner and document. Show the running on-hand balance after order confirmation, receipt, and delivery. The scenario ends at invoicing, so label payment as a possible next event rather than claiming it has happened. Then consider a supplier receipt of only fifteen chairs: explain what is still missing and who must act.
+Treat the thirty available chairs as usable and unreserved in the same warehouse; ignore other stock movements. Draw or describe each handoff with its owner and document. Show the running on-hand balance after order confirmation, receipt, and delivery. The scenario ends at invoicing, so label payment as a possible next event rather than claiming it has happened. Then consider a supplier receipt of only fifteen chairs: explain what is still missing and who must act.
 
 A company sells office chairs.
 
@@ -97,6 +97,8 @@ For example:
 - **Task:** "Create an invoice."
 - **Process:** Receive customer order → prepare goods → deliver goods → create invoice → collect payment.
 
+In this example, the customer order is the **trigger**, collected payment is the intended **outcome**, and the order and delivery information pass through handoffs from Sales to Warehouse and then to Finance. Those connections make the individual tasks part of one process.
+
 A business process normally has:
 
 - an input,
@@ -112,7 +114,7 @@ So the key difference is that a task is one piece of work, while a business proc
 
 ### 2. EMPLOYEE LEAVE-REQUEST PROCESS
 
-> **Added reasoning check:** Rejection produces a recorded decision and communication to the employee; it does not create approved absence. Approval should identify the affected dates and availability. The approver may be a line manager while HR owns the policy. Other ownership arrangements earn full credit if their responsibilities are explicit.
+Rejection produces a recorded decision and communication to the employee; it does not create approved absence. Approval should identify the affected dates and availability. The approver may be a line manager while HR owns the policy. Other ownership arrangements earn full credit if their responsibilities are explicit.
 
 **Input**
 
@@ -136,6 +138,8 @@ A typical process could be:
 4. Manager approves or rejects it.
 5. Approved leave is recorded.
 6. HR or scheduling information is updated.
+
+The request passes from the employee to the manager for a decision, then the decision passes to HR or the scheduling system for recording. These are the main handoffs in the process.
 
 **Output**
 
@@ -169,6 +173,8 @@ These departments work on different parts of the same business process.
 
 Suppose Sales receives an order for 100 products. Sales needs Warehouse to know whether those products are available. If only 70 are available, Purchasing may need to buy another 30. Once the goods are delivered, Finance must create the customer invoice and later record the payment.
 
+The customer order triggers this process, fulfilled demand and the related financial record are its outcomes, and each transfer of order, shortage, receipt, delivery, or invoice information is a departmental handoff.
+
 <div align="center">
 
 ```mermaid
@@ -183,7 +189,7 @@ If the departments operate independently, problems can appear:
 - Sales may promise unavailable stock.
 - Purchasing may buy unnecessary products.
 - Warehouse may not know which order needs stock.
-- **Enhanced:** Finance may invoice a quantity that conflicts with the agreed billing policy. Invoicing before delivery can be valid when the commercial arrangement allows it.
+- Finance may invoice a quantity that conflicts with the agreed billing policy. Invoicing before delivery can be valid when the commercial arrangement allows it.
 - Different departments may hold conflicting data.
 
 ERP exists partly to connect these activities.
@@ -217,7 +223,10 @@ A useful mental model is: **Master Data = Who or What**, while **Transaction Dat
 For example:
 
 - **Customer: ABC Trading** is master data.
-- **ABC Trading bought 10 monitors today** is transaction data.
+- **ABC Trading bought 10 monitors today** is one transaction.
+- **ABC Trading bought 4 keyboards next month** is another transaction.
+
+The same customer and product records can be reused, while each purchase creates new order, delivery, and invoice details.
 
 ---
 
@@ -232,6 +241,8 @@ For example:
 | Employee | Master Data | Reusable employee record |
 | Purchase Order | Transaction Data | Records a purchasing event |
 
+For example, ABC Trading remains one customer master record when it places two different orders. The two Sales Orders are separate transaction records because their dates, products, quantities, and statuses can differ.
+
 ---
 
 ### 6. EXPLAIN "SINGLE SOURCE OF TRUTH"
@@ -240,7 +251,9 @@ A **single source of truth** means the company has one authoritative place for a
 
 For example, there should not be three unrelated customer addresses: one in Sales, one in Finance, and one in Warehouse. Instead, the departments should use the same authoritative customer record.
 
-**Enhanced:** If an address changes, update the appropriate master address and review affected open documents. Invoice and delivery addresses can legitimately differ; an update should not silently rewrite historical commercial evidence.
+If ABC Trading buys monitors today and keyboards next month, both purchases refer to that reusable customer record. Each purchase still keeps its own transaction date, quantities, prices, delivery status, and invoice status.
+
+If an address changes, update the appropriate master address and review affected open documents. Invoice and delivery addresses can legitimately differ; an update should not silently rewrite historical commercial evidence.
 
 The purpose is to reduce:
 
@@ -271,6 +284,8 @@ It usually deals with areas such as:
 Therefore, CRM is usually one business function, while ERP integrates many business functions. Conceptually, **CRM sits inside the broader ERP business environment**.
 
 In Odoo specifically, CRM can operate as one application within a much larger connected business system.
+
+The business consequence is that a CRM alone may show that a deal was won without showing whether stock was available, goods were delivered, an invoice was posted, or payment was received. An integrated ERP connects those later events to the same business flow.
 
 ---
 
@@ -373,7 +388,7 @@ These records are reused across many transactions.
 
 ### 2. TRANSACTIONS
 
-> **Added evidence distinction:** A quotation is a plausible earlier document, but the scenario does not explicitly say one was created. Similarly, a supplier bill is a likely connected procurement document, while supplier and customer payments are not stated as completed. Separate observed events from inferred or future events to avoid inventing completion evidence.
+A quotation is a plausible earlier document, but the scenario does not explicitly say one was created. Similarly, a supplier bill is a likely connected procurement document, while supplier and customer payments are not stated as completed. Separate observed events from inferred or future events to avoid inventing completion evidence.
 
 The main transactions are:
 
@@ -428,7 +443,9 @@ These transactions record what happened during this particular sale.
 
 ### 6. CROSS-DEPARTMENT WORKFLOW
 
-> **Added worked check:** On-hand chairs are 30 after confirming the order, 50 after receiving 20, and 0 after delivering 50. The order records demand; the receipt and delivery change stock. If only 15 arrive, stock is 45 and five more are needed. Sales must agree whether to deliver 45 now or wait; Purchasing follows up on five. A complete answer names both the numerical gap and the business decision.
+On-hand chairs are 30 after confirming the order, 50 after receiving 20, and 0 after delivering 50. The order records demand; the receipt and delivery change stock. If only 15 arrive, stock is 45 and five more are needed. Sales must agree whether to deliver 45 now or wait; Purchasing follows up on five. A complete answer names both the numerical gap and the business decision.
+
+The handoffs also carry specific records. Sales owns the confirmed Sales Order passed to Warehouse. Warehouse reports the 20-chair shortage to Purchasing, which owns the Purchase Order sent to the supplier. Warehouse owns the receipt record and later the delivery record. Finance receives the confirmed delivery information and owns the customer invoice. Payment is only a possible next event because the scenario provides no evidence that the customer has paid.
 
 <div align="center">
 

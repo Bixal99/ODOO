@@ -1,8 +1,8 @@
-﻿# UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
+# UNIT I: UNDERSTAND THE BUSINESS BEFORE THE CODE
 
 ## CHAPTER 1: WHAT IS ERP?
 
-> **Added review guidance:** The chapter already explains the main ERP concepts with examples. The additions strengthen process boundaries, handoffs, changing master data, and evidence of learning. Throughout Unit I, **Added** marks new instruction and **Enhanced** or **Correction** marks corrected wording or diagrams. Worked monetary examples omit tax, discounts, freight, and currency conversion unless stated; they are arithmetic models, not country-specific accounting rules.
+This chapter develops the main ERP concepts through process boundaries, department handoffs, changing master data, and observable business outcomes. Worked monetary examples omit tax, discounts, freight, and currency conversion unless stated; they are arithmetic models, not country-specific accounting rules.
 
 **Starting-point check:** No prerequisite gap detected. This chapter is intentionally the foundation: before learning Odoo itself, you need to understand the business system Odoo is designed to represent.
 
@@ -38,7 +38,7 @@ The roadmap places Chapter 1 before Odoo applications, architecture, Python, ORM
 - [**1.7** ERP vs CRM](#17-erp-vs-crm)
 - [**1.8** ERP vs Standalone Business Software](#18-erp-vs-standalone-business-software)
 - [**1.9** Business Process Mapping](#19-business-process-mapping)
-- [Complete Running Example: GulfTech Electronics](#complete-running-example-gulftech-electronics) **(Enhanced link)**
+- [Complete Running Example: GulfTech Electronics](#complete-running-example-gulftech-electronics)
 - [Common Beginner Mistakes From Chapter 1](#common-beginner-mistakes-from-chapter-1)
 - [Chapter 1 Mastery Check](#chapter-1-mastery-check)
 - [Chapter 1 Summary](#chapter-1-summary)
@@ -160,7 +160,7 @@ The company may need to:
 - Create an invoice.
 - Receive payment.
 
-**Enhanced:** This example assumes a stock sale, delivery before invoicing, and payment afterward. Real processes can branch or overlap: a company can accept a backorder, request an advance payment, or issue a standalone invoice without a Sales Order. Ask which event authorizes each next action instead of treating the pictured sequence as a universal rule.
+This example assumes a stock sale, delivery before invoicing, and payment afterward. Real processes can branch or overlap: a company can accept a backorder, request an advance payment, or issue a standalone invoice without a Sales Order. Ask which event authorizes each next action instead of treating the pictured sequence as a universal rule.
 
 That entire sequence, from customer request to collected payment, is a **business process**.
 
@@ -220,7 +220,7 @@ ERP systems represent many such business processes. Some are commercial, like sa
 
 ### 1.1.2 PROCESS INPUTS
 
-> **Added worked distinction:** For the laptop sale, the customer call is the trigger, the requested quantity and delivery address are information inputs, and available stock is a resource constraint. Ask whether a quotation can be prepared if the address is missing, and whether shipment can proceed. The answer differs because each activity needs different inputs; not every missing input must block the entire process.
+For the laptop sale, the customer call is the trigger, the requested quantity and delivery address are information inputs, and available stock is a resource constraint. Ask whether a quotation can be prepared if the address is missing, and whether shipment can proceed. The answer differs because each activity needs different inputs; not every missing input must block the entire process.
 
 A process cannot begin from nothing. Something has to trigger the work. Something has to enter the system. Something has to give the process a reason to start.
 
@@ -340,7 +340,7 @@ These are not arbitrary UI features. They are not there because a designer liked
 
 ### 1.1.4 PROCESS OUTPUTS
 
-> **Added boundary check:** If the process is only quotation preparation, its output is a sent quotation and acceptance is outside its boundary. If the process is order-to-cash, a quotation is an intermediate output; delivery and settled customer debt are completion evidence. Write the start event and finish condition before deciding whether a process is complete.
+If the process is only quotation preparation, its output is a sent quotation and acceptance is outside its boundary. If the process is order-to-cash, a quotation is an intermediate output; delivery and settled customer debt are completion evidence. Write the start event and finish condition before deciding whether a process is complete.
 
 Every process exists to produce something. The result produced by a business process is its **output**.
 
@@ -396,7 +396,7 @@ ERP systems connect them. That connection is what allows a sale in one departmen
 
 ### 1.1.5 PROCESS OWNERS
 
-> **Added application:** If a promised delivery is late, the warehouse worker may execute the shipment, the warehouse manager may own picking accuracy, and an operations manager may own total order lead time. Give the overall owner a measurable outcome, such as the percentage of orders delivered by the agreed date. This separates accountability for improvement from permission to click an approval button.
+If a promised delivery is late, the warehouse worker may execute the shipment, the warehouse manager may own picking accuracy, and an operations manager may own total order lead time. Give the overall owner a measurable outcome, such as the percentage of orders delivered by the agreed date. This separates accountability for improvement from permission to click an approval button.
 
 Processes need responsibility. A process without ownership becomes everyone's problem and therefore nobody's problem.
 
@@ -476,7 +476,7 @@ Here are the relevant resources for **1.1 BUSINESS PROCESSES**:
 
 ## 1.2 DEPARTMENTS
 
-> **Added handoff example:** Sales passes an order reference, product code, quantity, delivery address, and promised date to Warehouse. Warehouse returns the quantity actually shipped and the shipment reference to Finance. A useful department description names both what it receives and what it hands on; “Warehouse manages inventory” alone does not explain how another team can act.
+Sales passes an order reference, product code, quantity, delivery address, and promised date to Warehouse. Warehouse returns the quantity actually shipped and the shipment reference to Finance. A useful department description names both what it receives and what it hands on; “Warehouse manages inventory” alone does not explain how another team can act.
 
 Businesses divide work into specialized groups because no single person can master every function. Salespeople should sell. Accountants should account. Warehouse staff should move goods. Specialization creates speed and expertise.
 
@@ -583,7 +583,7 @@ Consider a sale:
 
 $$ \text{Product Delivery} \rightarrow \text{Customer Invoice} \rightarrow \text{Payment} $$
 
-**Enhanced:** Operational activity can create financial consequences that Finance records under the applicable accounting rules. A customer charge, revenue reporting, and receipt of cash answer different questions; do not treat delivery, invoice creation, and payment as one event.
+Operational activity can create financial consequences that Finance records under the applicable accounting rules. A customer charge, revenue reporting, and receipt of cash answer different questions; do not treat delivery, invoice creation, and payment as one event.
 
 ERP integration connects operational events with accounting events so Finance does not live in a separate universe from the rest of the company.
 
@@ -707,7 +707,7 @@ A **cross-department workflow** is a business process whose activities involve m
 
 ### EXAMPLE: ORDER-TO-CASH
 
-> **Added reading task:** At each arrow, say the action aloud: “Sales confirms the accepted quotation; Warehouse uses the confirmed order to prepare a shipment.” Then ask what happens if only part can ship. One order may need two deliveries, so the arrow means a business dependency, not necessarily one new record or one automatic action. [Odoo invoicing policies](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/invoicing_policy.html) clarifies how billing can follow ordered or delivered quantities.
+At each arrow, say the action aloud: “Sales confirms the accepted quotation; Warehouse uses the confirmed order to prepare a shipment.” Then ask what happens if only part can ship. One order may need two deliveries, so the arrow means a business dependency, not necessarily one new record or one automatic action. [Odoo invoicing policies](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/invoicing_policy.html) clarifies how billing can follow ordered or delivered quantities.
 
 One famous ERP workflow is **Order-to-Cash**. It describes the journey from customer order to receiving customer payment, the full commercial cycle, not just the sales moment.
 
@@ -825,7 +825,7 @@ You should not recreate the customer's:
 
 from scratch for every order. That would waste time, invite typos, and guarantee inconsistency.
 
-Instead, the company maintains a reusable customer record. Every order references the same customer identity. **Enhanced:** Updating the master record provides the corrected address for future use, but each document may select an invoice or delivery address and retain its own values. Check existing documents separately rather than assuming a master-data change rewrites them.
+Instead, the company maintains a reusable customer record. Every order references the same customer identity. Updating the master record provides the corrected address for future use, but each document may select an invoice or delivery address and retain its own values. Check existing documents separately rather than assuming a master-data change rewrites them.
 
 That is master data.
 
@@ -896,7 +896,7 @@ That distinction matters.
 
 ### 1.4.3 PRODUCTS
 
-> **Added concrete example:** “Keyboard” is too vague if one item uses a US layout and another uses an Arabic layout. Give each distinct stock item an unambiguous reference and unit, such as KB-AR sold by the unit. If a vendor sells boxes of ten, three boxes represent thirty keyboards. A shared name cannot prevent quantity errors unless everyone also agrees on what one unit means.
+“Keyboard” is too vague if one item uses a US layout and another uses an Arabic layout. Give each distinct stock item an unambiguous reference and unit, such as KB-AR sold by the unit. If a vendor sells boxes of ten, three boxes represent thirty keyboards. A shared name cannot prevent quantity errors unless everyone also agrees on what one unit means.
 
 **Product** master data describes something the business buys, sells, stores, manufactures, or consumes.
 
@@ -922,7 +922,7 @@ A single product may participate in:
 
 This is one of the strongest examples of why ERP integration matters. A product is not "a Sales thing" or "a Warehouse thing." It is a business entity that crosses the entire system.
 
-Changing product information can influence many processes. **Enhanced:** A new default price can affect newly prepared quotations; existing agreed order lines retain their transaction-specific prices unless deliberately revised. Units of measure and tax settings influence subsequent calculations, so verify affected workflows before changing shared configuration.
+Changing product information can influence many processes. A new default price can affect newly prepared quotations; existing agreed order lines retain their transaction-specific prices unless deliberately revised. Units of measure and tax settings influence subsequent calculations, so verify affected workflows before changing shared configuration.
 
 ---
 
@@ -952,7 +952,7 @@ The employee exists as a person in the organization. The expense claim records o
 
 ### 1.4.5 ACCOUNTS
 
-> **Added vocabulary:** Accounts Receivable categorizes money customers owe; Accounts Payable categorizes money the business owes suppliers. “Customer ABC” identifies the party, while “Accounts Receivable” identifies the financial category. The same account can contain transactions for many customers, so an account is neither a login nor a customer record.
+Accounts Receivable categorizes money customers owe; Accounts Payable categorizes money the business owes suppliers. “Customer ABC” identifies the party, while “Accounts Receivable” identifies the financial category. The same account can contain transactions for many customers, so an account is neither a login nor a customer record.
 
 **Financial accounts** provide the structure used for categorizing monetary activity.
 
@@ -1035,7 +1035,7 @@ The transaction says: Customer A purchased 10 units of Product X for 5,000 QAR. 
 
 ### TRANSACTIONS CREATE BUSINESS HISTORY
 
-> **Added record-state example:** A draft quotation is transaction data even though the customer has not accepted it. Its state records a proposal; confirmation records a commitment; completed delivery records fulfillment. Do not infer that every transaction is finished, paid, or a separate database object merely because it has a business name.
+A draft quotation is transaction data even though the customer has not accepted it. Its state records a proposal; confirmation records a commitment; completed delivery records fulfillment. Do not infer that every transaction is finished, paid, or a separate database object merely because it has a business name.
 
 Master data tells us that a customer exists. Transactions tell us what that customer has done.
 
@@ -1062,7 +1062,7 @@ For example:
 
 $$ \text{Quotation} \rightarrow \text{Sales Order} \rightarrow \text{Delivery} \rightarrow \text{Invoice} \rightarrow \text{Payment} $$
 
-Later, in Odoo, you'll see these relationships directly. **Enhanced:** A sales order can relate to deliveries and invoice lines. Tracing from a delivery to an invoice may require following the originating sales lines; do not assume every delivery has a direct invoice link. Understanding the business meaning now will make the technical implementation much easier.
+Later, in Odoo, you'll see these relationships directly. A sales order can relate to deliveries and invoice lines. Tracing from a delivery to an invoice may require following the originating sales lines; do not assume every delivery has a direct invoice link. Understanding the business meaning now will make the technical implementation much easier.
 
 So a **transaction** is a recorded business event that usually points back to master data. Master data tells us who exists; **transactions tell us what they did**. Stack enough transactions and you have the company's **operational history**: quotations, orders, deliveries, invoices, and payments linked in chains you will recognize in Odoo screens later.
 
@@ -1121,7 +1121,7 @@ This reduces:
 
 #### BUT INTEGRATION CREATES RESPONSIBILITY
 
-> **Added resolution walkthrough:** Sales reports a new customer address. First identify the existing customer, then verify whether this replaces the billing address or adds a delivery site, assign an authorized person to update it, and inspect any open shipments affected. Keep the agreed order and prior document history traceable. Shared identity can legitimately have several addresses; duplicate identities and multiple valid addresses are different problems.
+Sales reports a new customer address. First identify the existing customer, then verify whether this replaces the billing address or adds a delivery site, assign an authorized person to update it, and inspect any open shipments affected. Keep the agreed order and prior document history traceable. Shared identity can legitimately have several addresses; duplicate identities and multiple valid addresses are different problems.
 
 A common beginner misconception is:
 
@@ -1212,7 +1212,7 @@ CRM optimizes the front of the revenue engine. ERP runs the engine itself.
 
 ### ODOO PERSPECTIVE
 
-> **Added transfer check:** A prospect asks for 100 chairs but has not agreed on a budget. CRM tracks the follow-up. Once the customer accepts a quote, ask which records prove shipment and payment. If your answer is still “the opportunity is Won,” revisit the difference between pursuing demand and fulfilling it.
+A prospect asks for 100 chairs but has not agreed on a budget. CRM tracks the follow-up. Once the customer accepts a quote, ask which records prove shipment and payment. If your answer is still “the opportunity is Won,” revisit the difference between pursuing demand and fulfilling it.
 
 This distinction will become interesting because Odoo includes CRM as one application inside a larger ERP ecosystem.
 
@@ -1286,7 +1286,7 @@ Now operational trouble begins. The customer expects 100 units. Warehouse can on
 
 ### STANDALONE SYSTEMS
 
-> **Added integration example:** If a specialist web shop sends orders to ERP, agree which system owns product prices, how an order is identified, and how failed transfers are retried without creating duplicates. A connected system still needs these rules. Compare solutions by whether the whole order can be traced and corrected, not by counting applications.
+If a specialist web shop sends orders to ERP, agree which system owns product prices, how an order is identified, and how failed transfers are retried without creating duplicates. A connected system still needs these rules. Compare solutions by whether the whole order can be traced and corrected, not by counting applications.
 
 Standalone systems can offer advantages:
 
@@ -1425,12 +1425,12 @@ where:
 
 #### EXAMPLE: PURCHASE APPROVAL
 
-> **Added walkthrough:** For this fictional rule, let P be the total request amount in QAR. Test 4,999, 5,000, and 5,001: the first needs the manager; the other two need manager and finance. The diagram shows approved paths only. If either reviewer rejects, return the request with a reason; do not issue the order. If the amount changes after approval, the business must decide when to require fresh approval. These are process requirements, not claims about an existing Odoo button.
+For this fictional rule, let P be the total request amount in QAR. Test 4,999, 5,000, and 5,001: the first needs the manager; the other two need manager and finance. The diagram shows approved paths only. If either reviewer rejects, return the request with a reason; do not issue the order. If the amount changes after approval, the business must decide when to require fresh approval. These are process requirements, not claims about an existing Odoo button.
 
 Suppose the rule is:
 
 - Purchases below 5,000 QAR require manager approval.
-- **Enhanced:** Purchases of 5,000 QAR or more require manager and finance approval.
+- Purchases of 5,000 QAR or more require manager and finance approval.
 
 We can model the process mathematically.
 
@@ -1504,7 +1504,7 @@ Do not automatically copy every inefficient existing practice into an ERP. Somet
 
 #### BUSINESS PROCESS MAPPING QUESTIONS
 
-> **Added guided practice:** Draw “request received,” “check stock,” and a decision “enough usable stock by the promised date?” Label both outcomes. Route No through purchasing and receipt, then rejoin fulfillment; include a supplier-delay path that notifies Sales. In the [bpmn.io modeler](https://demo.bpmn.io/new), use tasks for activities and a gateway for the decision. This makes omitted branches visible. The [toolkit walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) explains embedding the modeler in software; it is optional developer reading, not a beginner notation course.
+Draw “request received,” “check stock,” and a decision “enough usable stock by the promised date?” Label both outcomes. Route No through purchasing and receipt, then rejoin fulfillment; include a supplier-delay path that notifies Sales. In the [bpmn.io modeler](https://demo.bpmn.io/new), use tasks for activities and a gateway for the decision. This makes omitted branches visible. The [toolkit walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) explains embedding the modeler in software; it is optional developer reading, not a beginner notation course.
 
 When investigating a process, ask:
 
@@ -1608,7 +1608,7 @@ flowchart LR
 Also useful:
 
 - [bpmn.io Main Website](https://bpmn.io/)
-- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (**Enhanced:** optional developer guide to rendering and embedding the modeler)
+- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (optional developer guide to rendering and embedding the modeler)
 
 ---
 
@@ -1771,7 +1771,7 @@ flowchart LR
 Also useful:
 
 - [bpmn.io Main Website](https://bpmn.io/)
-- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (**Enhanced:** optional developer guide to rendering and embedding the modeler)
+- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (optional developer guide to rendering and embedding the modeler)
 
 ---
 
@@ -1823,7 +1823,7 @@ First understand the process.
 
 ## CHAPTER 1 MASTERY CHECK
 
-> **Added self-check:** Without rereading, explain a 20-monitor order with eight usable units and twelve purchased later. Name one reusable record, three transactions, the owner of each handoff, and why the Purchase Order does not increase on-hand stock. Then explain what changes if the supplier delivers only ten. A complete answer identifies eighteen usable monitors, two still missing, and a decision about partial delivery or waiting. If you only list apps, return to Sections 1.3 and 1.9.
+Without rereading, explain a 20-monitor order with eight usable units and twelve purchased later. Name one reusable record, three transactions, the owner of each handoff, and why the Purchase Order does not increase on-hand stock. Then explain what changes if the supplier delivers only ten. A complete answer identifies eighteen usable monitors, two still missing, and a decision about partial delivery or waiting. If you only list apps, return to Sections 1.3 and 1.9.
 
 You should now be able to explain why the following statement is incomplete:
 

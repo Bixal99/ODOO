@@ -1,6 +1,6 @@
 # CHAPTER 2 EXERCISE
 
-> **Added study method:** Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
+Answer before scrolling to the solution. For each response, give the concept, scenario evidence, and a reason. Self-score each original numbered question or named part: 0 = missing/incorrect, 1 = correct label without reasoning, 2 = correct explanation using evidence. Rework every answer below 2. The solution is one defensible model, not wording to memorize; clearly stated alternative assumptions can support a different answer.
 
 Try answering these without looking back at Content.md first. Answer in your own words, then compare with the complete solution at the bottom of this file.
 
@@ -22,7 +22,7 @@ For Odoo docs, hosting comparisons, GitHub repos, and practice environments, see
 
 ## PART A: UNDERSTANDING
 
-> **Added response guidance:** In the hosting comparison, use two scenarios: standard workflows with no technical operator, and a custom Python integration requiring maintenance. For users and companies, give one allowed action and one forbidden action. For Studio versus code, state the missing requirement detail that could change your choice. Distinguish release number from edition and hosting.
+In the hosting comparison, use two scenarios: standard workflows with no technical operator, and a custom Python integration requiring maintenance. For users and companies, give one allowed action and one forbidden action. For Studio versus code, state the missing requirement detail that could change your choice. Distinguish release number from edition and hosting.
 
 1. Explain Odoo in your own words without using only the phrase "ERP software."
 
@@ -60,7 +60,7 @@ For Odoo docs, hosting comparisons, GitHub repos, and practice environments, see
 
 ## PRACTICAL CLASSIFICATION EXERCISE
 
-> **Added success criteria:** For A–E, provide your first option, one reason, and one condition that would change it. “Custom module” without explaining the reliability or maintenance requirement is incomplete. A missing Studio subscription, an existing standard field, or a proven connector can change the investigation path. No code or live installation is required.
+For A–E, provide your first option, one reason, and one condition that would change it. “Custom module” without explaining the reliability or maintenance requirement is incomplete. A missing Studio subscription, an existing standard field, or a proven connector can change the investigation path. No code or live installation is required.
 
 Classify each request as the first solution you would investigate:
 
@@ -211,7 +211,7 @@ A better equation is:
 
 These answer different questions.
 
-**Enhanced:** **Edition** answers which software/license family is used (Community or Enterprise). **Release** answers which numbered generation, such as 19.0. These are separate from the hosting choice.
+**Edition** answers which software/license family is used (Community or Enterprise). **Release** answers which numbered generation, such as 19.0. These are separate from the hosting choice.
 
 Examples: Community, Enterprise.
 
@@ -227,7 +227,7 @@ You should never treat "Enterprise" and "Odoo.sh" as equivalent concepts. One co
 
 ### 7. ODOO ONLINE VS ODOO.SH VS SELF-HOSTED
 
-> **Added worked reasoning:** A firm needing supported standard settings and no custom addon can evaluate Online. A firm requiring a Python addon with managed infrastructure can evaluate Odoo.sh. A firm with a capable operations team and infrastructure constraints can evaluate self-hosting. These are conditional fits, not a universal ranking of quality. Confirm the [Online restriction](https://www.odoo.com/documentation/19.0/administration/odoo_online.html) and [Odoo.sh service terms](https://www.odoo.sh/faq) when defending the decision.
+A firm needing supported standard settings and no custom addon can evaluate Online. A firm requiring a Python addon with managed infrastructure can evaluate Odoo.sh. A firm with a capable operations team and infrastructure constraints can evaluate self-hosting. These are conditional fits, not a universal ranking of quality. Confirm the [Online restriction](https://www.odoo.com/documentation/19.0/administration/odoo_online.html) and [Odoo.sh service terms](https://www.odoo.sh/faq) when defending the decision.
 
 | Area | Odoo Online | Odoo.sh | Self-Hosted |
 | --- | --- | --- | --- |
@@ -316,6 +316,8 @@ But another employee might never use Odoo directly. Then **Employee ≠ User**.
 
 Also, some users may not be employees. For example, portal users might be customers.
 
+For an access check, Ahmed's employee-linked user may be allowed to create a Sales quotation but forbidden to open payroll settings. An employee without a user account is allowed to exist in the HR records but cannot log in and perform either action.
+
 ---
 
 ### 12. WHY USE MULTIPLE COMPANIES IN ONE DATABASE?
@@ -334,11 +336,13 @@ Multi-company support can allow:
 
 Conceptually, **one Odoo database** can contain multiple companies while still separating company-specific operations.
 
+For example, a group finance user allowed in both companies may post an invoice in the selected company. A Qatar-only salesperson must be forbidden from creating or changing a Pakistan Sales Order.
+
 ---
 
 ### 13. SHARED VS COMPANY-SPECIFIC RECORDS
 
-> **Added reasoning check:** Sharing a product identity does not pool the Qatar and Pakistan companies’ stock. Likewise, a user allowed into both companies must still create each invoice in the correct company. To test your explanation, name a shared fact, such as product reference, and a company-context fact, such as the stock held by that company.
+Sharing a product identity does not pool the Qatar and Pakistan companies’ stock. Likewise, a user allowed into both companies must still create each invoice in the correct company. To test your explanation, name a shared fact, such as product reference, and a company-context fact, such as the stock held by that company.
 
 **Potentially shared**
 
@@ -370,6 +374,8 @@ Examples: adding a field, rearranging a form, adding a simple approval, modifyin
 
 For such requirements, **Studio convenience > custom development cost**.
 
+The missing detail is the behavior behind the change. A field that people fill in manually may fit Studio, while a field that must be cryptographically signed, synchronized with an external service, or maintained through complex tests can change the choice.
+
 ---
 
 ### 15. WHEN IS CUSTOM DEVELOPMENT PREFERABLE?
@@ -390,13 +396,15 @@ Example: send each delivery to an external logistics API, retry failures, mainta
 
 That is clearly becoming an engineering problem rather than a simple visual customization.
 
+The decision can change if a supported connector already provides those behaviors or if discovery shows the requirement is only a simple display change. Confirm the failure, security, upgrade, and maintenance requirements before choosing code.
+
 ---
 
 ## PRACTICAL CLASSIFICATION EXERCISE: SOLUTIONS
 
 ### A. ADD AN ADDITIONAL TEXT FIELD TO CUSTOMER
 
-> **Added alternative:** If the required information fits an existing standard field, use it instead of creating a duplicate. If Studio is unavailable, a small custom extension can be reasonable. Full credit depends on this reasoning, not on always selecting Studio.
+If the required information fits an existing standard field, use it instead of creating a duplicate. If Studio is unavailable, a small custom extension can be reasonable. Full credit depends on this reasoning, not on always selecting Studio.
 
 **First investigate: Studio**
 
@@ -404,7 +412,7 @@ Assuming standard Odoo does not already provide the required field, this is a si
 
 ### B. SYNCHRONIZE ORDERS WITH PROPRIETARY API USING SIGNED HTTP REQUESTS
 
-> **Added alternative:** First check for a supported connector that demonstrably meets the signing, retry, and duplicate-prevention requirements. External middleware can also own the integration when supported interfaces allow it. A custom Odoo addon is one implementation location, not the definition of integration itself.
+First check for a supported connector that demonstrably meets the signing, retry, and duplicate-prevention requirements. External middleware can also own the integration when supported interfaces allow it. A custom Odoo addon is one implementation location, not the definition of integration itself.
 
 **First investigate: Custom Module**
 
@@ -416,15 +424,19 @@ Because this likely requires HTTP requests, authentication, signatures, error ha
 
 Install or enable the existing Purchase application. There is no reason to build something Odoo already provides.
 
+This choice changes if “Purchase” actually means a business capability absent from the standard app, such as a proprietary regulated approval or external buying network that cannot be configured safely.
+
 ### D. CHANGE A BUSINESS SETTING ALREADY AVAILABLE IN SETTINGS
 
 **Answer: Configuration**
 
 If the system already provides the setting, configure it. Do not customize the platform unnecessarily.
 
+This choice changes if the available setting does not produce the required behavior in the relevant company, records, or workflow. The exact setting and expected result must be verified before concluding that configuration is sufficient.
+
 ### E. COMPLICATED CUSTOM PRICING ALGORITHM USING MULTIPLE EXTERNAL SYSTEMS
 
-> **Added reasoning:** Ask whether the systems supply periodic prices that standard pricelists can consume, or whether each quotation requires live calculations. A cached price import and a live pricing call have different failure behavior. The latter needs a decision about what the salesperson sees if an external service is unavailable.
+Ask whether the systems supply periodic prices that standard pricelists can consume, or whether each quotation requires live calculations. A cached price import and a live pricing call have different failure behavior. The latter needs a decision about what the salesperson sees if an external service is unavailable.
 
 **Answer: Custom Module**
 

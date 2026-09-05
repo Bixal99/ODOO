@@ -6,7 +6,7 @@ These resources reinforce **business processes**, **departments**, **master data
 
 Use them after reading each section, not instead of it. Chapter 1 teaches ERP thinking before Odoo buttons.
 
-> **Enhanced verification scope:** This review checked targeted primary sources used by the marked additions. Existing videos and repository listings are retained as supplementary references; their playback, full content, and every link have not been reverified. Odoo-specific references use 19.0 unless stated.
+Primary sources support the key concepts in this chapter. Videos and repository listings are supplementary resources and may change over time. Odoo-specific references use version 19.0 unless stated.
 
 ---
 
@@ -103,7 +103,7 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 
 ### 3. SAP LEARNING: UNDERSTANDING THE CONCEPT OF MASTER DATA
 
-> **Added reading task:** Explain why a reusable customer and a particular order are different records, then identify the agreed price that belongs to an order. Translate the business idea into the chair exercise without memorizing SAP-specific menus. If the exact lesson has moved, use the available end-to-end course above and find its master-data topic.
+Explain why a reusable customer and a particular order are different records, then identify the agreed price that belongs to an order. Translate the business idea into the chair exercise without memorizing SAP-specific menus. If the exact lesson has moved, use the available end-to-end course above and find its master-data topic.
 
 | | |
 |---|---|
@@ -118,7 +118,7 @@ These are **not Odoo-specific**, which is useful for Chapter 1 because this chap
 
 ### 1. BPMN.IO: INTERACTIVE BPMN PROCESS MODELER
 
-> **Added guided use:** Model a customer request, a stock check, and a decision with both sufficient-stock and shortage paths. Put purchasing and actual receipt on the shortage path before rejoining delivery. Name the performer and completion evidence for each activity in your notes. The tool makes missing branches visible; drawing a diagram does not configure Odoo. The linked toolkit walkthrough explains software embedding and is optional, not prerequisite process-notation training.
+Model a customer request, a stock check, and a decision with both sufficient-stock and shortage paths. Put purchasing and actual receipt on the shortage path before rejoining delivery. Name the performer and completion evidence for each activity in your notes. The tool makes missing branches visible; drawing a diagram does not configure Odoo. The linked toolkit walkthrough explains software embedding and is optional, not prerequisite process-notation training.
 
 | | |
 |---|---|
@@ -155,7 +155,7 @@ flowchart LR
 Also useful:
 
 - [bpmn.io Main Website](https://bpmn.io/)
-- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (**Enhanced:** optional developer guide to rendering and embedding the modeler)
+- [BPMN Walkthrough](https://bpmn.io/toolkit/bpmn-js/walkthrough/) (optional developer guide to rendering and embedding the modeler)
 ---
 
 ## REPOSITORIES

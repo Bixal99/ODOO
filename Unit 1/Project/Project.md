@@ -20,7 +20,7 @@ This is **business modeling**, not Odoo configuration. Do not build records in O
 
 ## PROJECT GOAL
 
-> **Added submission and assessment:** Complete the five existing parts and include the eCommerce channel in Part 1 and the relevant sales flow. For each flow provide the seven requested elements, one numerical check, one exception with an owner, and completion evidence. Score each flow 0 for missing/incorrect, 1 for a correct sequence with missing reasoning, or 2 for a traceable explanation with quantities and exception handling. Revise each flow to 2 before moving on. The goal is a coherent business model; no paid environment, code, or deployment is required.
+Complete the five existing parts and include the eCommerce channel in Part 1 and the relevant sales flow. For each flow provide the seven requested elements, one numerical check, one exception with an owner, and completion evidence. Score each flow 0 for missing/incorrect, 1 for a correct sequence with missing reasoning, or 2 for a traceable explanation with quantities and exception handling. Revise each flow to 2 before moving on. The goal is a coherent business model; no paid environment, code, or deployment is required.
 
 Design a fictional company with:
 
@@ -95,7 +95,7 @@ If you can do that correctly, Unit I has done its job.
 
 ## PART 1: DESIGN THE COMPANY
 
-> **Added prompt:** Define at least one customer, vendor, resale item, service, manufactured product and its component recipe, plus the requested departments and employee roles. Choose a release baseline, edition, hosting assumption, and company boundary; explain how these support your flows. Assign a stable reference and unit to each product. Use the same identities when they recur across flows.
+Define at least one customer, vendor, resale item, service, manufactured product and its component recipe, plus the requested departments and employee roles. Choose a release baseline, edition, hosting assumption, and company boundary; explain how these support your flows. Assign a stable reference and unit to each product. Use the same identities when they recur across flows.
 
 Create your fictional company profile including departments, products, services, customers, vendors, and employees.
 
@@ -103,7 +103,7 @@ Create your fictional company profile including departments, products, services,
 
 ## PART 2: FLOW A - LEAD-TO-CASH
 
-> **Added prompt:** Supply opening stock, ordered quantity, price, billing policy, and payment terms. Trace demand → shortage decision → receipt if required → delivery → billing → settlement. Include sufficient-stock and supplier-delay outcomes. Explain what proof closes fulfillment and what separate proof closes the customer balance.
+Supply opening stock, ordered quantity, price, billing policy, and payment terms. Trace demand → shortage decision → receipt if required → delivery → billing → settlement. Include sufficient-stock and supplier-delay outcomes. Explain what proof closes fulfillment and what separate proof closes the customer balance.
 
 Map a product sale from prospect interest through payment.
 
@@ -111,7 +111,7 @@ Map a product sale from prospect interest through payment.
 
 ## PART 3: FLOW B - PROCURE-TO-PAY
 
-> **Added prompt:** Supply opening quantity, replenishment quantity, vendor price, and bill-control assumption. Identify who orders, who receives, and who verifies the bill. Test a partial receipt and a mismatched supplier bill. State whether buying is manual or triggered by configured replenishment rules.
+Supply opening quantity, replenishment quantity, vendor price, and bill-control assumption. Identify who orders, who receives, and who verifies the bill. Test a partial receipt and a mismatched supplier bill. State whether buying is manual or triggered by configured replenishment rules.
 
 Map a procurement cycle from need through vendor payment.
 
@@ -119,7 +119,7 @@ Map a procurement cycle from need through vendor payment.
 
 ## PART 4: FLOW C - SERVICE DELIVERY
 
-> **Added prompt:** Define hourly or fixed-price terms, the service product, project/tasks, responsible employee, and eligibility of recorded time. Use a complete set of hours and a rate to calculate a bill. Test non-billable work or an overrun, and identify who agrees a change with the customer.
+Define hourly or fixed-price terms, the service product, project/tasks, responsible employee, and eligibility of recorded time. Use a complete set of hours and a rate to calculate a bill. Test non-billable work or an overrun, and identify who agrees a change with the customer.
 
 Map a consulting or implementation sale from opportunity through billed hours.
 
@@ -127,7 +127,7 @@ Map a consulting or implementation sale from opportunity through billed hours.
 
 ## PART 5: FLOW D - MANUFACTURING
 
-> **Added prompt:** Specify finished demand, opening finished stock, the per-unit BoM, and usable component stock. Calculate gross components, shortages, consumption, finished output, and delivery balance. Test a component shortage or rejected finished unit. Explain which actions are planned manually and which would need configured automation in Odoo.
+Specify finished demand, opening finished stock, the per-unit BoM, and usable component stock. Calculate gross components, shortages, consumption, finished output, and delivery balance. Test a component shortage or rejected finished unit. Explain which actions are planned manually and which would need configured automation in Odoo.
 
 Map a made-to-order manufacturing scenario from sales demand through delivery and invoicing.
 
@@ -143,7 +143,7 @@ The solution below uses a fictional company called **Gulf Smart Solutions (GSS)*
 
 ### COMPANY PROFILE
 
-> **Added sample assumptions:** GSS is one operating company using an Odoo 19.0 conceptual design. For illustration it evaluates Enterprise with Odoo.sh if maintained Python extensions are needed; this is a stated option, not a requirement to purchase hosting. Each quantity example below is independent unless a handoff is explicitly stated. All prices omit tax, discounts, and freight, and opening physical stock is usable and unreserved.
+GSS is one operating company using an Odoo 19.0 conceptual design. For illustration it evaluates Enterprise with Odoo.sh if maintained Python extensions are needed; this is a stated option, not a requirement to purchase hosting. Each quantity example below is independent unless a handoff is explicitly stated. All prices omit tax, discounts, and freight, and opening physical stock is usable and unreserved.
 
 **Gulf Smart Solutions (GSS)** is a Qatar-based company that:
 
@@ -167,9 +167,9 @@ The solution below uses a fictional company called **Gulf Smart Solutions (GSS)*
 
 ### MASTER DATA
 
-> **Added sample references:** Use CUST-ABC, CUST-DOHA, and CUST-GULF for customers; VEN-DISPLAY, VEN-HARDWARE, and VEN-WOOD for vendors; and PROD-LAP, PROD-MON, PROD-KBD, and PROD-DESK for finished/resale products. Use COMP-TOP, COMP-LEG, and COMP-SCREW for components, each counted by the unit. SERV-ODOO is measured in hours. In Flow A, assume invoicing after full delivery with payment due thirty days after invoice; this is a sample commercial term, not a hosting or software default.
+Use CUST-ABC, CUST-DOHA, and CUST-GULF for customers; VEN-DISPLAY, VEN-HARDWARE, and VEN-WOOD for vendors; and PROD-LAP, PROD-MON, PROD-KBD, and PROD-DESK for finished/resale products. Use COMP-TOP, COMP-LEG, and COMP-SCREW for components, each counted by the unit. SERV-ODOO is measured in hours. In Flow A, assume invoicing after full delivery with payment due thirty days after invoice; this is a sample commercial term, not a hosting or software default.
 
-> **Added relationship check:** Give the desk and its tabletop, leg, and screw components separate product references. Use Layla’s employee identity for time and a linked authorized user identity when she logs work. Bilal’s HR role should not imply that every employee needs administrative access. The web shop reuses the keyboard/monitor identities; publication and pricing still require deliberate configuration.
+Give the desk and its tabletop, leg, and screw components separate product references. Use Layla’s employee identity for time and a linked authorized user identity when she logs work. Bilal’s HR role should not imply that every employee needs administrative access. The web shop reuses the keyboard/monitor identities; publication and pricing still require deliberate configuration.
 
 **Customers**
 
@@ -214,7 +214,7 @@ The solution below uses a fictional company called **Gulf Smart Solutions (GSS)*
 
 ## PART 2: FLOW A - LEAD-TO-CASH
 
-> **Added worked example and diagram correction:** Assume eight monitors on hand and demand for twenty. Buy and receive twelve, then deliver twenty: 8 + 12 − 20 = 0 monitors remaining. The diagram includes receipt after procurement and a sufficient-stock bypass. At 1,000 QAR each the charge is 20,000 QAR; a matched 5,000 QAR settlement leaves 15,000 QAR due. If the supplier delivers only ten, eighteen monitors are available and Sales must agree whether to ship partially or wait for two. Completion requires the actual delivery and settled customer balance, not merely a confirmed order.
+Assume eight monitors on hand and demand for twenty. Buy and receive twelve, then deliver twenty: 8 + 12 − 20 = 0 monitors remaining. The diagram includes receipt after procurement and a sufficient-stock bypass. At 1,000 QAR each the charge is 20,000 QAR; a matched 5,000 QAR settlement leaves 15,000 QAR due. If the supplier delivers only ten, eighteen monitors are available and Sales must agree whether to ship partially or wait for two. Completion requires the actual delivery and settled customer balance, not merely a confirmed order.
 
 **Scenario:** Doha Tech may need **20 monitors** for a new office. Ahmed qualifies the opportunity, quotes, confirms the sale, fulfills from stock with partial procurement, delivers, invoices, and receives payment.
 
@@ -253,7 +253,7 @@ flowchart TD
 | Commercial offer | Sales | Sales | Quotation |
 | Confirmed sale | Sales | Sales | Sales Order |
 | Stock check / shortage | Warehouse | Inventory | Replenishment need identified |
-| Procurement | Purchasing | Purchase | **Enhanced:** Purchase Order; Warehouse separately records its receipt in Inventory |
+| Procurement | Purchasing | Purchase | Purchase Order; Warehouse separately records its receipt in Inventory |
 | Fulfillment | Warehouse | Inventory | Delivery |
 | Billing | Finance | Accounting | Customer invoice |
 | Settlement | Finance | Accounting | Payment recorded |
@@ -264,9 +264,9 @@ flowchart TD
 
 ## PART 3: FLOW B - PROCURE-TO-PAY
 
-> **Added worked example:** Assume ten keyboards initially, a manually approved order for 100, and vendor price 130 QAR per keyboard. Full receipt gives 110 keyboards; the supplier charge is 13,000 QAR. If only eighty arrive, stock is ninety and twenty remain due. Under the assumed received-quantity control, the draft bill for this receipt is eighty × 130 = 10,400 QAR; investigate a supplier invoice for all 100. Finance verifies the difference with Purchasing and Warehouse before treating the cycle as complete. [Control policies](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/purchase/manage_deals/control_bills.html) clarifies the quantity basis.
+Assume ten keyboards initially, a manually approved order for 100, and vendor price 130 QAR per keyboard. Full receipt gives 110 keyboards; the supplier charge is 13,000 QAR. If only eighty arrive, stock is ninety and twenty remain due. Under the assumed received-quantity control, the draft bill for this receipt is eighty × 130 = 10,400 QAR; investigate a supplier invoice for all 100. Finance verifies the difference with Purchasing and Warehouse before treating the cycle as complete. [Control policies](https://www.odoo.com/documentation/19.0/applications/inventory_and_mrp/purchase/manage_deals/control_bills.html) clarifies the quantity basis.
 
-**Scenario:** Warehouse stock of keyboards falls below minimum. **Enhanced:** Sara procures **100 keyboards** from Qatar Hardware Supply, Ali records their receipt, and Fatima verifies the vendor bill and processes supplier settlement.
+**Scenario:** Warehouse stock of keyboards falls below minimum. Sara procures **100 keyboards** from Qatar Hardware Supply, Ali records their receipt, and Fatima verifies the vendor bill and processes supplier settlement.
 
 <div align="center">
 
@@ -308,7 +308,7 @@ flowchart TD
 
 ## PART 4: FLOW C - SERVICE DELIVERY
 
-> **Added evidence and configuration:** The sample uses time-based billing and a Service product linked to project work. Trace an eligible timesheet to its task and Sales Order Item, then to the invoice. Task completion establishes the work outcome; invoicing and settlement establish separate financial outcomes. If the same work were sold for a fixed 24,000 QAR, eighty-five actual hours would not automatically increase that price. [Time-and-material invoicing](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/time_materials.html) explains the service configuration.
+The sample uses time-based billing and a Service product linked to project work. Trace an eligible timesheet to its task and Sales Order Item, then to the invoice. Task completion establishes the work outcome; invoicing and settlement establish separate financial outcomes. If the same work were sold for a fixed 24,000 QAR, eighty-five actual hours would not automatically increase that price. [Time-and-material invoicing](https://www.odoo.com/documentation/19.0/applications/sales/sales/invoicing/time_materials.html) explains the service configuration.
 
 **Scenario:** Gulf Office Solutions buys an **Odoo Implementation Package** for **80 consulting hours**. Layla delivers the work through a project with timesheets. Finance invoices based on the commercial agreement.
 
@@ -347,7 +347,9 @@ flowchart TD
 | Billing | Finance | Accounting | Customer invoice |
 | Settlement | Finance | Accounting | Payment |
 
-**Enhanced worked example:** Layla records requirements 10 hours, configuration 20, migration 15, testing 15, and training 20: **80 hours total**. Assume all are eligible customer work at **300 QAR/hour**, giving **24,000 QAR**. Additional internal training is recorded separately and is not billed under this assumption. An extra five customer hours would be **1,500 QAR** only if the commercial terms authorize charging them; the original eighty-hour estimate is not automatic approval to bill any overrun.
+Layla records requirements 10 hours, configuration 20, migration 15, testing 15, and training 20: **80 hours total**. Assume all are eligible customer work at **300 QAR/hour**, giving **24,000 QAR**. Additional internal training is recorded separately and is not billed under this assumption. An extra five customer hours would be **1,500 QAR** only if the commercial terms authorize charging them; the original eighty-hour estimate is not automatic approval to bill any overrun.
+
+Layla links each eligible timesheet to its project task and the SERV-ODOO Sales Order Item so Finance can trace the billed quantity. The project manager reviews eligibility, while Sales or the authorized commercial owner agrees any billable overrun or scope change with Gulf Office Solutions before Finance charges it.
 
 For service businesses, **Sales → Project → Timesheet → Accounting** is as important as **Sales → Inventory → Accounting** is for product businesses.
 
@@ -355,7 +357,7 @@ For service businesses, **Sales → Project → Timesheet → Accounting** is as
 
 ## PART 5: FLOW D - MANUFACTURING
 
-> **Added worked quantities:** Assume no finished desks and usable stock of six tops, forty legs, and 120 screws. Ten desks require ten tops, forty legs, and 160 screws; obtain four tops and forty screws. After receipt, completing ten desks with no loss consumes those totals and produces ten desks; delivering ten leaves zero finished desks. If one desk fails inspection, only nine are deliverable until the missing output is resolved. At an assumed 1,500 QAR selling price, all ten delivered desks produce a 15,000 QAR charge under this example’s delivered-quantity policy. Component cost and production cost require additional data; they cannot be inferred from selling price.
+Assume no finished desks and usable stock of six tops, forty legs, and 120 screws. Ten desks require ten tops, forty legs, and 160 screws; obtain four tops and forty screws. After receipt, completing ten desks with no loss consumes those totals and produces ten desks; delivering ten leaves zero finished desks. If one desk fails inspection, only nine are deliverable until the missing output is resolved. At an assumed 1,500 QAR selling price, all ten delivered desks produce a 15,000 QAR charge under this example’s delivered-quantity policy. Component cost and production cost require additional data; they cannot be inferred from selling price.
 
 **Scenario:** ABC Trading orders **10 custom office desks**. GSS manufactures desks from components. Some components are in stock; WoodCraft Materials supplies missing items. Manufacturing completes the desks, warehouse delivers them, and Finance invoices ABC Trading.
 
@@ -411,11 +413,13 @@ flowchart TD
 - Finished desks increase upon production completion.
 - Finished desks decrease upon customer delivery.
 
+In this model, the planner manually creates the replenishment and manufacturing actions after reviewing demand and component shortages. Automatic creation would require configured routes, replenishment rules, BoMs, and procurement behavior; the document flow alone does not prove those automations exist.
+
 ---
 
 ## ECOMMERCE CHANNEL NOTE
 
-> **Added worked channel check:** Assume the store sells two keyboards at 200 QAR each with online payment before dispatch. The customer charge is 400 QAR; after completed delivery, starting good stock of thirty becomes twenty-eight. Failed or pending payment requires its own follow-up path before treating the order as paid. Map the online order into Flow A’s fulfillment process and identify the website/company, product, customer, payment evidence, and shipment reference. Checkout alone does not prove every downstream step completed.
+Assume the store sells two keyboards at 200 QAR each with online payment before dispatch. The customer charge is 400 QAR; after completed delivery, starting good stock of thirty becomes twenty-eight. Failed or pending payment requires its own follow-up path before treating the order as paid. Map the online order into Flow A’s fulfillment process and identify the website/company, product, customer, payment evidence, and shipment reference. Checkout alone does not prove every downstream step completed.
 
 GSS also sells keyboards and monitors online.
 
@@ -436,7 +440,9 @@ A website checkout creates the same internal document chain as a traditional sal
 
 ## FINAL ENTERPRISE MAP
 
-> **Added final assessment:** Trace one product identity from purchase to stock to sale, then explain why the consulting service uses project work instead of stock shipment. Verify each flow’s arithmetic, record references, owner handoffs, assumptions, exception response, and completion evidence. The four flows should agree on shared identities while retaining separate customer and vendor obligations. If you can only recite the app arrows, revise the relevant part with concrete records and an unfinished-case explanation.
+Trace one product identity from purchase to stock to sale, then explain why the consulting service uses project work instead of stock shipment. Verify each flow’s arithmetic, record references, owner handoffs, assumptions, exception response, and completion evidence. The four flows should agree on shared identities while retaining separate customer and vendor obligations. If you can only recite the app arrows, revise the relevant part with concrete records and an unfinished-case explanation.
+
+PROD-MON provides that trace: Purchasing orders it from VEN-DISPLAY, Warehouse receives it into the same product’s stock balance, and Sales delivers it to CUST-DOHA in Flow A. The receipt proves incoming physical quantity, the delivery proves fulfillment, and the invoice and matched settlement prove the separate customer obligation. SERV-ODOO follows project tasks and eligible timesheets because consulting hours are work evidence rather than physical units held in a warehouse.
 
 Gulf Smart Solutions therefore operates four major connected flows inside one enterprise model:
 

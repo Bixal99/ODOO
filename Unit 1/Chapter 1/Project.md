@@ -2,7 +2,7 @@
 
 ## PROJECT GOAL
 
-> **Added submission and completion criteria:** Complete the six existing parts on paper or in Markdown. Include all requested master-record counts, a role at every handoff, a running stock calculation, and one exception branch. State assumptions, then compare with the solution. Each part is complete when another learner can follow who acts, which information they use, and how the result can be checked; naming a department or app alone is insufficient.
+Complete the six existing parts on paper or in Markdown. Include all requested master-record counts, a role at every handoff, a running stock calculation, and one exception branch. State assumptions, then compare with the solution. Each part is complete when another learner can follow who acts, which information they use, and how the result can be checked; naming a department or app alone is insufficient.
 
 Create an ERP business analysis for a fictional company called **Bilal Office Supplies**.
 
@@ -35,7 +35,7 @@ For supplementary ERP videos and process-mapping tools, see [Resources.md](Resou
 
 ## PART 1: DEFINE THE DEPARTMENTS
 
-> **Added prompt:** For each department, give one input received from another team and one output passed onward. Explain how Operations coordinates a late order without taking over every specialist task. In a small company one person can cover several roles; keep the responsibilities distinct even if the person is the same.
+For each department, give one input received from another team and one output passed onward. Explain how Operations coordinates a late order without taking over every specialist task. In a small company one person can cover several roles; keep the responsibilities distinct even if the person is the same.
 
 Document responsibilities for:
 
@@ -52,7 +52,7 @@ For each department, describe its purpose, key responsibilities, and likely proc
 
 ## PART 2: DEFINE MASTER DATA
 
-> **Added prompt:** Give each customer, vendor, product, and employee a stable reference. For products include a unit of measure, selling price, and purchase cost; do not use cost and selling price interchangeably. Financial accounts are illustrative categories, not a production chart of accounts. The sample fields describe business requirements, not a guarantee of identical field placement on an Odoo form.
+Give each customer, vendor, product, and employee a stable reference. For products include a unit of measure, selling price, and purchase cost; do not use cost and selling price interchangeably. Financial accounts are illustrative categories, not a production chart of accounts. The sample fields describe business requirements, not a guarantee of identical field placement on an Odoo form.
 
 Create sample master records for:
 
@@ -68,7 +68,7 @@ Do not build them in Odoo yet. This is business modeling.
 
 ## PART 3: MAP ORDER-TO-CASH
 
-> **Added prompt:** Assume a credit sale with invoicing after full delivery. Include what permits each transition and what proves it happened: acceptance, validated delivery, posted invoice, and matched settlement evidence. Add a rejected-quotation branch. A flow ending with a sent invoice is not yet a completed order-to-cash cycle.
+Assume a credit sale with invoicing after full delivery. Include what permits each transition and what proves it happened: acceptance, validated delivery, posted invoice, and matched settlement evidence. Add a rejected-quotation branch. A flow ending with a sent invoice is not yet a completed order-to-cash cycle.
 
 Create the flow from customer request through payment.
 
@@ -93,7 +93,7 @@ For every stage identify:
 
 ## PART 4: ADD AN INVENTORY SHORTAGE
 
-> **Added prompt:** Assume the twenty units are on hand, unreserved, and usable. Show balances before and after ordering, receiving thirty, and delivering fifty. Then test a receipt of only twenty-five. Identify the remaining quantity and whether the customer accepts a partial delivery. A negative shortage is not a purchase requirement; use max(0, demand minus usable supply).
+Assume the twenty units are on hand, unreserved, and usable. Show balances before and after ordering, receiving thirty, and delivering fifty. Then test a receipt of only twenty-five. Identify the remaining quantity and whether the customer accepts a partial delivery. A negative shortage is not a purchase requirement; use max(0, demand minus usable supply).
 
 Assume:
 
@@ -118,7 +118,7 @@ Document how the departments interact.
 
 ## PART 5: IDENTIFY THE SOURCE OF TRUTH
 
-> **Added prompt:** Separate a default product price from the price agreed on a confirmed order, and a customer’s billing address from its delivery address. For stock, state company and location. For invoices, distinguish document state from payment state. Explain who may correct each fact and which open documents need review after a change.
+Separate a default product price from the price agreed on a confirmed order, and a customer’s billing address from its delivery address. For stock, state company and location. For invoices, distinguish document state from payment state. Explain who may correct each fact and which open documents need review after a change.
 
 For each item, decide where the authoritative information should conceptually live:
 
@@ -134,7 +134,7 @@ Then explain why maintaining multiple unrelated copies would cause problems.
 
 ## PART 6: AS-IS VS TO-BE
 
-> **Added prompt:** Compare the same fifty-monitor sale in both processes. Identify two failure points, the change that addresses each, and observable evidence of improvement. For example, measure elapsed time from shortage detection to buyer notification. Do not claim an improvement percentage without a baseline; propose what to measure.
+Compare the same fifty-monitor sale in both processes. Identify two failure points, the change that addresses each, and observable evidence of improvement. For example, measure elapsed time from shortage detection to buyer notification. Do not claim an improvement percentage without a baseline; propose what to measure.
 
 Design a deliberately inefficient manual process. For example:
 
@@ -182,6 +182,8 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 **Example:** A customer asks for **10 laptops**. Sales checks pricing and availability and creates a quotation. If the customer accepts, the quotation becomes a Sales Order.
 
+**Handoff:** Sales receives availability information from Warehouse and passes a confirmed Sales Order and promised date to Warehouse.
+
 **Process owner:** Sales Manager
 
 ---
@@ -201,6 +203,8 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 - track expected deliveries.
 
 **Example:** Customer demand is **50 monitors**, stock is **20**, shortage is **30**. Purchasing must obtain approximately 30 additional monitors if the company wants to fulfill the sale.
+
+**Handoff:** Purchasing receives the shortage requirement from Warehouse and passes an approved Purchase Order and expected receipt information back to Warehouse.
 
 **Process owner:** Purchasing Manager
 
@@ -223,6 +227,8 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 **Example:** A supplier delivers 30 monitors. Warehouse receives them and updates available stock.
 
+**Handoff:** Warehouse receives Sales Order demand from Sales and Purchase Order receipt details from Purchasing, then passes validated delivery quantities to Finance.
+
 **Process owner:** Warehouse Manager
 
 ---
@@ -243,6 +249,8 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 **Example:** A customer receives **10 laptops** at **3,000 QAR each**. Invoice amount: **30,000 QAR**. Finance records the customer invoice.
 
+**Handoff:** Finance receives the agreed order value and validated delivery evidence, then provides invoice and settlement status to the responsible commercial team.
+
 **Process owner:** Finance Manager
 
 ---
@@ -261,6 +269,8 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 - support policies and HR procedures.
 
 **Example:** A warehouse employee requests annual leave. HR manages the overall policy while the employee's manager may approve the request.
+
+**Handoff:** HR receives the manager's decision and passes updated availability information to the employee and operational scheduler while protecting confidential HR details.
 
 **Process owner:** HR Manager
 
@@ -281,6 +291,8 @@ The company will eventually use an ERP such as Odoo to integrate these activitie
 
 For Bilal Office Supplies, Operations may monitor whether Order → Purchase → Receipt → Delivery happens efficiently.
 
+**Handoff:** Operations receives milestone and exception status from Sales, Purchasing, and Warehouse and passes coordination decisions to the responsible owners. For a late order, Operations brings those owners together, records the revised plan, and checks customer communication; Sales still owns the customer promise, Purchasing the supplier follow-up, and Warehouse the physical receipt and delivery.
+
 **Process owner:** Operations Manager
 
 ---
@@ -289,7 +301,7 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ### A. CUSTOMERS
 
-> **Added sample references:** Use CUST-DBS, CUST-GES, and CUST-QMO for the three customers below; VEN-TECH and VEN-FURN for the vendors; PROD-LAP, PROD-MON, PROD-KBD, and PROD-CHAIR for the products; and EMP-AHMED, EMP-SARA, and EMP-OMAR for employees. The product unit in these examples is one item. These illustrative business references keep the written flows traceable; they are not claimed Odoo database IDs.
+Use CUST-DBS, CUST-GES, and CUST-QMO for the three customers below; VEN-TECH and VEN-FURN for the vendors; PROD-LAP, PROD-MON, PROD-KBD, and PROD-CHAIR for the products; and EMP-AHMED, EMP-SARA, and EMP-OMAR for employees. The product unit in these examples is one item. These illustrative business references keep the written flows traceable; they are not claimed Odoo database IDs.
 
 **Customer 1: Doha Business Solutions**
 
@@ -371,7 +383,7 @@ For Bilal Office Supplies, Operations may monitor whether Order → Purchase →
 
 ### E. BASIC FINANCIAL ACCOUNTS
 
-> **Added explanation:** Selling ten laptops at 3,000 QAR creates a 30,000 QAR customer charge in this simplified example. Their listed purchase cost is 24,000 QAR in total. The 6,000 QAR difference is a simple product-margin illustration before other costs, not the cash balance or the company’s final profit. Account categories help keep customer debt, supplier debt, revenue, and cost distinguishable.
+Selling ten laptops at 3,000 QAR creates a 30,000 QAR customer charge in this simplified example. Their listed purchase cost is 24,000 QAR in total. The 6,000 QAR difference is a simple product-margin illustration before other costs, not the cash balance or the company’s final profit. Account categories help keep customer debt, supplier debt, revenue, and cost distinguishable.
 
 | Account | Type | Purpose |
 | --- | --- | --- |
@@ -398,6 +410,8 @@ flowchart LR
 ```
 
 </div>
+
+Customer acceptance permits quotation confirmation. If the customer rejects the quotation, Sales records the reason and the flow ends or returns to revision; no Sales Order or delivery should be presented as completed. A confirmed order permits fulfillment planning, a validated delivery proves physical completion, a posted invoice establishes the receivable, and received funds matched to that invoice prove settlement. Sending an invoice without matching settlement evidence leaves order-to-cash financially open.
 
 ### STAGE 1: CUSTOMER REQUEST
 
@@ -501,7 +515,9 @@ Purchasing receives the requirement for **30 monitors** and creates a Purchase O
 
 ### STEP 4: SUPPLIER RECEIPT
 
-> **Added quantity proof:** Order confirmation leaves twenty monitors on hand. Receiving thirty produces fifty; delivering fifty leaves zero. If only twenty-five arrive, on hand is forty-five and five remain due from the supplier. Recording receipt of the ordered thirty without counting the twenty-five received would hide the shortage from Sales.
+Order confirmation leaves twenty monitors on hand. Receiving thirty produces fifty; delivering fifty leaves zero. If only twenty-five arrive, on hand is forty-five and five remain due from the supplier. Recording receipt of the ordered thirty without counting the twenty-five received would hide the shortage from Sales.
+
+For the twenty-five-unit receipt, Purchasing follows up on the remaining five while Sales asks the customer to accept delivery of forty-five now or wait for all fifty. The model does not assume the customer's choice; it records the agreed option and keeps five units outstanding if a partial delivery is accepted.
 
 TechSource Distribution sends the 30 monitors. Warehouse receives them. Stock becomes **50** (20 + 30). Now the complete customer order can be fulfilled.
 
@@ -532,11 +548,11 @@ That is a cross-department ERP workflow.
 
 **Authoritative location:** Customer master record.
 
-**Enhanced:** Sales, Warehouse, and Finance should reference the appropriate addresses associated with the same customer identity; the invoice address and delivery address may differ. If each department stores a different street, the company may deliver to the wrong address, invoice incorrectly, and maintain inconsistent customer data.
+Sales, Warehouse, and Finance should reference the appropriate addresses associated with the same customer identity; the invoice address and delivery address may differ. If each department stores a different street, the company may deliver to the wrong address, invoice incorrectly, and maintain inconsistent customer data.
 
 ### 2. PRODUCT PRICE
 
-> **Added explanation:** Pricing configuration supplies defaults and rules for a new quote. Once the customer agrees to 900 QAR per item, the confirmed order line is the authority for that agreed transaction price. Raising the catalog default to 1,000 QAR later does not justify silently invoicing the earlier order at the new price.
+Pricing configuration supplies defaults and rules for a new quote. Once the customer agrees to 900 QAR per item, the confirmed order line is the authority for that agreed transaction price. Raising the catalog default to 1,000 QAR later does not justify silently invoicing the earlier order at the new price.
 
 **Authoritative location:** Product / pricing master data.
 
@@ -558,9 +574,11 @@ Example: **Ahmed Khan → Sales Department**. Other applications should refer to
 
 **Authoritative location:** Accounting / Finance transaction record.
 
-**Enhanced:** Keep document state (such as Draft or Posted) separate from payment state (such as Not Paid, Partially Paid, In Payment, or Paid). A posted invoice can still be unpaid. Use the invoice and its related settlement evidence instead of a manually maintained spreadsheet. Sales should not maintain an unrelated spreadsheet manually saying an invoice is paid.
+Keep document state (such as Draft or Posted) separate from payment state (such as Not Paid, Partially Paid, In Payment, or Paid). A posted invoice can still be unpaid. Use the invoice and its related settlement evidence instead of a manually maintained spreadsheet. Sales should not maintain an unrelated spreadsheet manually saying an invoice is paid.
 
 ### WHY MULTIPLE UNRELATED COPIES ARE DANGEROUS
+
+Corrections also need an owner and a review boundary. An authorized customer-data steward may correct the appropriate billing or delivery address and review affected open quotations, orders, deliveries, and draft invoices without rewriting historical evidence. A pricing owner changes default pricing and reviews open quotations, while an accepted order keeps its agreed price unless the parties revise it. Warehouse personnel correct stock for the specified company and location through supported movements or counted adjustments and review reservations and open transfers. HR corrects employee department data. Finance controls invoice status and uses the appropriate accounting correction for posted documents rather than editing them as ordinary master data.
 
 Suppose the same information exists in four systems. A change must then be made four times. If someone forgets one system, the organization has multiple conflicting versions of "truth."
 
@@ -627,7 +645,7 @@ All activities operate around connected records.
 
 ### AS-IS VS TO-BE COMPARISON
 
-> **Added evaluation example:** If the To-Be flow still requires Finance to retype every order line, investigate why the records are not being reused. If stock is visible instantly but warehouse counts are wrong, integration alone has not solved the data-quality problem. A strong comparison connects each proposed improvement to a cause and a check, while retaining ownership and review.
+If the To-Be flow still requires Finance to retype every order line, investigate why the records are not being reused. If stock is visible instantly but warehouse counts are wrong, integration alone has not solved the data-quality problem. A strong comparison connects each proposed improvement to a cause and a check, while retaining ownership and review.
 
 | As-Is | To-Be |
 | --- | --- |
@@ -639,6 +657,8 @@ All activities operate around connected records.
 | Manual reconciliation | Related business transactions |
 | Difficult traceability | Better transaction history |
 | Higher inconsistency risk | Stronger data consistency |
+
+Two concrete checks connect the proposed improvements to the original failures. First, compare the elapsed time from shortage detection to buyer notification; the connected requirement should be visible without waiting for an email to be noticed. Second, compare the delivered quantity with the quantity Finance uses for billing; related delivery evidence should remove manual re-entry. These measures need an As-Is baseline before any percentage improvement can be claimed.
 
 ---
 
