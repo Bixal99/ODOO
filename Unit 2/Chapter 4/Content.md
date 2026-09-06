@@ -200,7 +200,49 @@ That confuses presentation with business logic and data. The three-tier model ex
 
 Here are the relevant resources for **4.1 THREE-TIERS ARCHITECTURE**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
+
+### 1. ODOO ARCHITECTURE EXPLAINED: THREE-TIERS (ODOO 19)
+
+| | |
+|---|---|
+| **Source** | Community technical channel (Odoo with Vinay) |
+| **Reinforces** | **Presentation → Logic → Data** |
+
+<div align="center">
+
+[![Odoo Architecture Explained | Three-Tiers Architecture in Odoo 19](https://img.youtube.com/vi/PKMgbCSneyg/hqdefault.jpg)](https://www.youtube.com/watch?v=PKMgbCSneyg)
+
+**Watch on YouTube:** [Odoo Architecture Explained | Three-Tiers Architecture in Odoo 19](https://www.youtube.com/watch?v=PKMgbCSneyg)
+
+</div>
+
+---
+
+### 2. ODOO TECHNICAL TRAINING PART 1: ARCHITECTURE AND EDITIONS
+
+| | |
+|---|---|
+| **Source** | Community technical channel (Odoo Tech) |
+| **Version note** | Titled for Odoo 18; use with Odoo 19.0 official docs as the authority |
+
+<div align="center">
+
+[![Odoo 18 Technical Training Part 1 | Architecture | Editions](https://img.youtube.com/vi/O8ij3ZF-UyQ/hqdefault.jpg)](https://www.youtube.com/watch?v=O8ij3ZF-UyQ)
+
+**Watch on YouTube:** [Odoo 18 Technical Training Part 1 | Architecture | Editions](https://www.youtube.com/watch?v=O8ij3ZF-UyQ)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Architecture overview** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -284,7 +326,14 @@ The browser is under the user's control. Authoritative business rules and creden
 
 Here are the relevant resources for **4.2 BROWSER**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Architecture overview (presentation tier)** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+| **Javascript / web client** | [Javascript Reference (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/frontend/javascript_reference.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -368,7 +417,46 @@ The browser hosts/runs the Odoo web client. Chrome is generic software. The Odoo
 
 Here are the relevant resources for **4.3 ODOO WEB CLIENT**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### 1. ODOO SERVICES USING OWL
+
+| | |
+|---|---|
+| **Source** | AJScript Media |
+| **Reinforces** | Browser-side services that talk to the server |
+
+<div align="center">
+
+[![Odoo Services Using OWL Javascript Framework](https://img.youtube.com/vi/jl9husDIX2o/hqdefault.jpg)](https://www.youtube.com/watch?v=jl9husDIX2o)
+
+**Watch on YouTube:** [Odoo Services Using OWL Javascript Framework](https://www.youtube.com/watch?v=jl9husDIX2o)
+
+</div>
+
+---
+
+### 2. ODOO 19 CLIENT ACTION WITH OWL
+
+| | |
+|---|---|
+| **Source** | Odoo with Vinay |
+
+<div align="center">
+
+[![Odoo 19 Client Action Explained with JavaScript (OWL)](https://img.youtube.com/vi/bF4aao2DbS8/hqdefault.jpg)](https://www.youtube.com/watch?v=bF4aao2DbS8)
+
+**Watch on YouTube:** [Odoo 19 Client Action Explained with JavaScript (OWL)](https://www.youtube.com/watch?v=bF4aao2DbS8)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Javascript / web client** | [Javascript Reference (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/frontend/javascript_reference.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -457,7 +545,13 @@ The important idea is continuity: the client asks, the server authenticates and 
 
 Here are the relevant resources for **4.4 HTTP REQUEST**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Web controllers / HTTP** | [Web Controllers (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/http.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -552,7 +646,31 @@ That would expose credentials, bypass business rules, weaken security enforcemen
 
 Here are the relevant resources for **4.5 ODOO APPLICATION SERVER**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### ODOO FRAMEWORK EXPLAINED
+
+| | |
+|---|---|
+| **Source** | EasyDev |
+| **Reinforces** | Odoo as a modular application framework, not only an ERP UI |
+
+<div align="center">
+
+[![Odoo Framework Explained](https://img.youtube.com/vi/Ru2cz7l0g5k/hqdefault.jpg)](https://www.youtube.com/watch?v=Ru2cz7l0g5k)
+
+**Watch on YouTube:** [Odoo Framework Explained](https://www.youtube.com/watch?v=Ru2cz7l0g5k)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Architecture overview** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+| **Deployment / server modes** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -635,7 +753,30 @@ That is incomplete. Frontend work uses HTML/CSS/JavaScript. Persistence uses Pos
 
 Here are the relevant resources for **4.6 PYTHON RUNTIME**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### ODOO FRAMEWORK EXPLAINED
+
+| | |
+|---|---|
+| **Source** | EasyDev |
+
+<div align="center">
+
+[![Odoo Framework Explained](https://img.youtube.com/vi/Ru2cz7l0g5k/hqdefault.jpg)](https://www.youtube.com/watch?v=Ru2cz7l0g5k)
+
+**Watch on YouTube:** [Odoo Framework Explained](https://www.youtube.com/watch?v=Ru2cz7l0g5k)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Architecture overview (logic tier)** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+| **Building a module** | [Building a Module (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/backend.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -754,7 +895,47 @@ The ORM is an abstraction layer used by application code to interact with persis
 
 Here are the relevant resources for **4.7 ORM**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### 1. ORM IN ODOO (OBJECT RELATIONAL MAPPING)
+
+| | |
+|---|---|
+| **Source** | Cybrosys Technologies |
+| **Reinforces** | **Python model ↔ PostgreSQL table** via the ORM |
+| **Version note** | Titled for Odoo 16; pair with the Odoo 19 ORM API reference |
+
+<div align="center">
+
+[![ORM (Object Relational Mapping) in Odoo 16](https://img.youtube.com/vi/A8MEl4BfqyY/hqdefault.jpg)](https://www.youtube.com/watch?v=A8MEl4BfqyY)
+
+**Watch on YouTube:** [ORM (Object Relational Mapping) in Odoo 16](https://www.youtube.com/watch?v=A8MEl4BfqyY)
+
+</div>
+
+---
+
+### 2. ODOO ORM METHODS (PART 1)
+
+| | |
+|---|---|
+| **Source** | Odoo Mates |
+
+<div align="center">
+
+[![Odoo ORM Methods - Part1](https://img.youtube.com/vi/8V-uOG8KkKA/hqdefault.jpg)](https://www.youtube.com/watch?v=8V-uOG8KkKA)
+
+**Watch on YouTube:** [Odoo ORM Methods - Part1](https://www.youtube.com/watch?v=8V-uOG8KkKA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **ORM API** | [ORM API (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/orm.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -848,7 +1029,32 @@ PostgreSQL is a separate persistence layer. Application logic and stored data ha
 
 Here are the relevant resources for **4.8 POSTGRESQL**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### HOW TO RESTORE YOUR ODOO DATABASE FROM BACKUP
+
+| | |
+|---|---|
+| **Source** | Cybrosys Technologies |
+| **Why use it** | Makes durable database state visible during backup/restore thinking |
+
+<div align="center">
+
+[![How to Restore your Odoo Database from Backup?](https://img.youtube.com/vi/kebK_7_ezD8/hqdefault.jpg)](https://www.youtube.com/watch?v=kebK_7_ezD8)
+
+**Watch on YouTube:** [How to Restore your Odoo Database from Backup?](https://www.youtube.com/watch?v=kebK_7_ezD8)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Architecture overview (data tier)** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+| **Deploy / backups** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+| **CLI db dump / load** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -929,7 +1135,32 @@ Not necessarily. Attachments and binary-field files can involve the filestore. A
 
 Here are the relevant resources for **4.9 FILESTORE**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### HOW TO RESTORE YOUR ODOO DATABASE FROM BACKUP
+
+| | |
+|---|---|
+| **Source** | Cybrosys Technologies |
+| **Why use it** | Shows why database dumps and attachment files both matter |
+
+<div align="center">
+
+[![How to Restore your Odoo Database from Backup?](https://img.youtube.com/vi/kebK_7_ezD8/hqdefault.jpg)](https://www.youtube.com/watch?v=kebK_7_ezD8)
+
+**Watch on YouTube:** [How to Restore your Odoo Database from Backup?](https://www.youtube.com/watch?v=kebK_7_ezD8)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Serving attachments / filestore** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+| **CLI `--data-dir` and db dump** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+| **Filestore path layout (Odoo.sh example)** | [Containers (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/odoo_sh/advanced/containers.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1014,7 +1245,63 @@ No. An addon can contribute Python, models, views, data, security, assets, contr
 
 Here are the relevant resources for **4.10 ADDONS**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### 1. ODOO MODULES EXPLAINED
+
+| | |
+|---|---|
+| **Source** | EasyDev |
+| **Reinforces** | Modules as the packaging unit for business features |
+
+<div align="center">
+
+[![Odoo Modules Explained](https://img.youtube.com/vi/uJPjmS5Arug/hqdefault.jpg)](https://www.youtube.com/watch?v=uJPjmS5Arug)
+
+**Watch on YouTube:** [Odoo Modules Explained](https://www.youtube.com/watch?v=uJPjmS5Arug)
+
+</div>
+
+---
+
+### 2. ODOO MODULE STRUCTURE: MODELS, VIEWS, SECURITY
+
+| | |
+|---|---|
+| **Source** | EasyDev |
+
+<div align="center">
+
+[![Odoo Module Structure Explained](https://img.youtube.com/vi/ov-ReGkIxIg/hqdefault.jpg)](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+**Watch on YouTube:** [Odoo Module Structure Explained](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+</div>
+
+---
+
+### 3. MANIFEST FILE IN ODOO 19
+
+| | |
+|---|---|
+| **Source** | Cybrosys Technologies |
+
+<div align="center">
+
+[![What is the Manifest File in Odoo?](https://img.youtube.com/vi/n7OXja3UBVw/hqdefault.jpg)](https://www.youtube.com/watch?v=n7OXja3UBVw)
+
+**Watch on YouTube:** [What is the Manifest File in Odoo?](https://www.youtube.com/watch?v=n7OXja3UBVw)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Module manifests** | [Module Manifests (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/module.html) |
+| **Architecture / modules** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1123,7 +1410,47 @@ No. The registry is part of the runtime model-loading architecture: the loaded m
 
 Here are the relevant resources for **4.11 REGISTRY**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### 1. ODOO MODULE STRUCTURE: MODELS, VIEWS, SECURITY
+
+| | |
+|---|---|
+| **Source** | EasyDev |
+| **Reinforces** | Installed module definitions compose the effective model universe |
+
+<div align="center">
+
+[![Odoo Module Structure Explained](https://img.youtube.com/vi/ov-ReGkIxIg/hqdefault.jpg)](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+**Watch on YouTube:** [Odoo Module Structure Explained](https://www.youtube.com/watch?v=ov-ReGkIxIg)
+
+</div>
+
+---
+
+### 2. MODULE LIFECYCLE: INSTALL, UPGRADE, UNINSTALL
+
+| | |
+|---|---|
+| **Source** | EasyDev |
+
+<div align="center">
+
+[![Odoo Module Lifecycle Explained](https://img.youtube.com/vi/lyUGD4reCys/hqdefault.jpg)](https://www.youtube.com/watch?v=lyUGD4reCys)
+
+**Watch on YouTube:** [Odoo Module Lifecycle Explained](https://www.youtube.com/watch?v=lyUGD4reCys)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **ORM API** | [ORM API (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/orm.html) |
+| **Architecture / modules** | [Chapter 1: Architecture Overview (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/server_framework_101/01_architecture.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1204,7 +1531,14 @@ The HTTP layer is the gateway: routing, authentication mode, session, database c
 
 Here are the relevant resources for **4.12 HTTP LAYER**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Web controllers / HTTP** | [Web Controllers (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/http.html) |
+| **Deploy / reverse proxy context** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1297,7 +1631,15 @@ A user is an account/identity. A session is one authenticated interaction contex
 
 Here are the relevant resources for **4.13 SESSIONS**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **CLI `--data-dir` (filestore and sessions)** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+| **Sessions path layout (Odoo.sh example)** | [Containers (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/odoo_sh/advanced/containers.html) |
+| **Deploy / db selection and access** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1384,7 +1726,14 @@ No. Workers process requests. A later request from the same user may be handled 
 
 Here are the relevant resources for **4.14 WORKERS**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Multi-threaded vs multi-processing workers** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+| **CLI `--workers`, limits, gevent-port** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1462,7 +1811,47 @@ Not necessarily. Cron work is scheduled/background work. It should not depend on
 
 Here are the relevant resources for **4.15 CRON WORKERS**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### 1. SCHEDULED ACTIONS IN ODOO 18
+
+| | |
+|---|---|
+| **Source** | Cybrosys Technologies |
+| **Reinforces** | Scheduled work is server-side, not browser-driven |
+
+<div align="center">
+
+[![What are Scheduled Actions in Odoo 18](https://img.youtube.com/vi/9HMwSNPww_c/hqdefault.jpg)](https://www.youtube.com/watch?v=9HMwSNPww_c)
+
+**Watch on YouTube:** [What are Scheduled Actions in Odoo 18](https://www.youtube.com/watch?v=9HMwSNPww_c)
+
+</div>
+
+---
+
+### 2. CRON JOBS AND SCHEDULED ACTIONS
+
+| | |
+|---|---|
+| **Source** | Odooistic |
+
+<div align="center">
+
+[![Automate Tasks with Cron Jobs and Scheduled Actions](https://img.youtube.com/vi/HQ4XLCw-2tM/hqdefault.jpg)](https://www.youtube.com/watch?v=HQ4XLCw-2tM)
+
+**Watch on YouTube:** [Automate Tasks with Cron Jobs and Scheduled Actions](https://www.youtube.com/watch?v=HQ4XLCw-2tM)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Scheduled Actions (ir.cron)** | [Actions (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/actions.html) |
+| **Cron workers in deployment** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1591,7 +1980,14 @@ Not really. It provides a different persistent communication model. Ordinary scr
 
 Here are the relevant resources for **4.16 LONG-POLLING / WEBSOCKET CONCEPTS**:
 
-> Topic resources will be added next in [Resources.md](Resources.md) (official Odoo 19.0 documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **WebSocket / live chat worker / `/websocket/` routing** | [System configuration / Deploy (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/deploy.html) |
+| **CLI `--gevent-port`, `--workers`, `--no-http`** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
