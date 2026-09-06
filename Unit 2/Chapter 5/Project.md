@@ -261,7 +261,7 @@ It must contain at least:
 
 Conceptually:
 
-$$ \texttt{addons\_path} = \text{Standard} + \text{Custom} $$
+**`addons_path`** = Standard + Custom
 
 If custom addons are absent:
 

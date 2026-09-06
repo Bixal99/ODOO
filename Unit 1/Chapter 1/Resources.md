@@ -22,7 +22,6 @@ Primary sources support the key concepts in this chapter. Videos and repository 
 
 ## YOUTUBE
 
-> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
 ### 1. ENTERPRISE RESOURCE PLANNING (ERP) IN 15 MINUTES
 

@@ -32,7 +32,6 @@ Primary sources support the key concepts in this chapter. Videos and repository 
 
 ## YOUTUBE: OVERVIEW
 
-> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
 ### ODOO FULL BEGINNER COURSE 2026
 

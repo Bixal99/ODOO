@@ -168,94 +168,71 @@ Trace the request from the browser to PostgreSQL and back using at least these c
 
 ### EXERCISE 1: TRACE THE FAILURE
 
-A 500 error indicates that the server-side request failed, but many components could cause that.
+**Concept:** a 500 is a server-side failure signal, not a database diagnosis.
 
-Consider first:
+**Scenario evidence:** Rami's browser and other websites work, so the client machine can still browse. The failure appears when talking to Odoo.
 
-- HTTP layer,
-- application server,
-- Python code,
-- installed addons,
-- ORM,
-- PostgreSQL.
+**Reason:** Start with layers that participate in the request: HTTP layer, application server, Python / addon code, ORM, and only then PostgreSQL. A custom addon can raise a Python exception before meaningful SQL runs. Logs and stack traces decide the next step.
 
-Database failure is only one possibility.
-
-For example, a custom addon could raise a Python exception before any meaningful SQL operation occurs.
-
-Therefore troubleshoot from evidence rather than assuming:
+Do not assume:
 
 $$ 500 \Rightarrow \text{Database Problem} $$
 
+Full credit names at least three layers and explains why PostgreSQL is not automatic.
+
 ### EXERCISE 2: DATABASE DIRECT ACCESS
 
-At least four problems appear.
+**Concept:** the application server is the control point between client and data.
 
-1. **Database credentials**
+**Scenario evidence:** a junior proposes browser JavaScript → PostgreSQL directly "for speed."
 
-   The client would need database access information.
+**Reason:** at least four problems:
 
-   That exposes sensitive credentials.
+1. **Credentials exposure** — the client would need database access information.
+2. **Business-rule bypass** — confirm, validate, and workflow rules in Python would be skippable.
+3. **Security-rule bypass** — record rules and access rights become much harder to enforce.
+4. **Tight coupling** — frontend would know raw schema; schema changes would break clients.
 
-2. **Business-rule bypass**
-
-   Users could bypass Odoo's Python business logic.
-
-3. **Security-rule bypass**
-
-   Application authorization would become much harder to enforce safely.
-
-4. **Tight coupling**
-
-   Frontend code would need knowledge of raw database schema.
-
-   Any schema change could break the client.
-
-The correct architecture is:
+The correct path:
 
 $$ \text{Client} \rightarrow \text{Application Server} \rightarrow \text{Database} $$
 
+Speed without that path is not Odoo architecture; it is an unprotected database client.
+
 ### EXERCISE 3: MISSING ATTACHMENT
 
-Investigate the **filestore**, together with its database attachment metadata.
+**Concept:** structured records and binary files are different durable stores.
 
-Why?
+**Scenario evidence:** the Sales Order opens correctly, so PostgreSQL-backed fields are loading. Only the attached PDF fails.
 
-Because the structured Sales Order data is successfully loading from PostgreSQL.
+**Reason:** investigate the **filestore** together with attachment metadata. The partial success is the clue:
 
-The failure is specifically related to binary attachment content.
+$$ \text{Order Fields OK} + \text{PDF Missing} \Rightarrow \text{Filestore / Attachment Path} $$
 
-That strongly suggests investigating:
-
-$$ \text{Attachment Metadata} + \text{Filestore} $$
-
-rather than assuming the entire database is unavailable.
+not "the whole database is gone."
 
 ### EXERCISE 4: CUSTOM ADDON
 
-**Addon discovery**
+**Concept:** custom behavior becomes real through discovery → Python → registry → ORM.
 
-Odoo finds the module through configured addon paths.
+**Scenario evidence:** `nova_order_gate` extends Sales Order.
 
-**Python loading**
+**Reason:**
 
-The module's Python files define extensions/business logic.
-
-**Registry**
-
-The model extension becomes part of the final effective model available for that database.
-
-**ORM**
-
-Requests operating on Sales Order records use the resulting model through Odoo's ORM.
-
-Conceptually:
+- **Addon discovery:** Odoo finds the module because its parent directory is on `addons_path` and the module is installed.
+- **Python loading:** the module's Python defines the extension and business logic.
+- **Registry:** installed definitions compose the effective `sale.order` model for that database.
+- **ORM:** later record operations go through that composed model, not through a side channel.
 
 $$ \text{Addon} \rightarrow \text{Python Definitions} \rightarrow \text{Registry} \rightarrow \text{ORM Record Operations} $$
 
 ### EXERCISE 5: MULTI-DATABASE
 
-Not necessarily.
+**Concept:** registries are per database, shaped by installed modules.
+
+**Scenario evidence:** Database A has Sales + Inventory; Database B has Sales + Manufacturing + a custom addon.
+
+**Reason:** do not expect identical effective registries. Shared server process does not mean shared model universe. Installed modules decide which models and extensions exist.
 
 Database A:
 
@@ -265,63 +242,53 @@ Database B:
 
 $$ \{\text{Sales, Manufacturing, Custom Addon}\} $$
 
-Because installed modules affect available models and extensions, their effective model environments can differ.
-
 ### EXERCISE 6: BACKGROUND TASK
 
-A scheduled/cron job.
+**Concept:** scheduled work belongs to cron workers, not browser sessions.
 
-The task should not depend on:
+**Scenario evidence:** a report must run every night at 02:00.
 
-- a user being logged in,
-- a browser remaining open.
-
-Conceptually:
+**Reason:** a salesperson keeping a browser open is the wrong dependency. Browsers close, laptops sleep, sessions expire. Use scheduled / cron architecture:
 
 $$ 02{:}00 \rightarrow \text{Cron} \rightarrow \text{Server-side Job} $$
 
 ### EXERCISE 7: HIGH CONCURRENCY
 
-Multiple workers allow requests to be processed concurrently across multiple server processes and make better use of multi-core hardware.
+**Concept:** production concurrency needs multiple workers, not a single simple development path.
 
-One slow request does not necessarily prevent every other request from being processed.
+**Scenario evidence:** many users send requests at once.
 
-For production workloads:
+**Reason:** multi-process workers can handle requests concurrently across processes and make better use of multi-core hardware. One slow request need not freeze every other user. The simple development-server model is convenient for learning, not a production concurrency design.
 
 $$ \text{Request Queue} \rightarrow \{W_1, W_2, W_3, \dots\} $$
 
-is more scalable than treating the application as one serial execution path.
-
 ### EXERCISE 8: REPEATED LOGIN
 
-Investigate **sessions**.
+**Concept:** sessions preserve authenticated continuity between requests.
 
-A session should preserve continuity between authenticated requests.
+**Scenario evidence:** Rami authenticates successfully, then must log in again on every navigation.
 
-Possible problems could involve:
-
-- session storage,
-- cookies,
-- proxy configuration,
-- session invalidation.
-
-The key architectural layer is session management.
+**Reason:** investigate **session** management. Continuity can break in session storage, cookies, proxy configuration, or premature invalidation. The symptom is not "Odoo forgot Sales"; it is "identity is not surviving the next request."
 
 ### EXERCISE 9: LIVE NOTIFICATION
 
-Ordinary HTTP normally follows:
+**Concept:** live updates need a long-lived channel, not only one-off HTTP.
 
-$$ \text{Request} \rightarrow \text{Response} $$
+**Scenario evidence:** Lina receives a notification immediately when another user acts.
 
-The server cannot conveniently push a new event at an arbitrary later moment unless the client asks again.
-
-Long-lived mechanisms such as WebSockets allow:
+**Reason:** ordinary HTTP is request → response. After the response, the server has no convenient open path to push a later event unless the client asks again. Long-lived mechanisms such as WebSockets support:
 
 $$ \text{Client} \leftrightarrow \text{Server} $$
 
-communication over a persistent connection.
+over a persistent connection. That is a different communication model, not "faster HTTP."
 
 ### EXERCISE 10: FULL REQUEST TRACE
+
+**Concept:** one UI click travels the full architecture path.
+
+**Scenario evidence:** user opens **Customers → Meridian Supplies**.
+
+**Reason:**
 
 <div align="center">
 
@@ -332,13 +299,15 @@ flowchart TB
 
 </div>
 
-1. **Browser:** the user clicks the contact.
-2. **Odoo Web Client:** JavaScript determines that the contact record needs to be loaded.
-3. **HTTP/RPC request:** the client sends the request.
-4. **HTTP layer:** Odoo interprets request/session/database context.
-5. **Worker:** an available worker processes it.
-6. **Python runtime:** server-side code executes.
-7. **Registry:** the appropriate loaded model definition is available.
+1. **Browser:** user clicks the contact.
+2. **Odoo Web Client:** JavaScript decides the contact record must load.
+3. **HTTP / RPC:** the client sends the request.
+4. **HTTP layer:** Odoo binds session / database / user context.
+5. **Worker:** an available worker handles the request.
+6. **Python runtime:** server code executes.
+7. **Registry:** the effective contact model for this database is available.
 8. **ORM:** the record is requested through the model layer.
 9. **PostgreSQL:** stored contact data is read.
-10. **Response / Web Client:** the result returns and the form is rendered.
+10. **Response / Web Client:** data returns and the form renders.
+
+A complete answer uses those layers in order and does not jump from browser click straight to SQL.

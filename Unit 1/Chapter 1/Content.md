@@ -94,14 +94,10 @@ Odoo is one implementation of this idea. It is not the only ERP in the world, bu
 Before we discuss Odoo itself in Chapter 2, we need to understand what exactly it is integrating. That means learning how businesses actually operate, the processes, the departments, the data, and the workflows that any ERP platform must represent.
 
 
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **FIRST: WHAT DOES ERP MEAN?**:
 
-> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
 ### 1. ENTERPRISE RESOURCE PLANNING (ERP) IN 15 MINUTES
 
@@ -449,10 +445,6 @@ So at this point, we can say we have the lens every Odoo developer needs before 
 With this process model in hand, the next layer is understanding who performs the work inside a company, and that means looking at **departments**.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **1.1 BUSINESS PROCESSES**:
@@ -674,10 +666,6 @@ So now we can see past the org chart. Businesses organize work into **department
 Departments give us the org chart. The next question is what happens when a single business outcome requires several of them to cooperate on one connected path, and that is where **cross-department workflows** enter the picture.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **1.2 DEPARTMENTS**:
@@ -769,10 +757,6 @@ ERP reduces this fragmentation by connecting the records involved in the workflo
 Putting it together, a **cross-department workflow** is still one process even when many departments participate. **Order-to-Cash** runs from selling through to customer payment; **Procure-to-Pay** runs from buying through to supplier payment. When each team uses its own tool, managers rebuild the truth by hand. ERP connects the records that belong to the same workflow.
 
 Processes and workflows generate data constantly, but not all data is the same kind. Some records describe events; others describe the stable entities those events revolve around. Separating those two categories is one of the most important distinctions in ERP.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -988,10 +972,6 @@ With that distinction clear, we can say **master data** is the stable "who and w
 Master data tells you who and what exists. **Transactions** tell you what actually happened, and over time, those events become the company's operational history.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **1.4 MASTER DATA**:
@@ -1069,10 +1049,6 @@ So a **transaction** is a recorded business event that usually points back to ma
 When dozens of departments create thousands of transactions referencing the same customers and products, the company faces a new challenge: which version of the truth is correct?
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **1.5 TRANSACTIONS**:
@@ -1144,9 +1120,6 @@ Single source of truth improves consistency, but only when the source is managed
 We can now say a **single source of truth** means the company knows which record is authoritative for a given fact: one **shared customer record** across applications instead of scattered copies. That only works when people respect validation, permissions, ownership, and data quality, because integration spreads good data fast and bad data just as fast.
 
 With processes, departments, master data, transactions, and a single source of truth defined, we can now compare ERP to systems you may already have heard of, starting with **CRM**.
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1227,8 +1200,6 @@ CRM is therefore an important part of enterprise operations, but not the entire 
 In short, **CRM** lives at the front of the revenue story (leads, pipelines, opportunities), while **ERP** runs the whole operation once a deal becomes real work: stock, purchasing, delivery, invoicing, manufacturing. CRM asks which deals might close; ERP asks whether the company can actually fulfill them. In Odoo you will see both, with CRM sitting inside the broader business system rather than replacing it.
 
 CRM is often one application among many. Companies also run standalone tools for accounting, warehouse, HR, and purchasing, and that creates a different kind of challenge.
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1352,8 +1323,6 @@ $$ ERP = \text{Literally Everything} $$
 Standalone tools can each be excellent, yet they fracture the moment a process crosses a boundary. Data hops through exports, APIs, or manual re-entry, and every handoff is a chance to lose the plot. ERP aims for a **Connected Enterprise System** where applications share related information, but real life is usually **ERP + External Systems + Integrations**, not one system doing literally everything.
 
 Understanding what ERP is, and what it is not, prepares you for the practical skill that turns business knowledge into implementable design: **business process mapping**.
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1547,10 +1516,6 @@ That is a much stronger understanding than simply saying:
 > "ERP is business software."
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **1.9 BUSINESS PROCESS MAPPING**:
@@ -1708,10 +1673,6 @@ flowchart TD
 - Management could theoretically inspect the process from beginning to end.
 
 That is the integrated enterprise concept at the heart of ERP.
-
-
-
-
 
 
 ### RELEVANT RESOURCES

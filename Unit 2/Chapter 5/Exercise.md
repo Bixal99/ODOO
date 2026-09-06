@@ -113,9 +113,13 @@ Describe a corrected development environment for this developer.
 
 ### QUESTION 1: GLOBAL PACKAGES
 
-Global installation can cause package conflicts between Odoo, the operating system, and other Python projects.
+**Concept:** dependency isolation.
 
-A virtual environment isolates Odoo's packages.
+**Scenario evidence:** packages were installed globally; Odoo "doesn't work," and other Python projects or the OS may already rely on different package versions.
+
+**Reason:** Global installation can cause package conflicts between Odoo, the operating system, and other Python projects. Odoo needs a controlled set of libraries. The OS may need a different set. Another project may need a third set. Mixing them in one global Python turns every upgrade into a possible breakage.
+
+A virtual environment isolates Odoo's packages:
 
 $$ \text{Odoo Packages} \rightarrow \text{Dedicated Environment} $$
 
@@ -123,9 +127,15 @@ is safer than:
 
 $$ \text{Everything} \rightarrow \text{Global Python} $$
 
+A full-credit answer names both the conflict risk and the isolation remedy, not only "use venv."
+
 ### QUESTION 2: BEFORE DEPENDENCIES
 
-A Python virtual environment.
+**Concept:** create the container before filling it.
+
+**Scenario evidence:** they installed packages globally, which means they skipped the isolation step.
+
+**Reason:** Create and activate a Python virtual environment before installing Odoo dependencies.
 
 Example:
 
@@ -133,40 +143,60 @@ Example:
 python3 -m venv .venv
 ```
 
-Then activate it before:
+Then activate it, confirm the interpreter path points into `.venv`, and only then run:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+If you install first and create `.venv` later, the packages are still in the wrong place. Order matters.
+
 ### QUESTION 3: POSTGRESQL INSTALLED
 
-We still need to know:
+**Concept:** installation ≠ usable connectivity.
 
-- is the server running?
-- what version is installed?
-- which role Odoo will use?
+**Scenario evidence:** PostgreSQL is installed, but nobody knows which account Odoo uses.
+
+**Reason:** "Installed" answers only one question. For Odoo you still need evidence for:
+
+- is the server process running?
+- what version is installed (Odoo 19 expects PostgreSQL 13+)?
+- which role will Odoo use?
 - can that role authenticate?
 - can it create or access the required database?
-- how will Odoo connect to it?
+- which host/port/auth method will Odoo use?
 
-Installation alone does not guarantee usable connectivity.
+Without those answers, Rami can spend hours debugging Odoo when the real gap is a stopped service or an unknown role.
 
 ### QUESTION 4: GIT VERSUS ZIP
 
-Git clone gives source files, branch information, commit history, ability to pull updates, ability to compare changes, and a proper version-control workflow.
+**Concept:** reproducible source control vs a static snapshot.
 
-A ZIP gives mostly a snapshot of files.
+**Scenario evidence:** they downloaded Odoo as a ZIP.
+
+**Reason:** Git clone gives source files plus branch information, commit history, update ability, comparison tools, and a normal development workflow. For Odoo 19 study you can clone branch `19.0` deliberately.
+
+A ZIP mostly gives a file snapshot. You can open it, but you lose the easy path to "which branch is this?" and "how do I pull a fix?"
+
+ZIP can be acceptable for a quick look. It is a weak foundation for ongoing development.
 
 ### QUESTION 5: DESKTOP MODULE
 
-Because Odoo only searches directories listed in `addons_path`.
+**Concept:** discovery is path-based, not machine-wide search.
 
-An arbitrary folder elsewhere on the machine is invisible to Odoo unless its parent addon directory is configured.
+**Scenario evidence:** custom module lives in `Desktop/my_module`; Odoo cannot find it.
+
+**Reason:** Odoo only searches directories listed in `addons_path`. An arbitrary folder on the Desktop is invisible unless its parent addon directory is configured into that path.
+
+The module can be perfect Python and still never appear in Apps. Presence on disk is not the same as discovery.
 
 ### QUESTION 6: MODULE DISCOVERY CONFIG
 
-`addons_path`.
+**Concept:** `addons_path` is the discovery map.
+
+**Scenario evidence:** module cannot be found despite existing on disk.
+
+**Reason:** Check `addons_path` in the configuration (or equivalent CLI flags).
 
 Example:
 
@@ -174,66 +204,95 @@ Example:
 addons_path = /path/to/odoo/addons,/path/to/custom_addons
 ```
 
-The custom module should live under one of those addon directories.
+Then place the custom module under one of those directories, for example:
+
+```text
+custom_addons/nova_order_gate/
+```
+
+not:
+
+```text
+Desktop/my_module/
+```
+
+unless Desktop itself is intentionally configured as an addon root, which is a poor professional habit.
 
 ### QUESTION 7: IDE INTERPRETER
 
-If the terminal uses `.venv` but VS Code uses system Python, then the editor may report missing imports, use the wrong debugger environment, and load different dependencies.
+**Concept:** one project, one interpreter.
 
-Both should normally point to the same project virtual environment.
+**Scenario evidence:** VS Code uses a different Python interpreter than the terminal.
+
+**Reason:** If the terminal uses `.venv` but VS Code uses system Python, the editor may report missing imports, launch the wrong debugger environment, and resolve different dependency versions.
+
+Then the developer hears:
+
+> But it runs in the terminal.
+
+and also:
+
+> But the IDE says the package is missing.
+
+Both can be true. Align:
+
+$$ \text{IDE Interpreter} = \text{Terminal Virtual Environment Interpreter} $$
 
 ### QUESTION 8: PRODUCTION DATABASE NAME
 
-It creates ambiguity.
+**Concept:** naming is a safety control.
 
-A developer may accidentally think they are working with a real production database, or accidentally use commands intended for development against the wrong environment.
+**Scenario evidence:** experiments run against a copy named `production`.
 
-Better:
+**Reason:** The name creates ambiguity. A tired developer may treat it as real production, run destructive commands, or apply experimental modules without the mental brake that `odoo19_dev` provides.
+
+Better names communicate purpose:
 
 ```text
 odoo19_dev
-```
-
-or:
-
-```text
 sales_training
 ```
 
+Even a restored production dump used for testing should be renamed to something that says "safe to break."
+
 ### QUESTION 9: PASSWORD IN GIT
 
-Git history is persistent.
+**Concept:** Git history persists secrets.
 
-Even if the password is later removed from the file, it may remain in previous commits.
+**Scenario evidence:** `db_password` was committed.
 
-Secrets should be managed separately and not exposed in a public repository.
+**Reason:** Git history is durable. Removing the password from the current file does not erase earlier commits. Public or shared repositories can leak credentials long after the "fix."
+
+Secrets belong outside public history: local ignored config, secret managers, or environment-specific private files. Treat a leaked password as compromised until rotated.
 
 ### QUESTION 10: CORRECTED ENVIRONMENT
 
-A good structure is:
+**Concept:** reproducible, isolated, inspectable, safe workspace.
+
+**Scenario evidence:** every failure above maps to a missing environment piece.
+
+**Reason:** A corrected layout could be:
 
 ```text
 odoo-development/
-├── odoo/
-├── custom_addons/
-├── .venv/
-└── odoo.conf
+├── odoo/                 # Git clone of branch 19.0
+├── custom_addons/        # team modules such as nova_order_gate
+├── .venv/                # isolated Python
+├── config/odoo.conf      # repeatable settings, no public secrets
+└── logs/
 ```
 
-Then:
+Then, in order:
 
-1. Use supported Python for Odoo 19.
-2. Create `.venv`.
-3. Activate it.
-4. Clone Odoo branch `19.0`.
-5. Install `requirements.txt`.
-6. Install and start supported PostgreSQL.
-7. Configure an Odoo DB role.
-8. Add both standard and custom directories to `addons_path`.
-9. Create a clearly named development database.
-10. Configure VS Code or PyCharm to use `.venv`.
-11. Keep secrets out of Git.
-12. Enable Developer Mode as needed.
-13. Configure logging and debugger.
+1. Use supported Python for Odoo 19 (3.10+).
+2. Create and activate `.venv`; verify interpreter path.
+3. Clone Odoo branch `19.0` with Git.
+4. Install `requirements.txt` into the venv.
+5. Install and start supported PostgreSQL (13+); create role `odoo_dev`.
+6. Put official and custom directories in `addons_path`.
+7. Create a clearly named development database such as `odoo19_dev`.
+8. Point VS Code or PyCharm at `.venv`.
+9. Keep secrets out of Git.
+10. Enable Developer Mode when inspecting; use logging and debugger when diagnosing.
 
-That gives a reproducible development environment.
+That environment does not merely "open Odoo." It makes failures inspectable and experiments recoverable.

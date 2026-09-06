@@ -182,15 +182,10 @@ That interconnected data model is what makes Odoo much more interesting than sim
 Odoo is therefore not merely a bundle of screens. It is an integrated platform where business records link across applications, and that connected data model is what turns separate apps into a true ERP.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.1 WHAT ODOO IS**:
 
-> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
 ### 1. ODOO BEGINNER'S GUIDE
 
@@ -346,10 +341,6 @@ A professional Odoo engineer doesn't automatically build everything from scratch
 The Odoo ecosystem matters because a capable developer knows how to search the existing software, partner network, and module marketplace before committing to custom code.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.2 ODOO ECOSYSTEM**:
@@ -471,9 +462,6 @@ $$ \text{Enterprise} = \text{Community foundation} + \text{Additional proprietar
 Community Edition is the real open-source foundation of Odoo: inspectable, deployable, and excellent for learning, but not identical to Enterprise in features or licensing.
 
 
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.3 COMMUNITY EDITION**:
@@ -571,9 +559,6 @@ The correct question is:
 > Which edition fits the organization's functional, technical, licensing, and operational requirements?
 
 Enterprise builds on Community rather than replacing it, and the right edition choice depends on functional needs, licensing constraints, and operational context, not on assuming that commercial always means better.
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -690,10 +675,6 @@ Odoo Online is generally not the appropriate environment for that because non-st
 This leads us directly to Odoo.sh.
 
 Odoo Online simplifies operations for standard usage, but its restriction on arbitrary custom modules is the dividing line between managed convenience and full developer freedom.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -837,10 +818,6 @@ Its role is fundamentally more development-oriented.
 Odoo.sh is the managed path for teams that need Git-based workflows, environment separation, and custom Python addons without taking on full infrastructure ownership.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.6 ODOO.SH**:
@@ -982,10 +959,6 @@ We will reach these subjects later in the roadmap.
 Self-hosted Odoo offers the most control and the most operational burden, and the three hosting options form a spectrum from maximum convenience to maximum freedom.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.7 ON-PREMISE ODOO**:
@@ -1098,10 +1071,6 @@ and:
 - having an integrated ERP.
 
 Odoo apps map business domains to software, but their value comes from integration: one confirmed sale can ripple through Inventory, Purchase, and Accounting without re-entering the same facts.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1236,10 +1205,6 @@ Odoo functionality is constructed as a network of modules, not as one indivisibl
 Modules and addons are the building blocks behind every app, installed selectively and linked by dependencies rather than shipped as one monolithic program.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.9 MODULES / ADDONS**:
@@ -1363,10 +1328,6 @@ Odoo can expose different interfaces and privileges depending on who the person 
 A user is an access identity, not the same thing as an employee record, and effective Odoo design assigns the minimum access each role actually needs.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.10 USERS**:
@@ -1474,10 +1435,6 @@ Some must be company-specific.
 This brings us directly to Section 2.12.
 
 Odoo models legal business entities explicitly, and multi-company setups introduce real design questions about what should be shared versus what must remain company-specific.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1616,9 +1573,6 @@ This will become technically important much later when we study company-dependen
 Odoo separates shared master data from company-specific transactions, and even shared records can carry company-dependent properties where the business requires it.
 
 
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.12 SHARED BUSINESS RECORDS**:
@@ -1675,7 +1629,7 @@ Suppose the standard configuration doesn't satisfy the exact workflow.
 
 We may create:
 
-$$ \texttt{bilal\_sale\_approval} $$
+`bilal_sale_approval`
 
 as a custom module.
 
@@ -1805,10 +1759,6 @@ need adjusting.
 Always understand what already exists before replacing it.
 
 Prefer the simplest maintainable option that satisfies the requirement. Investigate standard functionality and configuration, and consider Studio when it is available and suitable. A team without Studio or with an explicit code-maintenance requirement can reasonably choose an extension without first building a Studio prototype.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1972,10 +1922,6 @@ $$ \text{Custom Code Control} \gg \text{Studio Convenience} $$
 Studio is a legitimate customization layer for simpler metadata and UI changes, but complex integrations and business logic still belong in custom code.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **2.14 ODOO STUDIO CONCEPT**:
@@ -2063,9 +2009,6 @@ The system must run somewhere:
 - Odoo Online
 - Odoo.sh
 - Self-Hosted
-
-
-
 
 
 ### RELEVANT RESOURCES

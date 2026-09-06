@@ -85,16 +85,10 @@ flowchart LR
 That integration is the main idea of this entire chapter. Each application has its own responsibility, but the real power of ERP appears when those responsibilities connect into complete business processes.
 
 
-
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **BEFORE WE START: THE MOST IMPORTANT MENTAL MODEL**:
 
-> **How previews work on GitHub:** Click a thumbnail to open the video on YouTube. GitHub Markdown cannot embed an inline player, but thumbnails give you a visual preview without leaving the page layout.
 
 ### ODOO FULL BEGINNER COURSE 2026
 
@@ -224,10 +218,6 @@ A beginner may create duplicate contacts:
 Then different departments use different versions. That breaks the single-source-of-truth principle. Good ERP implementation requires controlled master data: one canonical record per real-world party, with clear naming and deduplication rules.
 
 Contacts is where that discipline begins. Every duplicate contact you allow today becomes a reconciliation problem tomorrow when Sales, Warehouse, and Finance each work from a slightly different version of the same customer.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -389,10 +379,6 @@ ABC Trading may be one contact but have **Opportunity 1**, **Opportunity 2**, an
 CRM therefore sits upstream of Sales in many organizations. It does not replace Sales, and it does not record confirmed commercial terms. It gives the sales team a structured way to pursue business before any quotation exists. When you later see CRM and Sales as separate Odoo apps, remember that separation reflects a real business distinction between possibility and commitment.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.2 CRM**:
@@ -537,10 +523,6 @@ That is false in many processes. The Sales Order may be confirmed days or weeks 
 Sales creates demand and commercial obligation. Other domains fulfill that obligation on their own timelines.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.3 SALES**:
@@ -657,10 +639,6 @@ A vendor can confirm an order today but deliver next week. ERP systems therefore
 - physical receipt.
 
 Purchase tells the organization what it agreed to buy. Inventory tells the organization what actually arrived and where it sits.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -839,10 +817,6 @@ Do not assume Sales creates inventory.
 These are different concepts. Sales says what must be fulfilled. Inventory records what actually moved.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.5 INVENTORY**:
@@ -963,10 +937,6 @@ ERP integration can link operational and financial records. That creates **trace
 Accounting is not an island. It is the financial mirror of operational reality.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.6 ACCOUNTING / INVOICING**:
@@ -1065,10 +1035,6 @@ His system user may connect to:
 Thus one real human participates in several ERP dimensions. HR knows Ahmed as an employee; Sales knows him as a salesperson; the system knows him as a user with specific access rights.
 
 Employees / HR reminds us that ERP is not only about products and invoices. People are business resources with organizational structure, approvals, time, expenses, and assignments. Any complete Odoo mental model must include humans alongside customers, vendors, and stock.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1171,10 +1137,6 @@ flowchart LR
 This is another cross-department workflow. The commercial agreement (Sales) becomes operational work (Projects), which may later connect to time tracking and invoicing.
 
 Projects matter whenever fulfillment is work performed over time rather than a product shipped from stock. For consulting, implementation, construction, and internal initiatives, the project record is how the organization coordinates who does what, by when, and toward which deliverable.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1288,10 +1250,6 @@ flowchart LR
 is for product businesses. The fulfillment path differs, but the integration principle is the same: one commercial commitment triggers work in other domains, which eventually produces a financial record.
 
 Timesheets turn invisible labor into measurable business data. For product companies they support costing and utilization. For service companies they can be the primary evidence that work was performed and is ready to bill. Either way, time is a resource ERP must track when projects and services are part of the business model.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1440,10 +1398,6 @@ We don't need those details yet, but remember that manufacturing is its own oper
 Manufacturing adds a production layer between demand and fulfillment. Sales may create the need, but Manufacturing determines how components become finished goods and Inventory records every physical change along the way. Resale businesses can ignore this app; make-to-stock and make-to-order businesses cannot.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.10 MANUFACTURING**:
@@ -1574,10 +1528,6 @@ So equipment health is not isolated from business performance. A maintenance del
 Maintenance is easy to overlook in ERP training because it does not appear in every company's daily workflow. When production equipment matters, however, downtime becomes a business problem with the same seriousness as stock shortage or late payment. Maintenance connects operational reliability to customer promise.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.11 MAINTENANCE**:
@@ -1660,10 +1610,6 @@ Without integration, someone might manually copy website form submissions into t
 - duplication.
 
 Integrated systems reduce manual transfers. What the customer submits online becomes a business record immediately, ready for follow-up.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1768,10 +1714,6 @@ In ERP terms, eCommerce is a **sales channel**. It affects:
 - delivery.
 
 Design matters for customer experience, but the ERP significance is operational: online orders become real business transactions.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -1891,10 +1833,6 @@ This stock reduction matters to warehouse and future sales availability. POS is 
 Point of Sale proves that not every sales channel follows the quotation-to-delivery cycle. Retail needs speed and immediacy, yet the underlying ERP principle remains: a sale creates stock and financial consequences inside one connected system rather than in a standalone cash register.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.14 POINT OF SALE**:
@@ -2001,10 +1939,6 @@ the business may already have those records. Helpdesk connects post-sale problem
 This gives a broader **customer lifecycle**. ERP does not stop caring about the customer after payment. Support is part of the same connected story.
 
 Helpdesk closes the loop on customer experience. CRM and Sales win the business, Inventory and Accounting fulfill and settle it, and Helpdesk handles what happens when something goes wrong afterward. Integrated support is faster because the ticket can reference the same customer, order, and delivery records the rest of the company already maintains.
-
-
-
-
 
 
 ### RELEVANT RESOURCES
@@ -2380,10 +2314,6 @@ Instead of memorizing "sale.order is some Python class," you will understand: it
 That's exactly why Unit I came before coding. Business meaning first; technical names second.
 
 
-
-
-
-
 ### RELEVANT RESOURCES
 
 Here are the relevant resources for **3.16 END-TO-END DOCUMENT FLOW**:
@@ -2567,9 +2497,6 @@ Attendance answers: "Was the employee present?" Timesheets answer: "What work di
 No. ERP processes deliberately cross application boundaries.
 
 Lead-to-Cash touches CRM, Sales, Purchase, Inventory, and Accounting. Expecting Sales to "handle everything" ignores how real businesses divide responsibility. Good ERP design respects domain boundaries while maintaining record linkage across them.
-
-
-
 
 
 ### RELEVANT RESOURCES
