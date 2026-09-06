@@ -4,7 +4,7 @@ Answer before scrolling to the solution. For each response, give the concept, sc
 
 Try answering these without looking back at Content.md first. Answer in your own words, then compare with the complete solution at the bottom of this file.
 
-For official architecture references when added, see [Resources.md](Resources.md).
+For official architecture docs, verified videos, GitHub repos, and practice environments, see [Resources.md](Resources.md).
 
 ---
 

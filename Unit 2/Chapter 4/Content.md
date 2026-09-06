@@ -28,9 +28,10 @@ Chapter 4 stays conceptual: you learn the layers and their evidence before insta
 - [**4.14** Workers](#414-workers)
 - [**4.15** Cron Workers](#415-cron-workers)
 - [**4.16** Long-Polling / WebSocket Concepts](#416-long-polling--websocket-concepts)
-- [Putting Chapter 4 Together](#putting-chapter-4-together)
+- [Bringing All of Chapter 4 Together](#bringing-all-of-chapter-4-together)
 - [Full Architecture Model](#full-architecture-model)
-- [Common Chapter 4 Mistakes](#common-chapter-4-mistakes)
+- [Common Beginner Mistakes in Chapter 4](#common-beginner-mistakes-in-chapter-4)
+- [Chapter 4 Mastery Check](#chapter-4-mastery-check)
 - [Chapter 4 Summary](#chapter-4-summary)
 - [**Free Learning Resources**](Resources.md)
 
@@ -1991,81 +1992,65 @@ Full chapter index: [Resources.md](Resources.md)
 
 ---
 
-## PUTTING CHAPTER 4 TOGETHER
+## BRINGING ALL OF CHAPTER 4 TOGETHER
 
-We can now trace a real user request.
+We can now build a stronger picture of how Odoo actually runs.
 
-Rami opens Sales Order **SO0052**.
+Unit I explained business meaning and application flow. Chapter 4 answers a different question: when Rami opens Sales Order **SO0052**, what software path makes that screen appear?
 
-### STEP 1: BROWSER
+### ONE COMPLETE REQUEST TRACE
 
-Chrome is running.
+#### STEP 1: BROWSER
 
-### STEP 2: ODOO WEB CLIENT
+Chrome (or another browser) is running. It hosts the client environment, but it does not own business rules or durable data.
 
-The Odoo JavaScript application detects that Rami wants SO0052.
+#### STEP 2: ODOO WEB CLIENT
 
-### STEP 3: HTTP/RPC
+The Odoo JavaScript application detects that Rami wants SO0052 and prepares the client-side action.
 
-The client sends a request.
+#### STEP 3: HTTP / RPC
 
-$$ \text{Browser} \rightarrow \text{HTTP} \rightarrow \text{Odoo} $$
+The client sends a request:
 
-### STEP 4: HTTP LAYER
+$$ \text{Browser} \rightarrow \text{HTTP / RPC} \rightarrow \text{Odoo Server} $$
 
-Odoo determines:
+#### STEP 4: HTTP LAYER
 
-- route/request type,
-- session,
-- database,
-- user context.
+Odoo determines route or request type, session, database, and user context.
 
-### STEP 5: WORKER
+#### STEP 5: WORKER
 
-An available server worker processes the request.
+An available server worker processes the request. The worker is not "Rami's permanent process"; it handles work that is currently assigned to it.
 
-### STEP 6: PYTHON RUNTIME
+#### STEP 6: PYTHON RUNTIME
 
-Odoo server code executes.
+Odoo server code executes in Python.
 
-### STEP 7: REGISTRY
+#### STEP 7: REGISTRY AND ADDONS
 
-The server uses the model definitions loaded for that database.
+The server uses the model definitions loaded for that database. It knows what `sale.order` means after installed modules and extensions have been combined.
 
-It knows what `sale.order` means after installed modules/extensions have been combined.
+#### STEP 8: ORM
 
-### STEP 8: ORM
+The Python layer asks to retrieve Sales Order 52. The ORM handles model-level access to persistent data.
 
-The Python layer requests:
+#### STEP 9: POSTGRESQL
 
-Retrieve Sales Order 52.
+The required structured data is retrieved from PostgreSQL.
 
-The ORM handles model-level access to persistent data.
+#### STEP 10: FILESTORE IF NECESSARY
 
-### STEP 9: POSTGRESQL
+If the order references attachments such as a customer PO PDF or scanned document, the binary content may come from the filestore while metadata remains in the database.
 
-The required structured data is retrieved.
+#### STEP 11: RESPONSE
 
-### STEP 10: FILESTORE IF NECESSARY
+The server sends data back over HTTP.
 
-If the order references attachments such as:
+#### STEP 12: WEB CLIENT RENDER
 
-- customer PO PDF,
-- scanned document,
+The JavaScript application renders the form. Rami sees **SO0052**.
 
-the actual binary file may come from Odoo's file storage system.
-
-### STEP 11: RESPONSE
-
-The server sends data back.
-
-### STEP 12: WEB CLIENT
-
-The JavaScript application renders the form.
-
-Rami sees:
-
-**SO0052**
+That is one interactive path. Around it, Odoo also uses sessions for continuity, cron workers for scheduled jobs, and WebSocket or long-lived event channels for live updates. Those supporting pieces are not optional trivia; they explain why production behavior differs from a single-process mental model.
 
 ---
 
@@ -2089,93 +2074,112 @@ Supporting pieces around that main path:
 | **Cron workers** | Scheduled background work |
 | **WebSocket / event worker** | Long-lived live communication |
 
+The chapter-level map is:
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    PRES["Presentation<br/>Browser + Web Client"] --> LOGIC["Logic<br/>HTTP + Workers + Python + ORM"] --> DATA["Data<br/>PostgreSQL + Filestore"]
+```
+
+</div>
+
 ---
 
-## COMMON CHAPTER 4 MISTAKES
+## COMMON BEGINNER MISTAKES IN CHAPTER 4
 
 Each topic above already includes a **Common Mistake** for that layer. This section gathers the chapter-level mistakes in one place for review.
 
+### MISTAKE 1: THINKING THE BROWSER TALKS DIRECTLY TO POSTGRESQL
 
-### MISTAKE 1
+**Wrong:** Chrome connects straight to the database.
 
-"The browser talks directly to PostgreSQL."
-
-Wrong.
+**Correct:**
 
 $$ \text{Browser} \rightarrow \text{Odoo Server} \rightarrow \text{PostgreSQL} $$
 
-### MISTAKE 2
+The browser presents. The server decides. PostgreSQL persists structured business data.
 
-"The web client and browser are the same thing."
+### MISTAKE 2: TREATING THE WEB CLIENT AND THE BROWSER AS THE SAME THING
 
-No.
+**Wrong:** "Browser" and "Odoo web client" are interchangeable labels.
 
-The browser hosts/runs the Odoo web client.
+**Correct:** The browser is the host application. The Odoo web client is the JavaScript application running inside it.
 
-### MISTAKE 3
+### MISTAKE 3: THINKING THE ORM IS THE DATABASE
 
-"ORM is the database."
+**Wrong:** ORM equals PostgreSQL.
 
-No.
+**Correct:** The ORM is an abstraction layer used by application code to interact with persistent records. PostgreSQL remains the relational database.
 
-The ORM is an abstraction layer used by application code to interact with persistent records.
+### MISTAKE 4: ASSUMING EVERYTHING IS STORED IN POSTGRESQL
 
-### MISTAKE 4
+**Wrong:** One database dump preserves the entire system state.
 
-"Everything is stored in PostgreSQL."
+**Correct:** Structured records live in PostgreSQL. Attachments and binary content often involve the filestore. Backup thinking must include both.
 
-Not necessarily.
+### MISTAKE 5: THINKING AN ADDON IS ONLY A VISUAL PLUGIN
 
-Attachments/binary files can involve the filestore.
+**Wrong:** Addons only change screens.
 
-### MISTAKE 5
+**Correct:** An addon can contribute Python, models, views, data, security, assets, controllers, and business behavior.
 
-"An addon is only a visual plugin."
+### MISTAKE 6: THINKING THE REGISTRY IS JUST ANOTHER DATABASE TABLE
 
-No.
+**Wrong:** Registry equals one PostgreSQL table you can open and edit casually.
 
-An addon can contribute:
+**Correct:** The registry is part of the runtime model-loading architecture: the effective model universe built from installed modules.
 
-- Python,
-- models,
-- views,
-- data,
-- security,
-- assets,
-- controllers,
-- business behavior.
+### MISTAKE 7: THINKING A WORKER BELONGS TO ONE USER
 
-### MISTAKE 6
+**Wrong:** Worker 3 is permanently "Rami's worker."
 
-"The registry is a table."
+**Correct:** Workers process requests. The same worker can handle different users over time.
 
-No.
+### MISTAKE 8: ASSUMING CRON JOBS ARE TRIGGERED BY BROWSER CLICKS
 
-It is part of the runtime model-loading architecture.
+**Wrong:** Background jobs only run when somebody presses a button.
 
-### MISTAKE 7
+**Correct:** Cron work is scheduled or background server work. It may run with no interactive browser session attached.
 
-"A worker belongs to one user."
+### MISTAKE 9: THINKING WEBSOCKET IS JUST FASTER HTTP
 
-No.
+**Wrong:** WebSocket is merely an optimized request/response shortcut.
 
-Workers process requests.
+**Correct:** WebSocket-style channels support long-lived communication. That is a different interaction model from ordinary short request/response HTTP.
 
-### MISTAKE 8
+---
 
-"Cron jobs are triggered by browser clicks."
+## CHAPTER 4 MASTERY CHECK
 
-Not necessarily.
+Without rereading, explain what happens when Rami opens **SO0052**.
 
-They are scheduled/background work.
+Name, in order:
 
-### MISTAKE 9
+1. the presentation pieces involved,
+2. the request transport,
+3. the server-side processing pieces,
+4. where structured data is retrieved,
+5. where an attachment PDF would likely live if the order has one.
 
-"WebSocket is just faster HTTP."
+Then answer these traps:
 
-Not really.
+- If the Network tab shows many calls, does that prove the browser queried PostgreSQL directly?
+- If a cron job posts a reminder overnight, did a browser click start it?
+- If a database dump restores records but attachments are missing, which architecture piece was incomplete?
 
-It provides a different persistent communication model.
+A complete answer separates presentation from logic from data, keeps the ORM distinct from PostgreSQL, and treats filestore, sessions, workers, cron, and WebSocket as supporting runtime evidence rather than optional extras. If you only list app names from Unit I, return to Sections 4.1, 4.7, 4.9, and the request trace above.
+
+You should now be able to explain why this statement is incomplete:
+
+> "Odoo is a website that saves data in a database."
+
+A stronger explanation would be:
+
+Odoo is a multitier application. The browser and web client present the interface, the Python application server applies business logic through workers, HTTP handling, the registry, and the ORM, and durable state is kept in PostgreSQL plus filestore-backed binaries, with sessions, cron, and live channels supporting continuity and background work.
+
+If that explanation makes sense rather than merely sounding technical, then the architecture foundation is working.
 
 ---
 
@@ -2189,32 +2193,38 @@ to:
 
 $$ \text{How Odoo operates internally} $$
 
-The fundamental architecture is:
+We began with the three-tier map:
 
-$$ \text{Presentation} \rightarrow \text{Business Logic} \rightarrow \text{Data} $$
+<div align="center">
 
-In Odoo this becomes approximately:
+```mermaid
+flowchart LR
+    P["Presentation<br/>HTML / JS / CSS"] --> L["Logic<br/>Python"] --> D["Data<br/>PostgreSQL"]
+```
 
-$$ \text{Browser/Web Client} \rightarrow \text{Python Odoo Server} \rightarrow \text{PostgreSQL} $$
+</div>
 
-But a realistic Odoo system also depends on:
+In Odoo that becomes approximately:
 
-- HTTP,
-- sessions,
-- ORM,
-- addons,
-- registry,
-- filestore,
-- HTTP workers,
-- cron workers,
-- WebSocket/event handling.
+$$ \text{Browser / Web Client} \rightarrow \text{Python Odoo Server} \rightarrow \text{PostgreSQL} $$
+
+We then filled in the realistic request path: HTTP and the HTTP layer, sessions, workers, the Python runtime, addons, the registry, the ORM, PostgreSQL, and the filestore. We also separated interactive request workers from cron workers and from long-lived WebSocket or event handling.
 
 The single most important mental model is:
 
 $$ \text{User Action} \rightarrow \text{Request} \rightarrow \text{Server Logic} \rightarrow \text{ORM} \rightarrow \text{Data} \rightarrow \text{Response} $$
 
-This model will make the next several chapters much easier.
+At this point we understand the architecture map and the evidence each layer leaves. What we have not yet done is install and operate a local environment we can run, inspect, and debug.
 
-Work through the **[Chapter 4 Exercise](Exercise.md)** and **[Chapter 4 Project](Project.md)** next. Resources for this chapter will be added in [Resources.md](Resources.md).
+<div align="center">
 
-**Up next after Chapter 4:** Chapter 5, Development Environment, where you create a real setup you can run, inspect, and debug.
+```mermaid
+flowchart LR
+    C4["Odoo Architecture"] --> C5["Development Environment"]
+```
+
+</div>
+
+Chapter 5 is where that map becomes a machine you control: **Python environment**, **virtual environments**, **dependencies**, **PostgreSQL setup**, **Odoo source**, **configuration**, **addons_path**, **custom addons**, **database creation**, **developer mode**, **logging**, and **IDE / debugger setup**.
+
+When you are ready to test yourself on this chapter, work through the [Exercise](Exercise.md) and [Project](Project.md). Use [Resources.md](Resources.md) whenever you need the official docs or verified supporting materials for a layer.

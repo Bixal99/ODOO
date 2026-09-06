@@ -4,7 +4,7 @@ This is an architecture-analysis project. You are not allowed to modify PostgreS
 
 A project is justified for this chapter because architecture is best learned by tracing a real system rather than memorizing components.
 
-For architecture references when added, see [Resources.md](Resources.md).
+For official architecture docs, verified videos, GitHub repos, and practice environments, see [Resources.md](Resources.md).
 
 ---
 
@@ -340,49 +340,20 @@ That is both better architecture thinking and better production engineering.
 
 ---
 
-## UP NEXT: CHAPTER 5
+## CHAPTER 4 PROJECT HANDOFF
 
-Chapter 4 answered:
+This project was architecture analysis: map the layers, trace SO0052, classify symptoms by region, and refuse unsafe guesses.
 
-**What components make an Odoo system work?**
-
-We now understand the path:
+At this point the conceptual path should be clear:
 
 $$ \text{Browser} \rightarrow \text{HTTP} \rightarrow \text{Python/Odoo} \rightarrow \text{ORM} \rightarrow \text{PostgreSQL} $$
 
-and the supporting roles of:
+with addons, registry, filestore, sessions, workers, cron, and WebSockets as supporting evidence.
 
-- addons,
-- registry,
-- filestore,
-- sessions,
-- workers,
-- cron,
-- WebSockets.
-
-But right now this is still mostly conceptual.
-
-The next problem is practical:
+What remains is practical:
 
 **How do we create an actual development environment where we can run, inspect, debug, and modify this architecture ourselves?**
 
-That is exactly why the roadmap moves next to:
+That is where Chapter 5 begins: Python environment, virtual environments, dependencies, PostgreSQL setup, Odoo source, configuration, addons_path, custom addons, database creation, developer mode, logging, and IDE / debugger setup.
 
-**Chapter 5: Development Environment**
-
-where we will learn:
-
-- Python environment,
-- virtual environments,
-- dependencies,
-- PostgreSQL setup,
-- Odoo source,
-- Git clone,
-- Odoo configuration,
-- addons_path,
-- custom addons directory,
-- database creation,
-- developer modes,
-- logging,
-- IDE setup,
-- debugger setup.
+If you still need chapter review before that, return to [Content.md](Content.md), then the [Exercise](Exercise.md). Use [Resources.md](Resources.md) for official references while investigating.
