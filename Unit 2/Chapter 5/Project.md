@@ -1,0 +1,556 @@
+# CHAPTER 2 PROJECT: DESIGN AN ODOO DEPLOYMENT FOR BILAL OFFICE SUPPLIES
+
+In the seven existing parts, produce app mappings, role permissions, company access, master-data decisions, a justified hosting choice, approval examples, and an integration failure walkthrough. This is a design exercise. Names are illustrative; if carrying forward Chapter 1’s Omar as warehouse officer, explain his relationship to the Ali used here rather than silently duplicating an employee.
+
+You already modeled the company's processes in Chapter 1.
+
+Now convert that conceptual company into an Odoo system design.
+
+This is **system design**, not Odoo configuration yet. Do not build records in Odoo until you have documented the requirement.
+
+For Odoo Learn, official documentation, and deployment resources, see [Resources.md](Resources.md).
+
+---
+
+## TABLE OF CONTENTS
+
+- [Part 1: Applications](#part-1-applications)
+- [Part 2: Users](#part-2-users)
+- [Part 3: Companies](#part-3-companies)
+- [Part 4: Master Records](#part-4-master-records)
+- [Part 5: Hosting Decision](#part-5-hosting-decision)
+- [Part 6: Custom Requirement (Sales Approval)](#part-6-custom-requirement-sales-approval)
+- [Part 7: Complex Requirement (Logistics API)](#part-7-complex-requirement-logistics-api)
+- [Complete Solution](#chapter-2-project-complete-solution)
+
+---
+
+## PART 1: APPLICATIONS
+
+Pair every app with the business record it manages and one required action. For example, customer management requires Contacts to identify the billing party; pipeline follow-up additionally motivates CRM. Mark optional apps explicitly so the design does not imply that every company needs every app.
+
+Bilal Office Supplies needs:
+
+- customer management,
+- Sales,
+- Purchasing,
+- Inventory,
+- invoicing,
+- employees.
+
+Identify the Odoo apps you expect to investigate for each requirement.
+
+---
+
+## PART 2: USERS
+
+For each role specify app, company, record scope, allowed action, and denied action. Describe one future positive and one future negative access check. For example, Ahmed may create a Qatar quotation but must not issue a Pakistan invoice. These are intended permissions to verify later, not claims that selecting an app role automatically enforces every detail.
+
+Create these roles:
+
+| User | Role |
+| --- | --- |
+| Ahmed | Salesperson |
+| Sara | Purchasing |
+| Ali | Warehouse |
+| Fatima | Finance |
+| Bilal | Administrator |
+
+For each user, document:
+
+- which apps they need,
+- what data they should see,
+- what actions they should perform,
+- what sensitive functionality they should probably not access.
+
+Do not configure security yet. We are designing the requirement.
+
+---
+
+## PART 3: COMPANIES
+
+State why Qatar and Pakistan are separate operating entities in this scenario. Identify the company on one Sales Order, one receipt, and one invoice. Explain why shared product identity does not make stock in Pakistan immediately available to a Qatar warehouse.
+
+Start with **Bilal Office Supplies Qatar**.
+
+Then imagine the company expands to **Bilal Office Supplies Pakistan**.
+
+Determine:
+
+- which users should access both,
+- which users should access only one,
+- which information might be shared,
+- which transactions must remain company-specific.
+
+---
+
+## PART 4: MASTER RECORDS
+
+Distinguish desired business differences from actual Odoo field behavior. A shared product may require different selling rules in two companies; that does not establish that the standard Sales Price field changes by company. Name the requirement, then identify what must be checked in configuration.
+
+Identify likely shared or master data:
+
+- customers,
+- vendors,
+- products,
+- employees.
+
+Then determine which of these may require company-specific information.
+
+---
+
+## PART 5: HOSTING DECISION
+
+Choose an edition and hosting option for the whole scenario, including the later logistics requirement. State who maintains custom code, who operates infrastructure, and one requirement that would make you reconsider. Do not propose purchasing a subscription or deploying software as part of this paper exercise.
+
+Compare the three options:
+
+- Odoo Online
+- Odoo.sh
+- Self-hosted
+
+For each, write:
+
+- main advantage,
+- main limitation,
+- customization capability,
+- infrastructure responsibility.
+
+---
+
+## PART 6: CUSTOM REQUIREMENT (SALES APPROVAL)
+
+For this exercise use QAR orders and the total including any applicable tax, after discounts. Test 49,999 QAR, exactly 50,000 QAR, and 50,001 QAR. Define approval before confirmation, a rejection reason, and whether a material edit invalidates approval. “Awaiting Approval” is a proposed business condition, not a promise that standard Odoo has that exact order state.
+
+Business requirement:
+
+All orders worth **QAR 50,000** or more require Sales Manager approval.
+
+Document:
+
+- **Trigger:** Total ≥ 50,000
+- **Actor:** Sales Manager
+- **Expected state:** Awaiting Approval
+- **Positive path:** Approve → Continue
+- **Negative path:** Reject → Return to salesperson
+
+Then answer:
+
+Would you first investigate standard Odoo, configuration, Studio, or custom code? Explain why.
+
+---
+
+## PART 7: COMPLEX REQUIREMENT (LOGISTICS API)
+
+Interpret the requirement as reporting a completed shipment to the provider. If the provider must book transport before dispatch, that is a different trigger to clarify. Walk through success, temporary outage, a lost response after external success, and invalid data. For each, state what Warehouse sees and how duplicate external operations are prevented.
+
+The company later says:
+
+Whenever an order is delivered, send the delivery information to an external logistics API. If the API fails, retry safely and show synchronization status inside Odoo.
+
+Now ask:
+
+- Would Studio likely be enough?
+- Would a custom module be more appropriate?
+- What new integration concerns appear?
+
+You are not coding yet. The goal is to develop Odoo engineering judgment.
+
+---
+
+# CHAPTER 2 PROJECT: COMPLETE SOLUTION
+
+Work through the parts above first. The solutions below apply Chapter 2 concepts to Bilal Office Supplies.
+
+---
+
+## PART 1: APPLICATIONS
+
+The company needs the following:
+
+| Requirement | Odoo Application |
+| --- | --- |
+| Customer management | Contacts |
+| Sales | Sales |
+| Purchasing | Purchase |
+| Inventory | Inventory |
+| Invoicing | Invoicing / Accounting |
+| Employees | Employees |
+
+**CRM** might additionally be investigated if the company wants to manage prospects and sales opportunities before quotations.
+
+The mapping is complete only when the expected record and action are explicit. Contacts maintains the customer record used as the billing party; Sales creates and confirms quotations or Sales Orders; Purchase creates RFQs and Purchase Orders; Inventory validates receipts and deliveries; Accounting posts invoices and reconciles payments; Employees maintains employee business records. CRM is optional here because an opportunity is needed only when the company chooses to track potential business before quotation.
+
+---
+
+## PART 2: USERS
+
+### AHMED: SALESPERSON
+
+**Applications:** Contacts, CRM (if used), Sales
+
+**Should see:** customers relevant to Sales, products, quotations, Sales Orders, his sales activities.
+
+**Should perform:** create quotations, update quotations, confirm permitted sales, communicate with customers.
+
+**Should probably not access:** full accounting configuration, employee salary information, server administration, vendor purchasing controls.
+
+### SARA: PURCHASING
+
+**Applications:** Purchase, Contacts/Vendors, relevant Inventory information
+
+**Should see:** vendors, products, procurement requirements, Purchase Orders, incoming receipts as relevant.
+
+**Should perform:** create RFQs, create Purchase Orders, select vendors, monitor procurement.
+
+**Should probably not access:** HR confidential information, full accounting administration, unrelated Sales administration, system administration.
+
+### ALI: WAREHOUSE
+
+**Applications:** primarily Inventory
+
+**Should see:** products, stock quantities, incoming shipments, outgoing deliveries, warehouse locations.
+
+**Should perform:** receive goods, validate transfers, pick and pack products, process deliveries.
+
+**Should probably not access:** accounting, vendor financial terms unnecessarily, HR, Odoo administration, sensitive Sales pricing if not required.
+
+Ali is the warehouse identity used for this Chapter 2 design. If the company carries forward Omar from Chapter 1, it must either retain Omar as the warehouse user or define Ali as a separate colleague or replacement; it must not silently treat two names as one employee.
+
+### FATIMA: FINANCE
+
+**Applications:** Accounting/Invoicing, Contacts, limited Sales/Purchase information when required for financial processing
+
+**Should see:** invoices, vendor bills, payments, financial accounts, customer and vendor balances.
+
+**Should perform:** issue and post invoices, record payments, process bills, reconcile financial transactions.
+
+**Should probably not access:** system technical settings, unnecessary HR data, arbitrary warehouse administration.
+
+### BILAL: ADMINISTRATOR
+
+**Applications:** potentially all applications
+
+**Should see:** system-wide information necessary for administration.
+
+**Should perform:** user administration, configuration, application installation, permissions management, technical administration.
+
+However, even administrators should use high privilege responsibly. Being an administrator does not mean changing anything at any time. Production systems require controlled changes.
+
+### USER-ACCESS PRINCIPLE
+
+As Ahmed, creating an allowed Qatar quotation should succeed; attempting a prohibited action should fail even if he reaches the record through another route. As Fatima, a permitted invoice should show the intended company. Exact groups and record rules are designed in later security units; here, the deliverable is a clear requirement that those checks can validate.
+
+The requirement should follow **Least Necessary Access**: users get what they need to perform their business responsibilities, not automatically everything.
+
+---
+
+## PART 3: COMPANIES
+
+We now have:
+
+- **C_Q** = Bilal Office Supplies Qatar
+- **C_P** = Bilal Office Supplies Pakistan
+
+### USER DESIGN
+
+| User | Role | Access |
+| --- | --- | --- |
+| Ahmed | Qatar salesperson | {C_Q} |
+| Sara | Group Purchasing Manager | {C_Q, C_P} |
+| Ali | Qatar warehouse worker | {C_Q} |
+| Fatima | Group finance manager | {C_Q, C_P} |
+| Bilal | Administrator | {C_Q, C_P} |
+
+Pakistan-specific staff would normally receive **C_P** only.
+
+### INFORMATION THAT MIGHT BE SHARED
+
+Potential examples:
+
+- customer contacts,
+- vendor contacts,
+- common product identities,
+- general contact information.
+
+For example, **Logitech Keyboard** could be recognized as the same product used throughout the group.
+
+### INFORMATION THAT MUST REMAIN COMPANY-SPECIFIC
+
+Examples:
+
+- Sales Orders,
+- Purchase Orders,
+- invoices,
+- vendor bills,
+- accounting entries,
+- taxes,
+- bank accounts,
+- financial reports,
+- inventory transactions where company ownership matters.
+
+Example: **INV_Q001 ∈ C_Q** must not accidentally become an accounting transaction for **C_P**.
+
+For a concrete trace, Qatar Sales Order **SO_Q001**, Qatar receipt **REC_Q001**, and invoice **INV_Q001** all belong to **C_Q**. A shared Logitech Keyboard identity lets both companies recognize the same product, but the receipt increases stock owned at the specified Qatar company and warehouse location; it does not make that quantity available in Pakistan.
+
+### WHY SEPARATION MATTERS
+
+The two businesses may have different currencies, taxes, laws, bank accounts, and accounting structures.
+
+Therefore **Shared ERP Database ≠ Shared Legal Identity**.
+
+---
+
+## PART 4: MASTER RECORDS
+
+### CUSTOMERS
+
+Potentially shared.
+
+Example: **ABC International** might purchase from both Qatar and Pakistan.
+
+The business may require different payment terms, sales ownership, pricing, and accounting treatment by company. Determine which standard fields or configuration rules provide those differences; do not assume every field on a shared contact automatically changes with company context.
+
+### VENDORS
+
+Potentially shared if the same supplier serves multiple group companies.
+
+Company-specific aspects might include purchase terms, currency, payment arrangements, and accounting information.
+
+### PRODUCTS
+
+Products are strong candidates for shared master information.
+
+Potentially shared: name, SKU, description, barcode.
+
+Requirements may differ for cost, accounting behavior, selling prices, taxes, and procurement settings, but these are not all automatically company-dependent fields. Verify each field and configuration separately; use explicit pricing rules when different selling prices are required.
+
+### EMPLOYEES
+
+Employees normally have much stronger company context.
+
+Ahmed working for Bilal Office Supplies Qatar should normally be associated with the Qatar organization.
+
+An employee's department, manager, contract, payroll, and leave rules may depend heavily on their company.
+
+### OVERALL DESIGN PRINCIPLE
+
+Some master information can be **Shared Identity** while certain attributes remain **Company-Specific Context**.
+
+---
+
+## PART 5: HOSTING DECISION
+
+### ODOO ONLINE
+
+| | |
+| --- | --- |
+| **Main advantage** | Very low infrastructure-management burden |
+| **Main limitation** | Limited freedom for arbitrary custom server-side Python modules |
+| **Customization capability** | Good for standard functionality, configuration, and supported Studio-based customization |
+| **Infrastructure responsibility** | Mostly handled by Odoo |
+
+### ODOO.SH
+
+| | |
+| --- | --- |
+| **Main advantage** | Supports real custom development while providing a managed Odoo-focused deployment platform |
+| **Main limitation** | Less infrastructure control than fully self-hosting and carries platform or service cost |
+| **Customization capability** | High; supports custom modules and Git-oriented development workflows |
+| **Infrastructure responsibility** | Shared and managed significantly by Odoo.sh; the development team concentrates more on Odoo than on raw server administration |
+
+### SELF-HOSTED
+
+| | |
+| --- | --- |
+| **Main advantage** | Maximum control over server, Odoo, PostgreSQL, dependencies, networking, and integrations |
+| **Main limitation** | Maximum operational responsibility |
+| **Customization capability** | Very high |
+| **Infrastructure responsibility** | Mostly yours; you need backups, security, SSL, updates, monitoring, recovery, and database management |
+
+### HOSTING RECOMMENDATION FOR BILAL OFFICE SUPPLIES
+
+Under the assumed need for a maintained Python integration and managed infrastructure, evaluate Enterprise with Odoo.sh and confirm the relevant service arrangement. If customization is removed and supported configuration satisfies the business, revisit Online. If the company chooses Community or requires different infrastructure control, evaluate a suitably operated self-hosted setup. Record the reason and operational owner, not just the preferred product name.
+
+Under the Odoo.sh option, the development team owns the custom addon and its tests, while the Odoo.sh service handles much of the platform infrastructure and the company still owns deployment decisions, data governance, and functional acceptance. A requirement for full server control or a Community-only deployment would trigger reconsideration in favor of a properly operated self-hosted environment.
+
+Suppose this company plans substantial custom development.
+
+A reasonable first choice to evaluate would be **Odoo.sh**, because it provides **Custom Development + Managed Odoo Infrastructure** without immediately forcing a small business to operate its entire production infrastructure itself.
+
+If the company eventually needs deep infrastructure control, strict hosting requirements, or specialized integrations, self-hosting may become attractive.
+
+---
+
+## PART 6: CUSTOM REQUIREMENT (SALES APPROVAL)
+
+**Requirement:** Order Total ≥ 50,000 QAR requires approval.
+
+| Element | Design |
+| --- | --- |
+| **Trigger** | Sales Order Total ≥ 50,000 QAR |
+| **Actor** | Sales Manager |
+| **Expected state (before approval)** | Awaiting Approval |
+
+### POSITIVE PATH
+
+49,999 QAR bypasses this approval rule; 50,000 and 50,001 require it. The diagram below shows the approval-required branch only. For the sample design, the salesperson cannot approve their own order, rejection returns it with a reason, and changing price, quantity, or customer after approval requires review again. These are explicit sample decisions to test against the chosen implementation.
+
+<div align="center">
+
+```mermaid
+flowchart TD
+    A["Salesperson creates order"] --> B{"Total ≥ 50,000?"}
+    B -->|Yes| C["Awaiting Approval"]
+    C --> D["Sales Manager Approves"]
+    D --> E["Order Continues"]
+```
+
+</div>
+
+### NEGATIVE PATH
+
+<div align="center">
+
+```mermaid
+flowchart TD
+    A["Awaiting Approval"] --> B["Manager Rejects"]
+    B --> C["Returned to Salesperson"]
+```
+
+</div>
+
+The salesperson may then need to revise the order, explain it, cancel it, or resubmit it.
+
+### WHAT SHOULD WE INVESTIGATE FIRST?
+
+Do not immediately choose custom Python.
+
+The first investigation should be **Standard Odoo Capability**, followed by **Configuration**, and potentially **Studio**.
+
+If those cannot correctly represent the company's workflow, then use a **Custom Module**.
+
+This follows the decision hierarchy:
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    STD["Standard"] --> CFG["Configuration"] --> STU["Studio"] --> CODE["Custom Code"]
+```
+
+</div>
+
+### ADDITIONAL QUESTIONS AN ODOO ENGINEER SHOULD ASK
+
+The sample assumptions above answer the initial questions for this exercise. A real discovery process must confirm them with the process owner. Also specify what happens for a non-QAR order; either define an exchange-rate/date rule or keep it outside this approval design until resolved. This prevents a numeric comparison between unlike currencies.
+
+Before implementation:
+
+- Can managers approve their own Sales Orders? (Probably a business-rule question.)
+- Can the salesperson modify the order after approval? If yes, imagine an order approved at 50,500 QAR then changed to 100,000 QAR. Should the old approval still be valid? Probably not.
+- What if the order drops below QAR 50,000? Should approval disappear? Business rule required.
+- Does tax count toward QAR 50,000? Possible definitions: **Untaxed Amount ≥ 50,000** or **Total Including Tax ≥ 50,000**. Those are different rules.
+- Can Sales Manager reject with no explanation? You might require a **Rejection Reason**.
+
+These questions turn a vague request into a real ERP specification.
+
+---
+
+## PART 7: COMPLEX REQUIREMENT (LOGISTICS API)
+
+**Requirement:** After delivery, send delivery information to an external logistics API, retry failures safely, and display synchronization status.
+
+### WOULD STUDIO LIKELY BE ENOUGH?
+
+For the complete requirement: **Probably No**.
+
+A simple webhook might sometimes be possible through no-code tools, but this requirement includes significantly more than merely sending one request. It requires reliable integration behavior.
+
+### WOULD A CUSTOM MODULE BE MORE APPROPRIATE?
+
+**Yes.** A custom module would likely be the more maintainable solution.
+
+### WHY?
+
+Because we probably need logic such as:
+
+<div align="center">
+
+```mermaid
+flowchart TD
+    A["Delivery Validated"] --> B["Prepare Payload"]
+    B --> C["Authenticate"]
+    C --> D["Send API Request"]
+    D --> E{"Success?"}
+    E -->|Yes| F["Synced"]
+    E -->|No| G["Retry"]
+```
+
+</div>
+
+### INTEGRATION CONCERNS
+
+Suppose delivery WH/OUT/0052 is recorded, the provider accepts its report as EXT-52, and the reply is lost. A retry must reuse the same stable event identity and recover EXT-52, not create a second report. Temporary failures can be retried with a limit and delay; invalid data needs correction. Keep the successful warehouse movement distinct from synchronization status. A proposed background workflow should queue work only for a committed delivery and retain the external reference as evidence. This is a design acceptance case, not an implemented guarantee.
+
+- On **success**, Warehouse sees **Synced** and the external shipment reference. Repeating the action with the same delivery identity returns or recognizes the same external operation.
+- During a **temporary outage**, Warehouse sees **Retry Scheduled** or **Failed—Retryable** while the validated delivery remains recorded. A delayed retry uses the same idempotency key.
+- When the provider succeeds but its **response is lost**, Warehouse initially sees an uncertain or retryable state. The next attempt queries or resends with the same identity and recovers the original external reference instead of creating another shipment.
+- For **invalid data**, Warehouse sees a permanent failure with a useful validation reason. An authorized person corrects the address or other source data and deliberately retries the same delivery event.
+
+**1. Authentication**
+
+How does the external API authenticate? Possibilities include API key, bearer token, OAuth, or request signature. Credentials must be stored securely.
+
+**2. Payload mapping**
+
+Odoo's delivery data must be transformed into whatever format the logistics system expects. For example Odoo might contain customer, delivery address, products, and quantities. The external API may require shipmentReference, recipient, address, items, and quantity. The two schemas must be mapped correctly.
+
+**3. Failure handling**
+
+Suppose the external server returns HTTP 500. We should not necessarily mark the delivery as synchronized. Instead: **Sync Status = Failed**.
+
+**4. Retries**
+
+Transient failures may need retrying, but retries must be safe.
+
+Imagine: Attempt 1 creates shipment SHIP1001, but the response gets lost. Odoo thinks it failed and retries. The external system creates SHIP1002. Now one delivery produced two shipments. That is dangerous.
+
+**5. Idempotency**
+
+We therefore need to think about idempotency. Ideally repeating the same synchronization request should not create duplicate external operations. Sending the same delivery again should not accidentally create another shipment.
+
+**6. Synchronization state**
+
+Odoo might need states such as: Pending, Synchronizing, Synced, Failed. Possibly also Retry Scheduled or Permanent Failure.
+
+**7. External reference**
+
+Store the logistics system's identifier. Example: Odoo Delivery **WH/OUT/0052** linked to External Shipment **SHIP-923812**. This allows the systems to refer to the same real-world shipment.
+
+**8. Logging**
+
+We may need to record synchronization time, request outcome, response code, failure reason, and retry count. Sensitive information should not be carelessly placed in logs.
+
+**9. Timeout**
+
+What happens if the API takes 60 seconds? The Odoo transaction should not necessarily remain blocked indefinitely. A timeout policy is required.
+
+**10. Business continuity**
+
+Suppose the logistics provider is down for two hours. Should warehouse users be unable to validate deliveries? Maybe not.
+
+A better architecture might be:
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    A["Validate Delivery"] --> B["Queue Integration Work"] --> C["Process in Background"]
+```
+
+</div>
+
+Rather than coupling the customer's core warehouse operation directly to the external provider's availability.
+
+That is already engineering judgment, not merely writing Python.
