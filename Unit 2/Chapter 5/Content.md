@@ -208,7 +208,47 @@ That confuses "Python exists on the machine" with "this machine has an isolated,
 
 Here are the relevant resources for **5.1 PYTHON ENVIRONMENT**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. ODOO 19 FULL INSTALLATION ON WINDOWS (VS CODE + POSTGRESQL)
+
+| | |
+|---|---|
+| **Source** | Community technical channel (Odooistic) |
+| **Reinforces** | End-to-end Windows workspace: Python, PostgreSQL, VS Code, Odoo 19 |
+
+<div align="center">
+
+[![Odoo 19 Full Installation on Windows | VS Code + PostgreSQL + Setup Explained!](https://img.youtube.com/vi/b6HEu5WQ2s8/hqdefault.jpg)](https://www.youtube.com/watch?v=b6HEu5WQ2s8)
+
+**Watch on YouTube:** [Odoo 19 Full Installation on Windows | VS Code + PostgreSQL + Setup Explained!](https://www.youtube.com/watch?v=b6HEu5WQ2s8)
+
+</div>
+
+---
+
+### 2. SET UP ODOO ENVIRONMENT: POSTGRESQL, GITHUB, VS CODE
+
+| | |
+|---|---|
+| **Source** | Community technical channel (Logic Works) |
+| **Why use it** | Environment-first framing before module work |
+
+<div align="center">
+
+[![Odoo Web Framework Tutorial | Set Up Odoo Environment | PostgreSQL, GitHub & VS Code](https://img.youtube.com/vi/a2ovPreTqAA/hqdefault.jpg)](https://www.youtube.com/watch?v=a2ovPreTqAA)
+
+**Watch on YouTube:** [Odoo Web Framework Tutorial | Set Up Odoo Environment | PostgreSQL, GitHub & VS Code](https://www.youtube.com/watch?v=a2ovPreTqAA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Source installation (Python and toolchain)** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -363,7 +403,47 @@ Yes, but into the wrong Python environment.
 
 Here are the relevant resources for **5.2 PYTHON VIRTUAL ENVIRONMENTS**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. VIRTUAL ENVIRONMENTS ON WINDOWS
+
+| | |
+|---|---|
+| **Source** | Odooistic |
+| **Reinforces** | Isolate project packages from the global Python install |
+
+<div align="center">
+
+[![How to use Virtual Environments on the Windows](https://img.youtube.com/vi/PpDCWg_Kb8M/hqdefault.jpg)](https://www.youtube.com/watch?v=PpDCWg_Kb8M)
+
+**Watch on YouTube:** [How to use Virtual Environments on the Windows](https://www.youtube.com/watch?v=PpDCWg_Kb8M)
+
+</div>
+
+---
+
+### 2. PYTHON VENV FOR ODOO 19 (UBUNTU)
+
+| | |
+|---|---|
+| **Source** | ROYTEK |
+| **Reinforces** | venv as a paired habit with Odoo setup |
+
+<div align="center">
+
+[![Create Python Virtual Environment for Odoo 19 on Ubuntu and the Odoo Configuration File](https://img.youtube.com/vi/yLcO2A1LA64/hqdefault.jpg)](https://www.youtube.com/watch?v=yLcO2A1LA64)
+
+**Watch on YouTube:** [Create Python Virtual Environment for Odoo 19 on Ubuntu and the Odoo Configuration File](https://www.youtube.com/watch?v=yLcO2A1LA64)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Source installation (Python environment)** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -466,7 +546,30 @@ A beginner confuses installing the `sale` Odoo module with installing Python pac
 
 Here are the relevant resources for **5.3 PYTHON DEPENDENCIES**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### PYTHON VENV FOR ODOO 19 AND DEPENDENCIES CONTEXT
+
+| | |
+|---|---|
+| **Source** | ROYTEK |
+| **Why use it** | Shows venv usage next to Odoo 19 setup where packages are installed |
+
+<div align="center">
+
+[![Create Python Virtual Environment for Odoo 19 on Ubuntu and the Odoo Configuration File](https://img.youtube.com/vi/yLcO2A1LA64/hqdefault.jpg)](https://www.youtube.com/watch?v=yLcO2A1LA64)
+
+**Watch on YouTube:** [Create Python Virtual Environment for Odoo 19 on Ubuntu and the Odoo Configuration File](https://www.youtube.com/watch?v=yLcO2A1LA64)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Requirements / source install dependencies** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -583,7 +686,47 @@ A beginner assumes "PostgreSQL is installed" means Odoo can already connect and 
 
 Here are the relevant resources for **5.4 POSTGRESQL SETUP**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. ODOO 19 FULL INSTALLATION ON WINDOWS (INCLUDES POSTGRESQL)
+
+| | |
+|---|---|
+| **Source** | Odooistic |
+| **Reinforces** | PostgreSQL as a required companion to the Odoo server |
+
+<div align="center">
+
+[![Odoo 19 Full Installation on Windows | VS Code + PostgreSQL + Setup Explained!](https://img.youtube.com/vi/b6HEu5WQ2s8/hqdefault.jpg)](https://www.youtube.com/watch?v=b6HEu5WQ2s8)
+
+**Watch on YouTube:** [Odoo 19 Full Installation on Windows | VS Code + PostgreSQL + Setup Explained!](https://www.youtube.com/watch?v=b6HEu5WQ2s8)
+
+</div>
+
+---
+
+### 2. INSTALL ODOO 19 ON UBUNTU
+
+| | |
+|---|---|
+| **Source** | Odoo Hub |
+| **Why use it** | Linux PostgreSQL + Odoo path |
+
+<div align="center">
+
+[![How to Install Odoo 19 on Ubuntu | Step by Step](https://img.youtube.com/vi/NDnX9k6jyTw/hqdefault.jpg)](https://www.youtube.com/watch?v=NDnX9k6jyTw)
+
+**Watch on YouTube:** [How to Install Odoo 19 on Ubuntu | Step by Step](https://www.youtube.com/watch?v=NDnX9k6jyTw)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **PostgreSQL in source installation** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -678,7 +821,31 @@ is the PostgreSQL role the server uses, while `admin@novaretail.example` remains
 
 Here are the relevant resources for **5.5 POSTGRESQL USER**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### SET UP ODOO ENVIRONMENT (POSTGRESQL ROLE CONTEXT)
+
+| | |
+|---|---|
+| **Source** | Logic Works |
+| **Why use it** | Environment setup where database access is configured intentionally |
+
+<div align="center">
+
+[![Odoo Web Framework Tutorial | Set Up Odoo Environment | PostgreSQL, GitHub & VS Code](https://img.youtube.com/vi/a2ovPreTqAA/hqdefault.jpg)](https://www.youtube.com/watch?v=a2ovPreTqAA)
+
+**Watch on YouTube:** [Odoo Web Framework Tutorial | Set Up Odoo Environment | PostgreSQL, GitHub & VS Code](https://www.youtube.com/watch?v=a2ovPreTqAA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **PostgreSQL user / source install** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+| **CLI database options** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -769,7 +936,31 @@ A beginner thinks a packaged installer is enough to study inheritance, ORM inter
 
 Here are the relevant resources for **5.6 ODOO SOURCE**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### INSTALL ODOO 19 ON UBUNTU (SOURCE ORIENTATION)
+
+| | |
+|---|---|
+| **Source** | Odoo Hub |
+| **Why use it** | Walkthrough of obtaining and running Odoo 19 from a prepared machine |
+
+<div align="center">
+
+[![How to Install Odoo 19 on Ubuntu | Step by Step](https://img.youtube.com/vi/NDnX9k6jyTw/hqdefault.jpg)](https://www.youtube.com/watch?v=NDnX9k6jyTw)
+
+**Watch on YouTube:** [How to Install Odoo 19 on Ubuntu | Step by Step](https://www.youtube.com/watch?v=NDnX9k6jyTw)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Installing Odoo from source** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+| **Source repository** | [GitHub: odoo/odoo](https://github.com/odoo/odoo) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -871,7 +1062,31 @@ A beginner downloads a ZIP from an unknown page, or clones `master` while intend
 
 Here are the relevant resources for **5.7 GIT CLONE**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### SET UP ODOO ENVIRONMENT: GITHUB AND VS CODE
+
+| | |
+|---|---|
+| **Source** | Logic Works |
+| **Reinforces** | Clone and branch discipline before development |
+
+<div align="center">
+
+[![Odoo Web Framework Tutorial | Set Up Odoo Environment | PostgreSQL, GitHub & VS Code](https://img.youtube.com/vi/a2ovPreTqAA/hqdefault.jpg)](https://www.youtube.com/watch?v=a2ovPreTqAA)
+
+**Watch on YouTube:** [Odoo Web Framework Tutorial | Set Up Odoo Environment | PostgreSQL, GitHub & VS Code](https://www.youtube.com/watch?v=a2ovPreTqAA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Clone / source install steps** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+| **odoo/odoo (branch 19.0)** | [GitHub: odoo/odoo](https://github.com/odoo/odoo) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -977,7 +1192,48 @@ A beginner commits `db_password` or `admin_passwd` into a public repository, or 
 
 Here are the relevant resources for **5.8 ODOO CONFIGURATION FILE**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. UNDERSTANDING THE ODOO CONFIGURATION FILE
+
+| | |
+|---|---|
+| **Source** | The Mighty Administrator |
+| **Reinforces** | Config as the durable control surface for db, paths, and runtime flags |
+
+<div align="center">
+
+[![Understanding the Odoo Configuration File](https://img.youtube.com/vi/BOX4saaIZ7g/hqdefault.jpg)](https://www.youtube.com/watch?v=BOX4saaIZ7g)
+
+**Watch on YouTube:** [Understanding the Odoo Configuration File](https://www.youtube.com/watch?v=BOX4saaIZ7g)
+
+</div>
+
+---
+
+### 2. CREATE A CONFIGURATION FILE (ODOO 17)
+
+| | |
+|---|---|
+| **Source** | WebLearns |
+| **Version note** | Titled for Odoo 17; pair with Odoo 19.0 CLI docs |
+
+<div align="center">
+
+[![How to Create a Configuration File for Odoo 17](https://img.youtube.com/vi/DRFn7Rb9uuA/hqdefault.jpg)](https://www.youtube.com/watch?v=DRFn7Rb9uuA)
+
+**Watch on YouTube:** [How to Create a Configuration File for Odoo 17](https://www.youtube.com/watch?v=DRFn7Rb9uuA)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **CLI / configuration options** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+| **Source install config context** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1080,7 +1336,31 @@ Because module discovery never reaches that directory.
 
 Here are the relevant resources for **5.9 ADDONS_PATH**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### MULTIPLE ADDONS USING ADDONS-PATH
+
+| | |
+|---|---|
+| **Source** | WebLearns |
+| **Reinforces** | Core addons and custom addons as separate path entries |
+
+<div align="center">
+
+[![How to add multiple addons using addons-path in Odoo](https://img.youtube.com/vi/TfYvao3hDNU/hqdefault.jpg)](https://www.youtube.com/watch?v=TfYvao3hDNU)
+
+**Watch on YouTube:** [How to add multiple addons using addons-path in Odoo](https://www.youtube.com/watch?v=TfYvao3hDNU)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **CLI `--addons-path` / config** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+| **Module manifests** | [Module Manifests (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/module.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1187,7 +1467,48 @@ referenced by configuration and tracked in the team's source control.
 
 Here are the relevant resources for **5.10 CUSTOM ADDONS DIRECTORY**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. MULTIPLE ADDONS USING ADDONS-PATH
+
+| | |
+|---|---|
+| **Source** | WebLearns |
+| **Reinforces** | Custom directory as its own addons_path entry |
+
+<div align="center">
+
+[![How to add multiple addons using addons-path in Odoo](https://img.youtube.com/vi/TfYvao3hDNU/hqdefault.jpg)](https://www.youtube.com/watch?v=TfYvao3hDNU)
+
+**Watch on YouTube:** [How to add multiple addons using addons-path in Odoo](https://www.youtube.com/watch?v=TfYvao3hDNU)
+
+</div>
+
+---
+
+### 2. CREATE A CUSTOM MODULE FROM SCRATCH (ODOO 19)
+
+| | |
+|---|---|
+| **Source** | Odoo Hub |
+| **Why use it** | Module scaffolding after the custom path exists |
+
+<div align="center">
+
+[![Odoo 19 Tutorial | How to Create a Custom Module (App) From Scratch](https://img.youtube.com/vi/l9uoxgmS6ig/hqdefault.jpg)](https://www.youtube.com/watch?v=l9uoxgmS6ig)
+
+**Watch on YouTube:** [Odoo 19 Tutorial | How to Create a Custom Module (App) From Scratch](https://www.youtube.com/watch?v=l9uoxgmS6ig)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Module manifests** | [Module Manifests (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/backend/module.html) |
+| **Building a module** | [Building a Module (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/tutorials/backend.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1299,7 +1620,31 @@ A beginner names a local experiment database `production`, or assumes creating a
 
 Here are the relevant resources for **5.11 DATABASE CREATION**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### ODOO 19 FULL INSTALLATION (DATABASE CREATION CONTEXT)
+
+| | |
+|---|---|
+| **Source** | Odooistic |
+| **Why use it** | Shows creating and selecting a database as part of first run |
+
+<div align="center">
+
+[![Odoo 19 Full Installation on Windows | VS Code + PostgreSQL + Setup Explained!](https://img.youtube.com/vi/b6HEu5WQ2s8/hqdefault.jpg)](https://www.youtube.com/watch?v=b6HEu5WQ2s8)
+
+**Watch on YouTube:** [Odoo 19 Full Installation on Windows | VS Code + PostgreSQL + Setup Explained!](https://www.youtube.com/watch?v=b6HEu5WQ2s8)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **CLI database options** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+| **Source installation / first database** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1393,7 +1738,30 @@ A beginner treats Developer Mode as permission to edit any technical record casu
 
 Here are the relevant resources for **5.12 DEVELOPER MODE**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### ACTIVATE DEVELOPER MODE
+
+| | |
+|---|---|
+| **Source** | TechMoodly |
+| **Language note** | Hindi narration; UI steps still map to the official developer mode path |
+
+<div align="center">
+
+[![How to Activate developer mode in Odoo](https://img.youtube.com/vi/uhVJ7RoaIuM/hqdefault.jpg)](https://www.youtube.com/watch?v=uhVJ7RoaIuM)
+
+**Watch on YouTube:** [How to Activate developer mode in Odoo](https://www.youtube.com/watch?v=uhVJ7RoaIuM)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Developer mode** | [Developer mode (Odoo 19)](https://www.odoo.com/documentation/19.0/applications/general/developer_mode.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1466,7 +1834,15 @@ A beginner enables `debug=assets` permanently for every session, even when only 
 
 Here are the relevant resources for **5.13 DEVELOPER MODE WITH ASSETS**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Developer mode** | [Developer mode (Odoo 19)](https://www.odoo.com/documentation/19.0/applications/general/developer_mode.html) |
+| **Javascript / assets debug context** | [Javascript Reference (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/frontend/javascript_reference.html) |
+| **CLI `--dev` related options** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1579,7 +1955,14 @@ A beginner changes many settings blindly without reading the error, or leaves DE
 
 Here are the relevant resources for **5.14 LOGGING**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **CLI logging options** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+| **Source install / runtime context** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1681,7 +2064,47 @@ A beginner writes Odoo code in an editor that still points at system Python, the
 
 Here are the relevant resources for **5.15 IDE SETUP**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. DEVELOPMENT SETUP ON WINDOWS 11 WITH VS CODE
+
+| | |
+|---|---|
+| **Source** | Exploring Odoo |
+| **Version note** | Older than Odoo 19; keep for IDE layout intuition |
+
+<div align="center">
+
+[![Odoo Tutorial: Development Setup On Windows 11 with VS Code](https://img.youtube.com/vi/wWnZu7-63jU/hqdefault.jpg)](https://www.youtube.com/watch?v=wWnZu7-63jU)
+
+**Watch on YouTube:** [Odoo Tutorial: Development Setup On Windows 11 with VS Code](https://www.youtube.com/watch?v=wWnZu7-63jU)
+
+</div>
+
+---
+
+### 2. CONFIGURE ODOO 19 WITH PYCHARM
+
+| | |
+|---|---|
+| **Source** | Odoo Hub |
+| **Why use it** | Alternate IDE path beside VS Code |
+
+<div align="center">
+
+[![How to Configure Odoo 19 with PyCharm](https://img.youtube.com/vi/i3V1stWh8fE/hqdefault.jpg)](https://www.youtube.com/watch?v=i3V1stWh8fE)
+
+**Watch on YouTube:** [How to Configure Odoo 19 with PyCharm](https://www.youtube.com/watch?v=i3V1stWh8fE)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **Source installation (workspace baseline)** | [Installing Odoo from source (Odoo 19)](https://www.odoo.com/documentation/19.0/administration/on_premise/source.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
@@ -1797,7 +2220,47 @@ A beginner only restarts Odoo and re-clicks the UI when logic is wrong, never at
 
 Here are the relevant resources for **5.16 DEBUGGER SETUP**:
 
-> Topic resources will be added later in [Resources.md](Resources.md) (official Odoo 19.0 source-install documentation and verified supporting materials).
+### 1. RUN ODOO IN VS CODE DEBUG
+
+| | |
+|---|---|
+| **Source** | Open Source Hustle |
+| **Reinforces** | Debugger launch args, restart habit, useful CLI flags |
+
+<div align="center">
+
+[![Run Odoo in VSCode using the Debug feature](https://img.youtube.com/vi/gq4ISuGO8xo/hqdefault.jpg)](https://www.youtube.com/watch?v=gq4ISuGO8xo)
+
+**Watch on YouTube:** [Run Odoo in VSCode using the Debug feature](https://www.youtube.com/watch?v=gq4ISuGO8xo)
+
+</div>
+
+---
+
+### 2. DEBUG ODOO IN VISUAL STUDIO CODE
+
+| | |
+|---|---|
+| **Source** | Community technical channel (Dong Chi) |
+| **Version note** | Older launch.json style; match your Odoo 19.0 venv and paths |
+
+<div align="center">
+
+[![How to debug Odoo in Visual Studio Code?](https://img.youtube.com/vi/w2t9YKQV7w8/hqdefault.jpg)](https://www.youtube.com/watch?v=w2t9YKQV7w8)
+
+**Watch on YouTube:** [How to debug Odoo in Visual Studio Code?](https://www.youtube.com/watch?v=w2t9YKQV7w8)
+
+</div>
+
+---
+
+### OFFICIAL DOCUMENTATION
+
+| Topic | Documentation |
+|---|---|
+| **CLI runtime / debug-related options** | [Command-line interface (Odoo 19)](https://www.odoo.com/documentation/19.0/developer/reference/cli.html) |
+
+Full chapter index: [Resources.md](Resources.md)
 
 ---
 
